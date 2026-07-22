@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>台股每日焦點 · 儀表板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">TW</span>
+    <div class="brand-text">
+      <h1>台股每日焦點</h1>
+      <p class="subtitle">個人自動化盤前情報 · 僅供參考，非投資建議</p>
+    </div>
+  </div>
+  <div class="date-control">
+    <label for="date-select">檢視日期</label>
+    <select id="date-select"><option>載入中…</option></select>
+  </div>
+</header>
+
+<div id="ticker" class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<main id="app">
+  <div class="state-message" id="state-message">正在讀取資料…</div>
+
+  <section class="meta-row" id="meta-row" hidden>
+    <span id="meta-generated"></span>
+  </section>
+
+  <section class="panel" id="panel-watchlist" hidden>
+    <div class="panel-head">
+      <h2>🎯 今日關注清單</h2>
+      <p class="panel-note">依「量能」×「價格方向」×「三大法人動向」交叉分類，顯著放量門檻：當日量 ≥ 近5日均量 2 倍</p>
+    </div>
+    <div class="watchlist-grid" id="watchlist-grid"></div>
+  </section>
+
+  <section class="panel" id="panel-gainers" hidden>
+    <div class="panel-head">
+      <h2>📈 今日漲幅排行</h2>
+    </div>
+    <div class="table-wrap"><table id="table-gainers"></table></div>
+  </section>
+
+  <section class="panel" id="panel-institution" hidden>
+    <div class="panel-head">
+      <h2>💰 三大法人買超</h2>
+    </div>
+    <div class="table-wrap"><table id="table-institution"></table></div>
+  </section>
+
+  <section class="panel" id="panel-weekly" hidden>
+    <div class="panel-head">
+      <h2>🔥 本週熱門</h2>
+      <p class="panel-note">近 5 個交易日重複上榜次數</p>
+    </div>
+    <div class="table-wrap"><table id="table-weekly"></table></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>資料來源：台灣證券交易所公開資訊 · 本站僅整理呈現，不構成任何投資建議</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
