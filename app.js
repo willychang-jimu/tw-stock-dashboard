@@ -22,6 +22,12 @@ const el = {
   tableInstitution: document.getElementById("table-institution"),
   panelWeekly: document.getElementById("panel-weekly"),
   tableWeekly: document.getElementById("table-weekly"),
+  panelBacktest: document.getElementById("panel-backtest"),
+  tableBacktest: document.getElementById("table-backtest"),
+};
+
+const CAT_EMOJI = { "強力關注": "🔥", "價量齊揚": "📈", "訊號矛盾": "⚠️", "出貨嫌疑": "🌊" };
+const HORIZON_ORDER = ["1日", "3日", "5日"];
 };
 
 function newsLink(code) {
