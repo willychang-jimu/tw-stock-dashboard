@@ -185,6 +185,7 @@ function showPanels() {
   el.panelGainers.hidden = false;
   el.panelInstitution.hidden = false;
   el.panelWeekly.hidden = false;
+  el.panelBacktest.hidden = false;
   el.stateMessage.hidden = true;
 }
 
