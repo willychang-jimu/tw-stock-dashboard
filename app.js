@@ -5,6 +5,8 @@ const CATEGORY_META = {
   "出貨嫌疑": { emoji: "🌊", cls: "cat-caution" },
 };
 const CATEGORY_ORDER = ["強力關注", "價量齊揚", "訊號矛盾", "出貨嫌疑"];
+const CAT_EMOJI = { "強力關注": "🔥", "價量齊揚": "📈", "訊號矛盾": "⚠️", "出貨嫌疑": "🌊" };
+const HORIZON_ORDER = ["1日", "3日", "5日"];
 
 const state = { index: [] };
 
@@ -24,10 +26,6 @@ const el = {
   tableWeekly: document.getElementById("table-weekly"),
   panelBacktest: document.getElementById("panel-backtest"),
   tableBacktest: document.getElementById("table-backtest"),
-};
-
-const CAT_EMOJI = { "強力關注": "🔥", "價量齊揚": "📈", "訊號矛盾": "⚠️", "出貨嫌疑": "🌊" };
-const HORIZON_ORDER = ["1日", "3日", "5日"];
 };
 
 function newsLink(code) {
@@ -177,6 +175,30 @@ function renderWeekly(day) {
     { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">新聞</a>` },
   ]);
   renderTable(el.tableWeekly, ["代號", "名稱", "上榜次數", "連結"], rows);
+}
+
+function renderBacktest(day) {
+  const backtest = day.backtest || {};
+  const rows = [];
+  Object.keys(CAT_EMOJI).forEach((cat) => {
+    const byHorizon = backtest[cat] || {};
+    HORIZON_ORDER.forEach((horizon) => {
+      const stat = byHorizon[horizon] || {};
+      const avg = stat["平均報酬%"];
+      const win = stat["勝率%"];
+      const n = stat["樣本數"] || 0;
+      rows.push([
+        `${CAT_EMOJI[cat]} ${cat}`,
+        horizon,
+        n === 0
+          ? { className: "", html: '<span class="empty-note">尚無樣本</span>' }
+          : { className: pctClass(avg), html: fmtPct(avg) },
+        n === 0 ? "-" : `${win.toFixed(1)}%`,
+        n,
+      ]);
+    });
+  });
+  renderTable(el.tableBacktest, ["分類", "天數後", "平均報酬", "勝率", "樣本數"], rows);
 }
 
 function showPanels() {
