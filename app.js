@@ -197,6 +197,7 @@ async function loadDay(dateStr) {
     renderGainers(day);
     renderInstitution(day);
     renderWeekly(day);
+    renderBacktest(day);
     showPanels();
   } catch (err) {
     el.stateMessage.hidden = false;
