@@ -242,5 +242,51 @@ async function init() {
     el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
   }
 }
+async function searchSupportLevel() {
+  const input = document.getElementById("support-input");
+  const resultBox = document.getElementById("support-result");
+  const code = input.value.trim();
+
+  if (!code) {
+    resultBox.innerHTML = '<p class="empty-note">請輸入股票代號</p>';
+    return;
+  }
+
+  resultBox.innerHTML = '<p class="empty-note">查詢中…</p>';
+
+  try {
+    const allData = await fetchJSON("support_levels.json");
+    const info = allData[code];
+
+    if (!info) {
+      resultBox.innerHTML = `<p class="empty-note">找不到代號 ${code} 的資料（可能是ETF、非個股，或代號輸入錯誤）</p>`;
+      return;
+    }
+
+    const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
+    const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
+    const distMa = info.dist_to_ma_pct !== null && info.dist_to_ma_pct !== undefined ? info.dist_to_ma_pct : null;
+
+    let bodyHtml = `<div class="code-title">${code} · 目前價格 ${info.current}</div>`;
+
+    if (ma20 === null) {
+      bodyHtml += `<p class="empty-note">資料累積中（目前${info.data_days}天），需滿20個交易日才能算出均線與布林通道</p>`;
+    } else {
+      bodyHtml += `
+        <div>20日均線：${ma20}　（距目前價格 ${fmtPct(distMa)}）</div>
+        <div>布林下軌：${bbLower}</div>
+      `;
+    }
+
+    resultBox.innerHTML = `<div class="support-card">${bodyHtml}</div>`;
+  } catch (err) {
+    resultBox.innerHTML = `<p class="empty-note">查詢失敗：${err.message}</p>`;
+  }
+}
+
+document.getElementById("support-search-btn").addEventListener("click", searchSupportLevel);
+document.getElementById("support-input").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") searchSupportLevel();
+});
 
 init();
