@@ -242,3 +242,48 @@ select:focus-visible, a:focus-visible {
   .date-control { width: 100%; }
   #date-select { flex: 1; }
 }
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#support-input {
+  flex: 1;
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+#support-search-btn {
+  background: var(--gold);
+  color: var(--bg);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#support-search-btn:hover { opacity: 0.85; }
+
+.support-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.support-card .code-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin-bottom: 8px;
+}
