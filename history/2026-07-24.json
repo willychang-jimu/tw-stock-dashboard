@@ -1,31 +1,14 @@
 {
   "version": 1,
-  "generated_at": "2026-07-24T21:22:44+08:00",
+  "generated_at": "2026-07-24T23:06:52+08:00",
   "date": "2026-07-24",
   "summary": {
-    "watchlist": 1,
+    "watchlist": 0,
     "gainers": 50,
     "institution": 50,
     "weekly": 26
   },
-  "watchlist": [
-    {
-      "category": "價量齊揚",
-      "code": "4557",
-      "name": "永新-KY",
-      "pct": 0.19,
-      "volume_ratio": 20.23,
-      "net_buy": 0.0,
-      "pe": "",
-      "ma20": 49.96,
-      "bb_lower": 46.47,
-      "dist_to_ma_pct": 5.27,
-      "signal_score": 1,
-      "signal_label": "⚪中立",
-      "conflict": false,
-      "conflict_reason": null
-    }
-  ],
+  "watchlist": [],
   "gainers": [
     {
       "code": "3669",
