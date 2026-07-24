@@ -288,4 +288,19 @@ document.getElementById("support-input").addEventListener("keypress", (e) => {
   if (e.key === "Enter") searchSupportLevel();
 });
 
+async function init() {
+  try {
+    state.index = await fetchJSON("history/index.json");
+    if (!state.index.length) {
+      el.stateMessage.textContent = "目前還沒有任何歷史資料，明天執行後就會出現。";
+      return;
+    }
+    buildDateOptions();
+    el.dateSelect.addEventListener("change", (e) => loadDay(e.target.value));
+    await loadDay(state.index[0].date);
+  } catch (err) {
+    el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
+  }
+}
+
 init();
