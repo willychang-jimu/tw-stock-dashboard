@@ -70,18 +70,12 @@
   <section class="panel" id="panel-signals" hidden>
     <div class="panel-head">
       <h2>🎯 進出場訊號排行</h2>
-      <p class="panel-note">依RSI/MACD/布林通道等技術指標，搭配量能、法人、營收算出的規則式評分，掃描全市場（不限今日關注清單），⚠️代表技術面與法人買賣方向相反，僅供參考，非投資建議</p>
+      <p class="panel-note">規則式評分，掃描全市場，滑鼠移到理由/⚠️可看完整說明，僅供參考，非投資建議</p>
     </div>
-    <div class="signal-columns">
-      <div>
-        <h3 class="signal-subtitle">🟢 買進訊號</h3>
-        <div class="table-wrap"><table id="table-signal-buy"></table></div>
-      </div>
-      <div>
-        <h3 class="signal-subtitle">🔴 賣出／出場訊號</h3>
-        <div class="table-wrap"><table id="table-signal-sell"></table></div>
-      </div>
-    </div>
+    <h3 class="signal-subtitle">🟢 買進訊號</h3>
+    <div class="table-wrap"><table id="table-signal-buy"></table></div>
+    <h3 class="signal-subtitle signal-subtitle-sell">🔴 賣出／出場訊號</h3>
+    <div class="table-wrap"><table id="table-signal-sell"></table></div>
   </section>
 
   <section class="panel" id="panel-backtest" hidden>
@@ -97,7 +91,7 @@
       <p class="panel-note">輸入股票代號查詢20日均線與布林下軌，僅供技術參考，非投資建議</p>
     </div>
     <div class="search-box">
-      <input type="text" id="support-input" placeholder="輸入股票代號，例如 2330" maxlength="6">
+      <input type="text" id="support-input" placeholder="輸入股票代號或公司名稱，例如 2330 或 台積電" maxlength="12">
       <button id="support-search-btn">查詢</button>
     </div>
     <div id="support-result"></div>
