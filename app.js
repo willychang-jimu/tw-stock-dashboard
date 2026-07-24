@@ -12,6 +12,7 @@ const GH_OWNER = "willychang-jimu";
 const GH_REPO = "tw-stock-dashboard";
 const WATCHLIST_PATH = "watchlist.json";
 const TOKEN_STORAGE_KEY = "tw_stock_watchlist_pat";
+const WATCHLIST_MAX = 20;
 
 const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null };
 
@@ -21,6 +22,8 @@ const el = {
   tickerTrack: document.getElementById("ticker-track"),
   metaRow: document.getElementById("meta-row"),
   metaGenerated: document.getElementById("meta-generated"),
+  panelStarred: document.getElementById("panel-starred"),
+  tableStarred: document.getElementById("table-starred"),
   panelWatchlist: document.getElementById("panel-watchlist"),
   watchlistGrid: document.getElementById("watchlist-grid"),
   panelGainers: document.getElementById("panel-gainers"),
@@ -290,6 +293,7 @@ function renderSignals(day) {
 
 function showPanels() {
   el.metaRow.hidden = false;
+  el.panelStarred.hidden = false;
   el.panelWatchlist.hidden = false;
   el.panelGainers.hidden = false;
   el.panelInstitution.hidden = false;
@@ -419,6 +423,57 @@ async function saveWatchlistToRepo(codes) {
   state.watchlistSha = result.content?.sha ?? state.watchlistSha;
 }
 
+function renderStarred(day) {
+  const codes = Array.from(state.watchlistCodes);
+  if (codes.length === 0) {
+    el.tableStarred.innerHTML = "";
+    const empty = document.createElement("p");
+    empty.className = "empty-note";
+    empty.textContent = "還沒有自選股，點任何一個表格裡的星號即可加入";
+    el.tableStarred.parentElement.appendChild(empty);
+    return;
+  }
+  // 移除上次可能留下的empty-note
+  const oldNote = el.tableStarred.parentElement.querySelector(".empty-note");
+  if (oldNote) oldNote.remove();
+
+  const gainerMap = new Map((day.gainers || []).map((x) => [x.code, x]));
+  const instMap = new Map((day.institution || []).map((x) => [x.code, x]));
+  const weeklyMap = new Map((day.weekly || []).map((x) => [x.code, x]));
+  const watchMap = new Map((day.watchlist || []).map((x) => [x.code, x]));
+  const signalBuyMap = new Map(((day.signals || {}).buy || []).map((x) => [x.code, x]));
+  const signalSellMap = new Map(((day.signals || {}).sell || []).map((x) => [x.code, x]));
+
+  const rows = codes.map((code) => {
+    const badges = [];
+    let name = "";
+    let signalInfo = null;
+
+    if (watchMap.has(code)) { badges.push("🎯"); name = name || watchMap.get(code).name; }
+    if (gainerMap.has(code)) { badges.push("📈"); name = name || gainerMap.get(code).name; }
+    if (instMap.has(code)) { badges.push("💰"); name = name || instMap.get(code).name; }
+    if (weeklyMap.has(code)) { badges.push("🔥"); name = name || weeklyMap.get(code).name; }
+    if (signalBuyMap.has(code)) { badges.push("🟢"); signalInfo = signalInfo || signalBuyMap.get(code); name = name || signalInfo.name; }
+    if (signalSellMap.has(code)) { badges.push("🔴"); signalInfo = signalInfo || signalSellMap.get(code); name = name || signalInfo.name; }
+
+    const badgeHtml = badges.length ? badges.join(" ") : '<span class="empty-note">今日未上榜</span>';
+    const signalHtml = signalInfo
+      ? `${scoreEmoji(signalInfo.score)}${signalInfo.score > 0 ? "+" : ""}${signalInfo.score}`
+      : "-";
+
+    return [
+      { className: "star-cell", html: starHtml(code) },
+      code,
+      { className: "name-cell", html: name || "-" },
+      { html: badgeHtml },
+      { className: pctClass(signalInfo ? signalInfo.score : null), html: signalHtml },
+      { html: `<a href="${newsLink(code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
+    ];
+  });
+
+  renderTable(el.tableStarred, ["★", "代號", "名稱", "出現於", "訊號", "連結"], rows);
+}
+
 function starHtml(code) {
   const filled = state.watchlistCodes.has(code);
   return `<span class="star-toggle${filled ? " star-filled" : ""}" data-code="${code}" title="${filled ? "移除自選股" : "加入自選股"}">${filled ? "★" : "☆"}</span>`;
@@ -458,6 +513,10 @@ async function toggleWatchlist(code) {
   if (state.watchlistCodes.has(code)) {
     state.watchlistCodes.delete(code);
   } else {
+    if (state.watchlistCodes.size >= WATCHLIST_MAX) {
+      window.alert(`自選股最多只能加${WATCHLIST_MAX}檔，請先移除其他股票再加入新的。`);
+      return;
+    }
     state.watchlistCodes.add(code);
   }
   if (state.currentDay) renderAll(state.currentDay);
@@ -474,6 +533,7 @@ document.addEventListener("click", (e) => {
 
 function renderAll(day) {
   renderTicker(day);
+  renderStarred(day);
   renderWatchlist(day);
   renderGainers(day);
   renderInstitution(day);
