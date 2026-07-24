@@ -31,6 +31,38 @@ const el = {
   tableBacktest: document.getElementById("table-backtest"),
 };
 
+function abbreviateReason(reason) {
+  const rules = [
+    [/^RSI(\d+)超賣$/, (m) => `RSI↓${m[1]}`],
+    [/^RSI(\d+)偏弱$/, (m) => `RSI${m[1]}`],
+    [/^RSI(\d+)偏強$/, (m) => `RSI${m[1]}`],
+    [/^RSI(\d+)超買$/, (m) => `RSI↑${m[1]}`],
+    [/^觸及布林下軌\(支撐\)$/, () => `布林↓`],
+    [/^觸及布林上軌\(壓力\)$/, () => `布林↑`],
+    [/^MACD黃金交叉$/, () => `MACD↗`],
+    [/^MACD死亡交叉$/, () => `MACD↘`],
+    [/^放量上漲$/, () => `量↑漲`],
+    [/^放量下跌\(出貨疑慮\)$/, () => `量↓跌`],
+    [/^法人買超$/, () => `法人↑`],
+    [/^法人賣超$/, () => `法人↓`],
+    [/^營收年增(\d+)%$/, (m) => `營收↑${m[1]}%`],
+    [/^營收年減(\d+)%$/, (m) => `營收↓${m[1]}%`],
+  ];
+  for (const [regex, fn] of rules) {
+    const m = reason.match(regex);
+    if (m) return fn(m);
+  }
+  return reason;
+}
+
+function scoreEmoji(score) {
+  if (score >= 4) return "🟢";
+  if (score >= 2) return "🟡";
+  if (score <= -4) return "🔴";
+  if (score <= -2) return "🟠";
+  return "⚪";
+}
+
 function newsLink(code) {
   return `https://tw.stock.yahoo.com/quote/${code}.TW/news`;
 }
@@ -108,8 +140,8 @@ function renderWatchlist(day) {
           row.href = newsLink(item.code);
           row.target = "_blank";
           row.rel = "noopener noreferrer";
-          const sigBadge = item.signal_label
-            ? `<span class="signal-badge">${item.signal_label}${item.conflict ? " ⚠️" : ""}</span>`
+          const sigBadge = item.signal_score !== null && item.signal_score !== undefined
+            ? `<span class="signal-badge" title="${item.conflict_reason || ""}">${scoreEmoji(item.signal_score)}${item.signal_score > 0 ? "+" : ""}${item.signal_score}${item.conflict ? " ⚠️" : ""}</span>`
             : "";
           row.innerHTML = `
             <span><span class="stock-id">${item.code}</span>${item.name}${sigBadge}</span>
@@ -212,26 +244,32 @@ function renderSignals(day) {
   const signals = day.signals || { buy: [], sell: [] };
 
   const buildRows = (list) =>
-    list.map((item) => [
-      item.code,
-      { className: "name-cell", html: item.name },
-      { className: pctClass(item.score), html: item.score > 0 ? `+${item.score}` : `${item.score}` },
-      item.label,
-      item.conflict
-        ? { className: "conflict-flag", html: `⚠️ ${item.conflict_reason || ""}` }
-        : "-",
-      (item.reasons || []).join("、"),
-      { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">新聞</a>` },
-    ]);
+    list.map((item) => {
+      const fullReasons = (item.reasons || []).join("、");
+      const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ");
+      return [
+        item.code,
+        { className: "name-cell", html: item.name },
+        {
+          className: pctClass(item.score),
+          html: `${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}`,
+        },
+        item.conflict
+          ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
+          : "-",
+        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
+        { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
+      ];
+    });
 
   renderTable(
     el.tableSignalBuy,
-    ["代號", "名稱", "分數", "標籤", "矛盾示警", "理由", "連結"],
+    ["代號", "名稱", "分數", "矛盾", "理由", "連結"],
     buildRows(signals.buy)
   );
   renderTable(
     el.tableSignalSell,
-    ["代號", "名稱", "分數", "標籤", "矛盾示警", "理由", "連結"],
+    ["代號", "名稱", "分數", "矛盾", "理由", "連結"],
     buildRows(signals.sell)
   );
 }
@@ -279,13 +317,32 @@ async function init() {
     el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
   }
 }
+function renderSupportCard(code, info) {
+  const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
+  const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
+  const distMa = info.dist_to_ma_pct !== null && info.dist_to_ma_pct !== undefined ? info.dist_to_ma_pct : null;
+  const label = info.name ? `${code} ${info.name}` : code;
+
+  let bodyHtml = `<div class="code-title">${label} · 目前價格 ${info.current}</div>`;
+
+  if (ma20 === null) {
+    bodyHtml += `<p class="empty-note">資料累積中（目前${info.data_days}天），需滿20個交易日才能算出均線與布林通道</p>`;
+  } else {
+    bodyHtml += `
+      <div>20日均線：${ma20}　（距目前價格 ${fmtPct(distMa)}）</div>
+      <div>布林下軌：${bbLower}</div>
+    `;
+  }
+  return `<div class="support-card">${bodyHtml}</div>`;
+}
+
 async function searchSupportLevel() {
   const input = document.getElementById("support-input");
   const resultBox = document.getElementById("support-result");
-  const code = input.value.trim();
+  const query = input.value.trim();
 
-  if (!code) {
-    resultBox.innerHTML = '<p class="empty-note">請輸入股票代號</p>';
+  if (!query) {
+    resultBox.innerHTML = '<p class="empty-note">請輸入股票代號或公司名稱</p>';
     return;
   }
 
@@ -293,29 +350,36 @@ async function searchSupportLevel() {
 
   try {
     const allData = await fetchJSON("support_levels.json");
-    const info = allData[code];
 
-    if (!info) {
-      resultBox.innerHTML = `<p class="empty-note">找不到代號 ${code} 的資料（可能是ETF、非個股，或代號輸入錯誤）</p>`;
+    // 先試代號完全比對
+    if (allData[query]) {
+      resultBox.innerHTML = renderSupportCard(query, allData[query]);
       return;
     }
 
-    const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
-    const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
-    const distMa = info.dist_to_ma_pct !== null && info.dist_to_ma_pct !== undefined ? info.dist_to_ma_pct : null;
+    // 代號沒對到，改用公司名稱做包含比對
+    const matches = Object.entries(allData).filter(
+      ([, info]) => info.name && info.name.includes(query)
+    );
 
-    let bodyHtml = `<div class="code-title">${code} · 目前價格 ${info.current}</div>`;
-
-    if (ma20 === null) {
-      bodyHtml += `<p class="empty-note">資料累積中（目前${info.data_days}天），需滿20個交易日才能算出均線與布林通道</p>`;
+    if (matches.length === 0) {
+      resultBox.innerHTML = `<p class="empty-note">找不到「${query}」的資料（可能是ETF、非個股，或代號/名稱輸入錯誤）</p>`;
+    } else if (matches.length === 1) {
+      const [matchCode, matchInfo] = matches[0];
+      resultBox.innerHTML = renderSupportCard(matchCode, matchInfo);
     } else {
-      bodyHtml += `
-        <div>20日均線：${ma20}　（距目前價格 ${fmtPct(distMa)}）</div>
-        <div>布林下軌：${bbLower}</div>
-      `;
+      const listHtml = matches
+        .slice(0, 20)
+        .map(([matchCode, matchInfo]) => `<button type="button" class="match-item" data-code="${matchCode}">${matchCode} ${matchInfo.name}</button>`)
+        .join("");
+      resultBox.innerHTML = `<p class="empty-note">找到 ${matches.length} 檔符合「${query}」，請選擇：</p><div class="match-list">${listHtml}</div>`;
+      resultBox.querySelectorAll(".match-item").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const matchCode = btn.dataset.code;
+          resultBox.innerHTML = renderSupportCard(matchCode, allData[matchCode]);
+        });
+      });
     }
-
-    resultBox.innerHTML = `<div class="support-card">${bodyHtml}</div>`;
   } catch (err) {
     resultBox.innerHTML = `<p class="empty-note">查詢失敗：${err.message}</p>`;
   }
