@@ -1,14 +1,31 @@
 {
   "version": 1,
-  "generated_at": "2026-07-24T16:42:08+08:00",
+  "generated_at": "2026-07-24T21:22:44+08:00",
   "date": "2026-07-24",
   "summary": {
-    "watchlist": 0,
+    "watchlist": 1,
     "gainers": 50,
     "institution": 50,
-    "weekly": 27
+    "weekly": 26
   },
-  "watchlist": [],
+  "watchlist": [
+    {
+      "category": "價量齊揚",
+      "code": "4557",
+      "name": "永新-KY",
+      "pct": 0.19,
+      "volume_ratio": 20.23,
+      "net_buy": 0.0,
+      "pe": "",
+      "ma20": 49.96,
+      "bb_lower": 46.47,
+      "dist_to_ma_pct": 5.27,
+      "signal_score": 1,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null
+    }
+  ],
   "gainers": [
     {
       "code": "3669",
@@ -413,11 +430,6 @@
       "net_buy": 4895315.0
     },
     {
-      "code": "2344",
-      "name": "華邦電",
-      "net_buy": 4579358.0
-    },
-    {
       "code": "2867",
       "name": "三商壽",
       "net_buy": 4009000.0
@@ -561,6 +573,11 @@
       "code": "3022",
       "name": "威強電",
       "net_buy": 959455.0
+    },
+    {
+      "code": "6166",
+      "name": "凌華",
+      "net_buy": 958211.0
     }
   ],
   "weekly": [
@@ -577,11 +594,6 @@
     {
       "code": "1102",
       "name": "亞泥",
-      "count": 2
-    },
-    {
-      "code": "2344",
-      "name": "華邦電",
       "count": 2
     },
     {
@@ -975,6 +987,19 @@
         "conflict_reason": null
       },
       {
+        "code": "2360",
+        "name": "致茂",
+        "score": 4,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增73%"
+        ],
+        "conflict": false,
+        "conflict_reason": null
+      },
+      {
         "code": "2388",
         "name": "威盛",
         "score": 4,
@@ -1048,6 +1073,19 @@
           "MACD黃金交叉",
           "法人買超",
           "營收年增14%"
+        ],
+        "conflict": false,
+        "conflict_reason": null
+      },
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "score": 4,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增66%"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1405,32 +1443,6 @@
         ],
         "conflict": false,
         "conflict_reason": null
-      },
-      {
-        "code": "1730",
-        "name": "花仙子",
-        "score": 3,
-        "label": "🟡偏多觀察",
-        "reasons": [
-          "MACD黃金交叉",
-          "營收年增10%"
-        ],
-        "conflict": false,
-        "conflict_reason": null
-      },
-      {
-        "code": "1734",
-        "name": "杏輝",
-        "score": 3,
-        "label": "🟡偏多觀察",
-        "reasons": [
-          "RSI37偏弱",
-          "觸及布林下軌(支撐)",
-          "法人賣超",
-          "營收年增4%"
-        ],
-        "conflict": true,
-        "conflict_reason": "技術面偏多但法人賣超"
       }
     ],
     "sell": [
