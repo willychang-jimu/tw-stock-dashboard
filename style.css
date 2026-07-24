@@ -273,6 +273,7 @@ select:focus-visible, a:focus-visible {
 #support-search-btn:hover { opacity: 0.85; }
 
 .support-card {
+  margin-bottom: 12px; 
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
