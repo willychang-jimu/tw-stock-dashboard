@@ -372,7 +372,7 @@ async function saveWatchlistToRepo(codes) {
   };
 
   let sha;
-  const getRes = await fetch(apiUrl, { headers });
+  const getRes = await fetch(apiUrl, { headers, cache: "no-store" });
   if (getRes.ok) {
     const fileInfo = await getRes.json();
     sha = fileInfo.sha;
@@ -413,25 +413,36 @@ function prioritize(items, codeAccessor) {
   });
 }
 
+state.saving = false;
+state.pendingSave = false;
+
+async function flushSave() {
+  if (state.saving) {
+    state.pendingSave = true;
+    return;
+  }
+  state.saving = true;
+  try {
+    await saveWatchlistToRepo(Array.from(state.watchlistCodes));
+  } catch (err) {
+    window.alert(err.message);
+  } finally {
+    state.saving = false;
+    if (state.pendingSave) {
+      state.pendingSave = false;
+      flushSave();
+    }
+  }
+}
+
 async function toggleWatchlist(code) {
-  const wasIn = state.watchlistCodes.has(code);
-  if (wasIn) {
+  if (state.watchlistCodes.has(code)) {
     state.watchlistCodes.delete(code);
   } else {
     state.watchlistCodes.add(code);
   }
-  // 先樂觀更新畫面
   if (state.currentDay) renderAll(state.currentDay);
-
-  try {
-    await saveWatchlistToRepo(Array.from(state.watchlistCodes));
-  } catch (err) {
-    // 失敗就復原
-    if (wasIn) state.watchlistCodes.add(code);
-    else state.watchlistCodes.delete(code);
-    if (state.currentDay) renderAll(state.currentDay);
-    window.alert(err.message);
-  }
+  flushSave();
 }
 
 document.addEventListener("click", (e) => {
