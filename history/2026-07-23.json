@@ -1,387 +1,14 @@
 {
   "version": 1,
-  "generated_at": "2026-07-23T17:47:14+08:00",
+  "generated_at": "2026-07-24T09:51:33+08:00",
   "date": "2026-07-23",
   "summary": {
-    "watchlist": 31,
+    "watchlist": 0,
     "gainers": 50,
     "institution": 50,
     "weekly": 50
   },
-  "watchlist": [
-    {
-      "category": "強力關注",
-      "code": "6141",
-      "name": "柏承",
-      "pct": 2.14,
-      "volume_ratio": 4.86,
-      "net_buy": 1170942.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "1312",
-      "name": "國喬",
-      "pct": 1.09,
-      "volume_ratio": 3.95,
-      "net_buy": 2480848.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "2455",
-      "name": "全新",
-      "pct": 6.32,
-      "volume_ratio": 2.92,
-      "net_buy": 2104527.0,
-      "pe": "102.37",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "6166",
-      "name": "凌華",
-      "pct": 10.0,
-      "volume_ratio": 2.7,
-      "net_buy": 2411387.0,
-      "pe": "40.17",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "1301",
-      "name": "台塑",
-      "pct": 4.25,
-      "volume_ratio": 2.66,
-      "net_buy": 28876077.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "3450",
-      "name": "聯鈞",
-      "pct": 3.38,
-      "volume_ratio": 2.57,
-      "net_buy": 664653.0,
-      "pe": "136.46",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "1229",
-      "name": "聯華",
-      "pct": 5.72,
-      "volume_ratio": 2.41,
-      "net_buy": 377927.0,
-      "pe": "15.46",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "3231",
-      "name": "緯創",
-      "pct": 5.79,
-      "volume_ratio": 2.3,
-      "net_buy": 82722214.0,
-      "pe": "16.45",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "8114",
-      "name": "振樺電",
-      "pct": 4.98,
-      "volume_ratio": 2.23,
-      "net_buy": 497895.0,
-      "pe": "14.73",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "8476",
-      "name": "台境*",
-      "pct": 5.59,
-      "volume_ratio": 2.11,
-      "net_buy": 321544.0,
-      "pe": "55.36",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "強力關注",
-      "code": "6206",
-      "name": "飛捷",
-      "pct": 2.77,
-      "volume_ratio": 2.07,
-      "net_buy": 571865.0,
-      "pe": "17.74",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "1325",
-      "name": "恆大",
-      "pct": 5.81,
-      "volume_ratio": 4.26,
-      "net_buy": -160534.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "6442",
-      "name": "光聖",
-      "pct": 0.36,
-      "volume_ratio": 3.73,
-      "net_buy": -667235.0,
-      "pe": "52.24",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "2605",
-      "name": "新興",
-      "pct": 3.34,
-      "volume_ratio": 3.15,
-      "net_buy": -1344.0,
-      "pe": "15.05",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "1732",
-      "name": "毛寶",
-      "pct": 2.22,
-      "volume_ratio": 3.11,
-      "net_buy": -328561.0,
-      "pe": "30.00",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "9919",
-      "name": "康那香",
-      "pct": 1.38,
-      "volume_ratio": 3.07,
-      "net_buy": -1118792.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "4133",
-      "name": "亞諾法",
-      "pct": 4.85,
-      "volume_ratio": 2.94,
-      "net_buy": -258999.0,
-      "pe": "721.67",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "6805",
-      "name": "富世達",
-      "pct": 4.3,
-      "volume_ratio": 2.5,
-      "net_buy": -10406.0,
-      "pe": "35.60",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "價量齊揚",
-      "code": "4551",
-      "name": "智伸科",
-      "pct": 3.3,
-      "volume_ratio": 2.33,
-      "net_buy": -198005.0,
-      "pe": "27.29",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "訊號矛盾",
-      "code": "1309",
-      "name": "台達化",
-      "pct": 0.0,
-      "volume_ratio": 5.6,
-      "net_buy": 485711.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "訊號矛盾",
-      "code": "6919",
-      "name": "康霈*",
-      "pct": -3.37,
-      "volume_ratio": 2.02,
-      "net_buy": 666014.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "6449",
-      "name": "鈺邦",
-      "pct": -6.12,
-      "volume_ratio": 5.14,
-      "net_buy": -241616.0,
-      "pe": "35.05",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "2406",
-      "name": "國碩",
-      "pct": -5.52,
-      "volume_ratio": 3.51,
-      "net_buy": -5082543.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "1305",
-      "name": "華夏",
-      "pct": 0.0,
-      "volume_ratio": 3.47,
-      "net_buy": -615685.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "1308",
-      "name": "亞聚",
-      "pct": 0.0,
-      "volume_ratio": 3.4,
-      "net_buy": -1767112.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "4142",
-      "name": "國光生",
-      "pct": 0.0,
-      "volume_ratio": 3.04,
-      "net_buy": -1095706.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "2493",
-      "name": "揚博",
-      "pct": -9.92,
-      "volume_ratio": 2.92,
-      "net_buy": -205446.0,
-      "pe": "61.94",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "1304",
-      "name": "台聚",
-      "pct": 0.0,
-      "volume_ratio": 2.57,
-      "net_buy": -1882568.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "1313",
-      "name": "聯成",
-      "pct": 0.0,
-      "volume_ratio": 2.25,
-      "net_buy": -946070.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "2393",
-      "name": "億光",
-      "pct": -0.3,
-      "volume_ratio": 2.25,
-      "net_buy": -1977065.0,
-      "pe": "16.01",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    },
-    {
-      "category": "出貨嫌疑",
-      "code": "2104",
-      "name": "國際中橡",
-      "pct": -0.48,
-      "volume_ratio": 2.13,
-      "net_buy": -403520.0,
-      "pe": "",
-      "ma20": null,
-      "bb_lower": null,
-      "dist_to_ma_pct": null
-    }
-  ],
+  "watchlist": [],
   "gainers": [
     {
       "code": "6166",
@@ -858,12 +485,17 @@
     {
       "code": "3665",
       "name": "貿聯-KY",
-      "net_buy": 1724092.0
+      "net_buy": 1860092.0
     },
     {
       "code": "2492",
       "name": "華新科",
       "net_buy": 1694680.0
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "net_buy": 1637566.0
     },
     {
       "code": "6176",
@@ -874,11 +506,6 @@
       "code": "3037",
       "name": "欣興",
       "net_buy": 1588378.0
-    },
-    {
-      "code": "3017",
-      "name": "奇鋐",
-      "net_buy": 1578566.0
     },
     {
       "code": "1101",
@@ -931,50 +558,80 @@
       "net_buy": 1032439.0
     },
     {
-      "code": "2357",
-      "name": "華碩",
-      "net_buy": 1008367.0
+      "code": "2454",
+      "name": "聯發科",
+      "net_buy": 1011683.0
     }
   ],
   "weekly": [
+    {
+      "code": "4938",
+      "name": "和碩",
+      "count": 5
+    },
+    {
+      "code": "6805",
+      "name": "富世達",
+      "count": 5
+    },
+    {
+      "code": "4739",
+      "name": "康普",
+      "count": 5
+    },
     {
       "code": "2455",
       "name": "全新",
       "count": 5
     },
     {
-      "code": "3037",
-      "name": "欣興",
+      "code": "4764",
+      "name": "雙鍵",
       "count": 5
     },
     {
-      "code": "6442",
-      "name": "光聖",
+      "code": "1402",
+      "name": "遠東新",
       "count": 5
     },
     {
-      "code": "8114",
-      "name": "振樺電",
+      "code": "2382",
+      "name": "廣達",
       "count": 5
     },
     {
-      "code": "3231",
-      "name": "緯創",
+      "code": "3706",
+      "name": "神達",
       "count": 5
     },
     {
-      "code": "6414",
-      "name": "樺漢",
+      "code": "6176",
+      "name": "瑞儀",
       "count": 5
     },
     {
-      "code": "8039",
-      "name": "台虹",
+      "code": "3481",
+      "name": "群創",
       "count": 5
     },
     {
-      "code": "2344",
-      "name": "華邦電",
+      "code": "1434",
+      "name": "福懋",
+      "count": 5
+    },
+    {
+      "code": "3045",
+      "name": "台灣大",
+      "count": 5
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "count": 5
+    },
+    {
+      "code": "6209",
+      "name": "今國光",
       "count": 5
     },
     {
@@ -983,33 +640,53 @@
       "count": 5
     },
     {
-      "code": "2317",
-      "name": "鴻海",
+      "code": "2301",
+      "name": "光寶科",
       "count": 5
     },
     {
-      "code": "2324",
-      "name": "仁寶",
+      "code": "2356",
+      "name": "英業達",
       "count": 5
     },
     {
-      "code": "2885",
-      "name": "元大金",
+      "code": "3036",
+      "name": "文曄",
       "count": 5
     },
     {
-      "code": "2002",
-      "name": "中鋼",
+      "code": "1732",
+      "name": "毛寶",
       "count": 5
     },
     {
-      "code": "1301",
-      "name": "台塑",
+      "code": "2426",
+      "name": "鼎元",
       "count": 5
     },
     {
-      "code": "2406",
-      "name": "國碩",
+      "code": "6285",
+      "name": "啟碁",
+      "count": 5
+    },
+    {
+      "code": "2882",
+      "name": "國泰金",
+      "count": 5
+    },
+    {
+      "code": "2412",
+      "name": "中華電",
+      "count": 5
+    },
+    {
+      "code": "2605",
+      "name": "新興",
+      "count": 5
+    },
+    {
+      "code": "2014",
+      "name": "中鴻",
       "count": 5
     },
     {
@@ -1018,182 +695,132 @@
       "count": 5
     },
     {
-      "code": "2377",
-      "name": "微星",
-      "count": 4
+      "code": "3665",
+      "name": "貿聯-KY",
+      "count": 5
     },
     {
-      "code": "6669",
-      "name": "緯穎",
-      "count": 4
-    },
-    {
-      "code": "2302",
-      "name": "麗正",
-      "count": 4
-    },
-    {
-      "code": "3605",
-      "name": "宏致",
-      "count": 4
-    },
-    {
-      "code": "1810",
-      "name": "和成",
-      "count": 4
-    },
-    {
-      "code": "2408",
-      "name": "南亞科",
-      "count": 4
-    },
-    {
-      "code": "2027",
-      "name": "大成鋼",
-      "count": 4
-    },
-    {
-      "code": "8021",
-      "name": "尖點",
-      "count": 4
-    },
-    {
-      "code": "6456",
-      "name": "GIS-KY",
-      "count": 4
-    },
-    {
-      "code": "2337",
-      "name": "旺宏",
-      "count": 4
-    },
-    {
-      "code": "3576",
-      "name": "聯合再生",
-      "count": 4
-    },
-    {
-      "code": "8112",
-      "name": "至上",
-      "count": 4
-    },
-    {
-      "code": "1312",
-      "name": "國喬",
-      "count": 3
-    },
-    {
-      "code": "3450",
-      "name": "聯鈞",
-      "count": 3
-    },
-    {
-      "code": "8046",
-      "name": "南電",
-      "count": 3
-    },
-    {
-      "code": "3706",
-      "name": "神達",
-      "count": 3
-    },
-    {
-      "code": "2412",
-      "name": "中華電",
-      "count": 3
-    },
-    {
-      "code": "2356",
-      "name": "英業達",
-      "count": 3
-    },
-    {
-      "code": "4938",
-      "name": "和碩",
-      "count": 3
-    },
-    {
-      "code": "2301",
-      "name": "光寶科",
-      "count": 3
-    },
-    {
-      "code": "2492",
-      "name": "華新科",
-      "count": 3
-    },
-    {
-      "code": "2486",
-      "name": "一詮",
-      "count": 3
+      "code": "3231",
+      "name": "緯創",
+      "count": 5
     },
     {
       "code": "6166",
       "name": "凌華",
-      "count": 3
+      "count": 5
+    },
+    {
+      "code": "8114",
+      "name": "振樺電",
+      "count": 5
+    },
+    {
+      "code": "1467",
+      "name": "南緯",
+      "count": 5
+    },
+    {
+      "code": "2634",
+      "name": "漢翔",
+      "count": 5
     },
     {
       "code": "6141",
       "name": "柏承",
-      "count": 3
+      "count": 5
     },
     {
-      "code": "1605",
-      "name": "華新",
-      "count": 3
+      "code": "6579",
+      "name": "研揚",
+      "count": 5
+    },
+    {
+      "code": "3016",
+      "name": "嘉晶",
+      "count": 5
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "count": 5
+    },
+    {
+      "code": "3702",
+      "name": "大聯大",
+      "count": 5
+    },
+    {
+      "code": "2885",
+      "name": "元大金",
+      "count": 5
+    },
+    {
+      "code": "2542",
+      "name": "興富發",
+      "count": 5
+    },
+    {
+      "code": "2002",
+      "name": "中鋼",
+      "count": 5
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "count": 5
+    },
+    {
+      "code": "2359",
+      "name": "所羅門",
+      "count": 5
     },
     {
       "code": "4904",
       "name": "遠傳",
-      "count": 3
+      "count": 5
     },
     {
-      "code": "2426",
-      "name": "鼎元",
-      "count": 3
+      "code": "1718",
+      "name": "中纖",
+      "count": 5
     },
     {
-      "code": "2882",
-      "name": "國泰金",
-      "count": 3
+      "code": "4133",
+      "name": "亞諾法",
+      "count": 5
     },
     {
-      "code": "6830",
-      "name": "汎銓",
-      "count": 2
+      "code": "2354",
+      "name": "鴻準",
+      "count": 5
     },
     {
-      "code": "1303",
-      "name": "南亞",
-      "count": 2
+      "code": "2486",
+      "name": "一詮",
+      "count": 5
     },
     {
-      "code": "1710",
-      "name": "東聯",
-      "count": 2
+      "code": "8039",
+      "name": "台虹",
+      "count": 5
     },
     {
-      "code": "2353",
-      "name": "宏碁",
-      "count": 2
+      "code": "6505",
+      "name": "台塑化",
+      "count": 5
     },
     {
-      "code": "6239",
-      "name": "力成",
-      "count": 2
-    },
-    {
-      "code": "2464",
-      "name": "盟立",
-      "count": 2
+      "code": "8046",
+      "name": "南電",
+      "count": 5
     }
   ],
   "backtest": {
     "強力關注": {
       "1日": {
-        "平均報酬%": null,
-        "勝率%": null,
-        "樣本數": 0
+        "平均報酬%": 0.0,
+        "勝率%": 0.0,
+        "樣本數": 11
       },
       "3日": {
         "平均報酬%": null,
@@ -1208,9 +835,9 @@
     },
     "價量齊揚": {
       "1日": {
-        "平均報酬%": null,
-        "勝率%": null,
-        "樣本數": 0
+        "平均報酬%": 0.0,
+        "勝率%": 0.0,
+        "樣本數": 8
       },
       "3日": {
         "平均報酬%": null,
@@ -1225,9 +852,9 @@
     },
     "訊號矛盾": {
       "1日": {
-        "平均報酬%": null,
-        "勝率%": null,
-        "樣本數": 0
+        "平均報酬%": 0.0,
+        "勝率%": 0.0,
+        "樣本數": 2
       },
       "3日": {
         "平均報酬%": null,
@@ -1242,9 +869,9 @@
     },
     "出貨嫌疑": {
       "1日": {
-        "平均報酬%": null,
-        "勝率%": null,
-        "樣本數": 0
+        "平均報酬%": 0.0,
+        "勝率%": 0.0,
+        "樣本數": 10
       },
       "3日": {
         "平均報酬%": null,
