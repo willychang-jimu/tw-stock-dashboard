@@ -13,7 +13,7 @@ const GH_REPO = "tw-stock-dashboard";
 const WATCHLIST_PATH = "watchlist.json";
 const TOKEN_STORAGE_KEY = "tw_stock_watchlist_pat";
 
-const state = { index: [], watchlistCodes: new Set(), currentDay: null };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -361,6 +361,32 @@ async function loadWatchlistData() {
   }
 }
 
+async function fetchWatchlistSha(apiUrl, headers) {
+  const getRes = await fetch(apiUrl, { headers, cache: "no-store" });
+  if (getRes.ok) {
+    const fileInfo = await getRes.json();
+    return fileInfo.sha;
+  }
+  if (getRes.status === 404) return null;
+  throw new Error(`讀取watchlist.json失敗 (${getRes.status})，請確認Token權限`);
+}
+
+async function putWatchlist(apiUrl, headers, codes, sha) {
+  const content = JSON.stringify({ codes }, null, 2);
+  const body = {
+    message: `更新自選股清單 (${codes.length}檔)`,
+    content: btoa(unescape(encodeURIComponent(content))),
+    branch: "main",
+  };
+  if (sha) body.sha = sha;
+
+  return fetch(apiUrl, {
+    method: "PUT",
+    headers: { ...headers, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+}
+
 async function saveWatchlistToRepo(codes) {
   const token = getToken() || promptForToken();
   if (!token) throw new Error("尚未設定Token，無法儲存");
@@ -371,33 +397,26 @@ async function saveWatchlistToRepo(codes) {
     Accept: "application/vnd.github+json",
   };
 
-  let sha;
-  const getRes = await fetch(apiUrl, { headers, cache: "no-store" });
-  if (getRes.ok) {
-    const fileInfo = await getRes.json();
-    sha = fileInfo.sha;
-  } else if (getRes.status !== 404) {
-    throw new Error(`讀取watchlist.json失敗 (${getRes.status})，請確認Token權限`);
+  // 第一次不知道版本號時才查一次，之後都沿用上次存檔成功後GitHub回傳的新版本號
+  if (state.watchlistSha === undefined) {
+    state.watchlistSha = await fetchWatchlistSha(apiUrl, headers);
   }
 
-  const content = JSON.stringify({ codes }, null, 2);
-  const body = {
-    message: `更新自選股清單 (${codes.length}檔)`,
-    content: btoa(unescape(encodeURIComponent(content))),
-    branch: "main",
-  };
-  if (sha) body.sha = sha;
+  let putRes = await putWatchlist(apiUrl, headers, codes, state.watchlistSha);
 
-  const putRes = await fetch(apiUrl, {
-    method: "PUT",
-    headers: { ...headers, "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
+  if (putRes.status === 409) {
+    // 版本號對不上（GitHub端資料同步延遲），重新查一次最新版本號後重試一次
+    state.watchlistSha = await fetchWatchlistSha(apiUrl, headers);
+    putRes = await putWatchlist(apiUrl, headers, codes, state.watchlistSha);
+  }
 
   if (!putRes.ok) {
     const errBody = await putRes.json().catch(() => ({}));
     throw new Error(`儲存失敗 (${putRes.status})：${errBody.message || "請確認Token是否過期或權限不足"}`);
   }
+
+  const result = await putRes.json();
+  state.watchlistSha = result.content?.sha ?? state.watchlistSha;
 }
 
 function starHtml(code) {
