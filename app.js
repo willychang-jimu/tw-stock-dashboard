@@ -228,27 +228,13 @@ async function loadDay(dateStr) {
   }
 }
 
-async function init() {
-  try {
-    state.index = await fetchJSON("history/index.json");
-    if (!state.index.length) {
-      el.stateMessage.textContent = "目前還沒有任何歷史資料，明天執行後就會出現。";
-      return;
-    }
-    buildDateOptions();
-    el.dateSelect.addEventListener("change", (e) => loadDay(e.target.value));
-    await loadDay(state.index[0].date);
-  } catch (err) {
-    el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
-  }
-}
 async function searchSupportLevel() {
   const input = document.getElementById("support-input");
   const resultBox = document.getElementById("support-result");
-  const code = input.value.trim();
+  const query = input.value.trim();
 
-  if (!code) {
-    resultBox.innerHTML = '<p class="empty-note">請輸入股票代號</p>';
+  if (!query) {
+    resultBox.innerHTML = '<p class="empty-note">請輸入股票代號或公司名稱</p>';
     return;
   }
 
@@ -256,32 +242,45 @@ async function searchSupportLevel() {
 
   try {
     const allData = await fetchJSON("support_levels.json");
-    const info = allData[code];
 
-    if (!info) {
-      resultBox.innerHTML = `<p class="empty-note">找不到代號 ${code} 的資料（可能是ETF、非個股，或代號輸入錯誤）</p>`;
+    let matches = [];
+    if (allData[query]) {
+      matches = [[query, allData[query]]];
+    } else {
+      matches = Object.entries(allData).filter(
+        ([, info]) => info.name && info.name.includes(query)
+      );
+    }
+
+    if (matches.length === 0) {
+      resultBox.innerHTML = `<p class="empty-note">找不到「${query}」相關的資料（可能是ETF、非個股，或名稱/代號輸入有誤）</p>`;
       return;
     }
 
-    const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
-    const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
-    const distMa = info.dist_to_ma_pct !== null && info.dist_to_ma_pct !== undefined ? info.dist_to_ma_pct : null;
-
-    let bodyHtml = `<div class="code-title">${code} · 目前價格 ${info.current}</div>`;
-
-    if (ma20 === null) {
-      bodyHtml += `<p class="empty-note">資料累積中（目前${info.data_days}天），需滿20個交易日才能算出均線與布林通道</p>`;
-    } else {
-      bodyHtml += `
-        <div>20日均線：${ma20}　（距目前價格 ${fmtPct(distMa)}）</div>
-        <div>布林下軌：${bbLower}</div>
-      `;
-    }
-
-    resultBox.innerHTML = `<div class="support-card">${bodyHtml}</div>`;
+    resultBox.innerHTML = matches.map(([code, info]) => renderSupportCard(code, info)).join("");
   } catch (err) {
     resultBox.innerHTML = `<p class="empty-note">查詢失敗：${err.message}</p>`;
   }
+}
+
+function renderSupportCard(code, info) {
+  const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
+  const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
+  const distMa = info.dist_to_ma_pct !== null && info.dist_to_ma_pct !== undefined ? info.dist_to_ma_pct : null;
+  const name = info.name || "";
+
+  let bodyHtml = `<div class="code-title">${code} ${name} · 目前價格 ${info.current}</div>`;
+
+  if (ma20 === null) {
+    bodyHtml += `<p class="empty-note">資料累積中（目前${info.data_days}天），需滿20個交易日才能算出均線與布林通道</p>`;
+  } else {
+    bodyHtml += `
+      <div>20日均線：${ma20}　（距目前價格 ${fmtPct(distMa)}）</div>
+      <div>布林下軌：${bbLower}</div>
+    `;
+  }
+
+  return `<div class="support-card">${bodyHtml}</div>`;
 }
 
 document.getElementById("support-search-btn").addEventListener("click", searchSupportLevel);
