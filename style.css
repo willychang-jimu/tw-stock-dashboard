@@ -273,7 +273,6 @@ select:focus-visible, a:focus-visible {
 #support-search-btn:hover { opacity: 0.85; }
 
 .support-card {
-  margin-bottom: 12px; 
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -287,4 +286,32 @@ select:focus-visible, a:focus-visible {
   font-family: var(--font-display);
   font-size: 16px;
   margin-bottom: 8px;
+}
+
+/* 進出場訊號排行 */
+.signal-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 760px) {
+  .signal-columns { grid-template-columns: 1fr; }
+}
+.signal-subtitle {
+  font-family: var(--font-display);
+  font-size: 15px;
+  margin: 0 0 10px;
+  color: var(--text-muted);
+}
+.signal-badge {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--gold);
+}
+td.conflict-flag {
+  color: var(--cat-warning);
+  font-family: var(--font-body);
+  white-space: normal;
 }
