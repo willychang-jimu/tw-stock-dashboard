@@ -49,8 +49,13 @@
   <section class="panel" id="panel-starred" hidden>
     <div class="panel-head">
       <h2>⭐ 自選股</h2>
-      <p class="panel-note">最多20檔，點星號加入/移除。「出現於」欄位標示今天出現在哪些榜單：🎯今日關注　📈漲幅榜　💰法人買超　🔥本週熱門　🟢買進訊號　🔴賣出訊號</p>
+      <p class="panel-note">最多20檔，點星號加入/移除，或用下面搜尋直接加入（不限今天有沒有上榜）。「出現於」欄位標示今天出現在哪些榜單：🎯今日關注　📈漲幅榜　💰法人買超　🔥本週熱門　🟢買進訊號　🔴賣出訊號</p>
     </div>
+    <div class="search-box">
+      <input type="text" id="watchlist-search-input" placeholder="輸入股票代號或公司名稱加入自選股，例如 2330 或 台積電" maxlength="12">
+      <button id="watchlist-search-btn">加入</button>
+    </div>
+    <div id="watchlist-search-result"></div>
     <div class="table-wrap"><table id="table-starred"></table></div>
   </section>
 
