@@ -1,25 +1,123 @@
-name: Intraday Signal
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>台股每日焦點 · 儀表板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-on:
-  workflow_dispatch:
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">TW</span>
+    <div class="brand-text">
+      <h1>台股每日焦點</h1>
+      <p class="subtitle">個人自動化盤前情報 · 僅供參考，非投資建議</p>
+    </div>
+  </div>
+  <div class="date-control">
+    <label for="date-select">檢視日期</label>
+    <select id="date-select"><option>載入中…</option></select>
+  </div>
+  <button type="button" id="watchlist-token-btn" class="token-btn" title="設定/清除自選股同步Token">⭐ 自選股設定</button>
+</header>
 
-jobs:
-  run:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+<div id="ticker" class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+<main id="app">
+  <div class="state-message" id="state-message">正在讀取資料…</div>
 
-      - name: Install dependencies
-        run: pip install requests
+  <section class="meta-row" id="meta-row" hidden>
+    <span id="meta-generated"></span>
+  </section>
 
-      - name: Run script
-        env:
-          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          DASHBOARD_PAT: ${{ secrets.DASHBOARD_PAT }}
-        run: python intraday_signal.py
+  <section class="panel" id="panel-intraday" hidden>
+    <div class="panel-head">
+      <h2>⏱️ 盤中即時訊號</h2>
+      <p class="panel-note">平日9:00~13:30每30分鐘更新，只查自選股，法人/量能盤中無法即時取得不列入評分，僅供參考，非投資建議</p>
+    </div>
+    <div class="table-wrap"><table id="table-intraday"></table></div>
+  </section>
+
+  <section class="panel" id="panel-starred" hidden>
+    <div class="panel-head">
+      <h2>⭐ 自選股</h2>
+      <p class="panel-note">最多20檔，點星號加入/移除。「出現於」欄位標示今天出現在哪些榜單：🎯今日關注　📈漲幅榜　💰法人買超　🔥本週熱門　🟢買進訊號　🔴賣出訊號</p>
+    </div>
+    <div class="table-wrap"><table id="table-starred"></table></div>
+  </section>
+
+  <section class="panel" id="panel-watchlist" hidden>
+    <div class="panel-head">
+      <h2>🎯 今日關注清單</h2>
+      <p class="panel-note">依「量能」×「價格方向」×「三大法人動向」交叉分類，顯著放量門檻：當日量 ≥ 近5日均量 2 倍</p>
+    </div>
+    <div class="watchlist-grid" id="watchlist-grid"></div>
+  </section>
+
+  <section class="panel" id="panel-gainers" hidden>
+    <div class="panel-head">
+      <h2>📈 今日漲幅排行</h2>
+    </div>
+    <div class="table-wrap"><table id="table-gainers"></table></div>
+  </section>
+
+  <section class="panel" id="panel-institution" hidden>
+    <div class="panel-head">
+      <h2>💰 三大法人買超</h2>
+    </div>
+    <div class="table-wrap"><table id="table-institution"></table></div>
+  </section>
+
+  <section class="panel" id="panel-weekly" hidden>
+    <div class="panel-head">
+      <h2>🔥 本週熱門</h2>
+      <p class="panel-note">近 5 個交易日重複上榜次數</p>
+    </div>
+    <div class="table-wrap"><table id="table-weekly"></table></div>
+  </section>
+
+  <section class="panel" id="panel-signals" hidden>
+    <div class="panel-head">
+      <h2>🎯 進出場訊號排行</h2>
+      <p class="panel-note">規則式評分，掃描全市場，滑鼠移到理由/⚠️可看完整說明，僅供參考，非投資建議</p>
+    </div>
+    <h3 class="signal-subtitle">🟢 買進訊號</h3>
+    <div class="table-wrap"><table id="table-signal-buy"></table></div>
+    <h3 class="signal-subtitle signal-subtitle-sell">🔴 賣出／出場訊號</h3>
+    <div class="table-wrap"><table id="table-signal-sell"></table></div>
+  </section>
+
+  <section class="panel" id="panel-backtest" hidden>
+    <div class="panel-head">
+      <h2>📊 回測分析</h2>
+      <p class="panel-note">各分類訊號發生後 1／3／5 個交易日的平均報酬與勝率，樣本數會隨時間逐日累積，僅供參考，非投資建議</p>
+    </div>
+    <div class="table-wrap"><table id="table-backtest"></table></div>
+  </section>
+  <section class="panel" id="panel-support">
+    <div class="panel-head">
+      <h2>🔍 支撐價位查詢</h2>
+      <p class="panel-note">輸入股票代號查詢20日均線與布林下軌，僅供技術參考，非投資建議</p>
+    </div>
+    <div class="search-box">
+      <input type="text" id="support-input" placeholder="輸入股票代號或公司名稱，例如 2330 或 台積電" maxlength="12">
+      <button id="support-search-btn">查詢</button>
+    </div>
+    <div id="support-result"></div>
+  </section>
+</main>
+<footer class="footer">
+  <p>資料來源：台灣證券交易所公開資訊 · 本站僅整理呈現，不構成任何投資建議</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
