@@ -439,6 +439,65 @@ async function saveWatchlistToRepo(codes) {
   state.watchlistSha = result.content?.sha ?? state.watchlistSha;
 }
 
+function searchStockCandidates(query) {
+  query = query.trim();
+  if (!query) return [];
+  if (state.codeNameMap[query]) {
+    return [[query, state.codeNameMap[query]]];
+  }
+  return Object.entries(state.codeNameMap).filter(([, name]) => name.includes(query));
+}
+
+function setupWatchlistSearch() {
+  const input = document.getElementById("watchlist-search-input");
+  const btn = document.getElementById("watchlist-search-btn");
+  const resultBox = document.getElementById("watchlist-search-result");
+
+  const handlePick = async (code, name) => {
+    if (state.watchlistCodes.has(code)) {
+      resultBox.innerHTML = `<p class="empty-note">${code} ${name} 已經在自選股裡了</p>`;
+      return;
+    }
+    const added = await addWatchlistCode(code);
+    resultBox.innerHTML = added
+      ? `<p class="empty-note">已加入 ${code} ${name}</p>`
+      : "";
+    input.value = "";
+  };
+
+  const doSearch = () => {
+    const query = input.value.trim();
+    if (!query) {
+      resultBox.innerHTML = "";
+      return;
+    }
+    if (Object.keys(state.codeNameMap).length === 0) {
+      resultBox.innerHTML = '<p class="empty-note">代號對照表還在載入中，稍等一下再試</p>';
+      return;
+    }
+    const matches = searchStockCandidates(query);
+    if (matches.length === 0) {
+      resultBox.innerHTML = `<p class="empty-note">找不到「${query}」，確認代號或名稱是否正確</p>`;
+    } else if (matches.length === 1) {
+      handlePick(matches[0][0], matches[0][1]);
+    } else {
+      const listHtml = matches
+        .slice(0, 20)
+        .map(([code, name]) => `<button type="button" class="match-item" data-code="${code}" data-name="${name}">${code} ${name}</button>`)
+        .join("");
+      resultBox.innerHTML = `<p class="empty-note">找到${matches.length}檔符合「${query}」，請選擇：</p><div class="match-list">${listHtml}</div>`;
+      resultBox.querySelectorAll(".match-item").forEach((b) => {
+        b.addEventListener("click", () => handlePick(b.dataset.code, b.dataset.name));
+      });
+    }
+  };
+
+  btn.addEventListener("click", doSearch);
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") doSearch();
+  });
+}
+
 function renderStarred(day) {
   const codes = Array.from(state.watchlistCodes);
   if (codes.length === 0) {
@@ -564,18 +623,31 @@ async function flushSave() {
   }
 }
 
-async function toggleWatchlist(code) {
-  if (state.watchlistCodes.has(code)) {
-    state.watchlistCodes.delete(code);
-  } else {
-    if (state.watchlistCodes.size >= WATCHLIST_MAX) {
-      window.alert(`自選股最多只能加${WATCHLIST_MAX}檔，請先移除其他股票再加入新的。`);
-      return;
-    }
-    state.watchlistCodes.add(code);
+async function addWatchlistCode(code) {
+  if (state.watchlistCodes.has(code)) return false;
+  if (state.watchlistCodes.size >= WATCHLIST_MAX) {
+    window.alert(`自選股最多只能加${WATCHLIST_MAX}檔，請先移除其他股票再加入新的。`);
+    return false;
   }
+  state.watchlistCodes.add(code);
   if (state.currentDay) renderAll(state.currentDay);
   flushSave();
+  return true;
+}
+
+async function removeWatchlistCode(code) {
+  if (!state.watchlistCodes.has(code)) return;
+  state.watchlistCodes.delete(code);
+  if (state.currentDay) renderAll(state.currentDay);
+  flushSave();
+}
+
+async function toggleWatchlist(code) {
+  if (state.watchlistCodes.has(code)) {
+    await removeWatchlistCode(code);
+  } else {
+    await addWatchlistCode(code);
+  }
 }
 
 document.addEventListener("click", (e) => {
@@ -599,6 +671,7 @@ function renderAll(day) {
 
 async function init() {
   setupTokenButton();
+  setupWatchlistSearch();
   await loadWatchlistData();
   loadCodeNameMap();
   renderIntraday();
