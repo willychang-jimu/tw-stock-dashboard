@@ -24,6 +24,8 @@ const el = {
   metaGenerated: document.getElementById("meta-generated"),
   panelStarred: document.getElementById("panel-starred"),
   tableStarred: document.getElementById("table-starred"),
+  panelIntraday: document.getElementById("panel-intraday"),
+  tableIntraday: document.getElementById("table-intraday"),
   panelWatchlist: document.getElementById("panel-watchlist"),
   watchlistGrid: document.getElementById("watchlist-grid"),
   panelGainers: document.getElementById("panel-gainers"),
@@ -474,6 +476,44 @@ function renderStarred(day) {
   renderTable(el.tableStarred, ["★", "代號", "名稱", "出現於", "訊號", "連結"], rows);
 }
 
+async function renderIntraday() {
+  try {
+    const data = await fetchJSON(`intraday.json?t=${Date.now()}`);
+    const signals = data.signals || {};
+    const codes = Object.keys(signals);
+
+    if (codes.length === 0) {
+      el.panelIntraday.hidden = true;
+      return;
+    }
+
+    // 只在資料是「今天」的才顯示,避免收盤後/隔天顯示過期的盤中資料造成誤解
+    const updatedDate = (data.updated_at || "").slice(0, 10);
+    const todayStr = new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Taipei" });
+    if (updatedDate !== todayStr) {
+      el.panelIntraday.hidden = true;
+      return;
+    }
+
+    el.panelIntraday.hidden = false;
+    const rows = Object.entries(signals)
+      .sort((a, b) => b[1].score - a[1].score)
+      .map(([code, item]) => [
+        { className: "star-cell", html: starHtml(code) },
+        code,
+        { className: "name-cell", html: item.name },
+        item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
+        { className: pctClass(item.pct), html: fmtPct(item.pct) },
+        { className: pctClass(item.score), html: `${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}` },
+        (item.reasons || []).map(abbreviateReason).join(" "),
+        item.time || "-",
+      ]);
+    renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由", "時間"], rows);
+  } catch (err) {
+    el.panelIntraday.hidden = true;
+  }
+}
+
 function starHtml(code) {
   const filled = state.watchlistCodes.has(code);
   return `<span class="star-toggle${filled ? " star-filled" : ""}" data-code="${code}" title="${filled ? "移除自選股" : "加入自選股"}">${filled ? "★" : "☆"}</span>`;
@@ -545,6 +585,8 @@ function renderAll(day) {
 async function init() {
   setupTokenButton();
   await loadWatchlistData();
+  renderIntraday();
+  setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
     state.index = await fetchJSON("history/index.json");
     if (!state.index.length) {
