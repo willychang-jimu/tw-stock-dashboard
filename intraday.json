@@ -1,258 +1,234 @@
 {
-  "updated_at": "2026-07-27T12:30:30+08:00",
+  "updated_at": "2026-07-27T13:00:40+08:00",
   "signals": {
-    "1215": {
-      "name": "卜蜂",
-      "price": 105.5,
-      "price_is_estimated": false,
-      "pct": -3.65,
-      "volume_prorated_ref": 1898,
-      "score": 4,
-      "label": "🟢強力買進",
-      "reasons": [
-        "RSI28超賣",
-        "觸及布林下軌(支撐)"
-      ],
-      "time": "12:30:18"
-    },
-    "1526": {
-      "name": "日馳",
-      "price": 17.7,
-      "price_is_estimated": false,
-      "pct": 9.94,
-      "volume_prorated_ref": 1546,
-      "score": -3,
-      "label": "🟠偏空風險",
-      "reasons": [
-        "RSI68偏強",
-        "觸及布林上軌(壓力)"
-      ],
-      "time": "12:28:06"
-    },
-    "1512": {
-      "name": "瑞利",
-      "price": 6.785,
+    "2615": {
+      "name": "萬海",
+      "price": 83.75,
       "price_is_estimated": true,
-      "pct": -1.52,
-      "volume_prorated_ref": 8,
+      "pct": -3.74,
+      "volume_prorated_ref": 10379,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:12:41"
+      "time": "13:00:06"
     },
-    "1319": {
-      "name": "東陽",
-      "price": 72.55,
-      "price_is_estimated": true,
-      "pct": 0.62,
-      "volume_prorated_ref": 1584,
-      "score": 3,
-      "label": "🟡偏多觀察",
+    "3669": {
+      "name": "圓展",
+      "price": 42.1,
+      "price_is_estimated": false,
+      "pct": 3.44,
+      "volume_prorated_ref": 5664,
+      "score": -4,
+      "label": "🔴出場訊號",
       "reasons": [
-        "RSI35偏弱",
-        "MACD黃金交叉"
+        "RSI72超買",
+        "觸及布林上軌(壓力)"
       ],
-      "time": "12:29:22"
+      "time": "13:00:07"
     },
-    "1615": {
-      "name": "大山",
-      "price": 42.9,
-      "price_is_estimated": true,
-      "pct": 0.0,
-      "volume_prorated_ref": 95,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI33偏弱"
-      ],
-      "time": "12:28:09"
-    },
-    "1423": {
-      "name": "利華",
-      "price": 35.475,
-      "price_is_estimated": true,
-      "pct": -0.35,
-      "volume_prorated_ref": 17,
-      "score": 4,
-      "label": "🟢強力買進",
-      "reasons": [
-        "RSI26超賣",
-        "觸及布林下軌(支撐)"
-      ],
-      "time": "11:55:41"
-    },
-    "1558": {
-      "name": "伸興",
-      "price": 89.8,
-      "price_is_estimated": true,
-      "pct": -0.55,
-      "volume_prorated_ref": 30,
+    "2002": {
+      "name": "中鋼",
+      "price": 19.25,
+      "price_is_estimated": false,
+      "pct": 0.52,
+      "volume_prorated_ref": 30358,
       "score": -2,
       "label": "🟠偏空風險",
       "reasons": [
-        "MACD死亡交叉"
+        "觸及布林上軌(壓力)"
       ],
-      "time": "12:28:18"
+      "time": "13:00:03"
     },
-    "1236": {
-      "name": "宏亞",
-      "price": 23.45,
-      "price_is_estimated": true,
-      "pct": -0.42,
-      "volume_prorated_ref": 37,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI35偏弱"
-      ],
-      "time": "12:27:57"
-    },
-    "1468": {
-      "name": "昶和",
-      "price": 13.05,
+    "2610": {
+      "name": "華航",
+      "price": 21.15,
       "price_is_estimated": false,
-      "pct": -0.38,
-      "volume_prorated_ref": 40,
+      "pct": 3.17,
+      "volume_prorated_ref": 31169,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:27:43"
+      "time": "12:59:56"
     },
-    "1417": {
-      "name": "嘉裕",
-      "price": 8.375,
+    "2324": {
+      "name": "仁寶",
+      "price": 36.525,
       "price_is_estimated": true,
-      "pct": -0.89,
-      "volume_prorated_ref": 69,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "12:26:34"
-    },
-    "1806": {
-      "name": "冠軍",
-      "price": 8.15,
-      "price_is_estimated": true,
-      "pct": -0.37,
-      "volume_prorated_ref": 78,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "12:28:55"
-    },
-    "1225": {
-      "name": "福懋油",
-      "price": 26.5,
-      "price_is_estimated": true,
-      "pct": -0.56,
-      "volume_prorated_ref": 121,
-      "score": 1,
-      "label": "⚪中立",
+      "pct": -1.81,
+      "volume_prorated_ref": 35820,
+      "score": 2,
+      "label": "🟡偏多觀察",
       "reasons": [
-        "RSI34偏弱"
+        "MACD黃金交叉"
       ],
-      "time": "12:18:29"
+      "time": "13:00:25"
     },
-    "1721": {
-      "name": "三晃",
-      "price": 20.8,
+    "2618": {
+      "name": "長榮航",
+      "price": 41.6,
       "price_is_estimated": false,
       "pct": 2.21,
-      "volume_prorated_ref": 615,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI40偏弱"
-      ],
-      "time": "12:29:05"
-    },
-    "1219": {
-      "name": "福壽",
-      "price": 11.625,
-      "price_is_estimated": true,
-      "pct": -1.9,
-      "volume_prorated_ref": 541,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI35偏弱"
-      ],
-      "time": "12:28:12"
-    },
-    "1533": {
-      "name": "車王電",
-      "price": 33.3,
-      "price_is_estimated": true,
-      "pct": 0.6,
-      "volume_prorated_ref": 146,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI38偏弱"
-      ],
-      "time": "12:25:36"
-    },
-    "2038": {
-      "name": "海光",
-      "price": 12.675,
-      "price_is_estimated": true,
-      "pct": -0.59,
-      "volume_prorated_ref": 165,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI39偏弱"
-      ],
-      "time": "12:28:57"
-    },
-    "2033": {
-      "name": "佳大",
-      "price": 15.25,
-      "price_is_estimated": true,
-      "pct": -0.97,
-      "volume_prorated_ref": 47,
+      "volume_prorated_ref": 45242,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:28:47"
+      "time": "13:00:31"
     },
-    "1449": {
-      "name": "佳和",
-      "price": 12.65,
+    "2609": {
+      "name": "陽明",
+      "price": 50.8,
       "price_is_estimated": true,
-      "pct": -0.39,
-      "volume_prorated_ref": 190,
-      "score": 1,
-      "label": "⚪中立",
+      "pct": -1.36,
+      "volume_prorated_ref": 10099,
+      "score": 2,
+      "label": "🟡偏多觀察",
       "reasons": [
-        "RSI36偏弱"
+        "MACD黃金交叉"
       ],
-      "time": "12:30:02"
+      "time": "13:00:33"
     },
-    "1608": {
-      "name": "華榮",
-      "price": 29.275,
+    "2885": {
+      "name": "元大金",
+      "price": 64.45,
       "price_is_estimated": true,
-      "pct": -2.42,
-      "volume_prorated_ref": 2053,
-      "score": 4,
-      "label": "🟢強力買進",
-      "reasons": [
-        "RSI29超賣",
-        "觸及布林下軌(支撐)"
-      ],
-      "time": "12:30:19"
-    },
-    "1440": {
-      "name": "南紡",
-      "price": 12.7,
-      "price_is_estimated": true,
-      "pct": -0.39,
-      "volume_prorated_ref": 1264,
+      "pct": 2.14,
+      "volume_prorated_ref": 28238,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:30:00"
+      "time": "13:00:21"
+    },
+    "2451": {
+      "name": "創見",
+      "price": 269.25,
+      "price_is_estimated": true,
+      "pct": 1.99,
+      "volume_prorated_ref": 14194,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "13:00:21"
+    },
+    "8112": {
+      "name": "至上",
+      "price": 83.55,
+      "price_is_estimated": true,
+      "pct": -5.38,
+      "volume_prorated_ref": 19606,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "MACD死亡交叉"
+      ],
+      "time": "13:00:24"
+    },
+    "6226": {
+      "name": "光鼎",
+      "price": 17.975,
+      "price_is_estimated": true,
+      "pct": -4.39,
+      "volume_prorated_ref": 11629,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:22"
+    },
+    "3231": {
+      "name": "緯創",
+      "price": 174.0,
+      "price_is_estimated": false,
+      "pct": -2.79,
+      "volume_prorated_ref": 105902,
+      "score": -1,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI64偏強"
+      ],
+      "time": "12:59:57"
+    },
+    "2302": {
+      "name": "麗正",
+      "price": 41.15,
+      "price_is_estimated": true,
+      "pct": -4.3,
+      "volume_prorated_ref": 2935,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:12"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 62.65,
+      "price_is_estimated": true,
+      "pct": -2.87,
+      "volume_prorated_ref": 20917,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:21"
+    },
+    "8039": {
+      "name": "台虹",
+      "price": 240.0,
+      "price_is_estimated": true,
+      "pct": 0.0,
+      "volume_prorated_ref": 40143,
+      "score": -2,
+      "label": "🟠偏空風險",
+      "reasons": [
+        "RSI73超買"
+      ],
+      "time": "12:59:57"
+    },
+    "2603": {
+      "name": "長榮",
+      "price": 203.25,
+      "price_is_estimated": true,
+      "pct": -1.33,
+      "volume_prorated_ref": 5399,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:26"
+    },
+    "2606": {
+      "name": "裕民",
+      "price": 62.75,
+      "price_is_estimated": true,
+      "pct": -1.95,
+      "volume_prorated_ref": 2351,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:27"
+    },
+    "2388": {
+      "name": "威盛",
+      "price": 73.75,
+      "price_is_estimated": true,
+      "pct": -1.54,
+      "volume_prorated_ref": 3417,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:00:00"
+    },
+    "2359": {
+      "name": "所羅門",
+      "price": 142.75,
+      "price_is_estimated": true,
+      "pct": -1.55,
+      "volume_prorated_ref": 4035,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "13:00:16"
     }
   }
 }
