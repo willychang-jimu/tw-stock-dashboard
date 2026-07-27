@@ -1,0 +1,65 @@
+{
+  "updated_at": "2026-07-27T11:45:40+08:00",
+  "signals": {
+    "3669": {
+      "name": "圓展",
+      "price": 42.55,
+      "price_is_estimated": true,
+      "pct": 4.55,
+      "volume_prorated_ref": 7383,
+      "score": -4,
+      "label": "🔴出場訊號",
+      "reasons": [
+        "RSI72超買",
+        "觸及布林上軌(壓力)"
+      ],
+      "time": "11:45:29"
+    },
+    "2324": {
+      "name": "仁寶",
+      "price": 36.175,
+      "price_is_estimated": true,
+      "pct": -2.76,
+      "volume_prorated_ref": 42956,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "11:45:30"
+    },
+    "2002": {
+      "name": "中鋼",
+      "price": 19.175,
+      "price_is_estimated": true,
+      "pct": 0.13,
+      "volume_prorated_ref": 35776,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:45:30"
+    },
+    "3231": {
+      "name": "緯創",
+      "price": 168.25,
+      "price_is_estimated": true,
+      "pct": -6.01,
+      "volume_prorated_ref": 126211,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:45:37"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 61.65,
+      "price_is_estimated": true,
+      "pct": -4.42,
+      "volume_prorated_ref": 25560,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:45:31"
+    }
+  }
+}
