@@ -14,7 +14,7 @@ const WATCHLIST_PATH = "watchlist.json";
 const TOKEN_STORAGE_KEY = "tw_stock_watchlist_pat";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {} };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -353,6 +353,20 @@ function setupTokenButton() {
 }
 
 // ===== 自選股：GitHub 讀寫 =====
+async function loadCodeNameMap() {
+  try {
+    const data = await fetchJSON(`support_levels.json?t=${Date.now()}`);
+    const map = {};
+    for (const [code, info] of Object.entries(data)) {
+      if (info && info.name) map[code] = info.name;
+    }
+    state.codeNameMap = map;
+    if (state.currentDay) renderStarred(state.currentDay);  // 名稱表較晚載入完成,補渲染一次自選股表格
+  } catch (err) {
+    // 讀不到就維持空表,renderStarred遇到查不到名稱時單純顯示"-"
+  }
+}
+
 async function loadWatchlistData() {
   try {
     const res = await fetch(`watchlist.json?t=${Date.now()}`, { cache: "no-store" });
@@ -457,6 +471,7 @@ function renderStarred(day) {
     if (weeklyMap.has(code)) { badges.push("🔥"); name = name || weeklyMap.get(code).name; }
     if (signalBuyMap.has(code)) { badges.push("🟢"); signalInfo = signalInfo || signalBuyMap.get(code); name = name || signalInfo.name; }
     if (signalSellMap.has(code)) { badges.push("🔴"); signalInfo = signalInfo || signalSellMap.get(code); name = name || signalInfo.name; }
+    name = name || state.codeNameMap[code] || "";
 
     const badgeHtml = badges.length ? badges.join(" ") : '<span class="empty-note">今日未上榜</span>';
     const signalHtml = signalInfo
@@ -585,6 +600,7 @@ function renderAll(day) {
 async function init() {
   setupTokenButton();
   await loadWatchlistData();
+  loadCodeNameMap();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
