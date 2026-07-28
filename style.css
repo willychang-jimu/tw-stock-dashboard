@@ -387,3 +387,22 @@ td.star-cell { width: 44px; padding-left: 4px; padding-right: 4px; }
   border-color: var(--gold);
   color: var(--gold);
 }
+
+/* 盤中訊號手動觸發按鈕 */
+#intraday-trigger-btn {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  padding: 8px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#intraday-trigger-btn:hover { color: var(--gold); border-color: var(--gold); }
+#intraday-trigger-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+#intraday-trigger-status {
+  display: flex;
+  align-items: center;
+}
