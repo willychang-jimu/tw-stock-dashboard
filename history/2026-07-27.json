@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-07-28T09:22:40+08:00",
+  "generated_at": "2026-07-28T09:43:54+08:00",
   "date": "2026-07-27",
   "summary": {
     "watchlist": 7,
@@ -20,8 +20,8 @@
       "ma20": 20.71,
       "bb_lower": 20.19,
       "dist_to_ma_pct": -0.3,
-      "signal_score": 4,
-      "signal_label": "🟢強力買進",
+      "signal_score": 3,
+      "signal_label": "🟡偏多觀察",
       "conflict": false,
       "conflict_reason": null
     },
@@ -52,7 +52,7 @@
       "ma20": 78.83,
       "bb_lower": 75.08,
       "dist_to_ma_pct": 3.89,
-      "signal_score": 3,
+      "signal_score": 2,
       "signal_label": "🟡偏多觀察",
       "conflict": false,
       "conflict_reason": null
@@ -68,7 +68,7 @@
       "ma20": 35.5,
       "bb_lower": 30.06,
       "dist_to_ma_pct": -4.51,
-      "signal_score": 3,
+      "signal_score": 2,
       "signal_label": "🟡偏多觀察",
       "conflict": false,
       "conflict_reason": null
@@ -100,7 +100,7 @@
       "ma20": 145.72,
       "bb_lower": 138.31,
       "dist_to_ma_pct": 4.65,
-      "signal_score": 1,
+      "signal_score": 0,
       "signal_label": "⚪中立",
       "conflict": false,
       "conflict_reason": null
@@ -1003,13 +1003,14 @@
       {
         "code": "1720",
         "name": "生達",
-        "score": 6,
+        "score": 5,
         "label": "🟢強力買進",
         "reasons": [
           "RSI28超賣",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增9%"
+          "營收年增9%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1017,13 +1018,14 @@
       {
         "code": "1319",
         "name": "東陽",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI37偏弱",
           "MACD黃金交叉",
           "法人買超",
-          "營收年增3%"
+          "營收年增3%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1031,13 +1033,14 @@
       {
         "code": "1718",
         "name": "中纖",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI38偏弱",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增2%"
+          "營收年增2%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1045,13 +1048,14 @@
       {
         "code": "1734",
         "name": "杏輝",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI39偏弱",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增4%"
+          "營收年增4%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1059,13 +1063,14 @@
       {
         "code": "2433",
         "name": "互盛電",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI38偏弱",
           "MACD黃金交叉",
           "法人買超",
-          "營收年增2%"
+          "營收年增2%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1073,12 +1078,13 @@
       {
         "code": "3138",
         "name": "耀登",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI26超賣",
           "MACD黃金交叉",
-          "法人買超"
+          "法人買超",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1086,13 +1092,14 @@
       {
         "code": "4915",
         "name": "致伸",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI36偏弱",
           "MACD黃金交叉",
           "法人買超",
-          "營收年增28%"
+          "營收年增28%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1100,13 +1107,14 @@
       {
         "code": "4960",
         "name": "誠美材",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI31偏弱",
           "MACD黃金交叉",
           "法人買超",
-          "營收年增5%"
+          "營收年增5%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1114,13 +1122,14 @@
       {
         "code": "5244",
         "name": "弘凱",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI32偏弱",
           "MACD黃金交叉",
           "法人買超",
-          "營收年增3%"
+          "營收年增3%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1128,13 +1137,14 @@
       {
         "code": "6531",
         "name": "愛普*",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI39偏弱",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增60%"
+          "營收年增60%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1142,13 +1152,14 @@
       {
         "code": "7610",
         "name": "聯友金屬-創",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI33偏弱",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增555%"
+          "營收年增555%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1156,13 +1167,14 @@
       {
         "code": "7788",
         "name": "松川精密",
-        "score": 5,
+        "score": 4,
         "label": "🟢強力買進",
         "reasons": [
           "RSI37偏弱",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年增66%"
+          "營收年增66%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1170,13 +1182,14 @@
       {
         "code": "1215",
         "name": "卜蜂",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI28超賣",
           "觸及布林下軌(支撐)",
           "法人賣超",
-          "營收年增9%"
+          "營收年增9%",
+          "大盤空頭(-1)"
         ],
         "conflict": true,
         "conflict_reason": "技術面偏多但法人賣超"
@@ -1184,12 +1197,13 @@
       {
         "code": "1418",
         "name": "東華",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增6800%"
+          "營收年增6800%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1197,11 +1211,12 @@
       {
         "code": "1423",
         "name": "利華",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI28超賣",
-          "觸及布林下軌(支撐)"
+          "觸及布林下軌(支撐)",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1209,12 +1224,13 @@
       {
         "code": "1446",
         "name": "宏和",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI26超賣",
           "法人買超",
-          "營收年增23%"
+          "營收年增23%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1222,12 +1238,13 @@
       {
         "code": "1516",
         "name": "川飛",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI25超賣",
           "法人買超",
-          "營收年增60%"
+          "營收年增60%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1235,12 +1252,13 @@
       {
         "code": "1528",
         "name": "恩德",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI25超賣",
           "法人買超",
-          "營收年增23%"
+          "營收年增23%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1248,12 +1266,13 @@
       {
         "code": "1730",
         "name": "花仙子",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增10%"
+          "營收年增10%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1261,13 +1280,14 @@
       {
         "code": "1731",
         "name": "美吾華",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI40偏弱",
           "放量上漲",
           "法人買超",
-          "營收年增2%"
+          "營收年增2%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1275,12 +1295,13 @@
       {
         "code": "1817",
         "name": "凱撒衛",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增4%"
+          "營收年增4%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1288,12 +1309,13 @@
       {
         "code": "2008",
         "name": "高興昌",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增5%"
+          "營收年增5%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1301,12 +1323,13 @@
       {
         "code": "2010",
         "name": "春源",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI36偏弱",
           "MACD黃金交叉",
-          "法人買超"
+          "法人買超",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1314,12 +1337,13 @@
       {
         "code": "2028",
         "name": "威致",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增13%"
+          "營收年增13%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1327,12 +1351,13 @@
       {
         "code": "2029",
         "name": "盛餘",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增3%"
+          "營收年增3%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1340,13 +1365,14 @@
       {
         "code": "2204",
         "name": "中華",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI29超賣",
           "觸及布林下軌(支撐)",
           "法人賣超",
-          "營收年增7%"
+          "營收年增7%",
+          "大盤空頭(-1)"
         ],
         "conflict": true,
         "conflict_reason": "技術面偏多但法人賣超"
@@ -1354,12 +1380,13 @@
       {
         "code": "2355",
         "name": "敬鵬",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI26超賣",
           "法人買超",
-          "營收年增4%"
+          "營收年增4%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1367,12 +1394,13 @@
       {
         "code": "2397",
         "name": "友通",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增31%"
+          "營收年增31%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1380,12 +1408,13 @@
       {
         "code": "2438",
         "name": "翔耀",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI27超賣",
           "法人買超",
-          "營收年增5%"
+          "營收年增5%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1393,12 +1422,13 @@
       {
         "code": "2485",
         "name": "兆赫",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI28超賣",
           "法人買超",
-          "營收年增81%"
+          "營收年增81%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1406,12 +1436,13 @@
       {
         "code": "2489",
         "name": "瑞軒",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI27超賣",
           "法人買超",
-          "營收年增23%"
+          "營收年增23%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1419,12 +1450,13 @@
       {
         "code": "2495",
         "name": "普安",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI29超賣",
           "法人買超",
-          "營收年增40%"
+          "營收年增40%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1432,12 +1464,13 @@
       {
         "code": "2712",
         "name": "遠雄來",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增17%"
+          "營收年增17%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1445,12 +1478,13 @@
       {
         "code": "2722",
         "name": "夏都",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI30偏弱",
           "觸及布林下軌(支撐)",
-          "法人買超"
+          "法人買超",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1458,12 +1492,13 @@
       {
         "code": "2945",
         "name": "三商家購",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增39%"
+          "營收年增39%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1471,12 +1506,13 @@
       {
         "code": "3013",
         "name": "晟銘電",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI30超賣",
           "法人買超",
-          "營收年增26%"
+          "營收年增26%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1484,12 +1520,13 @@
       {
         "code": "3034",
         "name": "聯詠",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增19%"
+          "營收年增19%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1497,12 +1534,13 @@
       {
         "code": "3036",
         "name": "文曄",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增188%"
+          "營收年增188%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1510,12 +1548,13 @@
       {
         "code": "3045",
         "name": "台灣大",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增7%"
+          "營收年增7%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1523,12 +1562,13 @@
       {
         "code": "3054",
         "name": "立萬利",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI29超賣",
           "法人買超",
-          "營收年增176%"
+          "營收年增176%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1536,12 +1576,13 @@
       {
         "code": "3090",
         "name": "日電貿",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI28超賣",
           "法人買超",
-          "營收年增32%"
+          "營收年增32%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1549,12 +1590,13 @@
       {
         "code": "3447",
         "name": "展達",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI28超賣",
           "法人買超",
-          "營收年增18%"
+          "營收年增18%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1562,12 +1604,13 @@
       {
         "code": "3645",
         "name": "達邁",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI29超賣",
           "法人買超",
-          "營收年增3%"
+          "營收年增3%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1575,12 +1618,13 @@
       {
         "code": "3715",
         "name": "定穎投控",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI25超賣",
           "法人買超",
-          "營收年增46%"
+          "營收年增46%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1588,13 +1632,14 @@
       {
         "code": "4552",
         "name": "力達-KY",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI29超賣",
           "觸及布林下軌(支撐)",
           "法人買超",
-          "營收年減16%"
+          "營收年減16%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1602,12 +1647,13 @@
       {
         "code": "4927",
         "name": "泰鼎-KY",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI27超賣",
           "法人買超",
-          "營收年增10%"
+          "營收年增10%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1615,12 +1661,13 @@
       {
         "code": "6166",
         "name": "凌華",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增26%"
+          "營收年增26%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1628,12 +1675,13 @@
       {
         "code": "6230",
         "name": "尼得科超眾",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI39偏弱",
           "MACD黃金交叉",
-          "法人買超"
+          "法人買超",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1641,12 +1689,13 @@
       {
         "code": "6579",
         "name": "研揚",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "MACD黃金交叉",
           "法人買超",
-          "營收年增47%"
+          "營收年增47%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
@@ -1654,12 +1703,13 @@
       {
         "code": "6792",
         "name": "詠業",
-        "score": 4,
-        "label": "🟢強力買進",
+        "score": 3,
+        "label": "🟡偏多觀察",
         "reasons": [
           "RSI30超賣",
           "法人買超",
-          "營收年增8%"
+          "營收年增8%",
+          "大盤空頭(-1)"
         ],
         "conflict": false,
         "conflict_reason": null
