@@ -12,6 +12,9 @@ const GH_OWNER = "willychang-jimu";
 const GH_REPO = "tw-stock-dashboard";
 const WATCHLIST_PATH = "watchlist.json";
 const TOKEN_STORAGE_KEY = "tw_stock_watchlist_pat";
+const TRIGGER_TOKEN_STORAGE_KEY = "tw_stock_intraday_trigger_pat";
+const PRIVATE_REPO = "tw-stock-daily-highlights-";
+const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
 const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {} };
@@ -550,26 +553,128 @@ function renderStarred(day) {
   renderTable(el.tableStarred, ["★", "代號", "名稱", "出現於", "訊號", "連結"], rows);
 }
 
+// ===== 盤中訊號:手動立即觸發 =====
+function getTriggerToken() {
+  return localStorage.getItem(TRIGGER_TOKEN_STORAGE_KEY) || "";
+}
+
+function promptForTriggerToken() {
+  const input = window.prompt(
+    "貼上能觸發私有repo(tw-stock-daily-highlights-)workflow的Classic Token\n" +
+    "（跟你cron-job.org設定裡用的同一組，勾repo權限即可）。\n" +
+    "Token只會存在這台裝置的瀏覽器裡。留空取消。"
+  );
+  if (input && input.trim()) {
+    localStorage.setItem(TRIGGER_TOKEN_STORAGE_KEY, input.trim());
+    return input.trim();
+  }
+  return "";
+}
+
+async function triggerIntradayNow() {
+  const statusEl = document.getElementById("intraday-trigger-status");
+  const btn = document.getElementById("intraday-trigger-btn");
+  const token = getTriggerToken() || promptForTriggerToken();
+  if (!token) return;
+
+  btn.disabled = true;
+  statusEl.textContent = "觸發中…";
+
+  try {
+    const url = `https://api.github.com/repos/${GH_OWNER}/${PRIVATE_REPO}/actions/workflows/${INTRADAY_WORKFLOW}/dispatches`;
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ref: "main" }),
+    });
+
+    if (!res.ok) {
+      const body = await res.json().catch(() => ({}));
+      throw new Error(`觸發失敗 (${res.status})：${body.message || "請確認Token權限"}`);
+    }
+
+    statusEl.textContent = "已觸發，約1分鐘後自動更新…";
+    pollForIntradayUpdate();
+  } catch (err) {
+    statusEl.textContent = err.message;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function pollForIntradayUpdate() {
+  const statusEl = document.getElementById("intraday-trigger-status");
+  let prevUpdatedAt = null;
+  try {
+    const data = await fetchJSON(`intraday.json?t=${Date.now()}`);
+    prevUpdatedAt = data.updated_at;
+  } catch (err) {
+    // 讀不到就當作沒有基準時間,還是繼續輪詢,靠次數上限結束
+  }
+
+  let attempts = 0;
+  const maxAttempts = 12; // 每10秒一次,最多輪詢2分鐘
+  const timer = setInterval(async () => {
+    attempts += 1;
+    try {
+      const data = await fetchJSON(`intraday.json?t=${Date.now()}`);
+      if (data.updated_at && data.updated_at !== prevUpdatedAt) {
+        clearInterval(timer);
+        statusEl.textContent = `已更新（${data.updated_at}）`;
+        renderIntraday();
+        return;
+      }
+    } catch (err) {
+      // 忽略單次失敗,繼續等下一次輪詢
+    }
+    if (attempts >= maxAttempts) {
+      clearInterval(timer);
+      statusEl.textContent = "還沒更新完成，稍後可手動重新整理頁面查看";
+    }
+  }, 10000);
+}
+
+function setupIntradayTriggerButton() {
+  const btn = document.getElementById("intraday-trigger-btn");
+  btn.addEventListener("click", triggerIntradayNow);
+}
+
 async function renderIntraday() {
+  const tableWrap = el.tableIntraday.parentElement;
+
+  if (state.watchlistCodes.size === 0) {
+    el.panelIntraday.hidden = true;
+    return;
+  }
+  el.panelIntraday.hidden = false;
+
   try {
     const data = await fetchJSON(`intraday.json?t=${Date.now()}`);
     const signals = data.signals || {};
     const codes = Object.keys(signals);
 
-    if (codes.length === 0) {
-      el.panelIntraday.hidden = true;
-      return;
-    }
-
-    // 只在資料是「今天」的才顯示,避免收盤後/隔天顯示過期的盤中資料造成誤解
     const updatedDate = (data.updated_at || "").slice(0, 10);
     const todayStr = new Date().toLocaleDateString("sv-SE", { timeZone: "Asia/Taipei" });
-    if (updatedDate !== todayStr) {
-      el.panelIntraday.hidden = true;
+
+    if (codes.length === 0 || updatedDate !== todayStr) {
+      el.tableIntraday.innerHTML = "";
+      let note = tableWrap.parentElement.querySelector(".empty-note");
+      if (!note) {
+        note = document.createElement("p");
+        note.className = "empty-note";
+        tableWrap.parentElement.insertBefore(note, tableWrap);
+      }
+      note.textContent = "今天還沒有盤中資料，點上面「立即更新」或等下一次排程";
       return;
     }
 
-    el.panelIntraday.hidden = false;
+    const oldNote = tableWrap.parentElement.querySelector(".empty-note");
+    if (oldNote) oldNote.remove();
+
     const rows = Object.entries(signals)
       .sort((a, b) => b[1].score - a[1].score)
       .map(([code, item]) => [
@@ -584,7 +689,14 @@ async function renderIntraday() {
       ]);
     renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由", "時間"], rows);
   } catch (err) {
-    el.panelIntraday.hidden = true;
+    el.tableIntraday.innerHTML = "";
+    let note = tableWrap.parentElement.querySelector(".empty-note");
+    if (!note) {
+      note = document.createElement("p");
+      note.className = "empty-note";
+      tableWrap.parentElement.insertBefore(note, tableWrap);
+    }
+    note.textContent = "還沒有盤中資料，點上面「立即更新」試試看";
   }
 }
 
@@ -672,6 +784,7 @@ function renderAll(day) {
 async function init() {
   setupTokenButton();
   setupWatchlistSearch();
+  setupIntradayTriggerButton();
   await loadWatchlistData();
   loadCodeNameMap();
   renderIntraday();
