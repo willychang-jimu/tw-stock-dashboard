@@ -1,6 +1,57 @@
 {
-  "updated_at": "2026-07-28T13:56:41+08:00",
+  "updated_at": "2026-07-28T13:58:45+08:00",
   "signals": {
+    "8028": {
+      "name": "昇陽半導體",
+      "price": 280.0,
+      "price_is_estimated": false,
+      "pct": -9.97,
+      "volume_prorated_ref": 2833,
+      "score": 1,
+      "label": "⚪中立",
+      "reasons": [
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "13:30:00"
+    },
+    "4976": {
+      "name": "佳凌",
+      "price": 34.3,
+      "price_is_estimated": false,
+      "pct": 1.18,
+      "volume_prorated_ref": 12166,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:30:00"
+    },
+    "2618": {
+      "name": "長榮航",
+      "price": 42.75,
+      "price_is_estimated": false,
+      "pct": 1.91,
+      "volume_prorated_ref": 71772,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:30:00"
+    },
+    "3504": {
+      "name": "揚明光",
+      "price": 62.4,
+      "price_is_estimated": false,
+      "pct": -4.15,
+      "volume_prorated_ref": 5471,
+      "score": -1,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI37偏弱",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "13:30:00"
+    },
     "2303": {
       "name": "聯電",
       "price": 113.5,
@@ -27,6 +78,17 @@
       "reasons": [],
       "time": "13:30:00"
     },
+    "2610": {
+      "name": "華航",
+      "price": 21.75,
+      "price_is_estimated": false,
+      "pct": 2.35,
+      "volume_prorated_ref": 102927,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:30:00"
+    },
     "3481": {
       "name": "群創",
       "price": 45.0,
@@ -38,32 +100,6 @@
       "reasons": [
         "RSI32偏弱",
         "大盤空頭(-1)"
-      ],
-      "time": "13:30:00"
-    },
-    "6142": {
-      "name": "友勁",
-      "price": 9.83,
-      "price_is_estimated": false,
-      "pct": -5.93,
-      "volume_prorated_ref": 1462,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "13:30:00"
-    },
-    "3504": {
-      "name": "揚明光",
-      "price": 62.4,
-      "price_is_estimated": false,
-      "pct": -4.15,
-      "volume_prorated_ref": 5471,
-      "score": -1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI37偏弱",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
       ],
       "time": "13:30:00"
     },
@@ -81,59 +117,12 @@
       ],
       "time": "13:30:00"
     },
-    "8028": {
-      "name": "昇陽半導體",
-      "price": 280.0,
+    "6142": {
+      "name": "友勁",
+      "price": 9.83,
       "price_is_estimated": false,
-      "pct": -9.97,
-      "volume_prorated_ref": 2833,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:30:00"
-    },
-    "2618": {
-      "name": "長榮航",
-      "price": 42.75,
-      "price_is_estimated": false,
-      "pct": 1.91,
-      "volume_prorated_ref": 71772,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "13:30:00"
-    },
-    "2356": {
-      "name": "英業達",
-      "price": 58.8,
-      "price_is_estimated": false,
-      "pct": -7.84,
-      "volume_prorated_ref": 22214,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "13:30:00"
-    },
-    "4976": {
-      "name": "佳凌",
-      "price": 34.3,
-      "price_is_estimated": false,
-      "pct": 1.18,
-      "volume_prorated_ref": 12166,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "13:30:00"
-    },
-    "2610": {
-      "name": "華航",
-      "price": 21.75,
-      "price_is_estimated": false,
-      "pct": 2.35,
-      "volume_prorated_ref": 102927,
+      "pct": -5.93,
+      "volume_prorated_ref": 1462,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
@@ -145,6 +134,17 @@
       "price_is_estimated": false,
       "pct": -5.93,
       "volume_prorated_ref": 50774,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "13:30:00"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 58.8,
+      "price_is_estimated": false,
+      "pct": -7.84,
+      "volume_prorated_ref": 22214,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
