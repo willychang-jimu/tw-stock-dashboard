@@ -1,169 +1,12 @@
 {
-  "updated_at": "2026-07-29T11:00:46+08:00",
+  "updated_at": "2026-07-29T11:30:40+08:00",
   "signals": {
-    "3504": {
-      "name": "揚明光",
-      "price": 65.6,
-      "price_is_estimated": true,
-      "pct": 5.13,
-      "volume_prorated_ref": 9688,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:08"
-    },
-    "6226": {
-      "name": "光鼎",
-      "price": 20.5,
-      "price_is_estimated": true,
-      "pct": 0.0,
-      "volume_prorated_ref": 33768,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:36"
-    },
-    "2356": {
-      "name": "英業達",
-      "price": 58.95,
-      "price_is_estimated": true,
-      "pct": 0.26,
-      "volume_prorated_ref": 65682,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:16"
-    },
-    "2409": {
-      "name": "友達",
-      "price": 23.65,
-      "price_is_estimated": false,
-      "pct": -1.05,
-      "volume_prorated_ref": 331488,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI39偏弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "11:00:21"
-    },
-    "6142": {
-      "name": "友勁",
-      "price": 9.315,
-      "price_is_estimated": true,
-      "pct": -5.24,
-      "volume_prorated_ref": 1469,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:07"
-    },
-    "2610": {
-      "name": "華航",
-      "price": 21.675,
-      "price_is_estimated": true,
-      "pct": -0.34,
-      "volume_prorated_ref": 92144,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:11"
-    },
-    "2618": {
-      "name": "長榮航",
-      "price": 41.475,
-      "price_is_estimated": true,
-      "pct": -2.98,
-      "volume_prorated_ref": 59038,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:40"
-    },
-    "4976": {
-      "name": "佳凌",
-      "price": 37.7,
-      "price_is_estimated": false,
-      "pct": 9.91,
-      "volume_prorated_ref": 16312,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)"
-      ],
-      "time": "11:00:12"
-    },
-    "2332": {
-      "name": "友訊",
-      "price": 22.975,
-      "price_is_estimated": true,
-      "pct": -2.65,
-      "volume_prorated_ref": 109296,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:20"
-    },
-    "2303": {
-      "name": "聯電",
-      "price": 113.5,
-      "price_is_estimated": true,
-      "pct": 0.0,
-      "volume_prorated_ref": 537298,
-      "score": 2,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI34偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "11:00:15"
-    },
-    "2330": {
-      "name": "台積電",
-      "price": 2212.5,
-      "price_is_estimated": true,
-      "pct": -2.96,
-      "volume_prorated_ref": 58786,
-      "score": 2,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI36偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "11:00:20"
-    },
-    "2317": {
-      "name": "鴻海",
-      "price": 235.75,
-      "price_is_estimated": true,
-      "pct": -0.95,
-      "volume_prorated_ref": 92308,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:15"
-    },
-    "3669": {
-      "name": "圓展",
-      "price": 39.6,
-      "price_is_estimated": true,
-      "pct": -2.1,
-      "volume_prorated_ref": 2614,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:00:11"
-    },
     "3481": {
       "name": "群創",
       "price": 40.85,
       "price_is_estimated": false,
       "pct": -9.22,
-      "volume_prorated_ref": 786712,
+      "volume_prorated_ref": 669546,
       "score": 3,
       "label": "🟡偏多觀察",
       "reasons": [
@@ -171,14 +14,168 @@
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "11:00:17"
+      "time": "11:30:07"
+    },
+    "2303": {
+      "name": "聯電",
+      "price": 113.5,
+      "price_is_estimated": true,
+      "pct": 0.0,
+      "volume_prorated_ref": 433404,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI34偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "11:30:05"
+    },
+    "2618": {
+      "name": "長榮航",
+      "price": 40.975,
+      "price_is_estimated": true,
+      "pct": -4.15,
+      "volume_prorated_ref": 56272,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:26"
+    },
+    "2332": {
+      "name": "友訊",
+      "price": 23.075,
+      "price_is_estimated": true,
+      "pct": -2.22,
+      "volume_prorated_ref": 94106,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:02"
+    },
+    "3669": {
+      "name": "圓展",
+      "price": 39.325,
+      "price_is_estimated": true,
+      "pct": -2.78,
+      "volume_prorated_ref": 2239,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:29"
+    },
+    "2330": {
+      "name": "台積電",
+      "price": 2222.5,
+      "price_is_estimated": true,
+      "pct": -2.52,
+      "volume_prorated_ref": 51916,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI37偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "11:30:05"
+    },
+    "3504": {
+      "name": "揚明光",
+      "price": 66.7,
+      "price_is_estimated": true,
+      "pct": 6.89,
+      "volume_prorated_ref": 8460,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:02"
+    },
+    "6142": {
+      "name": "友勁",
+      "price": 9.43,
+      "price_is_estimated": true,
+      "pct": -4.07,
+      "volume_prorated_ref": 1270,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:28:48"
+    },
+    "2610": {
+      "name": "華航",
+      "price": 21.525,
+      "price_is_estimated": true,
+      "pct": -1.03,
+      "volume_prorated_ref": 79983,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:31"
+    },
+    "4976": {
+      "name": "佳凌",
+      "price": 34.3,
+      "price_is_estimated": true,
+      "pct": 0.0,
+      "volume_prorated_ref": 13196,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:29:54"
+    },
+    "2317": {
+      "name": "鴻海",
+      "price": 236.25,
+      "price_is_estimated": true,
+      "pct": -0.74,
+      "volume_prorated_ref": 81644,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:05"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 59.35,
+      "price_is_estimated": true,
+      "pct": 0.94,
+      "volume_prorated_ref": 58471,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:01"
+    },
+    "2409": {
+      "name": "友達",
+      "price": 23.925,
+      "price_is_estimated": true,
+      "pct": 0.1,
+      "volume_prorated_ref": 287865,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI40偏弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "11:29:56"
+    },
+    "6226": {
+      "name": "光鼎",
+      "price": 20.5,
+      "price_is_estimated": true,
+      "pct": 0.0,
+      "volume_prorated_ref": 27322,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:30:15"
     },
     "8028": {
       "name": "昇陽半導體",
       "price": 252.0,
       "price_is_estimated": true,
       "pct": -10.0,
-      "volume_prorated_ref": 2079,
+      "volume_prorated_ref": 1733,
       "score": 2,
       "label": "🟡偏多觀察",
       "reasons": [
@@ -186,7 +183,7 @@
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "11:00:15"
+      "time": "11:30:01"
     }
   }
 }
