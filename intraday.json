@@ -1,72 +1,28 @@
 {
-  "updated_at": "2026-07-30T12:00:40+08:00",
+  "updated_at": "2026-07-30T12:30:32+08:00",
   "signals": {
-    "2356": {
-      "name": "英業達",
-      "price": 57.75,
+    "3481": {
+      "name": "群創",
+      "price": 42.825,
       "price_is_estimated": true,
-      "pct": -4.23,
-      "volume_prorated_ref": 38025,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "12:00:18"
-    },
-    "2330": {
-      "name": "台積電",
-      "price": 2232.5,
-      "price_is_estimated": true,
-      "pct": 1.48,
-      "volume_prorated_ref": 42534,
-      "score": 3,
-      "confidence": 33,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(36→39)",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "12:00:25"
-    },
-    "2610": {
-      "name": "華航",
-      "price": 21.475,
-      "price_is_estimated": true,
-      "pct": -1.04,
-      "volume_prorated_ref": 32866,
-      "score": 0,
-      "confidence": 0,
+      "pct": 2.45,
+      "volume_prorated_ref": 538759,
+      "score": 1,
+      "confidence": 19,
       "label": "⚪中立",
       "reasons": [
-        "MACD空頭動能減弱",
+        "RSI32偏弱",
+        "RSI翻揚(29→32)",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:36"
-    },
-    "8028": {
-      "name": "昇陽半導體",
-      "price": 239.5,
-      "price_is_estimated": false,
-      "pct": -4.96,
-      "volume_prorated_ref": 2499,
-      "score": 2,
-      "confidence": 28,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI34偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "12:00:23"
+      "time": "12:30:07"
     },
     "2337": {
       "name": "旺宏",
-      "price": 97.15,
+      "price": 96.35,
       "price_is_estimated": true,
-      "pct": -4.75,
-      "volume_prorated_ref": 102069,
+      "pct": -5.54,
+      "volume_prorated_ref": 92799,
       "score": 1,
       "confidence": 28,
       "label": "⚪中立",
@@ -76,30 +32,26 @@
         "大盤空頭(-1)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "12:00:20"
+      "time": "12:30:05"
     },
-    "2303": {
-      "name": "聯電",
-      "price": 102.5,
+    "2356": {
+      "name": "英業達",
+      "price": 58.45,
       "price_is_estimated": true,
-      "pct": 0.0,
-      "volume_prorated_ref": 398608,
-      "score": 2,
-      "confidence": 28,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI30偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "12:00:20"
+      "pct": -3.07,
+      "volume_prorated_ref": 35484,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "12:30:06"
     },
     "2408": {
       "name": "南亞科",
-      "price": 345.25,
+      "price": 343.25,
       "price_is_estimated": true,
-      "pct": -2.33,
-      "volume_prorated_ref": 137060,
+      "pct": -2.9,
+      "volume_prorated_ref": 123346,
       "score": 1,
       "confidence": 14,
       "label": "⚪中立",
@@ -107,30 +59,14 @@
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:36"
-    },
-    "3481": {
-      "name": "群創",
-      "price": 42.825,
-      "price_is_estimated": true,
-      "pct": 2.45,
-      "volume_prorated_ref": 600666,
-      "score": 1,
-      "confidence": 19,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI32偏弱",
-        "RSI翻揚(29→32)",
-        "大盤空頭(-1)"
-      ],
-      "time": "12:00:22"
+      "time": "12:30:01"
     },
     "2317": {
       "name": "鴻海",
       "price": 230.75,
       "price_is_estimated": true,
       "pct": -2.64,
-      "volume_prorated_ref": 73905,
+      "volume_prorated_ref": 67101,
       "score": -1,
       "confidence": 17,
       "label": "⚪中立",
@@ -142,30 +78,47 @@
         "大盤空頭(-1)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "12:00:20"
+      "time": "12:30:05"
     },
-    "2344": {
-      "name": "華邦電",
-      "price": 124.75,
+    "2303": {
+      "name": "聯電",
+      "price": 102.5,
       "price_is_estimated": true,
-      "pct": -4.04,
-      "volume_prorated_ref": 227446,
+      "pct": 0.0,
+      "volume_prorated_ref": 346949,
       "score": 2,
       "confidence": 28,
       "label": "🟡偏多觀察",
       "reasons": [
-        "RSI34偏弱",
+        "RSI30偏弱",
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:25"
+      "time": "12:30:05"
+    },
+    "2330": {
+      "name": "台積電",
+      "price": 2237.5,
+      "price_is_estimated": true,
+      "pct": 1.7,
+      "volume_prorated_ref": 39469,
+      "score": 3,
+      "confidence": 33,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI40偏弱",
+        "RSI翻揚(36→40)",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "12:30:10"
     },
     "2409": {
       "name": "友達",
-      "price": 23.375,
+      "price": 23.275,
       "price_is_estimated": true,
-      "pct": 0.54,
-      "volume_prorated_ref": 235456,
+      "pct": 0.11,
+      "volume_prorated_ref": 217191,
       "score": 2,
       "confidence": 25,
       "label": "🟡偏多觀察",
@@ -175,19 +128,66 @@
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:21"
+      "time": "12:30:06"
     },
     "2618": {
       "name": "長榮航",
-      "price": 41.375,
+      "price": 41.525,
       "price_is_estimated": true,
-      "pct": -0.18,
-      "volume_prorated_ref": 48777,
+      "pct": 0.18,
+      "volume_prorated_ref": 46295,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:00:36"
+      "time": "12:30:25"
+    },
+    "8028": {
+      "name": "昇陽半導體",
+      "price": 237.0,
+      "price_is_estimated": false,
+      "pct": -5.95,
+      "volume_prorated_ref": 2254,
+      "score": 2,
+      "confidence": 28,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI33偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "12:29:19"
+    },
+    "2344": {
+      "name": "華邦電",
+      "price": 123.75,
+      "price_is_estimated": true,
+      "pct": -4.81,
+      "volume_prorated_ref": 204832,
+      "score": 2,
+      "confidence": 28,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI34偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "12:30:10"
+    },
+    "2610": {
+      "name": "華航",
+      "price": 21.6,
+      "price_is_estimated": false,
+      "pct": -0.46,
+      "volume_prorated_ref": 31515,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "12:30:01"
     }
   }
 }
