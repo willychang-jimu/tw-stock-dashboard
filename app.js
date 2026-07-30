@@ -155,8 +155,9 @@ function renderWatchlist(day) {
           row.href = newsLink(item.code);
           row.target = "_blank";
           row.rel = "noopener noreferrer";
+          const sigTitle = `信心值 ${item.signal_confidence ?? "-"}%${item.conflict_reason ? " ｜ " + item.conflict_reason : ""}`;
           const sigBadge = item.signal_score !== null && item.signal_score !== undefined
-            ? `<span class="signal-badge" title="${item.conflict_reason || ""}">${scoreEmoji(item.signal_score)}${item.signal_score > 0 ? "+" : ""}${item.signal_score}${item.conflict ? " ⚠️" : ""}</span>`
+            ? `<span class="signal-badge" title="${sigTitle}">${scoreEmoji(item.signal_score)}${item.signal_score > 0 ? "+" : ""}${item.signal_score}${item.conflict ? " ⚠️" : ""}</span>`
             : "";
           row.innerHTML = `
             <span>${starHtml(item.code)} <span class="stock-id">${item.code}</span>${item.name}${sigBadge}</span>
@@ -274,7 +275,7 @@ function renderSignals(day) {
         { className: "name-cell", html: item.name },
         {
           className: pctClass(item.score),
-          html: `${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}`,
+          html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>`,
         },
         item.conflict
           ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
@@ -537,7 +538,7 @@ function renderStarred(day) {
 
     const badgeHtml = badges.length ? badges.join(" ") : '<span class="empty-note">今日未上榜</span>';
     const signalHtml = signalInfo
-      ? `${scoreEmoji(signalInfo.score)}${signalInfo.score > 0 ? "+" : ""}${signalInfo.score}`
+      ? `<span title="信心值 ${signalInfo.confidence ?? "-"}%">${scoreEmoji(signalInfo.score)}${signalInfo.score > 0 ? "+" : ""}${signalInfo.score}</span>`
       : "-";
 
     return [
@@ -683,7 +684,7 @@ async function renderIntraday() {
         { className: "name-cell", html: item.name },
         item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
         { className: pctClass(item.pct), html: fmtPct(item.pct) },
-        { className: pctClass(item.score), html: `${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}` },
+        { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
         (item.reasons || []).map(abbreviateReason).join(" "),
         item.time || "-",
       ]);
