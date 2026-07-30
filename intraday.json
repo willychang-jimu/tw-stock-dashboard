@@ -1,168 +1,164 @@
 {
-  "updated_at": "2026-07-30T09:00:37+08:00",
+  "updated_at": "2026-07-30T09:30:31+08:00",
   "signals": {
-    "3481": {
-      "name": "群創",
-      "price": 41.5,
-      "price_is_estimated": false,
-      "pct": -0.72,
-      "volume_prorated_ref": 83310,
-      "score": 1,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI29超賣",
-        "大盤空頭(-1)"
-      ],
-      "time": "09:00:22"
-    },
     "2618": {
       "name": "長榮航",
-      "price": 41.475,
+      "price": 41.175,
       "price_is_estimated": true,
-      "pct": 0.06,
-      "volume_prorated_ref": 6990,
+      "pct": -0.66,
+      "volume_prorated_ref": 49086,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "09:00:31"
+      "time": "09:30:20"
     },
-    "2344": {
-      "name": "華邦電",
-      "price": 122.25,
+    "2356": {
+      "name": "英業達",
+      "price": 58.25,
       "price_is_estimated": true,
-      "pct": -5.96,
-      "volume_prorated_ref": 63490,
-      "score": 2,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI33偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "09:00:25"
-    },
-    "2337": {
-      "name": "旺宏",
-      "price": 95.85,
-      "price_is_estimated": true,
-      "pct": -6.03,
-      "volume_prorated_ref": 0,
-      "score": 1,
+      "pct": -3.4,
+      "volume_prorated_ref": 101547,
+      "score": 0,
       "label": "⚪中立",
-      "reasons": [
-        "RSI30偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:00:31"
+      "reasons": [],
+      "time": "09:30:00"
     },
     "8028": {
       "name": "昇陽半導體",
-      "price": 227.0,
-      "price_is_estimated": false,
-      "pct": -9.92,
-      "volume_prorated_ref": 2260,
+      "price": 243.0,
+      "price_is_estimated": true,
+      "pct": -3.57,
+      "volume_prorated_ref": 10642,
       "score": 2,
       "label": "🟡偏多觀察",
       "reasons": [
-        "RSI32偏弱",
+        "RSI35偏弱",
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "09:00:22"
+      "time": "09:29:58"
+    },
+    "2408": {
+      "name": "南亞科",
+      "price": 354.5,
+      "price_is_estimated": false,
+      "pct": 0.28,
+      "volume_prorated_ref": 328779,
+      "score": 1,
+      "label": "⚪中立",
+      "reasons": [
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "09:30:26"
+    },
+    "2330": {
+      "name": "台積電",
+      "price": 2217.5,
+      "price_is_estimated": true,
+      "pct": 0.8,
+      "volume_prorated_ref": 116262,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI38偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "09:30:05"
+    },
+    "2303": {
+      "name": "聯電",
+      "price": 102.5,
+      "price_is_estimated": true,
+      "pct": 0.0,
+      "volume_prorated_ref": 1216818,
+      "score": 2,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI30偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "09:30:05"
     },
     "2317": {
       "name": "鴻海",
       "price": 234.25,
       "price_is_estimated": true,
       "pct": -1.16,
-      "volume_prorated_ref": 20630,
+      "volume_prorated_ref": 131238,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "09:00:25"
+      "time": "09:30:05"
     },
-    "2330": {
-      "name": "台積電",
-      "price": 2215.0,
-      "price_is_estimated": false,
-      "pct": 0.68,
-      "volume_prorated_ref": 42770,
+    "2344": {
+      "name": "華邦電",
+      "price": 127.75,
+      "price_is_estimated": true,
+      "pct": -1.73,
+      "volume_prorated_ref": 540414,
       "score": 2,
       "label": "🟡偏多觀察",
       "reasons": [
-        "RSI37偏弱",
+        "RSI35偏弱",
         "觸及布林下軌(支撐)",
         "大盤空頭(-1)"
       ],
-      "time": "09:00:25"
+      "time": "09:30:05"
     },
-    "2409": {
-      "name": "友達",
-      "price": 23.0,
+    "3481": {
+      "name": "群創",
+      "price": 43.175,
       "price_is_estimated": true,
-      "pct": -1.08,
-      "volume_prorated_ref": 40310,
+      "pct": 3.29,
+      "volume_prorated_ref": 1352313,
       "score": 0,
       "label": "⚪中立",
       "reasons": [
-        "RSI38偏弱",
+        "RSI32偏弱",
         "大盤空頭(-1)"
       ],
-      "time": "09:00:26"
-    },
-    "2408": {
-      "name": "南亞科",
-      "price": 326.25,
-      "price_is_estimated": true,
-      "pct": -7.71,
-      "volume_prorated_ref": 49410,
-      "score": 2,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI39偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "09:00:36"
-    },
-    "2356": {
-      "name": "英業達",
-      "price": 59.0,
-      "price_is_estimated": true,
-      "pct": -2.16,
-      "volume_prorated_ref": 13600,
-      "score": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "09:00:26"
+      "time": "09:30:07"
     },
     "2610": {
       "name": "華航",
-      "price": 21.625,
+      "price": 21.575,
       "price_is_estimated": true,
-      "pct": -0.35,
-      "volume_prorated_ref": 18710,
+      "pct": -0.58,
+      "volume_prorated_ref": 61947,
       "score": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "09:00:36"
+      "time": "09:30:24"
     },
-    "2303": {
-      "name": "聯電",
-      "price": 107.5,
-      "price_is_estimated": false,
-      "pct": 4.88,
-      "volume_prorated_ref": 120830,
-      "score": 2,
-      "label": "🟡偏多觀察",
+    "2409": {
+      "name": "友達",
+      "price": 23.8,
+      "price_is_estimated": true,
+      "pct": 2.37,
+      "volume_prorated_ref": 510412,
+      "score": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "09:29:56"
+    },
+    "2337": {
+      "name": "旺宏",
+      "price": 101.25,
+      "price_is_estimated": true,
+      "pct": -0.74,
+      "volume_prorated_ref": 254565,
+      "score": 1,
+      "label": "⚪中立",
       "reasons": [
-        "RSI34偏弱",
+        "RSI32偏弱",
         "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "09:00:20"
+      "time": "09:30:30"
     }
   }
 }
