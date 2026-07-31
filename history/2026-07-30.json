@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-07-30T16:42:32+08:00",
+  "generated_at": "2026-07-31T08:30:46+08:00",
   "date": "2026-07-30",
   "summary": {
     "watchlist": 18,
@@ -16,7 +16,7 @@
       "pct": 3.09,
       "volume_ratio": 2.39,
       "net_buy": 74853.0,
-      "pe": "118.27",
+      "pe": "121.92",
       "ma20": 37.7,
       "bb_lower": 31.25,
       "dist_to_ma_pct": -15.91,
@@ -35,7 +35,7 @@
       "pct": 3.99,
       "volume_ratio": 2.35,
       "net_buy": 1035689.0,
-      "pe": "16.38",
+      "pe": "17.03",
       "ma20": 335.9,
       "bb_lower": 319.93,
       "dist_to_ma_pct": 4.79,
@@ -54,7 +54,7 @@
       "pct": 3.45,
       "volume_ratio": 2.1,
       "net_buy": 44466756.0,
-      "pe": "18.64",
+      "pe": "19.29",
       "ma20": 25.44,
       "bb_lower": 24.36,
       "dist_to_ma_pct": 6.12,
@@ -92,7 +92,7 @@
       "pct": 6.17,
       "volume_ratio": 2.02,
       "net_buy": 566852.0,
-      "pe": "15.20",
+      "pe": "16.14",
       "ma20": 489.18,
       "bb_lower": 451.91,
       "dist_to_ma_pct": 12.64,
@@ -111,7 +111,7 @@
       "pct": 7.88,
       "volume_ratio": 2.01,
       "net_buy": 316076.0,
-      "pe": "37.54",
+      "pe": "40.50",
       "ma20": 60.98,
       "bb_lower": 44.36,
       "dist_to_ma_pct": -20.3,
@@ -130,7 +130,7 @@
       "pct": -7.49,
       "volume_ratio": 3.67,
       "net_buy": 732382.0,
-      "pe": "36.15",
+      "pe": "33.44",
       "ma20": 580.42,
       "bb_lower": 493.57,
       "dist_to_ma_pct": -22.38,
@@ -148,8 +148,8 @@
       "name": "邁科",
       "pct": -6.56,
       "volume_ratio": 3.05,
-      "net_buy": 346080.0,
-      "pe": "103.86",
+      "net_buy": 71080.0,
+      "pe": "97.05",
       "ma20": 692.38,
       "bb_lower": 439.2,
       "dist_to_ma_pct": -31.03,
@@ -168,7 +168,7 @@
       "pct": -3.19,
       "volume_ratio": 2.25,
       "net_buy": 1840209.0,
-      "pe": "63.72",
+      "pe": "61.69",
       "ma20": 853.9,
       "bb_lower": 644.46,
       "dist_to_ma_pct": -28.91,
@@ -187,7 +187,7 @@
       "pct": -8.39,
       "volume_ratio": 2.16,
       "net_buy": 401524.0,
-      "pe": "47.03",
+      "pe": "43.08",
       "ma20": 736.42,
       "bb_lower": 467.66,
       "dist_to_ma_pct": -39.98,
@@ -263,7 +263,7 @@
       "pct": -9.94,
       "volume_ratio": 3.44,
       "net_buy": -227000.0,
-      "pe": "565.63",
+      "pe": "509.38",
       "ma20": 228.2,
       "bb_lower": 105.65,
       "dist_to_ma_pct": -28.57,
@@ -282,7 +282,7 @@
       "pct": -9.91,
       "volume_ratio": 2.32,
       "net_buy": -1050036.0,
-      "pe": "61.15",
+      "pe": "55.09",
       "ma20": 750.3,
       "bb_lower": 408.37,
       "dist_to_ma_pct": -43.02,
@@ -315,31 +315,12 @@
     },
     {
       "category": "出貨嫌疑",
-      "code": "8046",
-      "name": "南電",
-      "pct": -4.78,
-      "volume_ratio": 2.17,
-      "net_buy": -771082.0,
-      "pe": "186.23",
-      "ma20": 1143.1,
-      "bb_lower": 864.04,
-      "dist_to_ma_pct": -26.78,
-      "signal_score": 1,
-      "signal_confidence": 39,
-      "signal_label": "⚪中立",
-      "conflict": true,
-      "conflict_reason": "技術面偏多但法人賣超",
-      "market_regime": "空頭",
-      "stock_trend": "中性/不明"
-    },
-    {
-      "category": "出貨嫌疑",
       "code": "2382",
       "name": "廣達",
       "pct": -9.85,
-      "volume_ratio": 2.12,
+      "volume_ratio": 2.18,
       "net_buy": -26531309.0,
-      "pe": "15.56",
+      "pe": "14.03",
       "ma20": 346.05,
       "bb_lower": 285.43,
       "dist_to_ma_pct": -19.38,
@@ -350,6 +331,25 @@
       "conflict_reason": "技術面偏多但法人賣超",
       "market_regime": "空頭",
       "stock_trend": "空頭排列"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "8046",
+      "name": "南電",
+      "pct": -4.78,
+      "volume_ratio": 2.17,
+      "net_buy": -813082.0,
+      "pe": "177.33",
+      "ma20": 1143.1,
+      "bb_lower": 864.04,
+      "dist_to_ma_pct": -26.78,
+      "signal_score": 1,
+      "signal_confidence": 39,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "空頭",
+      "stock_trend": "中性/不明"
     }
   ],
   "gainers": [
@@ -741,14 +741,14 @@
       "net_buy": 7643712.0
     },
     {
-      "code": "2891",
-      "name": "中信金",
-      "net_buy": 6583454.0
-    },
-    {
       "code": "4904",
       "name": "遠傳",
       "net_buy": 6480139.0
+    },
+    {
+      "code": "2891",
+      "name": "中信金",
+      "net_buy": 5805454.0
     },
     {
       "code": "2633",
@@ -896,14 +896,14 @@
       "net_buy": 1734992.0
     },
     {
-      "code": "3532",
-      "name": "台勝科",
-      "net_buy": 1718791.0
-    },
-    {
       "code": "2484",
       "name": "希華",
       "net_buy": 1653443.0
+    },
+    {
+      "code": "6919",
+      "name": "康霈*",
+      "net_buy": 1652388.0
     }
   ],
   "weekly": [
@@ -1033,6 +1033,11 @@
       "count": 4
     },
     {
+      "code": "6919",
+      "name": "康霈*",
+      "count": 4
+    },
+    {
       "code": "2886",
       "name": "兆豐金",
       "count": 4
@@ -1150,11 +1155,6 @@
     {
       "code": "2303",
       "name": "聯電",
-      "count": 3
-    },
-    {
-      "code": "2313",
-      "name": "華通",
       "count": 3
     }
   ],
@@ -2070,24 +2070,6 @@
         "stock_trend": "中性/不明"
       },
       {
-        "code": "8150",
-        "name": "南茂",
-        "score": 4,
-        "confidence": 57,
-        "label": "🟢強力買進",
-        "reasons": [
-          "RSI31偏弱",
-          "觸及布林下軌(支撐)",
-          "法人買超",
-          "營收年增37%",
-          "大盤空頭(-1)"
-        ],
-        "conflict": false,
-        "conflict_reason": null,
-        "market_regime": "空頭",
-        "stock_trend": "中性/不明"
-      },
-      {
         "code": "9958",
         "name": "世紀鋼",
         "score": 4,
@@ -2153,6 +2135,25 @@
           "接近布林下軌支撐(0.4%)",
           "法人買超",
           "營收年增8%",
+          "大盤空頭(-1)",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "空頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "1522",
+        "name": "堤維西",
+        "score": 3,
+        "confidence": 50,
+        "label": "🟡偏多觀察",
+        "reasons": [
+          "RSI27超賣",
+          "接近布林下軌支撐(0.5%)",
+          "法人買超",
+          "營收年增70%",
           "大盤空頭(-1)",
           "個股空頭排列(接刀風險,-1)"
         ],
