@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-04T12:00:37+08:00",
+  "updated_at": "2026-08-04T12:30:37+08:00",
   "signals": {
     "3481": {
       "name": "群創",
       "price": 46.775,
       "price_is_estimated": true,
       "pct": 2.13,
-      "volume_prorated_ref": 412767,
+      "volume_prorated_ref": 368001,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
@@ -14,14 +14,14 @@
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:21"
+      "time": "12:30:12"
     },
     "2317": {
       "name": "鴻海",
-      "price": 250.5,
-      "price_is_estimated": false,
-      "pct": -0.99,
-      "volume_prorated_ref": 40689,
+      "price": 250.75,
+      "price_is_estimated": true,
+      "pct": -0.89,
+      "volume_prorated_ref": 37328,
       "score": 1,
       "confidence": 17,
       "label": "⚪中立",
@@ -29,38 +29,38 @@
         "MACD黃金交叉",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:24"
+      "time": "12:30:10"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 65.65,
+      "price_is_estimated": true,
+      "pct": 2.74,
+      "volume_prorated_ref": 35421,
+      "score": 1,
+      "confidence": 17,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "大盤空頭(-1)"
+      ],
+      "time": "12:30:11"
     },
     "2610": {
       "name": "華航",
-      "price": 22.375,
-      "price_is_estimated": true,
-      "pct": -0.33,
-      "volume_prorated_ref": 33914,
+      "price": 22.4,
+      "price_is_estimated": false,
+      "pct": -0.22,
+      "volume_prorated_ref": 31481,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [
         "MACD黃金交叉",
-        "接近布林上軌壓力(1.2%)",
+        "接近布林上軌壓力(1.1%)",
         "大盤空頭(-1)"
       ],
-      "time": "12:00:16"
-    },
-    "2356": {
-      "name": "英業達",
-      "price": 65.45,
-      "price_is_estimated": true,
-      "pct": 2.43,
-      "volume_prorated_ref": 39680,
-      "score": 1,
-      "confidence": 17,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)"
-      ],
-      "time": "12:00:26"
+      "time": "12:30:31"
     }
   }
 }
