@@ -17,7 +17,7 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {} };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -537,6 +537,79 @@ function setupWatchlistSearch() {
   });
 }
 
+// ===== 自選股K線圖彈窗 =====
+async function loadChartsData() {
+  try {
+    const data = await fetchJSON(`charts.json?t=${Date.now()}`);
+    state.chartsData = data;
+  } catch (err) {
+    state.chartsData = {};
+  }
+}
+
+function openChartModal(code, name) {
+  const overlay = document.getElementById("chart-modal-overlay");
+  const title = document.getElementById("chart-modal-title");
+  const body = document.getElementById("chart-modal-body");
+  title.textContent = name ? `${code} ${name}` : code;
+  body.innerHTML = "";
+
+  const candles = (state.chartsData || {})[code];
+  if (!candles || candles.length === 0) {
+    body.innerHTML = '<p class="empty-note">目前還沒有足夠的K線資料(需要累積一段時間)</p>';
+    overlay.hidden = false;
+    return;
+  }
+
+  overlay.hidden = false;
+
+  if (typeof LightweightCharts === "undefined") {
+    body.innerHTML = '<p class="empty-note">圖表元件載入失敗，請重新整理頁面再試</p>';
+    return;
+  }
+
+  const chart = LightweightCharts.createChart(body, {
+    width: body.clientWidth || 560,
+    height: 320,
+    layout: { background: { color: "transparent" }, textColor: "#8B93AC" },
+    grid: {
+      vertLines: { color: "#293145" },
+      horzLines: { color: "#293145" },
+    },
+    timeScale: { borderColor: "#293145" },
+    rightPriceScale: { borderColor: "#293145" },
+  });
+  const candleSeries = chart.addCandlestickSeries({
+    upColor: "#E24C4C", downColor: "#2BAA6D",
+    borderUpColor: "#E24C4C", borderDownColor: "#2BAA6D",
+    wickUpColor: "#E24C4C", wickDownColor: "#2BAA6D",
+  });
+  candleSeries.setData(candles);
+  chart.timeScale().fitContent();
+  state.activeChart = chart;
+}
+
+function closeChartModal() {
+  const overlay = document.getElementById("chart-modal-overlay");
+  overlay.hidden = true;
+  if (state.activeChart) {
+    state.activeChart.remove();
+    state.activeChart = null;
+  }
+}
+
+function setupChartModal() {
+  document.getElementById("chart-modal-close").addEventListener("click", closeChartModal);
+  document.getElementById("chart-modal-overlay").addEventListener("click", (e) => {
+    if (e.target.id === "chart-modal-overlay") closeChartModal();
+  });
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".chart-open-trigger");
+    if (!trigger) return;
+    openChartModal(trigger.dataset.code, trigger.dataset.name);
+  });
+}
+
 function renderStarred(day) {
   const codes = Array.from(state.watchlistCodes);
   if (codes.length === 0) {
@@ -578,7 +651,7 @@ function renderStarred(day) {
 
     return [
       { className: "star-cell", html: starHtml(code) },
-      code,
+      { html: `<span class="chart-clickable chart-open-trigger" data-code="${code}" data-name="${name || ""}">${code}</span>` },
       { className: "name-cell", html: name || "-" },
       { html: badgeHtml },
       { className: pctClass(signalInfo ? signalInfo.score : null), html: signalHtml },
@@ -822,8 +895,10 @@ async function init() {
   setupTokenButton();
   setupWatchlistSearch();
   setupIntradayTriggerButton();
+  setupChartModal();
   await loadWatchlistData();
   loadCodeNameMap();
+  loadChartsData();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
