@@ -17,7 +17,7 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {} };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -897,9 +897,11 @@ async function init() {
   setupWatchlistSearch();
   setupIntradayTriggerButton();
   setupChartModal();
+  setupSignalModal();
   await loadWatchlistData();
   loadCodeNameMap();
   loadChartsData();
+  loadAllSignals();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
@@ -915,6 +917,87 @@ async function init() {
     el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
   }
 }
+async function loadAllSignals() {
+  try {
+    const data = await fetchJSON(`all_signals.json?t=${Date.now()}`);
+    state.allSignals = data;
+  } catch (err) {
+    state.allSignals = {};
+  }
+}
+
+function openSignalModal(code) {
+  const overlay = document.getElementById("signal-modal-overlay");
+  const title = document.getElementById("signal-modal-title");
+  const body = document.getElementById("signal-modal-body");
+  const info = state.allSignals[code];
+
+  if (!info) {
+    title.textContent = code;
+    body.innerHTML = '<p class="empty-note">目前沒有這檔股票的訊號資料(可能歷史資料不足20天)</p>';
+    overlay.hidden = false;
+    return;
+  }
+
+  title.textContent = info.name ? `${code} ${info.name}` : code;
+
+  const scoreHtml = `<span title="信心值 ${info.confidence}%">${scoreEmoji(info.score)}${info.score > 0 ? "+" : ""}${info.score}</span>`;
+  const conflictHtml = info.conflict
+    ? `<div class="signal-modal-conflict">⚠️ ${info.conflict_reason}</div>`
+    : "";
+  const reasonsHtml = (info.reasons || []).length
+    ? `<ul class="signal-modal-reasons">${info.reasons.map((r) => `<li>${r}</li>`).join("")}</ul>`
+    : '<p class="empty-note">目前沒有觸發任何加減分條件</p>';
+
+  body.innerHTML = `
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">燈號</span>
+      <span>${scoreHtml}　${info.label}</span>
+    </div>
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">產業別</span>
+      <span>${info.industry || "-"}</span>
+    </div>
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">RSI(14)</span>
+      <span>${info.rsi ?? "-"}</span>
+    </div>
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">MACD</span>
+      <span>${info.macd_golden_cross ? "黃金交叉 ↗" : info.macd_death_cross ? "死亡交叉 ↘" : "-"}</span>
+    </div>
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">大盤環境</span>
+      <span>${info.market_regime}</span>
+    </div>
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">個股趨勢</span>
+      <span>${info.stock_trend}</span>
+    </div>
+    ${conflictHtml}
+    <div class="signal-modal-reasons-title">訊號理由</div>
+    ${reasonsHtml}
+    <a class="signal-modal-news" href="${newsLink(code)}" target="_blank" rel="noopener noreferrer">🔗 相關新聞</a>
+  `;
+  overlay.hidden = false;
+}
+
+function closeSignalModal() {
+  document.getElementById("signal-modal-overlay").hidden = true;
+}
+
+function setupSignalModal() {
+  document.getElementById("signal-modal-close").addEventListener("click", closeSignalModal);
+  document.getElementById("signal-modal-overlay").addEventListener("click", (e) => {
+    if (e.target.id === "signal-modal-overlay") closeSignalModal();
+  });
+  document.addEventListener("click", (e) => {
+    const trigger = e.target.closest(".signal-open-trigger");
+    if (!trigger) return;
+    openSignalModal(trigger.dataset.code);
+  });
+}
+
 function renderSupportCard(code, info) {
   const ma20 = info.ma20 !== null && info.ma20 !== undefined ? info.ma20 : null;
   const bbLower = info.bb_lower !== null && info.bb_lower !== undefined ? info.bb_lower : null;
@@ -931,6 +1014,17 @@ function renderSupportCard(code, info) {
       <div>布林下軌：${bbLower}</div>
     `;
   }
+
+  const sig = state.allSignals[code];
+  if (sig) {
+    bodyHtml += `
+      <div class="support-card-signal">
+        目前訊號：<span title="信心值 ${sig.confidence}%">${scoreEmoji(sig.score)}${sig.score > 0 ? "+" : ""}${sig.score}</span>　${sig.label}
+        <button type="button" class="signal-open-trigger signal-detail-btn" data-code="${code}">查看完整訊號分析</button>
+      </div>
+    `;
+  }
+
   return `<div class="support-card">${bodyHtml}</div>`;
 }
 
