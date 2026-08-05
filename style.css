@@ -406,3 +406,26 @@ td.star-cell { width: 44px; padding-left: 4px; padding-right: 4px; }
   display: flex;
   align-items: center;
 }
+
+/* 可收合分頁(漲幅榜/法人買超/本週熱門),預設收合,點標題展開 */
+.panel-head-collapsible {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+.panel-head-collapsible::-webkit-details-marker { display: none; }
+.panel-head-collapsible::before {
+  content: "▸";
+  color: var(--gold);
+  font-size: 13px;
+  transition: transform 0.15s;
+}
+details[open] .panel-head-collapsible::before {
+  transform: rotate(90deg);
+}
+.panel-head-collapsible h2 { margin: 0; font-size: 16px; }
+.panel-head-collapsible .panel-note { margin: 0; }
+details .table-wrap { margin-top: 14px; }
