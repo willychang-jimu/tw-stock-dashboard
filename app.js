@@ -42,6 +42,8 @@ const el = {
   tableSignalSell: document.getElementById("table-signal-sell"),
   panelBacktest: document.getElementById("panel-backtest"),
   tableBacktest: document.getElementById("table-backtest"),
+  panelSignalBacktest: document.getElementById("panel-signal-backtest"),
+  tableSignalBacktest: document.getElementById("table-signal-backtest"),
 };
 
 function abbreviateReason(reason) {
@@ -268,6 +270,32 @@ function renderBacktest(day) {
   renderTable(el.tableBacktest, ["分類", "天數後", "平均報酬", "勝率", "樣本數"], rows);
 }
 
+function renderSignalBacktest(day) {
+  const signalBacktest = day.signal_backtest || {};
+  const labelOrder = ["🟢強力買進", "🟡偏多觀察", "🟠偏空風險", "🔴出場訊號"];
+  const rows = [];
+  labelOrder.forEach((label) => {
+    const byHorizon = signalBacktest[label];
+    if (!byHorizon) return;
+    HORIZON_ORDER.forEach((horizon) => {
+      const stat = byHorizon[horizon] || {};
+      const avg = stat["平均報酬%"];
+      const win = stat["勝率%"];
+      const n = stat["樣本數"] || 0;
+      rows.push([
+        label,
+        horizon,
+        n === 0
+          ? { className: "", html: '<span class="empty-note">尚無樣本</span>' }
+          : { className: pctClass(avg), html: fmtPct(avg) },
+        n === 0 ? "-" : `${win.toFixed(1)}%`,
+        n,
+      ]);
+    });
+  });
+  renderTable(el.tableSignalBacktest, ["標籤", "天數後", "平均報酬", "勝率", "樣本數"], rows);
+}
+
 function renderSignals(day) {
   const signals = day.signals || { buy: [], sell: [] };
 
@@ -312,6 +340,7 @@ function showPanels() {
   el.panelWeekly.hidden = false;
   el.panelSignals.hidden = false;
   el.panelBacktest.hidden = false;
+  el.panelSignalBacktest.hidden = false;
   el.stateMessage.hidden = true;
 }
 
@@ -786,6 +815,7 @@ function renderAll(day) {
   renderWeekly(day);
   renderSignals(day);
   renderBacktest(day);
+  renderSignalBacktest(day);
 }
 
 async function init() {
