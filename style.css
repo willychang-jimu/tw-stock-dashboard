@@ -441,6 +441,9 @@ details .table-wrap { margin-top: 14px; }
   z-index: 1000;
   padding: 20px;
 }
+.chart-modal-overlay[hidden] {
+  display: none;
+}
 .chart-modal {
   background: var(--surface);
   border: 1px solid var(--border);
