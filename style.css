@@ -481,3 +481,62 @@ details .table-wrap { margin-top: 14px; }
   text-underline-offset: 3px;
 }
 .chart-clickable:hover { color: var(--gold); }
+
+/* 支撐卡片裡的訊號摘要與按鈕 */
+.support-card-signal {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.signal-detail-btn {
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.signal-detail-btn:hover { border-color: var(--gold); }
+
+/* 訊號詳情彈窗內容 */
+.signal-modal-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+}
+.signal-modal-label { color: var(--text-muted); }
+.signal-modal-conflict {
+  margin-top: 10px;
+  color: var(--cat-warning);
+  font-size: 13px;
+}
+.signal-modal-reasons-title {
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.signal-modal-reasons {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+.signal-modal-news {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--gold);
+  font-size: 13px;
+  text-decoration: none;
+}
+.signal-modal-news:hover { text-decoration: underline; }
