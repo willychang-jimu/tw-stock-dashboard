@@ -1,108 +1,12 @@
 {
-  "updated_at": "2026-08-05T10:00:46+08:00",
+  "updated_at": "2026-08-05T10:30:42+08:00",
   "signals": {
-    "1532": {
-      "name": "勤美",
-      "price": 21.625,
-      "price_is_estimated": true,
-      "pct": 0.58,
-      "volume_prorated_ref": 270,
-      "score": 2,
-      "confidence": 26,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI37偏弱",
-        "RSI翻揚(34→37)",
-        "接近布林下軌支撐(0.4%)",
-        "大盤空頭(-1)"
-      ],
-      "time": "09:56:52"
-    },
-    "2233": {
-      "name": "宇隆",
-      "price": 213.25,
-      "price_is_estimated": true,
-      "pct": 4.53,
-      "volume_prorated_ref": 3612,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:58:57"
-    },
-    "1444": {
-      "name": "力麗",
-      "price": 7.19,
-      "price_is_estimated": true,
-      "pct": 0.7,
-      "volume_prorated_ref": 1382,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "10:00:25"
-    },
-    "1216": {
-      "name": "統一",
-      "price": 72.85,
-      "price_is_estimated": true,
-      "pct": -1.42,
-      "volume_prorated_ref": 20866,
-      "score": 2,
-      "confidence": 28,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI36偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "10:00:39"
-    },
-    "1563": {
-      "name": "巧新",
-      "price": 58.0,
-      "price_is_estimated": true,
-      "pct": 1.58,
-      "volume_prorated_ref": 630,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "10:00:11"
-    },
-    "1516": {
-      "name": "川飛",
-      "price": 15.7,
-      "price_is_estimated": true,
-      "pct": -2.18,
-      "volume_prorated_ref": 9,
-      "score": 1,
-      "confidence": 31,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI35偏弱",
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:57:28"
-    },
     "1617": {
       "name": "榮星",
-      "price": 18.725,
+      "price": 18.625,
       "price_is_estimated": true,
-      "pct": 2.6,
-      "volume_prorated_ref": 10184,
+      "pct": 2.05,
+      "volume_prorated_ref": 7193,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
@@ -110,62 +14,30 @@
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "10:00:23"
+      "time": "10:29:54"
     },
-    "1446": {
-      "name": "宏和",
-      "price": 13.7,
-      "price_is_estimated": false,
-      "pct": 0.74,
-      "volume_prorated_ref": 279,
-      "score": 3,
-      "confidence": 36,
-      "label": "🟡偏多觀察",
+    "6906": {
+      "name": "現觀科",
+      "price": 71.55,
+      "price_is_estimated": true,
+      "pct": 4.15,
+      "volume_prorated_ref": 104,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
       "reasons": [
-        "RSI28超賣",
-        "RSI翻揚(25→28)",
         "MACD黃金交叉",
         "大盤空頭(-1)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "09:59:33"
-    },
-    "1718": {
-      "name": "中纖",
-      "price": 10.075,
-      "price_is_estimated": true,
-      "pct": 0.85,
-      "volume_prorated_ref": 84632,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "10:00:32"
-    },
-    "3026": {
-      "name": "禾伸堂",
-      "price": 520.0,
-      "price_is_estimated": false,
-      "pct": 4.42,
-      "volume_prorated_ref": 2606,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "10:00:27"
+      "time": "10:26:45"
     },
     "1215": {
       "name": "卜蜂",
       "price": 103.75,
       "price_is_estimated": true,
       "pct": 0.24,
-      "volume_prorated_ref": 738,
+      "volume_prorated_ref": 741,
       "score": 2,
       "confidence": 32,
       "label": "🟡偏多觀察",
@@ -177,31 +49,239 @@
         "大盤空頭(-1)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "10:00:18"
+      "time": "10:30:15"
     },
-    "1308": {
-      "name": "亞聚",
-      "price": 12.925,
+    "1444": {
+      "name": "力麗",
+      "price": 7.185,
       "price_is_estimated": true,
-      "pct": 1.37,
-      "volume_prorated_ref": 2452,
-      "score": 2,
-      "confidence": 25,
-      "label": "🟡偏多觀察",
+      "pct": 0.63,
+      "volume_prorated_ref": 1071,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
       "reasons": [
-        "RSI40偏弱",
-        "RSI翻揚(37→40)",
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "10:00:23"
+      "time": "10:29:40"
+    },
+    "5244": {
+      "name": "弘凱",
+      "price": 32.45,
+      "price_is_estimated": true,
+      "pct": 3.02,
+      "volume_prorated_ref": 436,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:28:04"
+    },
+    "2233": {
+      "name": "宇隆",
+      "price": 215.75,
+      "price_is_estimated": true,
+      "pct": 5.76,
+      "volume_prorated_ref": 2658,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:30:10"
+    },
+    "8163": {
+      "name": "達方",
+      "price": 31.5,
+      "price_is_estimated": true,
+      "pct": -1.87,
+      "volume_prorated_ref": 3744,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:30:07"
+    },
+    "1446": {
+      "name": "宏和",
+      "price": 13.725,
+      "price_is_estimated": true,
+      "pct": 0.92,
+      "volume_prorated_ref": 200,
+      "score": 3,
+      "confidence": 36,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI29超賣",
+        "RSI翻揚(25→29)",
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:25:18"
+    },
+    "8940": {
+      "name": "新天地",
+      "price": 15.45,
+      "price_is_estimated": false,
+      "pct": 0.65,
+      "volume_prorated_ref": 54,
+      "score": 1,
+      "confidence": 26,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI31偏弱",
+        "RSI翻揚(26→31)",
+        "接近布林下軌支撐(0.4%)",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:15:43"
+    },
+    "1532": {
+      "name": "勤美",
+      "price": 21.625,
+      "price_is_estimated": true,
+      "pct": 0.58,
+      "volume_prorated_ref": 255,
+      "score": 2,
+      "confidence": 26,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI37偏弱",
+        "RSI翻揚(34→37)",
+        "接近布林下軌支撐(0.4%)",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:29:30"
+    },
+    "1216": {
+      "name": "統一",
+      "price": 72.85,
+      "price_is_estimated": true,
+      "pct": -1.42,
+      "volume_prorated_ref": 16959,
+      "score": 2,
+      "confidence": 28,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI36偏弱",
+        "觸及布林下軌(支撐)",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:30:34"
+    },
+    "3026": {
+      "name": "禾伸堂",
+      "price": 547.0,
+      "price_is_estimated": true,
+      "pct": 9.84,
+      "volume_prorated_ref": 2676,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:30:05"
+    },
+    "8261": {
+      "name": "富鼎",
+      "price": 185.75,
+      "price_is_estimated": true,
+      "pct": 3.19,
+      "volume_prorated_ref": 20913,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:30:12"
+    },
+    "1516": {
+      "name": "川飛",
+      "price": 15.75,
+      "price_is_estimated": true,
+      "pct": -1.87,
+      "volume_prorated_ref": 6,
+      "score": 1,
+      "confidence": 31,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI36偏弱",
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:28:50"
+    },
+    "1342": {
+      "name": "八貫",
+      "price": 101.75,
+      "price_is_estimated": true,
+      "pct": 1.75,
+      "volume_prorated_ref": 452,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:29:56"
+    },
+    "7769": {
+      "name": "鴻勁",
+      "price": 6562.5,
+      "price_is_estimated": true,
+      "pct": 6.02,
+      "volume_prorated_ref": 942,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD黃金交叉",
+        "大盤空頭(-1)",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:30:38"
+    },
+    "1563": {
+      "name": "巧新",
+      "price": 58.4,
+      "price_is_estimated": true,
+      "pct": 2.28,
+      "volume_prorated_ref": 631,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "大盤空頭(-1)"
+      ],
+      "time": "10:29:53"
     },
     "6164": {
       "name": "華興",
-      "price": 11.975,
+      "price": 11.925,
       "price_is_estimated": true,
-      "pct": 2.35,
-      "volume_prorated_ref": 1084,
+      "pct": 1.92,
+      "volume_prorated_ref": 912,
       "score": -1,
       "confidence": 0,
       "label": "⚪中立",
@@ -210,64 +290,14 @@
         "大盤空頭(-1)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "10:00:00"
+      "time": "10:30:27"
     },
-    "5244": {
-      "name": "弘凱",
-      "price": 32.475,
+    "1308": {
+      "name": "亞聚",
+      "price": 13.025,
       "price_is_estimated": true,
-      "pct": 3.1,
-      "volume_prorated_ref": 581,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:59:55"
-    },
-    "8940": {
-      "name": "新天地",
-      "price": 15.375,
-      "price_is_estimated": true,
-      "pct": 0.16,
-      "volume_prorated_ref": 68,
-      "score": 3,
-      "confidence": 33,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI27超賣",
-        "RSI翻揚(26→27)",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:56:45"
-    },
-    "6906": {
-      "name": "現觀科",
-      "price": 71.9,
-      "price_is_estimated": true,
-      "pct": 4.66,
-      "volume_prorated_ref": 128,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:59:52"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 186.25,
-      "price_is_estimated": true,
-      "pct": 3.47,
-      "volume_prorated_ref": 28827,
+      "pct": 2.16,
+      "volume_prorated_ref": 2445,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
@@ -275,56 +305,22 @@
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "10:00:37"
+      "time": "10:30:28"
     },
-    "7769": {
-      "name": "鴻勁",
-      "price": 6570.0,
+    "1718": {
+      "name": "中纖",
+      "price": 10.175,
       "price_is_estimated": true,
-      "pct": 6.14,
-      "volume_prorated_ref": 1102,
+      "pct": 1.85,
+      "volume_prorated_ref": 63237,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "10:00:23"
-    },
-    "8163": {
-      "name": "達方",
-      "price": 31.525,
-      "price_is_estimated": true,
-      "pct": -1.79,
-      "volume_prorated_ref": 5170,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "10:00:14"
-    },
-    "1342": {
-      "name": "八貫",
-      "price": 100.75,
-      "price_is_estimated": true,
-      "pct": 0.75,
-      "volume_prorated_ref": 435,
-      "score": 2,
-      "confidence": 25,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI38偏弱",
-        "RSI翻揚(36→38)",
         "MACD空頭動能減弱",
         "大盤空頭(-1)"
       ],
-      "time": "09:59:03"
+      "time": "10:30:35"
     }
   }
 }
