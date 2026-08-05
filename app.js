@@ -577,6 +577,7 @@ function openChartModal(code, name) {
       horzLines: { color: "#293145" },
     },
     timeScale: { borderColor: "#293145" },
+    localization: { dateFormat: "yy/MM/dd" },
     rightPriceScale: { borderColor: "#293145" },
   });
   const candleSeries = chart.addCandlestickSeries({
