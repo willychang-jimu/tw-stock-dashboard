@@ -1,212 +1,197 @@
 {
-  "updated_at": "2026-08-05T13:30:30+08:00",
+  "updated_at": "2026-08-06T09:00:40+08:00",
   "signals": {
-    "1216": {
-      "name": "統一",
-      "price": 73.15,
-      "price_is_estimated": true,
-      "pct": -1.01,
-      "volume_prorated_ref": 15449,
-      "score": 2,
-      "confidence": 28,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI36偏弱",
-        "觸及布林下軌(支撐)",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:29:59"
-    },
-    "2408": {
-      "name": "南亞科",
-      "price": 445.0,
-      "price_is_estimated": false,
-      "pct": 2.06,
-      "volume_prorated_ref": 141894,
-      "score": 1,
-      "confidence": 17,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:30:00"
-    },
     "3231": {
       "name": "緯創",
-      "price": 193.0,
-      "price_is_estimated": false,
-      "pct": -1.03,
-      "volume_prorated_ref": 204609,
-      "score": -2,
-      "confidence": 26,
-      "label": "🟠偏空風險",
+      "price": 195.0,
+      "price_is_estimated": true,
+      "pct": 1.04,
+      "volume_prorated_ref": 27040,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
       "reasons": [
-        "RSI67偏強",
-        "RSI走弱(69→67)",
-        "接近布林上軌壓力(0.1%)",
+        "RSI68偏強",
+        "接近布林上軌壓力(1.5%)",
+        "大盤多頭(+1)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "13:30:00"
-    },
-    "6906": {
-      "name": "現觀科",
-      "price": 72.65,
-      "price_is_estimated": true,
-      "pct": 5.75,
-      "volume_prorated_ref": 99,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "13:29:56"
-    },
-    "1308": {
-      "name": "亞聚",
-      "price": 12.95,
-      "price_is_estimated": false,
-      "pct": 1.57,
-      "volume_prorated_ref": 1247,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:29:59"
-    },
-    "1444": {
-      "name": "力麗",
-      "price": 7.175,
-      "price_is_estimated": true,
-      "pct": 0.49,
-      "volume_prorated_ref": 1200,
-      "score": 2,
-      "confidence": 25,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI40偏弱",
-        "RSI翻揚(39→40)",
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:29:55"
+      "time": "09:00:07"
     },
     "2356": {
       "name": "英業達",
-      "price": 65.45,
+      "price": 65.55,
       "price_is_estimated": true,
-      "pct": -0.83,
-      "volume_prorated_ref": 42464,
+      "pct": -0.23,
+      "volume_prorated_ref": 4370,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "09:00:36"
+    },
+    "2465": {
+      "name": "麗臺",
+      "price": 87.85,
+      "price_is_estimated": true,
+      "pct": 2.39,
+      "volume_prorated_ref": 2450,
       "score": 1,
       "confidence": 17,
       "label": "⚪中立",
       "reasons": [
-        "MACD黃金交叉",
-        "大盤空頭(-1)"
+        "RSI61偏強",
+        "MACD黃金交叉"
       ],
-      "time": "13:29:58"
-    },
-    "3026": {
-      "name": "禾伸堂",
-      "price": 547.0,
-      "price_is_estimated": false,
-      "pct": 9.84,
-      "volume_prorated_ref": 1136,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:29:59"
-    },
-    "2301": {
-      "name": "光寶科",
-      "price": 249.25,
-      "price_is_estimated": true,
-      "pct": -1.09,
-      "volume_prorated_ref": 86074,
-      "score": -2,
-      "confidence": 33,
-      "label": "🟠偏空風險",
-      "reasons": [
-        "RSI64偏強",
-        "RSI走弱(65→64)",
-        "MACD黃金交叉",
-        "觸及布林上軌(壓力)"
-      ],
-      "time": "13:29:59"
-    },
-    "8163": {
-      "name": "達方",
-      "price": 31.05,
-      "price_is_estimated": false,
-      "pct": -3.27,
-      "volume_prorated_ref": 2317,
-      "score": 1,
-      "confidence": 31,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI39偏弱",
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "13:30:00"
-    },
-    "1342": {
-      "name": "八貫",
-      "price": 102.0,
-      "price_is_estimated": false,
-      "pct": 2.0,
-      "volume_prorated_ref": 350,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "大盤空頭(-1)"
-      ],
-      "time": "13:30:00"
-    },
-    "1516": {
-      "name": "川飛",
-      "price": 15.8,
-      "price_is_estimated": true,
-      "pct": -1.56,
-      "volume_prorated_ref": 3,
-      "score": 1,
-      "confidence": 31,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI36偏弱",
-        "MACD黃金交叉",
-        "大盤空頭(-1)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "13:27:04"
+      "time": "09:00:05"
     },
     "1617": {
       "name": "榮星",
-      "price": 18.525,
+      "price": 18.475,
       "price_is_estimated": true,
-      "pct": 1.51,
-      "volume_prorated_ref": 4087,
+      "pct": -0.4,
+      "volume_prorated_ref": 0,
+      "score": 1,
+      "confidence": 6,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "08:59:55"
+    },
+    "1216": {
+      "name": "統一",
+      "price": 73.35,
+      "price_is_estimated": true,
+      "pct": 0.2,
+      "volume_prorated_ref": 3120,
+      "score": 3,
+      "confidence": 26,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI37偏弱",
+        "RSI翻揚(37→37)",
+        "接近布林下軌支撐(0.6%)"
+      ],
+      "time": "09:00:34"
+    },
+    "8163": {
+      "name": "達方",
+      "price": 31.075,
+      "price_is_estimated": true,
+      "pct": 0.08,
+      "volume_prorated_ref": 120,
+      "score": 3,
+      "confidence": 36,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI39偏弱",
+        "RSI翻揚(39→39)",
+        "MACD黃金交叉",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "09:00:18"
+    },
+    "2301": {
+      "name": "光寶科",
+      "price": 253.5,
+      "price_is_estimated": true,
+      "pct": 1.81,
+      "volume_prorated_ref": 9670,
+      "score": -2,
+      "confidence": 28,
+      "label": "🟠偏空風險",
+      "reasons": [
+        "RSI65偏強",
+        "觸及布林上軌(壓力)",
+        "大盤多頭(+1)"
+      ],
+      "time": "09:00:10"
+    },
+    "2324": {
+      "name": "仁寶",
+      "price": 36.75,
+      "price_is_estimated": true,
+      "pct": -0.54,
+      "volume_prorated_ref": 5170,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "09:00:20"
+    },
+    "2330": {
+      "name": "台積電",
+      "price": 2392.5,
+      "price_is_estimated": true,
+      "pct": -0.52,
+      "volume_prorated_ref": 22550,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "09:00:10"
+    },
+    "3026": {
+      "name": "禾伸堂",
+      "price": 541.0,
+      "price_is_estimated": false,
+      "pct": -1.1,
+      "volume_prorated_ref": 650,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [
         "MACD空頭動能減弱",
-        "大盤空頭(-1)"
+        "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "13:29:57"
+      "time": "09:00:08"
+    },
+    "2344": {
+      "name": "華邦電",
+      "price": 164.75,
+      "price_is_estimated": true,
+      "pct": -2.51,
+      "volume_prorated_ref": 30140,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "09:00:10"
+    },
+    "3189": {
+      "name": "景碩",
+      "price": 818.5,
+      "price_is_estimated": true,
+      "pct": -1.15,
+      "volume_prorated_ref": 0,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "08:59:55"
+    },
+    "2408": {
+      "name": "南亞科",
+      "price": 441.0,
+      "price_is_estimated": false,
+      "pct": -0.9,
+      "volume_prorated_ref": 29300,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "MACD黃金交叉"
+      ],
+      "time": "09:00:26"
     }
   }
 }
