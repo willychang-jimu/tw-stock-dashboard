@@ -540,3 +540,15 @@ details .table-wrap { margin-top: 14px; }
   text-decoration: none;
 }
 .signal-modal-news:hover { text-decoration: underline; }
+
+/* 全市場訊號瀏覽的產業篩選下拉選單 */
+#industry-filter {
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  cursor: pointer;
+}
