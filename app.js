@@ -40,6 +40,10 @@ const el = {
   panelSignals: document.getElementById("panel-signals"),
   tableSignalBuy: document.getElementById("table-signal-buy"),
   tableSignalSell: document.getElementById("table-signal-sell"),
+  panelAllSignals: document.getElementById("panel-all-signals"),
+  tableAllSignalsBuy: document.getElementById("table-all-signals-buy"),
+  tableAllSignalsSell: document.getElementById("table-all-signals-sell"),
+  industryFilter: document.getElementById("industry-filter"),
   panelBacktest: document.getElementById("panel-backtest"),
   tableBacktest: document.getElementById("table-backtest"),
   panelSignalBacktest: document.getElementById("panel-signal-backtest"),
@@ -296,6 +300,72 @@ function renderSignalBacktest(day) {
   renderTable(el.tableSignalBacktest, ["標籤", "天數後", "平均報酬", "勝率", "樣本數"], rows);
 }
 
+function sortByWatchlistAndConfidence(items, codeAccessor) {
+  return [...items].sort((a, b) => {
+    const aw = state.watchlistCodes.has(codeAccessor(a)) ? 0 : 1;
+    const bw = state.watchlistCodes.has(codeAccessor(b)) ? 0 : 1;
+    if (aw !== bw) return aw - bw;
+    return (b.confidence ?? 0) - (a.confidence ?? 0);
+  });
+}
+
+function populateIndustryFilter() {
+  const industries = new Set();
+  Object.values(state.allSignals).forEach((s) => {
+    if (s.industry) industries.add(s.industry);
+  });
+  const sorted = Array.from(industries).sort((a, b) => a.localeCompare(b, "zh-Hant"));
+  el.industryFilter.innerHTML =
+    '<option value="">全部產業</option>' +
+    sorted.map((ind) => `<option value="${ind}">${ind}</option>`).join("");
+}
+
+function renderAllSignalsBrowser() {
+  const filterValue = el.industryFilter.value;
+  const entries = Object.entries(state.allSignals)
+    .map(([code, info]) => ({ code, ...info }))
+    .filter((s) => !filterValue || s.industry === filterValue);
+
+  const buyList = sortByWatchlistAndConfidence(entries.filter((s) => s.score >= 2), (x) => x.code);
+  const sellList = sortByWatchlistAndConfidence(entries.filter((s) => s.score <= -2), (x) => x.code);
+
+  const buildRows = (list) =>
+    list.map((item) => {
+      const fullReasons = (item.reasons || []).join("、");
+      const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ");
+      return [
+        { className: "star-cell", html: starHtml(item.code) },
+        item.code,
+        { className: "name-cell", html: item.name },
+        item.industry || "-",
+        {
+          className: pctClass(item.score),
+          html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>`,
+        },
+        item.conflict
+          ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
+          : "-",
+        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
+        { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
+      ];
+    });
+
+  renderTable(
+    el.tableAllSignalsBuy,
+    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由", "連結"],
+    buildRows(buyList)
+  );
+  renderTable(
+    el.tableAllSignalsSell,
+    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由", "連結"],
+    buildRows(sellList)
+  );
+}
+
+function setupIndustryFilter() {
+  el.industryFilter.addEventListener("change", renderAllSignalsBrowser);
+}
+
 function renderSignals(day) {
   const signals = day.signals || { buy: [], sell: [] };
 
@@ -339,6 +409,7 @@ function showPanels() {
   el.panelInstitution.hidden = false;
   el.panelWeekly.hidden = false;
   el.panelSignals.hidden = false;
+  el.panelAllSignals.hidden = false;
   el.panelBacktest.hidden = false;
   el.panelSignalBacktest.hidden = false;
   el.stateMessage.hidden = true;
@@ -888,6 +959,7 @@ function renderAll(day) {
   renderInstitution(day);
   renderWeekly(day);
   renderSignals(day);
+  renderAllSignalsBrowser();
   renderBacktest(day);
   renderSignalBacktest(day);
 }
@@ -898,10 +970,11 @@ async function init() {
   setupIntradayTriggerButton();
   setupChartModal();
   setupSignalModal();
+  setupIndustryFilter();
   await loadWatchlistData();
   loadCodeNameMap();
   loadChartsData();
-  loadAllSignals();
+  await loadAllSignals();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
@@ -921,8 +994,12 @@ async function loadAllSignals() {
   try {
     const data = await fetchJSON(`all_signals.json?t=${Date.now()}`);
     state.allSignals = data;
+    populateIndustryFilter();
+    el.panelAllSignals.hidden = Object.keys(data).length === 0;
+    renderAllSignalsBrowser();
   } catch (err) {
     state.allSignals = {};
+    el.panelAllSignals.hidden = true;
   }
 }
 
