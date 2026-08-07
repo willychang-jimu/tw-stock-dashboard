@@ -37,9 +37,6 @@ const el = {
   tableInstitution: document.getElementById("table-institution"),
   panelWeekly: document.getElementById("panel-weekly"),
   tableWeekly: document.getElementById("table-weekly"),
-  panelSignals: document.getElementById("panel-signals"),
-  tableSignalBuy: document.getElementById("table-signal-buy"),
-  tableSignalSell: document.getElementById("table-signal-sell"),
   panelAllSignals: document.getElementById("panel-all-signals"),
   tableAllSignalsBuy: document.getElementById("table-all-signals-buy"),
   tableAllSignalsSell: document.getElementById("table-all-signals-sell"),
@@ -366,41 +363,6 @@ function setupIndustryFilter() {
   el.industryFilter.addEventListener("change", renderAllSignalsBrowser);
 }
 
-function renderSignals(day) {
-  const signals = day.signals || { buy: [], sell: [] };
-
-  const buildRows = (list) =>
-    prioritize(list, (x) => x.code).map((item) => {
-      const fullReasons = (item.reasons || []).join("、");
-      const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ");
-      return [
-        { className: "star-cell", html: starHtml(item.code) },
-        item.code,
-        { className: "name-cell", html: item.name },
-        {
-          className: pctClass(item.score),
-          html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>`,
-        },
-        item.conflict
-          ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
-          : "-",
-        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
-        { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
-      ];
-    });
-
-  renderTable(
-    el.tableSignalBuy,
-    ["★", "代號", "名稱", "分數", "矛盾", "理由", "連結"],
-    buildRows(signals.buy)
-  );
-  renderTable(
-    el.tableSignalSell,
-    ["★", "代號", "名稱", "分數", "矛盾", "理由", "連結"],
-    buildRows(signals.sell)
-  );
-}
-
 function showPanels() {
   el.metaRow.hidden = false;
   el.panelStarred.hidden = false;
@@ -408,7 +370,6 @@ function showPanels() {
   el.panelGainers.hidden = false;
   el.panelInstitution.hidden = false;
   el.panelWeekly.hidden = false;
-  el.panelSignals.hidden = false;
   el.panelAllSignals.hidden = false;
   el.panelBacktest.hidden = false;
   el.panelSignalBacktest.hidden = false;
@@ -958,7 +919,6 @@ function renderAll(day) {
   renderGainers(day);
   renderInstitution(day);
   renderWeekly(day);
-  renderSignals(day);
   renderAllSignalsBrowser();
   renderBacktest(day);
   renderSignalBacktest(day);
