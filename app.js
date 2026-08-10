@@ -601,20 +601,12 @@ function renderTradingViewChart(code) {
     state.activeChart = null;
   }
 
-  const container = document.createElement("div");
-  container.className = "tradingview-widget-container";
-  container.style.cssText = "height:100%;width:100%";
-  const widgetDiv = document.createElement("div");
-  widgetDiv.className = "tradingview-widget-container__widget";
-  widgetDiv.style.cssText = "height:calc(100% - 32px);width:100%";
-  container.appendChild(widgetDiv);
-  body.appendChild(container);
+  if (typeof TradingView === "undefined" || typeof TradingView.widget !== "function") {
+    body.innerHTML = '<p class="empty-note">TradingView元件載入失敗，請改用「內建K線圖」或重新整理頁面</p>';
+    return;
+  }
 
-  const script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-  script.async = true;
-  script.text = JSON.stringify({
+  new TradingView.widget({
     autosize: true,
     symbol: `TWSE:${code}`,
     interval: "D",
@@ -624,9 +616,8 @@ function renderTradingViewChart(code) {
     locale: "zh_TW",
     hide_top_toolbar: false,
     allow_symbol_change: false,
-    support_host: "https://www.tradingview.com",
+    container_id: "chart-modal-body",
   });
-  container.appendChild(script);
 }
 
 function renderOwnChart(code) {
