@@ -452,22 +452,6 @@ details .table-wrap { margin-top: 14px; }
   max-width: 640px;
   padding: 18px;
 }
-.chart-modal-wide {
-  max-width: 900px;
-}
-.chart-modal-switch-btn {
-  background: var(--surface-raised);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--gold);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  padding: 6px 12px;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 8px;
-}
-.chart-modal-switch-btn:hover { border-color: var(--gold); }
 .chart-modal-head {
   display: flex;
   align-items: center;
@@ -489,8 +473,7 @@ details .table-wrap { margin-top: 14px; }
 }
 #chart-modal-close:hover { color: var(--gold); }
 #chart-modal-body {
-  min-height: 420px;
-  height: 420px;
+  min-height: 300px;
 }
 .chart-clickable {
   cursor: pointer;
