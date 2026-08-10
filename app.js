@@ -17,7 +17,7 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {} };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {}, chartModalCode: null, chartModalMode: "tv" };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -582,19 +582,66 @@ async function loadChartsData() {
 function openChartModal(code, name) {
   const overlay = document.getElementById("chart-modal-overlay");
   const title = document.getElementById("chart-modal-title");
-  const body = document.getElementById("chart-modal-body");
+  const switchBtn = document.getElementById("chart-modal-switch");
   title.textContent = name ? `${code} ${name}` : code;
+  overlay.hidden = false;
+
+  state.chartModalCode = code;
+  state.chartModalMode = "tv";
+  switchBtn.textContent = "內建K線圖 →";
+  switchBtn.hidden = false;
+  renderTradingViewChart(code);
+}
+
+function renderTradingViewChart(code) {
+  const body = document.getElementById("chart-modal-body");
   body.innerHTML = "";
+  if (state.activeChart) {
+    state.activeChart.remove();
+    state.activeChart = null;
+  }
+
+  const container = document.createElement("div");
+  container.className = "tradingview-widget-container";
+  container.style.cssText = "height:100%;width:100%";
+  const widgetDiv = document.createElement("div");
+  widgetDiv.className = "tradingview-widget-container__widget";
+  widgetDiv.style.cssText = "height:calc(100% - 32px);width:100%";
+  container.appendChild(widgetDiv);
+  body.appendChild(container);
+
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+  script.async = true;
+  script.text = JSON.stringify({
+    autosize: true,
+    symbol: `TWSE:${code}`,
+    interval: "D",
+    timezone: "Asia/Taipei",
+    theme: "dark",
+    style: "1",
+    locale: "zh_TW",
+    hide_top_toolbar: false,
+    allow_symbol_change: false,
+    support_host: "https://www.tradingview.com",
+  });
+  container.appendChild(script);
+}
+
+function renderOwnChart(code) {
+  const body = document.getElementById("chart-modal-body");
+  body.innerHTML = "";
+  if (state.activeChart) {
+    state.activeChart.remove();
+    state.activeChart = null;
+  }
 
   const candles = (state.chartsData || {})[code];
   if (!candles || candles.length === 0) {
-    body.innerHTML = '<p class="empty-note">目前還沒有足夠的K線資料(需要累積一段時間)</p>';
-    overlay.hidden = false;
+    body.innerHTML = '<p class="empty-note">目前還沒有足夠的自建K線資料(需要累積一段時間)</p>';
     return;
   }
-
-  overlay.hidden = false;
-
   if (typeof LightweightCharts === "undefined") {
     body.innerHTML = '<p class="empty-note">圖表元件載入失敗，請重新整理頁面再試</p>';
     return;
@@ -602,7 +649,7 @@ function openChartModal(code, name) {
 
   const chart = LightweightCharts.createChart(body, {
     width: body.clientWidth || 560,
-    height: 320,
+    height: 420,
     layout: { background: { color: "transparent" }, textColor: "#8B93AC" },
     grid: {
       vertLines: { color: "#293145" },
@@ -622,6 +669,22 @@ function openChartModal(code, name) {
   state.activeChart = chart;
 }
 
+function toggleChartMode() {
+  const switchBtn = document.getElementById("chart-modal-switch");
+  const code = state.chartModalCode;
+  if (!code) return;
+
+  if (state.chartModalMode === "tv") {
+    state.chartModalMode = "own";
+    switchBtn.textContent = "← TradingView圖表";
+    renderOwnChart(code);
+  } else {
+    state.chartModalMode = "tv";
+    switchBtn.textContent = "內建K線圖 →";
+    renderTradingViewChart(code);
+  }
+}
+
 function closeChartModal() {
   const overlay = document.getElementById("chart-modal-overlay");
   overlay.hidden = true;
@@ -629,10 +692,13 @@ function closeChartModal() {
     state.activeChart.remove();
     state.activeChart = null;
   }
+  document.getElementById("chart-modal-body").innerHTML = "";
+  state.chartModalCode = null;
 }
 
 function setupChartModal() {
   document.getElementById("chart-modal-close").addEventListener("click", closeChartModal);
+  document.getElementById("chart-modal-switch").addEventListener("click", toggleChartMode);
   document.getElementById("chart-modal-overlay").addEventListener("click", (e) => {
     if (e.target.id === "chart-modal-overlay") closeChartModal();
   });
