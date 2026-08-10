@@ -39,9 +39,9 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 900px 700px at 8% -5%, rgba(45, 212, 168, 0.16), transparent 40%),
-    radial-gradient(ellipse 850px 650px at 100% 10%, rgba(226, 103, 60, 0.18), transparent 30%),
-    radial-gradient(ellipse 750px 750px at 10% 100%, rgba(226, 103, 60, 0.12), transparent 20%);
+    radial-gradient(ellipse 900px 700px at 8% -5%, rgba(45, 212, 168, 0.16), transparent 50%),
+    radial-gradient(ellipse 850px 650px at 100% 10%, rgba(226, 103, 60, 0.20), transparent 50%),
+    radial-gradient(ellipse 750px 750px at 10% 100%, rgba(226, 103, 60, 0.12), transparent 50%);
 }
 
 .topbar, .ticker, main, .footer {
