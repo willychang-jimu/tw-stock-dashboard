@@ -17,7 +17,7 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {}, chartModalCode: null, chartModalMode: "tv" };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {} };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -582,42 +582,9 @@ async function loadChartsData() {
 function openChartModal(code, name) {
   const overlay = document.getElementById("chart-modal-overlay");
   const title = document.getElementById("chart-modal-title");
-  const switchBtn = document.getElementById("chart-modal-switch");
   title.textContent = name ? `${code} ${name}` : code;
   overlay.hidden = false;
-
-  state.chartModalCode = code;
-  state.chartModalMode = "tv";
-  switchBtn.textContent = "內建K線圖 →";
-  switchBtn.hidden = false;
-  renderTradingViewChart(code);
-}
-
-function renderTradingViewChart(code) {
-  const body = document.getElementById("chart-modal-body");
-  body.innerHTML = "";
-  if (state.activeChart) {
-    state.activeChart.remove();
-    state.activeChart = null;
-  }
-
-  if (typeof TradingView === "undefined" || typeof TradingView.widget !== "function") {
-    body.innerHTML = '<p class="empty-note">TradingView元件載入失敗，請改用「內建K線圖」或重新整理頁面</p>';
-    return;
-  }
-
-  new TradingView.widget({
-    autosize: true,
-    symbol: `TWSE:${code}`,
-    interval: "D",
-    timezone: "Asia/Taipei",
-    theme: "dark",
-    style: "1",
-    locale: "zh_TW",
-    hide_top_toolbar: false,
-    allow_symbol_change: false,
-    container_id: "chart-modal-body",
-  });
+  renderOwnChart(code);
 }
 
 function renderOwnChart(code) {
@@ -630,7 +597,7 @@ function renderOwnChart(code) {
 
   const candles = (state.chartsData || {})[code];
   if (!candles || candles.length === 0) {
-    body.innerHTML = '<p class="empty-note">目前還沒有足夠的自建K線資料(需要累積一段時間)</p>';
+    body.innerHTML = '<p class="empty-note">目前還沒有足夠的K線資料(需要累積一段時間)</p>';
     return;
   }
   if (typeof LightweightCharts === "undefined") {
@@ -640,7 +607,7 @@ function renderOwnChart(code) {
 
   const chart = LightweightCharts.createChart(body, {
     width: body.clientWidth || 560,
-    height: 420,
+    height: 320,
     layout: { background: { color: "transparent" }, textColor: "#8B93AC" },
     grid: {
       vertLines: { color: "#293145" },
@@ -660,22 +627,6 @@ function renderOwnChart(code) {
   state.activeChart = chart;
 }
 
-function toggleChartMode() {
-  const switchBtn = document.getElementById("chart-modal-switch");
-  const code = state.chartModalCode;
-  if (!code) return;
-
-  if (state.chartModalMode === "tv") {
-    state.chartModalMode = "own";
-    switchBtn.textContent = "← TradingView圖表";
-    renderOwnChart(code);
-  } else {
-    state.chartModalMode = "tv";
-    switchBtn.textContent = "內建K線圖 →";
-    renderTradingViewChart(code);
-  }
-}
-
 function closeChartModal() {
   const overlay = document.getElementById("chart-modal-overlay");
   overlay.hidden = true;
@@ -683,13 +634,10 @@ function closeChartModal() {
     state.activeChart.remove();
     state.activeChart = null;
   }
-  document.getElementById("chart-modal-body").innerHTML = "";
-  state.chartModalCode = null;
 }
 
 function setupChartModal() {
   document.getElementById("chart-modal-close").addEventListener("click", closeChartModal);
-  document.getElementById("chart-modal-switch").addEventListener("click", toggleChartMode);
   document.getElementById("chart-modal-overlay").addEventListener("click", (e) => {
     if (e.target.id === "chart-modal-overlay") closeChartModal();
   });
