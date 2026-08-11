@@ -342,7 +342,7 @@ function renderAllSignalsBrowser() {
         item.conflict
           ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
           : "-",
-        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
+        { className: "reason-cell", html: `<span title="${fullReasons}">${shortReasons}</span>` },
         { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
       ];
     });
@@ -582,24 +582,19 @@ async function loadChartsData() {
 function openChartModal(code, name) {
   const overlay = document.getElementById("chart-modal-overlay");
   const title = document.getElementById("chart-modal-title");
-  title.textContent = name ? `${code} ${name}` : code;
-  overlay.hidden = false;
-  renderOwnChart(code);
-}
-
-function renderOwnChart(code) {
   const body = document.getElementById("chart-modal-body");
+  title.textContent = name ? `${code} ${name}` : code;
   body.innerHTML = "";
-  if (state.activeChart) {
-    state.activeChart.remove();
-    state.activeChart = null;
-  }
 
   const candles = (state.chartsData || {})[code];
   if (!candles || candles.length === 0) {
     body.innerHTML = '<p class="empty-note">目前還沒有足夠的K線資料(需要累積一段時間)</p>';
+    overlay.hidden = false;
     return;
   }
+
+  overlay.hidden = false;
+
   if (typeof LightweightCharts === "undefined") {
     body.innerHTML = '<p class="empty-note">圖表元件載入失敗，請重新整理頁面再試</p>';
     return;
@@ -831,7 +826,7 @@ async function renderIntraday() {
         item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
         { className: pctClass(item.pct), html: fmtPct(item.pct) },
         { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
-        (item.reasons || []).map(abbreviateReason).join(" "),
+        { className: "reason-cell", html: (item.reasons || []).map(abbreviateReason).join(" ") },
         item.time || "-",
       ]);
     renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由", "時間"], rows);
