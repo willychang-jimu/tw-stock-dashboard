@@ -17,7 +17,7 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {} };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {}, intradaySignals: {} };
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -332,12 +332,13 @@ function renderAllSignalsBrowser() {
 
   const buildRows = (list) =>
     list.map((item) => {
-      const fullReasons = (item.reasons || []).join("、");
-      const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ");
+      const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ") || "-";
+      const codeTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.code}</span>`;
+      const nameTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.name || "-"}</span>`;
       return [
         { className: "star-cell", html: starHtml(item.code) },
-        item.code,
-        { className: "name-cell", html: item.name },
+        { html: codeTrigger },
+        { className: "name-cell", html: nameTrigger },
         item.industry || "-",
         {
           className: pctClass(item.score),
@@ -346,19 +347,21 @@ function renderAllSignalsBrowser() {
         item.conflict
           ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
           : "-",
-        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
-        { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
+        {
+          className: "reason-cell",
+          html: `<span class="signal-open-trigger reason-preview-trigger" data-code="${item.code}">${shortReasons}</span>`,
+        },
       ];
     });
 
   renderTable(
     el.tableAllSignalsBuy,
-    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由", "連結"],
+    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由（點擊看完整）"],
     buildRows(buyList)
   );
   renderTable(
     el.tableAllSignalsSell,
-    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由", "連結"],
+    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由（點擊看完整）"],
     buildRows(sellList)
   );
 }
@@ -821,19 +824,23 @@ async function renderIntraday() {
     const oldNote = tableWrap.parentElement.querySelector(".empty-note");
     if (oldNote) oldNote.remove();
 
+    state.intradaySignals = signals;  // 存起來給理由彈窗查詢用
     const rows = Object.entries(signals)
       .sort((a, b) => b[1].score - a[1].score)
-      .map(([code, item]) => [
-        { className: "star-cell", html: starHtml(code) },
-        code,
-        { className: "name-cell", html: item.name },
-        item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
-        { className: pctClass(item.pct), html: fmtPct(item.pct) },
-        { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
-        (item.reasons || []).map(abbreviateReason).join(" "),
-        item.time || "-",
-      ]);
-    renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由", "時間"], rows);
+      .map(([code, item]) => {
+        const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ") || "-";
+        return [
+          { className: "star-cell", html: starHtml(code) },
+          { html: `<span class="intraday-open-trigger chart-clickable" data-code="${code}">${code}</span>` },
+          { className: "name-cell", html: `<span class="intraday-open-trigger chart-clickable" data-code="${code}">${item.name}</span>` },
+          item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
+          { className: pctClass(item.pct), html: fmtPct(item.pct) },
+          { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
+          { className: "reason-cell", html: `<span class="intraday-open-trigger reason-preview-trigger" data-code="${code}">${shortReasons}</span>` },
+          item.time || "-",
+        ];
+      });
+    renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由（點擊看完整）", "時間"], rows);
   } catch (err) {
     el.tableIntraday.innerHTML = "";
     let note = tableWrap.parentElement.querySelector(".empty-note");
@@ -967,6 +974,25 @@ async function loadAllSignals() {
   }
 }
 
+function openReasonsModal(code, name, reasons, extraHtml) {
+  const overlay = document.getElementById("signal-modal-overlay");
+  const title = document.getElementById("signal-modal-title");
+  const body = document.getElementById("signal-modal-body");
+  title.textContent = name ? `${code} ${name}` : code;
+
+  const reasonsHtml = (reasons || []).length
+    ? `<ul class="signal-modal-reasons">${reasons.map((r) => `<li>${r}</li>`).join("")}</ul>`
+    : '<p class="empty-note">目前沒有觸發任何加減分條件</p>';
+
+  body.innerHTML = `
+    ${extraHtml || ""}
+    <div class="signal-modal-reasons-title">訊號理由</div>
+    ${reasonsHtml}
+    <a class="signal-modal-news" href="${newsLink(code)}" target="_blank" rel="noopener noreferrer">🔗 相關新聞</a>
+  `;
+  overlay.hidden = false;
+}
+
 function openSignalModal(code) {
   const overlay = document.getElementById("signal-modal-overlay");
   const title = document.getElementById("signal-modal-title");
@@ -1034,8 +1060,31 @@ function setupSignalModal() {
   });
   document.addEventListener("click", (e) => {
     const trigger = e.target.closest(".signal-open-trigger");
-    if (!trigger) return;
-    openSignalModal(trigger.dataset.code);
+    if (trigger) {
+      openSignalModal(trigger.dataset.code);
+      return;
+    }
+    const intradayTrigger = e.target.closest(".intraday-open-trigger");
+    if (intradayTrigger) {
+      const code = intradayTrigger.dataset.code;
+      const item = (state.intradaySignals || {})[code];
+      if (!item) return;
+      const extraHtml = `
+        <div class="signal-modal-row">
+          <span class="signal-modal-label">價格</span>
+          <span>${item.price_is_estimated ? "≈" : ""}${item.price}（${fmtPct(item.pct)}）</span>
+        </div>
+        <div class="signal-modal-row">
+          <span class="signal-modal-label">燈號</span>
+          <span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>
+        </div>
+        <div class="signal-modal-row">
+          <span class="signal-modal-label">更新時間</span>
+          <span>${item.time || "-"}</span>
+        </div>
+      `;
+      openReasonsModal(code, item.name, item.reasons || [], extraHtml);
+    }
   });
 }
 
