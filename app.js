@@ -283,6 +283,8 @@ function renderSignalBacktest(day) {
       const avg = stat["平均報酬%"];
       const win = stat["勝率%"];
       const n = stat["樣本數"] || 0;
+      const sharpe = stat["夏普比率"];
+      const pf = stat["獲利因子"];
       rows.push([
         label,
         horizon,
@@ -291,10 +293,12 @@ function renderSignalBacktest(day) {
           : { className: pctClass(avg), html: fmtPct(avg) },
         n === 0 ? "-" : `${win.toFixed(1)}%`,
         n,
+        sharpe === null || sharpe === undefined ? "-" : sharpe.toFixed(2),
+        pf === null || pf === undefined ? "-" : pf.toFixed(2),
       ]);
     });
   });
-  renderTable(el.tableSignalBacktest, ["標籤", "天數後", "平均報酬", "勝率", "樣本數"], rows);
+  renderTable(el.tableSignalBacktest, ["標籤", "天數後", "平均報酬", "勝率", "樣本數", "夏普比率", "獲利因子"], rows);
 }
 
 function sortByWatchlistAndConfidence(items, codeAccessor) {
@@ -342,7 +346,7 @@ function renderAllSignalsBrowser() {
         item.conflict
           ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
           : "-",
-        { className: "reason-cell", html: `<span title="${fullReasons}">${shortReasons}</span>` },
+        { html: `<span title="${fullReasons}">${shortReasons}</span>` },
         { html: `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer">🔗</a>` },
       ];
     });
@@ -826,7 +830,7 @@ async function renderIntraday() {
         item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
         { className: pctClass(item.pct), html: fmtPct(item.pct) },
         { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
-        { className: "reason-cell", html: (item.reasons || []).map(abbreviateReason).join(" ") },
+        (item.reasons || []).map(abbreviateReason).join(" "),
         item.time || "-",
       ]);
     renderTable(el.tableIntraday, ["★", "代號", "名稱", "價格", "漲跌%", "分數", "理由", "時間"], rows);
