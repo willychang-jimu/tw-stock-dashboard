@@ -366,6 +366,33 @@ td.conflict-flag {
   text-align: center;
 }
 
+.confidence-badge {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--text-muted);
+  vertical-align: middle;
+}
+
+.inst-tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+.inst-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.inst-tag-buy { background: rgba(226, 76, 76, 0.16); color: var(--up); }
+.inst-tag-sell { background: rgba(43, 170, 109, 0.16); color: var(--down); }
+.inst-tag-flat { background: var(--surface-raised); color: var(--text-muted); }
+
 /* 自選股星號欄位,套用到所有表格 */
 th.star-cell, td.star-cell {
   text-align: center;
