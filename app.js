@@ -85,6 +85,12 @@ function scoreEmoji(score) {
   return "⚪";
 }
 
+function scoreWithConfidenceHtml(score, confidence) {
+  const conf = confidence === null || confidence === undefined ? "-" : `${confidence}%`;
+  const sign = score > 0 ? "+" : "";
+  return `${scoreEmoji(score)}${sign}${score}<span class="confidence-badge">${conf}</span>`;
+}
+
 function newsLink(code) {
   return `https://tw.stock.yahoo.com/quote/${code}.TW/news`;
 }
@@ -333,16 +339,16 @@ function renderAllSignalsBrowser() {
   const buildRows = (list) =>
     list.map((item) => {
       const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ") || "-";
-      const codeTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.code}</span>`;
+      const codeLink = `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer" class="chart-clickable">${item.code}</a>`;
       const nameTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.name || "-"}</span>`;
       return [
         { className: "star-cell", html: starHtml(item.code) },
-        { html: codeTrigger },
+        { html: codeLink },
         { className: "name-cell", html: nameTrigger },
         item.industry || "-",
         {
           className: pctClass(item.score),
-          html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>`,
+          html: scoreWithConfidenceHtml(item.score, item.confidence),
         },
         item.conflict
           ? { className: "conflict-flag", html: `<span title="${item.conflict_reason || ""}">⚠️</span>` }
@@ -686,7 +692,7 @@ function renderStarred(day) {
 
     const badgeHtml = badges.length ? badges.join(" ") : '<span class="empty-note">今日未上榜</span>';
     const signalHtml = signalInfo
-      ? `<span title="信心值 ${signalInfo.confidence ?? "-"}%">${scoreEmoji(signalInfo.score)}${signalInfo.score > 0 ? "+" : ""}${signalInfo.score}</span>`
+      ? scoreWithConfidenceHtml(signalInfo.score, signalInfo.confidence)
       : "-";
 
     return [
@@ -835,7 +841,7 @@ async function renderIntraday() {
           { className: "name-cell", html: `<span class="intraday-open-trigger chart-clickable" data-code="${code}">${item.name}</span>` },
           item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
           { className: pctClass(item.pct), html: fmtPct(item.pct) },
-          { className: pctClass(item.score), html: `<span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>` },
+          { className: pctClass(item.score), html: scoreWithConfidenceHtml(item.score, item.confidence) },
           { className: "reason-cell", html: `<span class="intraday-open-trigger reason-preview-trigger" data-code="${code}">${shortReasons}</span>` },
           item.time || "-",
         ];
@@ -993,6 +999,37 @@ function openReasonsModal(code, name, reasons, extraHtml) {
   overlay.hidden = false;
 }
 
+function instDirectionHtml(label, value) {
+  if (value === null || value === undefined) {
+    return `<span class="inst-tag inst-tag-flat">${label}無資料</span>`;
+  }
+  const lots = value / 1000; // 股數換算成張
+  const absLots = Math.abs(lots);
+  let tier = "";
+  if (absLots >= 1000) tier = "大";
+  else if (absLots > 0) tier = "小";
+  if (value > 0) {
+    return `<span class="inst-tag inst-tag-buy">${label}${tier}買${absLots.toFixed(0)}張</span>`;
+  } else if (value < 0) {
+    return `<span class="inst-tag inst-tag-sell">${label}${tier}賣${absLots.toFixed(0)}張</span>`;
+  }
+  return `<span class="inst-tag inst-tag-flat">${label}持平</span>`;
+}
+
+function instBreakdownHtml(breakdown) {
+  if (!breakdown) return "";
+  return `
+    <div class="signal-modal-row">
+      <span class="signal-modal-label">三大法人拆分</span>
+      <span class="inst-tag-group">
+        ${instDirectionHtml("外資", breakdown["外資"])}
+        ${instDirectionHtml("投信", breakdown["投信"])}
+        ${instDirectionHtml("自營商", breakdown["自營商"])}
+      </span>
+    </div>
+  `;
+}
+
 function openSignalModal(code) {
   const overlay = document.getElementById("signal-modal-overlay");
   const title = document.getElementById("signal-modal-title");
@@ -1008,7 +1045,7 @@ function openSignalModal(code) {
 
   title.textContent = info.name ? `${code} ${info.name}` : code;
 
-  const scoreHtml = `<span title="信心值 ${info.confidence}%">${scoreEmoji(info.score)}${info.score > 0 ? "+" : ""}${info.score}</span>`;
+  const scoreHtml = scoreWithConfidenceHtml(info.score, info.confidence);
   const conflictHtml = info.conflict
     ? `<div class="signal-modal-conflict">⚠️ ${info.conflict_reason}</div>`
     : "";
@@ -1041,6 +1078,7 @@ function openSignalModal(code) {
       <span class="signal-modal-label">個股趨勢</span>
       <span>${info.stock_trend}</span>
     </div>
+    ${instBreakdownHtml(info.inst_breakdown)}
     ${conflictHtml}
     <div class="signal-modal-reasons-title">訊號理由</div>
     ${reasonsHtml}
@@ -1076,7 +1114,7 @@ function setupSignalModal() {
         </div>
         <div class="signal-modal-row">
           <span class="signal-modal-label">燈號</span>
-          <span title="信心值 ${item.confidence ?? "-"}%">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</span>
+          ${scoreWithConfidenceHtml(item.score, item.confidence)}
         </div>
         <div class="signal-modal-row">
           <span class="signal-modal-label">更新時間</span>
@@ -1109,7 +1147,7 @@ function renderSupportCard(code, info) {
   if (sig) {
     bodyHtml += `
       <div class="support-card-signal">
-        目前訊號：<span title="信心值 ${sig.confidence}%">${scoreEmoji(sig.score)}${sig.score > 0 ? "+" : ""}${sig.score}</span>　${sig.label}
+        目前訊號：${scoreWithConfidenceHtml(sig.score, sig.confidence)}　${sig.label}
         <button type="button" class="signal-open-trigger signal-detail-btn" data-code="${code}">查看完整訊號分析</button>
       </div>
     `;
