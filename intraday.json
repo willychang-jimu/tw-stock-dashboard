@@ -1,40 +1,24 @@
 {
-  "updated_at": "2026-08-19T12:30:32+08:00",
+  "updated_at": "2026-08-19T13:00:43+08:00",
   "signals": {
-    "3450": {
-      "name": "聯鈞",
-      "price": 566.0,
+    "2425": {
+      "name": "承啟",
+      "price": 38.725,
       "price_is_estimated": true,
-      "pct": -2.25,
-      "volume_prorated_ref": 23257,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI61偏強",
-        "RSI走弱(63→61)",
-        "大盤多頭(+2)"
-      ],
-      "time": "12:29:57"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 184.0,
-      "price_is_estimated": true,
-      "pct": -1.34,
-      "volume_prorated_ref": 12718,
+      "pct": -2.09,
+      "volume_prorated_ref": 2002,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:30:08"
+      "time": "13:00:20"
     },
     "3189": {
       "name": "景碩",
-      "price": 843.5,
+      "price": 846.5,
       "price_is_estimated": true,
-      "pct": -2.49,
-      "volume_prorated_ref": 21272,
+      "pct": -2.14,
+      "volume_prorated_ref": 20282,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -43,19 +27,35 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "12:30:07"
+      "time": "13:00:17"
     },
-    "2425": {
-      "name": "承啟",
-      "price": 39.075,
+    "8261": {
+      "name": "富鼎",
+      "price": 182.75,
       "price_is_estimated": true,
-      "pct": -1.2,
-      "volume_prorated_ref": 2163,
+      "pct": -2.01,
+      "volume_prorated_ref": 11748,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "12:30:10"
+      "time": "13:00:18"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 565.5,
+      "price_is_estimated": true,
+      "pct": -2.33,
+      "volume_prorated_ref": 21128,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI60偏強",
+        "RSI走弱(63→60)",
+        "大盤多頭(+2)"
+      ],
+      "time": "13:00:35"
     }
   }
 }
