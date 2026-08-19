@@ -1,36 +1,52 @@
 {
-  "updated_at": "2026-08-19T11:30:33+08:00",
+  "updated_at": "2026-08-19T12:00:43+08:00",
   "signals": {
     "2425": {
       "name": "承啟",
-      "price": 38.725,
+      "price": 39.35,
       "price_is_estimated": true,
-      "pct": -2.09,
-      "volume_prorated_ref": 2512,
+      "pct": -0.51,
+      "volume_prorated_ref": 2397,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "11:29:58"
+      "time": "12:00:23"
+    },
+    "8261": {
+      "name": "富鼎",
+      "price": 185.25,
+      "price_is_estimated": true,
+      "pct": -0.67,
+      "volume_prorated_ref": 14072,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "12:00:12"
     },
     "3450": {
       "name": "聯鈞",
-      "price": 556.5,
+      "price": 569.0,
       "price_is_estimated": true,
-      "pct": -3.89,
-      "volume_prorated_ref": 26726,
+      "pct": -1.73,
+      "volume_prorated_ref": 25436,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
-      "reasons": [],
-      "time": "11:30:27"
+      "reasons": [
+        "RSI61偏強",
+        "RSI走弱(63→61)",
+        "大盤多頭(+2)"
+      ],
+      "time": "12:00:37"
     },
     "3189": {
       "name": "景碩",
-      "price": 854.5,
+      "price": 854.0,
       "price_is_estimated": true,
-      "pct": -1.21,
-      "volume_prorated_ref": 27599,
+      "pct": -1.27,
+      "volume_prorated_ref": 23645,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -39,19 +55,7 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "11:30:12"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 187.25,
-      "price_is_estimated": true,
-      "pct": 0.4,
-      "volume_prorated_ref": 15928,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "11:30:11"
+      "time": "11:59:55"
     }
   }
 }
