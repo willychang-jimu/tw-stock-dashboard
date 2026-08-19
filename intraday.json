@@ -1,12 +1,48 @@
 {
-  "updated_at": "2026-08-19T10:30:42+08:00",
+  "updated_at": "2026-08-19T11:00:46+08:00",
   "signals": {
+    "8261": {
+      "name": "富鼎",
+      "price": 188.0,
+      "price_is_estimated": true,
+      "pct": 0.8,
+      "volume_prorated_ref": 19210,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:00:07"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 554.0,
+      "price_is_estimated": true,
+      "pct": -4.32,
+      "volume_prorated_ref": 31972,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:00:24"
+    },
+    "2425": {
+      "name": "承啟",
+      "price": 38.725,
+      "price_is_estimated": true,
+      "pct": -2.09,
+      "volume_prorated_ref": 2948,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "11:00:09"
+    },
     "3189": {
       "name": "景碩",
-      "price": 846.5,
+      "price": 857.5,
       "price_is_estimated": true,
-      "pct": -2.14,
-      "volume_prorated_ref": 40314,
+      "pct": -0.87,
+      "volume_prorated_ref": 33028,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -15,43 +51,7 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "10:30:22"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 188.25,
-      "price_is_estimated": true,
-      "pct": 0.94,
-      "volume_prorated_ref": 24396,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "10:30:26"
-    },
-    "2425": {
-      "name": "承啟",
-      "price": 38.925,
-      "price_is_estimated": true,
-      "pct": -1.58,
-      "volume_prorated_ref": 3669,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "10:30:21"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 553.5,
-      "price_is_estimated": true,
-      "pct": -4.4,
-      "volume_prorated_ref": 40551,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "10:30:37"
+      "time": "11:00:02"
     }
   }
 }
