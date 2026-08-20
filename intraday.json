@@ -1,52 +1,41 @@
 {
-  "updated_at": "2026-08-19T13:30:37+08:00",
+  "updated_at": "2026-08-20T09:00:38+08:00",
   "signals": {
-    "3450": {
-      "name": "聯鈞",
-      "price": 567.0,
-      "price_is_estimated": false,
-      "pct": -2.07,
-      "volume_prorated_ref": 20180,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI61偏強",
-        "RSI走弱(63→61)",
-        "大盤多頭(+2)"
-      ],
-      "time": "13:30:00"
-    },
     "8261": {
       "name": "富鼎",
-      "price": 183.5,
-      "price_is_estimated": false,
-      "pct": -1.61,
-      "volume_prorated_ref": 11577,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "13:30:00"
-    },
-    "2425": {
-      "name": "承啟",
-      "price": 39.025,
+      "price": 186.25,
       "price_is_estimated": true,
-      "pct": -1.33,
-      "volume_prorated_ref": 2178,
+      "pct": 1.5,
+      "volume_prorated_ref": 2570,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "13:29:59"
+      "time": "09:00:23"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 584.0,
+      "price_is_estimated": true,
+      "pct": 3.0,
+      "volume_prorated_ref": 5590,
+      "score": 1,
+      "confidence": 6,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI62偏強",
+        "MACD多頭動能減弱",
+        "20日新高(動能突破)",
+        "大盤多頭(+2)"
+      ],
+      "time": "09:00:37"
     },
     "3189": {
       "name": "景碩",
-      "price": 849.0,
+      "price": 877.0,
       "price_is_estimated": false,
-      "pct": -1.85,
-      "volume_prorated_ref": 20478,
+      "pct": 3.3,
+      "volume_prorated_ref": 5200,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -55,7 +44,21 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "13:30:00"
+      "time": "09:00:27"
+    },
+    "2425": {
+      "name": "承啟",
+      "price": 39.4,
+      "price_is_estimated": true,
+      "pct": 1.03,
+      "volume_prorated_ref": 500,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "09:00:21"
     }
   }
 }
