@@ -1,12 +1,41 @@
 {
-  "updated_at": "2026-08-20T10:00:38+08:00",
+  "updated_at": "2026-08-20T10:30:40+08:00",
   "signals": {
+    "2425": {
+      "name": "承啟",
+      "price": 38.575,
+      "price_is_estimated": true,
+      "pct": -1.09,
+      "volume_prorated_ref": 1485,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:30:06"
+    },
+    "8261": {
+      "name": "富鼎",
+      "price": 178.25,
+      "price_is_estimated": true,
+      "pct": -2.86,
+      "volume_prorated_ref": 12189,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:08"
+    },
     "3189": {
       "name": "景碩",
-      "price": 839.0,
+      "price": 827.5,
       "price_is_estimated": true,
-      "pct": -1.18,
-      "volume_prorated_ref": 32058,
+      "pct": -2.53,
+      "volume_prorated_ref": 26853,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -15,51 +44,24 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "10:00:02"
+      "time": "10:30:11"
     },
     "3450": {
       "name": "聯鈞",
-      "price": 561.5,
+      "price": 563.5,
       "price_is_estimated": true,
-      "pct": -0.97,
-      "volume_prorated_ref": 27904,
-      "score": 1,
-      "confidence": 0,
+      "pct": -0.62,
+      "volume_prorated_ref": 21897,
+      "score": -1,
+      "confidence": 22,
       "label": "⚪中立",
       "reasons": [
+        "RSI60偏強",
+        "RSI走弱(61→60)",
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "10:00:24"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 178.75,
-      "price_is_estimated": true,
-      "pct": -2.59,
-      "volume_prorated_ref": 16214,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
-      ],
-      "time": "10:00:08"
-    },
-    "2425": {
-      "name": "承啟",
-      "price": 38.8,
-      "price_is_estimated": true,
-      "pct": -0.51,
-      "volume_prorated_ref": 1583,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "09:59:31"
+      "time": "10:29:57"
     }
   }
 }
