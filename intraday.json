@@ -1,26 +1,12 @@
 {
-  "updated_at": "2026-08-20T10:30:40+08:00",
+  "updated_at": "2026-08-20T11:00:43+08:00",
   "signals": {
-    "2425": {
-      "name": "承啟",
-      "price": 38.575,
+    "3450": {
+      "name": "聯鈞",
+      "price": 558.0,
       "price_is_estimated": true,
-      "pct": -1.09,
-      "volume_prorated_ref": 1485,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "10:30:06"
-    },
-    "8261": {
-      "name": "富鼎",
-      "price": 178.25,
-      "price_is_estimated": true,
-      "pct": -2.86,
-      "volume_prorated_ref": 12189,
+      "pct": -1.59,
+      "volume_prorated_ref": 19868,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -28,14 +14,29 @@
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "10:30:08"
+      "time": "11:00:30"
+    },
+    "8261": {
+      "name": "富鼎",
+      "price": 178.25,
+      "price_is_estimated": true,
+      "pct": -2.86,
+      "volume_prorated_ref": 10048,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
+      ],
+      "time": "11:00:06"
     },
     "3189": {
       "name": "景碩",
-      "price": 827.5,
+      "price": 826.5,
       "price_is_estimated": true,
-      "pct": -2.53,
-      "volume_prorated_ref": 26853,
+      "pct": -2.65,
+      "volume_prorated_ref": 22401,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -44,24 +45,22 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "10:30:11"
+      "time": "11:00:07"
     },
-    "3450": {
-      "name": "聯鈞",
-      "price": 563.5,
+    "2425": {
+      "name": "承啟",
+      "price": 38.375,
       "price_is_estimated": true,
-      "pct": -0.62,
-      "volume_prorated_ref": 21897,
-      "score": -1,
-      "confidence": 22,
-      "label": "⚪中立",
+      "pct": -1.6,
+      "volume_prorated_ref": 1244,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
       "reasons": [
-        "RSI60偏強",
-        "RSI走弱(61→60)",
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
+        "RSI40偏弱",
+        "MACD空頭動能減弱"
       ],
-      "time": "10:29:57"
+      "time": "11:00:11"
     }
   }
 }
