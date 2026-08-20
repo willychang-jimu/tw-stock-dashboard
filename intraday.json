@@ -1,27 +1,12 @@
 {
-  "updated_at": "2026-08-20T11:00:43+08:00",
+  "updated_at": "2026-08-20T11:30:33+08:00",
   "signals": {
-    "3450": {
-      "name": "聯鈞",
-      "price": 558.0,
-      "price_is_estimated": true,
-      "pct": -1.59,
-      "volume_prorated_ref": 19868,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
-      ],
-      "time": "11:00:30"
-    },
     "8261": {
       "name": "富鼎",
-      "price": 178.25,
+      "price": 177.25,
       "price_is_estimated": true,
-      "pct": -2.86,
-      "volume_prorated_ref": 10048,
+      "pct": -3.41,
+      "volume_prorated_ref": 8337,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -29,14 +14,44 @@
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "11:00:06"
+      "time": "11:29:49"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 559.0,
+      "price_is_estimated": true,
+      "pct": -1.41,
+      "volume_prorated_ref": 16845,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
+      ],
+      "time": "11:29:56"
+    },
+    "2425": {
+      "name": "承啟",
+      "price": 38.2,
+      "price_is_estimated": true,
+      "pct": -2.05,
+      "volume_prorated_ref": 1298,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "RSI39偏弱",
+        "MACD空頭動能減弱"
+      ],
+      "time": "11:30:04"
     },
     "3189": {
       "name": "景碩",
-      "price": 826.5,
+      "price": 841.0,
       "price_is_estimated": true,
-      "pct": -2.65,
-      "volume_prorated_ref": 22401,
+      "pct": -0.94,
+      "volume_prorated_ref": 20054,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -45,22 +60,7 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "11:00:07"
-    },
-    "2425": {
-      "name": "承啟",
-      "price": 38.375,
-      "price_is_estimated": true,
-      "pct": -1.6,
-      "volume_prorated_ref": 1244,
-      "score": 2,
-      "confidence": 17,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI40偏弱",
-        "MACD空頭動能減弱"
-      ],
-      "time": "11:00:11"
+      "time": "11:30:07"
     }
   }
 }
