@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-08-20T12:30:36+08:00",
+  "updated_at": "2026-08-20T13:00:44+08:00",
   "signals": {
-    "2425": {
-      "name": "承啟",
-      "price": 38.325,
+    "8261": {
+      "name": "富鼎",
+      "price": 178.25,
       "price_is_estimated": true,
-      "pct": -1.73,
-      "volume_prorated_ref": 1168,
-      "score": 2,
-      "confidence": 17,
-      "label": "🟡偏多觀察",
+      "pct": -2.86,
+      "volume_prorated_ref": 6145,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
       "reasons": [
-        "RSI40偏弱",
-        "MACD空頭動能減弱"
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
       ],
-      "time": "12:29:32"
+      "time": "13:00:37"
     },
     "3189": {
       "name": "景碩",
-      "price": 853.0,
+      "price": 842.5,
       "price_is_estimated": true,
-      "pct": 0.47,
-      "volume_prorated_ref": 18438,
+      "pct": -0.77,
+      "volume_prorated_ref": 16698,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -30,29 +30,29 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "12:29:55"
+      "time": "13:00:37"
     },
-    "8261": {
-      "name": "富鼎",
-      "price": 178.75,
+    "2425": {
+      "name": "承啟",
+      "price": 38.275,
       "price_is_estimated": true,
-      "pct": -2.59,
-      "volume_prorated_ref": 6553,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
+      "pct": -1.86,
+      "volume_prorated_ref": 1108,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
       "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
+        "RSI40偏弱",
+        "MACD空頭動能減弱"
       ],
-      "time": "12:30:08"
+      "time": "13:00:31"
     },
     "3450": {
       "name": "聯鈞",
-      "price": 555.5,
+      "price": 550.5,
       "price_is_estimated": true,
-      "pct": -2.03,
-      "volume_prorated_ref": 12999,
+      "pct": -2.91,
+      "volume_prorated_ref": 11991,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -60,7 +60,7 @@
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "12:30:37"
+      "time": "13:00:31"
     }
   }
 }
