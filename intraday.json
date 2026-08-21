@@ -1,26 +1,27 @@
 {
-  "updated_at": "2026-08-21T09:00:39+08:00",
+  "updated_at": "2026-08-21T09:30:34+08:00",
   "signals": {
-    "2425": {
-      "name": "承啟",
-      "price": 38.675,
+    "8261": {
+      "name": "富鼎",
+      "price": 177.75,
       "price_is_estimated": true,
-      "pct": 0.19,
-      "volume_prorated_ref": 210,
+      "pct": -0.97,
+      "volume_prorated_ref": 5499,
       "score": 1,
-      "confidence": 5,
+      "confidence": 0,
       "label": "⚪中立",
       "reasons": [
-        "MACD空頭動能減弱"
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
       ],
-      "time": "09:00:19"
+      "time": "09:30:06"
     },
     "3189": {
       "name": "景碩",
-      "price": 834.5,
+      "price": 811.5,
       "price_is_estimated": true,
-      "pct": -1.94,
-      "volume_prorated_ref": 2390,
+      "pct": -4.64,
+      "volume_prorated_ref": 50648,
       "score": 2,
       "confidence": 0,
       "label": "🟡偏多觀察",
@@ -29,14 +30,14 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "09:00:37"
+      "time": "09:29:56"
     },
     "3450": {
       "name": "聯鈞",
-      "price": 554.5,
+      "price": 547.5,
       "price_is_estimated": true,
-      "pct": 0.27,
-      "volume_prorated_ref": 3350,
+      "pct": -0.99,
+      "volume_prorated_ref": 28935,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -44,22 +45,22 @@
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "09:00:22"
+      "time": "09:30:31"
     },
-    "8261": {
-      "name": "富鼎",
-      "price": 179.75,
+    "2425": {
+      "name": "承啟",
+      "price": 38.4,
       "price_is_estimated": true,
-      "pct": 0.14,
-      "volume_prorated_ref": 660,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
+      "pct": -0.52,
+      "volume_prorated_ref": 2169,
+      "score": 2,
+      "confidence": 17,
+      "label": "🟡偏多觀察",
       "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
+        "RSI40偏弱",
+        "MACD空頭動能減弱"
       ],
-      "time": "09:00:26"
+      "time": "09:30:11"
     }
   }
 }
