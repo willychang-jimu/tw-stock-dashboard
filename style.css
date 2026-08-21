@@ -152,6 +152,35 @@ body::before {
   .ticker-track { animation: none; }
 }
 
+.ticker-picks {
+  border-bottom: 1px solid var(--border);
+}
+
+.ticker-picks .ticker-track {
+  animation-duration: 40s;
+}
+
+.ticker-picks .pick-rank {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.ticker-picks .pick-fallback-tag {
+  font-size: 10px;
+  color: var(--text-muted);
+  margin-left: 2px;
+}
+
+.picks-ticker-note {
+  margin: 0;
+  padding: 6px clamp(16px, 4vw, 48px) 10px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
 main {
   padding: 28px clamp(16px, 4vw, 48px) 60px;
   max-width: 1100px;

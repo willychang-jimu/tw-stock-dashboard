@@ -25,6 +25,8 @@ const el = {
   stateMessage: document.getElementById("state-message"),
   dateSelect: document.getElementById("date-select"),
   tickerTrack: document.getElementById("ticker-track"),
+  picksTicker: document.getElementById("picks-ticker"),
+  picksTickerTrack: document.getElementById("picks-ticker-track"),
   metaRow: document.getElementById("meta-row"),
   metaGenerated: document.getElementById("meta-generated"),
   panelStarred: document.getElementById("panel-starred"),
@@ -954,6 +956,7 @@ async function init() {
   loadCodeNameMap();
   loadChartsData();
   await loadAllSignals();
+  loadDailyPicks();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
@@ -969,6 +972,30 @@ async function init() {
     el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
   }
 }
+function renderDailyPicksTicker(picks) {
+  const items = picks.map((p) => {
+    const fallbackTag = p.tier === "fallback" ? `<span class="pick-fallback-tag">(候補)</span>` : "";
+    return `<span><span class="pick-rank">#${p.rank}</span>${p.code} ${p.name}${fallbackTag} ${scoreWithConfidenceHtml(p.score, p.confidence)}</span>`;
+  });
+  const html = items.join("");
+  el.picksTickerTrack.innerHTML = html + html;
+}
+
+async function loadDailyPicks() {
+  try {
+    const data = await fetchJSON(`daily_picks.json?t=${Date.now()}`);
+    const picks = data.picks || [];
+    if (!picks.length) {
+      el.picksTicker.hidden = true;
+      return;
+    }
+    renderDailyPicksTicker(picks);
+    el.picksTicker.hidden = false;
+  } catch (err) {
+    el.picksTicker.hidden = true;
+  }
+}
+
 async function loadAllSignals() {
   try {
     const data = await fetchJSON(`all_signals.json?t=${Date.now()}`);
