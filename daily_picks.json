@@ -1,0 +1,189 @@
+{
+  "date": "2026-08-21",
+  "picks": [
+    {
+      "code": "4582",
+      "name": "聚恆-創",
+      "score": 5,
+      "confidence": 61,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI33偏弱",
+        "RSI翻揚(32→33)",
+        "MACD空頭動能減弱",
+        "放量上漲",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增34%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 1
+    },
+    {
+      "code": "8926",
+      "name": "台汽電",
+      "score": 5,
+      "confidence": 57,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI39偏弱",
+        "RSI翻揚(37→39)",
+        "MACD黃金交叉",
+        "法人買超",
+        "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+        "營收年增1459%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 2
+    },
+    {
+      "code": "1445",
+      "name": "大宇",
+      "score": 5,
+      "confidence": 54,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD黃金交叉",
+        "放量上漲",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增9%"
+      ],
+      "rank": 3
+    },
+    {
+      "code": "2538",
+      "name": "基泰",
+      "score": 4,
+      "confidence": 54,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI34偏弱",
+        "RSI翻揚(28→34)",
+        "MACD空頭動能減弱",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增14%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 4
+    },
+    {
+      "code": "2812",
+      "name": "台中銀",
+      "score": 4,
+      "confidence": 54,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI38偏弱",
+        "RSI翻揚(37→38)",
+        "MACD空頭動能減弱",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增2%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 5
+    },
+    {
+      "code": "2912",
+      "name": "統一超",
+      "score": 5,
+      "confidence": 54,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD黃金交叉",
+        "放量上漲",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增8%"
+      ],
+      "rank": 6
+    },
+    {
+      "code": "1101",
+      "name": "台泥",
+      "score": 4,
+      "confidence": 53,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD黃金交叉",
+        "接近布林上軌壓力(0.4%)",
+        "20日新高(動能突破)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增2%"
+      ],
+      "rank": 7
+    },
+    {
+      "code": "1604",
+      "name": "聲寶",
+      "score": 5,
+      "confidence": 53,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD黃金交叉",
+        "接近布林下軌支撐(1.5%)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增11%"
+      ],
+      "rank": 8
+    },
+    {
+      "code": "1220",
+      "name": "台榮",
+      "score": 4,
+      "confidence": 48,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI34偏弱",
+        "MACD空頭動能減弱",
+        "接近布林下軌支撐(0.7%)",
+        "法人買超",
+        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+        "營收年增1%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 9
+    },
+    {
+      "code": "4426",
+      "name": "利勤",
+      "score": 4,
+      "confidence": 48,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI40偏弱",
+        "MACD空頭動能減弱",
+        "接近布林下軌支撐(1.6%)",
+        "法人買超",
+        "營收年增35%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 10
+    }
+  ],
+  "disclaimer": "「近期關注度」為本週上榜次數代理指標,非真實新聞/社群話題熱度；此名單本身尚在驗證階段,不構成投資建議"
+}
