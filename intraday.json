@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-24T12:00:41+08:00",
+  "updated_at": "2026-08-24T12:30:38+08:00",
   "signals": {
     "3450": {
       "name": "聯鈞",
-      "price": 512.5,
+      "price": 513.5,
       "price_is_estimated": true,
-      "pct": -6.99,
-      "volume_prorated_ref": 11132,
+      "pct": -6.81,
+      "volume_prorated_ref": 10151,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -14,14 +14,29 @@
         "MACD多頭動能減弱",
         "大盤多頭(+2)"
       ],
-      "time": "11:59:57"
+      "time": "12:30:32"
+    },
+    "4915": {
+      "name": "致伸",
+      "price": 60.55,
+      "price_is_estimated": true,
+      "pct": -0.08,
+      "volume_prorated_ref": 842,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI38偏弱",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "12:30:25"
     },
     "3189": {
       "name": "景碩",
       "price": 796.5,
       "price_is_estimated": true,
       "pct": -1.79,
-      "volume_prorated_ref": 12586,
+      "volume_prorated_ref": 11115,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -30,14 +45,14 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "11:59:55"
+      "time": "12:30:22"
     },
     "2425": {
       "name": "承啟",
-      "price": 37.75,
+      "price": 37.675,
       "price_is_estimated": true,
-      "pct": 0.53,
-      "volume_prorated_ref": 1212,
+      "pct": 0.33,
+      "volume_prorated_ref": 1061,
       "score": 3,
       "confidence": 22,
       "label": "🟡偏多觀察",
@@ -46,34 +61,19 @@
         "RSI翻揚(38→39)",
         "MACD空頭動能減弱"
       ],
-      "time": "12:00:15"
-    },
-    "4915": {
-      "name": "致伸",
-      "price": 60.55,
-      "price_is_estimated": true,
-      "pct": -0.08,
-      "volume_prorated_ref": 919,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI38偏弱",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "11:59:56"
+      "time": "12:30:19"
     },
     "8261": {
       "name": "富鼎",
-      "price": 179.75,
+      "price": 180.25,
       "price_is_estimated": true,
-      "pct": 1.27,
-      "volume_prorated_ref": 3423,
+      "pct": 1.55,
+      "volume_prorated_ref": 2991,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "11:59:28"
+      "time": "12:30:02"
     }
   }
 }
