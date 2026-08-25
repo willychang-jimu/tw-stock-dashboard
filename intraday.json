@@ -1,73 +1,27 @@
 {
-  "updated_at": "2026-08-25T10:00:38+08:00",
+  "updated_at": "2026-08-25T10:30:42+08:00",
   "signals": {
-    "4915": {
-      "name": "致伸",
-      "price": 59.55,
-      "price_is_estimated": true,
-      "pct": -1.57,
-      "volume_prorated_ref": 4414,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI35偏弱",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "10:00:00"
-    },
-    "3189": {
-      "name": "景碩",
-      "price": 790.0,
-      "price_is_estimated": true,
-      "pct": -0.5,
-      "volume_prorated_ref": 18338,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD死亡交叉",
-        "大盤多頭(+2)",
-        "個股多頭排列(逢高疑慮較低,+1)"
-      ],
-      "time": "10:00:02"
-    },
     "8261": {
       "name": "富鼎",
-      "price": 171.75,
+      "price": 170.25,
       "price_is_estimated": true,
-      "pct": -3.24,
-      "volume_prorated_ref": 3956,
+      "pct": -4.08,
+      "volume_prorated_ref": 4752,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [
-        "RSI40偏弱",
+        "RSI39偏弱",
         "MACD多頭動能減弱"
       ],
-      "time": "10:00:04"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 493.5,
-      "price_is_estimated": true,
-      "pct": -2.66,
-      "volume_prorated_ref": 25520,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
-      ],
-      "time": "10:00:02"
+      "time": "10:30:33"
     },
     "2425": {
       "name": "承啟",
-      "price": 37.225,
+      "price": 37.4,
       "price_is_estimated": true,
-      "pct": -1.78,
-      "volume_prorated_ref": 1899,
+      "pct": -1.32,
+      "volume_prorated_ref": 1511,
       "score": 1,
       "confidence": 17,
       "label": "⚪中立",
@@ -76,7 +30,53 @@
         "MACD空頭動能減弱",
         "20日新低(動能破底)"
       ],
-      "time": "09:59:54"
+      "time": "10:29:59"
+    },
+    "3189": {
+      "name": "景碩",
+      "price": 785.5,
+      "price_is_estimated": true,
+      "pct": -1.07,
+      "volume_prorated_ref": 13740,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD死亡交叉",
+        "大盤多頭(+2)",
+        "個股多頭排列(逢高疑慮較低,+1)"
+      ],
+      "time": "10:30:26"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 492.0,
+      "price_is_estimated": true,
+      "pct": -2.96,
+      "volume_prorated_ref": 21240,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD多頭動能減弱",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:27"
+    },
+    "4915": {
+      "name": "致伸",
+      "price": 59.45,
+      "price_is_estimated": true,
+      "pct": -1.74,
+      "volume_prorated_ref": 3468,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI34偏弱",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:30:06"
     }
   }
 }
