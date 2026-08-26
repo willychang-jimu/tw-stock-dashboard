@@ -1,55 +1,38 @@
 {
-  "updated_at": "2026-08-26T10:00:40+08:00",
+  "updated_at": "2026-08-26T10:30:41+08:00",
   "signals": {
-    "8261": {
-      "name": "富鼎",
-      "price": 184.75,
+    "2425": {
+      "name": "承啟",
+      "price": 38.175,
       "price_is_estimated": true,
-      "pct": 4.08,
-      "volume_prorated_ref": 13406,
+      "pct": 1.13,
+      "volume_prorated_ref": 1221,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:30:10"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 568.0,
+      "price_is_estimated": true,
+      "pct": 6.57,
+      "volume_prorated_ref": 30021,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "10:00:06"
-    },
-    "4915": {
-      "name": "致伸",
-      "price": 60.0,
-      "price_is_estimated": true,
-      "pct": 0.33,
-      "volume_prorated_ref": 2214,
-      "score": 1,
-      "confidence": 17,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI37偏弱",
-        "RSI翻揚(36→37)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "10:00:00"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 552.5,
-      "price_is_estimated": true,
-      "pct": 3.66,
-      "volume_prorated_ref": 34978,
-      "score": 1,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD多頭動能減弱",
-        "大盤多頭(+2)"
-      ],
-      "time": "10:00:32"
+      "time": "10:30:32"
     },
     "3189": {
       "name": "景碩",
-      "price": 832.5,
+      "price": 825.5,
       "price_is_estimated": true,
-      "pct": -0.3,
-      "volume_prorated_ref": 31104,
+      "pct": -1.14,
+      "volume_prorated_ref": 28221,
       "score": 1,
       "confidence": 0,
       "label": "⚪中立",
@@ -58,21 +41,35 @@
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "10:00:02"
+      "time": "10:30:02"
     },
-    "2425": {
-      "name": "承啟",
-      "price": 38.125,
+    "8261": {
+      "name": "富鼎",
+      "price": 186.75,
       "price_is_estimated": true,
-      "pct": 0.99,
-      "volume_prorated_ref": 1663,
+      "pct": 5.21,
+      "volume_prorated_ref": 11907,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "10:30:08"
+    },
+    "4915": {
+      "name": "致伸",
+      "price": 59.95,
+      "price_is_estimated": true,
+      "pct": 0.25,
+      "volume_prorated_ref": 1796,
       "score": 1,
-      "confidence": 5,
+      "confidence": 17,
       "label": "⚪中立",
       "reasons": [
-        "MACD空頭動能減弱"
+        "RSI37偏弱",
+        "RSI翻揚(36→37)",
+        "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "09:57:49"
+      "time": "10:29:59"
     }
   }
 }
