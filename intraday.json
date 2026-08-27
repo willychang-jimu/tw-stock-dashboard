@@ -1,75 +1,34 @@
 {
-  "updated_at": "2026-08-27T09:30:35+08:00",
+  "updated_at": "2026-08-27T10:00:53+08:00",
   "signals": {
-    "8261": {
-      "name": "富鼎",
-      "price": 184.75,
+    "2344": {
+      "name": "華邦電",
+      "price": 187.25,
       "price_is_estimated": true,
-      "pct": -0.67,
-      "volume_prorated_ref": 10683,
-      "score": 0,
-      "confidence": 0,
+      "pct": 3.17,
+      "volume_prorated_ref": 381290,
+      "score": 1,
+      "confidence": 6,
       "label": "⚪中立",
-      "reasons": [],
-      "time": "09:30:12"
-    },
-    "3189": {
-      "name": "景碩",
-      "price": 952.5,
-      "price_is_estimated": true,
-      "pct": 8.12,
-      "volume_prorated_ref": 147606,
-      "score": 2,
-      "confidence": 20,
-      "label": "🟡偏多觀察",
       "reasons": [
-        "RSI65偏強",
-        "MACD黃金交叉",
         "20日新高(動能突破)"
       ],
-      "time": "09:29:57"
+      "time": "10:00:05"
     },
-    "4915": {
-      "name": "致伸",
-      "price": 60.25,
+    "2408": {
+      "name": "南亞科",
+      "price": 544.5,
       "price_is_estimated": true,
-      "pct": 0.08,
-      "volume_prorated_ref": 1555,
-      "score": 1,
-      "confidence": 17,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(38→39)",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "09:29:36"
-    },
-    "2425": {
-      "name": "承啟",
-      "price": 38.075,
-      "price_is_estimated": true,
-      "pct": 0.2,
-      "volume_prorated_ref": 1611,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "09:30:01"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 575.5,
-      "price_is_estimated": true,
-      "pct": 0.26,
-      "volume_prorated_ref": 43610,
+      "pct": 5.32,
+      "volume_prorated_ref": 253683,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
-      "reasons": [],
-      "time": "09:29:56"
+      "reasons": [
+        "RSI62偏強",
+        "20日新高(動能突破)"
+      ],
+      "time": "10:00:36"
     }
   }
 }
