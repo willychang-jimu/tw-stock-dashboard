@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-08-27T11:30:33+08:00",
+  "updated_at": "2026-08-27T12:00:42+08:00",
   "signals": {
     "2408": {
       "name": "南亞科",
-      "price": 546.5,
+      "price": 547.5,
       "price_is_estimated": true,
-      "pct": 5.71,
-      "volume_prorated_ref": 122900,
+      "pct": 5.9,
+      "volume_prorated_ref": 105482,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
@@ -14,21 +14,21 @@
         "RSI63偏強",
         "20日新高(動能突破)"
       ],
-      "time": "11:30:06"
+      "time": "12:00:36"
     },
     "2344": {
       "name": "華邦電",
       "price": 187.75,
       "price_is_estimated": true,
       "pct": 3.44,
-      "volume_prorated_ref": 192312,
+      "volume_prorated_ref": 166430,
       "score": 1,
       "confidence": 6,
       "label": "⚪中立",
       "reasons": [
         "20日新高(動能突破)"
       ],
-      "time": "11:30:15"
+      "time": "12:00:00"
     }
   }
 }
