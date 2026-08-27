@@ -1,6 +1,27 @@
 {
-  "date": "2026-08-25",
+  "date": "2026-08-26",
   "picks": [
+    {
+      "code": "1220",
+      "name": "台榮",
+      "score": 4,
+      "confidence": 70,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI34偏弱",
+        "RSI翻揚(29→34)",
+        "MACD黃金交叉",
+        "MACD死亡交叉",
+        "接近布林下軌支撐(0.8%)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增1%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 1
+    },
     {
       "code": "2538",
       "name": "基泰",
@@ -10,176 +31,159 @@
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI33偏弱",
-        "RSI翻揚(32→33)",
+        "RSI38偏弱",
+        "RSI翻揚(33→38)",
         "MACD黃金交叉",
         "法人買超",
         "三大法人方向一致",
         "營收年增14%",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "rank": 1
+      "rank": 2
     },
     {
-      "code": "7821",
-      "name": "神數",
-      "score": 4,
-      "confidence": 58,
+      "code": "6005",
+      "name": "群益證",
+      "score": 5,
+      "confidence": 57,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
         "RSI38偏弱",
+        "RSI翻揚(35→38)",
         "MACD黃金交叉",
-        "接近布林下軌支撐(1.1%)",
-        "放量下跌(出貨疑慮)",
         "法人買超",
-        "營收年增45%",
+        "營收年增25%",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "rank": 2
+      "rank": 3
+    },
+    {
+      "code": "8487",
+      "name": "愛爾達-創",
+      "score": 5,
+      "confidence": 57,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI36偏弱",
+        "RSI翻揚(33→36)",
+        "MACD黃金交叉",
+        "法人買超",
+        "營收年增208%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 4
     },
     {
       "code": "4195",
       "name": "基米-創",
+      "score": 5,
+      "confidence": 57,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI35偏弱",
+        "RSI翻揚(30→35)",
+        "MACD黃金交叉",
+        "法人買超",
+        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+        "營收年增8%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 5
+    },
+    {
+      "code": "4426",
+      "name": "利勤",
       "score": 4,
       "confidence": 55,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI30超賣",
-        "MACD空頭動能減弱",
-        "接近布林下軌支撐(1.9%)",
-        "20日新低(動能破底)",
+        "RSI39偏弱",
+        "RSI翻揚(35→39)",
+        "接近布林下軌支撐(0.6%)",
         "法人買超",
         "三大法人方向一致",
-        "營收年增8%",
+        "營收年增35%",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "rank": 3
+      "rank": 6
     },
     {
-      "code": "1477",
-      "name": "聚陽",
+      "code": "6614",
+      "name": "資拓宏宇",
+      "score": 5,
+      "confidence": 55,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI40偏弱",
+        "RSI翻揚(36→40)",
+        "接近布林下軌支撐(1.6%)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增4%"
+      ],
+      "rank": 7
+    },
+    {
+      "code": "2305",
+      "name": "全友",
+      "score": 5,
+      "confidence": 54,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD黃金交叉",
+        "放量上漲",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增198%"
+      ],
+      "rank": 8
+    },
+    {
+      "code": "2406",
+      "name": "國碩",
       "score": 4,
       "confidence": 54,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI37偏弱",
-        "RSI翻揚(37→37)",
+        "RSI40偏弱",
+        "RSI翻揚(36→40)",
         "MACD空頭動能減弱",
         "法人買超",
         "三大法人方向一致",
-        "營收年增8%",
+        "營收年增66%",
         "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 4
-    },
-    {
-      "code": "2412",
-      "name": "中華電",
-      "score": 4,
-      "confidence": 53,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "接近布林下軌支撐(1.8%)",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增4%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 5
-    },
-    {
-      "code": "2425",
-      "name": "承啟",
-      "score": 4,
-      "confidence": 49,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI39偏弱",
-        "MACD空頭動能減弱",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增144%"
-      ],
-      "rank": 6
-    },
-    {
-      "code": "1442",
-      "name": "名軒",
-      "score": 4,
-      "confidence": 47,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增11%"
-      ],
-      "rank": 7
-    },
-    {
-      "code": "2540",
-      "name": "愛山林",
-      "score": 4,
-      "confidence": 47,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(38→39)",
-        "MACD空頭動能減弱",
-        "法人買超",
-        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
-        "營收年增7%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 8
-    },
-    {
-      "code": "2646",
-      "name": "星宇航空",
-      "score": 4,
-      "confidence": 47,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增43%"
       ],
       "rank": 9
     },
     {
-      "code": "6743",
-      "name": "安普新",
-      "score": 4,
-      "confidence": 47,
+      "code": "2425",
+      "name": "承啟",
+      "score": 5,
+      "confidence": 54,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(36→39)",
+        "RSI40偏弱",
+        "RSI翻揚(39→40)",
         "MACD空頭動能減弱",
         "法人買超",
-        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
-        "營收年增50%",
-        "個股空頭排列(接刀風險,-1)"
+        "三大法人方向一致",
+        "營收年增144%"
       ],
       "rank": 10
     }
