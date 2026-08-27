@@ -1,70 +1,40 @@
 {
-  "updated_at": "2026-08-27T09:00:40+08:00",
+  "updated_at": "2026-08-27T09:30:35+08:00",
   "signals": {
-    "2425": {
-      "name": "承啟",
-      "price": 38.0,
-      "price_is_estimated": false,
-      "pct": 0.0,
-      "volume_prorated_ref": 270,
-      "score": 2,
-      "confidence": 17,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "RSI40偏弱",
-        "MACD空頭動能減弱"
-      ],
-      "time": "09:00:06"
-    },
     "8261": {
       "name": "富鼎",
-      "price": 186.75,
+      "price": 184.75,
       "price_is_estimated": true,
-      "pct": 0.4,
-      "volume_prorated_ref": 0,
+      "pct": -0.67,
+      "volume_prorated_ref": 10683,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [],
-      "time": "08:59:58"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 583.0,
-      "price_is_estimated": true,
-      "pct": 1.57,
-      "volume_prorated_ref": 3550,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI60偏強",
-        "20日新高(動能突破)"
-      ],
-      "time": "09:00:17"
+      "time": "09:30:12"
     },
     "3189": {
       "name": "景碩",
-      "price": 923.5,
+      "price": 952.5,
       "price_is_estimated": true,
-      "pct": 4.82,
-      "volume_prorated_ref": 11370,
+      "pct": 8.12,
+      "volume_prorated_ref": 147606,
       "score": 2,
       "confidence": 20,
       "label": "🟡偏多觀察",
       "reasons": [
-        "RSI63偏強",
+        "RSI65偏強",
         "MACD黃金交叉",
         "20日新高(動能突破)"
       ],
-      "time": "09:00:27"
+      "time": "09:29:57"
     },
     "4915": {
       "name": "致伸",
-      "price": 60.35,
+      "price": 60.25,
       "price_is_estimated": true,
-      "pct": 0.25,
-      "volume_prorated_ref": 110,
+      "pct": 0.08,
+      "volume_prorated_ref": 1555,
       "score": 1,
       "confidence": 17,
       "label": "⚪中立",
@@ -73,7 +43,33 @@
         "RSI翻揚(38→39)",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "time": "09:00:37"
+      "time": "09:29:36"
+    },
+    "2425": {
+      "name": "承啟",
+      "price": 38.075,
+      "price_is_estimated": true,
+      "pct": 0.2,
+      "volume_prorated_ref": 1611,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "09:30:01"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 575.5,
+      "price_is_estimated": true,
+      "pct": 0.26,
+      "volume_prorated_ref": 43610,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "09:29:56"
     }
   }
 }
