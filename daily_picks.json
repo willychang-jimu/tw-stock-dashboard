@@ -1,116 +1,86 @@
 {
-  "date": "2026-08-27",
+  "date": "2026-08-28",
   "picks": [
     {
-      "code": "3189",
-      "name": "景碩",
+      "code": "2834",
+      "name": "臺企銀",
       "score": 5,
-      "confidence": 60,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI62偏強",
-        "MACD黃金交叉",
-        "20日新高(動能突破)",
-        "放量上漲",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增36%"
-      ],
-      "rank": 1
-    },
-    {
-      "code": "1617",
-      "name": "榮星",
-      "score": 5,
-      "confidence": 54,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "放量上漲",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增40%"
-      ],
-      "rank": 2
-    },
-    {
-      "code": "2236",
-      "name": "百達-KY",
-      "score": 4,
-      "confidence": 54,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI33偏弱",
-        "RSI翻揚(31→33)",
-        "MACD空頭動能減弱",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增65%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 3
-    },
-    {
-      "code": "4590",
-      "name": "富田-創",
-      "score": 5,
-      "confidence": 54,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "放量上漲",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增2%"
-      ],
-      "rank": 4
-    },
-    {
-      "code": "4916",
-      "name": "事欣科",
-      "score": 5,
-      "confidence": 54,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "MACD黃金交叉",
-        "放量上漲",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增129%"
-      ],
-      "rank": 5
-    },
-    {
-      "code": "6117",
-      "name": "迎廣",
-      "score": 4,
-      "confidence": 54,
+      "confidence": 64,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
         "RSI39偏弱",
-        "RSI翻揚(39→39)",
+        "RSI翻揚(36→39)",
         "MACD黃金交叉",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增18%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 1
+    },
+    {
+      "code": "6873",
+      "name": "泓德能源",
+      "score": 5,
+      "confidence": 61,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI40偏弱",
+        "RSI翻揚(38→40)",
+        "MACD黃金交叉",
+        "放量上漲",
         "法人買超",
         "三大法人方向一致",
         "個股空頭排列(接刀風險,-1)"
       ],
-      "rank": 6
+      "rank": 2
     },
     {
-      "code": "6781",
-      "name": "AES-KY",
+      "code": "3003",
+      "name": "健和興",
+      "score": 4,
+      "confidence": 60,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI66偏強",
+        "MACD黃金交叉",
+        "接近布林上軌壓力(1.8%)",
+        "20日新高(動能突破)",
+        "放量上漲",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增93%"
+      ],
+      "rank": 3
+    },
+    {
+      "code": "1220",
+      "name": "台榮",
+      "score": 5,
+      "confidence": 58,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI34偏弱",
+        "MACD黃金交叉",
+        "接近布林下軌支撐(1.1%)",
+        "法人買超",
+        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+        "營收年增1%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 4
+    },
+    {
+      "code": "3576",
+      "name": "聯合再生",
       "score": 5,
       "confidence": 54,
       "label": "🟢強力買進",
@@ -121,59 +91,98 @@
         "放量上漲",
         "法人買超",
         "三大法人方向一致",
-        "營收年增28%"
+        "營收年增73%"
       ],
-      "rank": 7
+      "rank": 5
     },
     {
-      "code": "6873",
-      "name": "泓德能源",
+      "code": "6937",
+      "name": "天虹",
       "score": 4,
       "confidence": 54,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI38偏弱",
-        "RSI翻揚(36→38)",
         "MACD黃金交叉",
+        "接近布林上軌壓力(1.7%)",
+        "放量上漲",
         "法人買超",
         "三大法人方向一致",
+        "營收年增62%"
+      ],
+      "rank": 6
+    },
+    {
+      "code": "1339",
+      "name": "昭輝",
+      "score": 4,
+      "confidence": 53,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI39偏弱",
+        "RSI翻揚(38→39)",
+        "MACD黃金交叉",
+        "MACD死亡交叉",
+        "觸及布林下軌(支撐)",
+        "法人賣超",
+        "⚠️三大法人方向不一致(外資賣/投信平/自營商買)",
+        "營收年增2%"
+      ],
+      "rank": 7
+    },
+    {
+      "code": "3432",
+      "name": "台端",
+      "score": 4,
+      "confidence": 52,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI36偏弱",
+        "MACD黃金交叉",
+        "法人買超",
+        "營收年增25%",
         "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 8
     },
     {
-      "code": "6914",
-      "name": "阜爾運通",
-      "score": 7,
-      "confidence": 54,
+      "code": "5234",
+      "name": "達興材料",
+      "score": 4,
+      "confidence": 48,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI22超賣",
-        "RSI翻揚(13→22)",
-        "觸及布林下軌(支撐)",
-        "法人買超",
-        "營收年增10%"
+        "RSI39偏弱",
+        "RSI翻揚(38→39)",
+        "MACD黃金交叉",
+        "放量上漲",
+        "法人賣超",
+        "⚠️三大法人方向不一致(外資買/投信賣/自營商賣)",
+        "營收年增12%",
+        "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 9
     },
     {
-      "code": "6928",
-      "name": "攸泰科技",
-      "score": 5,
-      "confidence": 54,
+      "code": "2465",
+      "name": "麗臺",
+      "score": 4,
+      "confidence": 47,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
         "MACD黃金交叉",
-        "放量上漲",
         "法人買超",
         "三大法人方向一致",
-        "營收年增18%"
+        "營收年增281%"
       ],
       "rank": 10
     }
