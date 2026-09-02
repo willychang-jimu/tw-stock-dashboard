@@ -25,8 +25,6 @@ const el = {
   stateMessage: document.getElementById("state-message"),
   dateSelect: document.getElementById("date-select"),
   tickerTrack: document.getElementById("ticker-track"),
-  picksTicker: document.getElementById("picks-ticker"),
-  picksTickerTrack: document.getElementById("picks-ticker-track"),
   metaRow: document.getElementById("meta-row"),
   metaGenerated: document.getElementById("meta-generated"),
   panelStarred: document.getElementById("panel-starred"),
@@ -93,6 +91,25 @@ function scoreWithConfidenceHtml(score, confidence) {
   const conf = confidence === null || confidence === undefined ? "-" : `${confidence}%`;
   const sign = score > 0 ? "+" : "";
   return `${scoreEmoji(score)}${sign}${score}<span class="confidence-badge">${conf}</span>`;
+}
+
+function confidenceGaugeHtml(confidence, isDown) {
+  // 圓形信心值儀表,用在單一股票聚焦的畫面(彈窗/支撐卡片),表格列太密集不適合放這個
+  const conf = confidence === null || confidence === undefined ? 0 : confidence;
+  const circumference = 2 * Math.PI * 22; // r=22
+  const offset = circumference * (1 - conf / 100);
+  const downClass = isDown ? " gauge-down" : "";
+  const label = confidence === null || confidence === undefined ? "-" : `${conf}%`;
+  return `
+    <div class="gauge">
+      <svg width="56" height="56" viewBox="0 0 56 56">
+        <circle class="gauge-bg" cx="28" cy="28" r="22"/>
+        <circle class="gauge-fill${downClass}" cx="28" cy="28" r="22"
+          stroke-dasharray="${circumference}" stroke-dashoffset="${offset}"/>
+      </svg>
+      <div class="gauge-label${downClass}">${label}</div>
+    </div>
+  `;
 }
 
 function newsLink(code) {
@@ -956,7 +973,6 @@ async function init() {
   loadCodeNameMap();
   loadChartsData();
   await loadAllSignals();
-  loadDailyPicks();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
   try {
@@ -972,30 +988,6 @@ async function init() {
     el.stateMessage.textContent = `無法讀取索引資料：${err.message}`;
   }
 }
-function renderDailyPicksTicker(picks) {
-  const items = picks.map((p) => {
-    const fallbackTag = p.tier === "fallback" ? `<span class="pick-fallback-tag">(候補)</span>` : "";
-    return `<span><span class="pick-rank">#${p.rank}</span>${p.code} ${p.name}${fallbackTag} ${scoreWithConfidenceHtml(p.score, p.confidence)}</span>`;
-  });
-  const html = items.join("");
-  el.picksTickerTrack.innerHTML = html + html;
-}
-
-async function loadDailyPicks() {
-  try {
-    const data = await fetchJSON(`daily_picks.json?t=${Date.now()}`);
-    const picks = data.picks || [];
-    if (!picks.length) {
-      el.picksTicker.hidden = true;
-      return;
-    }
-    renderDailyPicksTicker(picks);
-    el.picksTicker.hidden = false;
-  } catch (err) {
-    el.picksTicker.hidden = true;
-  }
-}
-
 async function loadAllSignals() {
   try {
     const data = await fetchJSON(`all_signals.json?t=${Date.now()}`);
@@ -1074,7 +1066,6 @@ function openSignalModal(code) {
 
   title.textContent = info.name ? `${code} ${info.name}` : code;
 
-  const scoreHtml = scoreWithConfidenceHtml(info.score, info.confidence);
   const conflictHtml = info.conflict
     ? `<div class="signal-modal-conflict">⚠️ ${info.conflict_reason}</div>`
     : "";
@@ -1082,10 +1073,15 @@ function openSignalModal(code) {
     ? `<ul class="signal-modal-reasons">${info.reasons.map((r) => `<li>${r}</li>`).join("")}</ul>`
     : '<p class="empty-note">目前沒有觸發任何加減分條件</p>';
 
+  const gaugeHtml = confidenceGaugeHtml(info.confidence, info.score < 0);
+
   body.innerHTML = `
-    <div class="signal-modal-row">
-      <span class="signal-modal-label">燈號</span>
-      <span>${scoreHtml}　${info.label}</span>
+    <div class="signal-modal-hero">
+      ${gaugeHtml}
+      <div class="signal-modal-hero-text">
+        <div class="signal-modal-hero-score">${scoreEmoji(info.score)}${info.score > 0 ? "+" : ""}${info.score}</div>
+        <div class="signal-modal-hero-label">${info.label}</div>
+      </div>
     </div>
     <div class="signal-modal-row">
       <span class="signal-modal-label">產業別</span>
