@@ -361,7 +361,10 @@ function renderAllSignalsBrowser() {
     list.map((item) => {
       const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ") || "-";
       const codeLink = `<a href="${newsLink(item.code)}" target="_blank" rel="noopener noreferrer" class="chart-clickable">${item.code}</a>`;
-      const nameTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.name || "-"}</span>`;
+      const divergenceBadge = item.chip_divergence
+        ? ' <span class="chip-divergence-badge" title="放量下跌但法人買超：散戶恐慌賣、法人默默接。歷史表現最好的模式之一，但樣本集中在少數幾次急跌，僅供參考不計入分數">🔻買</span>'
+        : "";
+      const nameTrigger = `<span class="signal-open-trigger chart-clickable" data-code="${item.code}">${item.name || "-"}</span>${divergenceBadge}`;
       return [
         { className: "star-cell", html: starHtml(item.code) },
         { html: codeLink },
@@ -1104,6 +1107,13 @@ function openSignalModal(code) {
       <span>${info.stock_trend}</span>
     </div>
     ${instBreakdownHtml(info.inst_breakdown)}
+    ${info.chip_divergence ? `
+      <div class="chip-divergence-note">
+        <div class="chip-divergence-title">🔻買　籌碼背離</div>
+        <div>今天放量下跌，但法人買超——散戶恐慌賣、法人默默接。</div>
+        <div class="chip-divergence-caveat">這個模式歷史表現最好（5日勝率約82%），但樣本集中在少數幾次市場急跌，樣本之間不獨立，<strong>刻意不計入分數</strong>，僅供你自己判斷參考。</div>
+      </div>
+    ` : ""}
     ${conflictHtml}
     <div class="signal-modal-reasons-title">訊號理由</div>
     ${reasonsHtml}
