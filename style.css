@@ -420,6 +420,39 @@ td.conflict-flag {
 .inst-tag-sell { background: rgba(43, 170, 109, 0.16); color: var(--down); }
 .inst-tag-flat { background: var(--surface-raised); color: var(--text-muted); }
 
+/* 籌碼背離標記:放量下跌但法人買超,只標示不計分(見signal_score.py與CLAUDE.md說明) */
+.chip-divergence-badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-family: var(--font-mono);
+  background: rgba(255, 93, 93, 0.16);
+  color: var(--up);
+  border: 1px solid rgba(255, 93, 93, 0.3);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+.chip-divergence-note {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 93, 93, 0.08);
+  border: 1px solid rgba(255, 93, 93, 0.22);
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.chip-divergence-title {
+  font-weight: 700;
+  color: var(--up);
+  margin-bottom: 4px;
+}
+.chip-divergence-caveat {
+  color: var(--text-muted);
+  font-size: 11.5px;
+  margin-top: 6px;
+}
+
 /* 自選股星號欄位,套用到所有表格 */
 th.star-cell, td.star-cell {
   text-align: center;
