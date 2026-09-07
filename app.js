@@ -370,6 +370,8 @@ function renderAllSignalsBrowser() {
         { html: codeLink },
         { className: "name-cell", html: nameTrigger },
         item.industry || "-",
+        { className: pctClass(item.pct), html: item.price !== null && item.price !== undefined ? `${item.price}` : "-" },
+        { className: pctClass(item.pct), html: fmtPct(item.pct) },
         {
           className: pctClass(item.score),
           html: scoreWithConfidenceHtml(item.score, item.confidence),
@@ -386,12 +388,12 @@ function renderAllSignalsBrowser() {
 
   renderTable(
     el.tableAllSignalsBuy,
-    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由（點擊看完整）"],
+    ["★", "代號", "名稱", "產業別", "價格", "漲跌%", "分數", "矛盾", "理由（點擊看完整）"],
     buildRows(buyList)
   );
   renderTable(
     el.tableAllSignalsSell,
-    ["★", "代號", "名稱", "產業別", "分數", "矛盾", "理由（點擊看完整）"],
+    ["★", "代號", "名稱", "產業別", "價格", "漲跌%", "分數", "矛盾", "理由（點擊看完整）"],
     buildRows(sellList)
   );
 }
@@ -861,7 +863,7 @@ async function renderIntraday() {
         const shortReasons = (item.reasons || []).map(abbreviateReason).join(" ") || "-";
         return [
           { className: "star-cell", html: starHtml(code) },
-          { html: `<span class="intraday-open-trigger chart-clickable" data-code="${code}">${code}</span>` },
+          { html: `<span class="chart-clickable chart-open-trigger" data-code="${code}" data-name="${item.name || ""}">${code}</span>` },
           { className: "name-cell", html: `<span class="intraday-open-trigger chart-clickable" data-code="${code}">${item.name}</span>` },
           item.price_is_estimated ? `≈${item.price}` : `${item.price}`,
           { className: pctClass(item.pct), html: fmtPct(item.pct) },
@@ -1143,17 +1145,24 @@ function setupSignalModal() {
       const item = (state.intradaySignals || {})[code];
       if (!item) return;
       const extraHtml = `
-        <div class="signal-modal-row">
-          <span class="signal-modal-label">價格</span>
-          <span>${item.price_is_estimated ? "≈" : ""}${item.price}（${fmtPct(item.pct)}）</span>
+        <div class="signal-modal-hero">
+          ${confidenceGaugeHtml(item.confidence, item.score < 0)}
+          <div class="signal-modal-hero-text">
+            <div class="signal-modal-hero-score">${scoreEmoji(item.score)}${item.score > 0 ? "+" : ""}${item.score}</div>
+            <div class="signal-modal-hero-label">${item.label || ""}</div>
+          </div>
         </div>
         <div class="signal-modal-row">
-          <span class="signal-modal-label">燈號</span>
-          ${scoreWithConfidenceHtml(item.score, item.confidence)}
+          <span class="signal-modal-label">現價</span>
+          <span class="${pctClass(item.pct)}">${item.price_is_estimated ? "≈" : ""}${item.price}　${fmtPct(item.pct)}</span>
         </div>
         <div class="signal-modal-row">
           <span class="signal-modal-label">更新時間</span>
           <span>${item.time || "-"}</span>
+        </div>
+        <div class="intraday-scope-note">
+          這是<strong>盤中即時</strong>分析，用當下價格重算技術指標。
+          <strong>法人買賣超與量能盤中拿不到，沒有計入分數</strong>，所以跟每日收盤後的分析會有落差，兩者不是同一份判斷。
         </div>
       `;
       openReasonsModal(code, item.name, item.reasons || [], extraHtml);
