@@ -453,6 +453,19 @@ td.conflict-flag {
   margin-top: 6px;
 }
 
+/* 盤中彈窗的資料範圍說明:明確區分盤中即時分析 vs 每日收盤分析 */
+.intraday-scope-note {
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-raised);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11.5px;
+  line-height: 1.6;
+}
+.intraday-scope-note strong { color: var(--text); }
+
 /* 自選股星號欄位,套用到所有表格 */
 th.star-cell, td.star-cell {
   text-align: center;
