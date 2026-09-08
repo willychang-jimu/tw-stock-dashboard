@@ -1,186 +1,186 @@
 {
-  "date": "2026-09-04",
+  "date": "2026-09-07",
   "picks": [
     {
-      "code": "9917",
-      "name": "中保科",
+      "code": "2072",
+      "name": "世紀風電",
+      "score": 4,
+      "confidence": 57,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI26超賣",
+        "觸及布林下軌(支撐)",
+        "20日新低(動能破底)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增106%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 1
+    },
+    {
+      "code": "6136",
+      "name": "富爾特",
+      "score": 4,
+      "confidence": 57,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI36偏弱",
+        "觸及布林下軌(支撐)",
+        "20日新低(動能破底)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增27%"
+      ],
+      "rank": 2
+    },
+    {
+      "code": "1220",
+      "name": "台榮",
       "score": 4,
       "confidence": 55,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(36→39)",
-        "接近布林下軌支撐(1.7%)",
-        "法人買超",
-        "三大法人方向一致",
-        "營收年增5%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 1
-    },
-    {
-      "code": "1477",
-      "name": "聚陽",
-      "score": 4,
-      "confidence": 54,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI38偏弱",
-        "RSI翻揚(33→38)",
+        "RSI28超賣",
         "MACD空頭動能減弱",
+        "接近布林下軌支撐(0.7%)",
+        "20日新低(動能破底)",
         "法人買超",
         "三大法人方向一致",
-        "營收年增8%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 2
-    },
-    {
-      "code": "2227",
-      "name": "裕日車",
-      "score": 4,
-      "confidence": 48,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI39偏弱",
-        "RSI翻揚(38→39)",
-        "接近布林下軌支撐(0.7%)",
-        "法人買超",
-        "營收年增2%",
+        "營收年增1%",
         "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 3
     },
     {
-      "code": "3025",
-      "name": "星通",
-      "score": 4,
-      "confidence": 48,
+      "code": "4426",
+      "name": "利勤",
+      "score": 5,
+      "confidence": 53,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
-        "RSI38偏弱",
-        "RSI翻揚(36→38)",
-        "接近布林下軌支撐(1.8%)",
+        "RSI35偏弱",
+        "RSI翻揚(33→35)",
+        "MACD空頭動能減弱",
+        "接近布林下軌支撐(1.5%)",
         "法人買超",
-        "營收年增2%",
+        "營收年增35%",
         "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 4
     },
     {
-      "code": "4414",
-      "name": "如興",
+      "code": "2012",
+      "name": "春雨",
       "score": 4,
-      "confidence": 48,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI40偏弱",
-        "RSI翻揚(38→40)",
-        "接近布林下軌支撐(0.9%)",
-        "法人買超",
-        "營收年增25%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 5
-    },
-    {
-      "code": "4426",
-      "name": "利勤",
-      "score": 4,
-      "confidence": 48,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI33偏弱",
-        "MACD空頭動能減弱",
-        "接近布林下軌支撐(1.1%)",
-        "法人買超",
-        "營收年增35%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 6
-    },
-    {
-      "code": "6541",
-      "name": "泰福-KY",
-      "score": 5,
-      "confidence": 48,
-      "label": "🟢強力買進",
-      "tier": "primary",
-      "recent_attention": 0,
-      "reasons": [
-        "RSI28超賣",
-        "RSI翻揚(25→28)",
-        "接近布林下軌支撐(1.2%)",
-        "法人買超",
-        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
-        "營收年增219%",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "rank": 7
-    },
-    {
-      "code": "6641",
-      "name": "基士德-KY",
-      "score": 4,
-      "confidence": 48,
+      "confidence": 43,
       "label": "🟢強力買進",
       "tier": "primary",
       "recent_attention": 0,
       "reasons": [
         "RSI39偏弱",
-        "RSI翻揚(31→39)",
-        "接近布林下軌支撐(1.1%)",
+        "RSI翻揚(34→39)",
+        "MACD空頭動能減弱",
+        "接近布林下軌支撐(1.4%)",
         "法人買超",
-        "營收年增12%",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "rank": 5
+    },
+    {
+      "code": "7835",
+      "name": "永悅健康-創",
+      "score": 4,
+      "confidence": 42,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI34偏弱",
+        "RSI翻揚(33→34)",
+        "法人買超",
+        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+        "營收年增41%"
+      ],
+      "rank": 6
+    },
+    {
+      "code": "6281",
+      "name": "全國電",
+      "score": 4,
+      "confidence": 36,
+      "label": "🟢強力買進",
+      "tier": "primary",
+      "recent_attention": 0,
+      "reasons": [
+        "MACD空頭動能減弱",
+        "接近布林下軌支撐(1.0%)",
+        "法人買超",
+        "營收年增4%"
+      ],
+      "rank": 7
+    },
+    {
+      "code": "7818",
+      "name": "溢泰實業",
+      "score": 3,
+      "confidence": 65,
+      "label": "🟡偏多觀察",
+      "tier": "fallback",
+      "recent_attention": 0,
+      "reasons": [
+        "RSI35偏弱",
+        "MACD黃金交叉(參考,不計分)",
+        "接近布林下軌支撐(1.7%)",
+        "法人買超",
+        "三大法人方向一致",
+        "營收年增13%",
         "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 8
     },
     {
-      "code": "6645",
-      "name": "金萬林-創",
-      "score": 4,
-      "confidence": 48,
-      "label": "🟢強力買進",
-      "tier": "primary",
+      "code": "4582",
+      "name": "聚恆-創",
+      "score": 2,
+      "confidence": 59,
+      "label": "🟡偏多觀察",
+      "tier": "fallback",
       "recent_attention": 0,
       "reasons": [
-        "RSI36偏弱",
-        "MACD空頭動能減弱",
-        "接近布林下軌支撐(2.0%)",
+        "RSI33偏弱",
+        "MACD黃金交叉(參考,不計分)",
+        "20日新低(動能破底)",
         "法人買超",
-        "營收年增30%",
-        "個股空頭排列(接刀風險,-1)"
+        "三大法人方向一致",
+        "營收年增34%"
       ],
       "rank": 9
     },
     {
-      "code": "2364",
-      "name": "倫飛",
-      "score": 5,
-      "confidence": 47,
-      "label": "🟢強力買進",
-      "tier": "primary",
+      "code": "1210",
+      "name": "大成",
+      "score": 3,
+      "confidence": 58,
+      "label": "🟡偏多觀察",
+      "tier": "fallback",
       "recent_attention": 0,
       "reasons": [
         "RSI40偏弱",
-        "RSI翻揚(37→40)",
-        "MACD空頭動能減弱",
+        "MACD黃金交叉(參考,不計分)",
+        "接近布林下軌支撐(1.7%)",
         "法人買超",
-        "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
-        "營收年增52%"
+        "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+        "營收年增22%",
+        "個股空頭排列(接刀風險,-1)"
       ],
       "rank": 10
     }
