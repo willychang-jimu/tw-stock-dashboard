@@ -19,7 +19,22 @@ const PRIVATE_REPO = "tw-stock-daily-highlights-";
 const INTRADAY_WORKFLOW = "intraday-signal.yml";
 const WATCHLIST_MAX = 20;
 
-const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {}, intradaySignals: {} };
+const state = { index: [], watchlistCodes: new Set(), watchlistSha: undefined, currentDay: null, codeNameMap: {}, chartsData: {}, activeChart: null, allSignals: {}, intradaySignals: {}, v3Data: null, v3ActiveKey: null };
+
+// 三個策略的證據狀態，只做UI呈現用的補充標籤——真正的note/caveat文字來自daily_picks.json
+// (由strategy_base.py的STRATEGY_EVIDENCE產生)，這裡只放「一眼看懂等級」用的短標籤跟樣式class
+const V3_EVIDENCE_LABEL = {
+  validated: "多角度互相印證",
+  invalidated_general: "全市場證偽",
+  abandoned: "已放棄",
+};
+// 不同策略該用什麼頻率檢視，是刻意跟20天/90~120天的驗證尺度對應——
+// 長天期策略不該被當成「每天看有沒有漲」的東西
+const V3_CADENCE = {
+  reversal: "每日訊號 · 建議持有至第20個交易日",
+  breakout: "每日訊號（建議僅參考你的觀察名單內個股）",
+  momentum: "研究記錄 · 非每日訊號，不建議依此進出場",
+};
 
 const el = {
   stateMessage: document.getElementById("state-message"),
@@ -47,6 +62,9 @@ const el = {
   tableBacktest: document.getElementById("table-backtest"),
   panelSignalBacktest: document.getElementById("panel-signal-backtest"),
   tableSignalBacktest: document.getElementById("table-signal-backtest"),
+  panelV3: document.getElementById("panel-v3-strategies"),
+  v3Tabs: document.getElementById("v3-tabs"),
+  v3TabPanel: document.getElementById("v3-tab-panel"),
 };
 
 function abbreviateReason(reason) {
@@ -967,6 +985,75 @@ function renderAll(day) {
   renderSignalBacktest(day);
 }
 
+// ===== V3三策略：分頁籤呈現（2026-09-09新增） =====
+function renderV3PickCard(pick) {
+  const pctHtml = pick.pct !== undefined && pick.pct !== null
+    ? `<span class="${pctClass(pick.pct)}">${fmtPct(pick.pct)}</span>` : "";
+  const priceText = pick.current !== undefined && pick.current !== null ? pick.current.toFixed(2) : "-";
+  const reasons = (pick.reasons || []).join(" · ");
+  return `
+    <div class="v3-pick-card">
+      <div class="v3-pick-main">
+        <span class="v3-pick-name">${pick.name || ""} <span class="v3-pick-code">${pick.code}</span></span>
+        <span class="v3-pick-reasons">${reasons}</span>
+      </div>
+      <div class="v3-pick-price">${priceText}　${pctHtml}</div>
+    </div>`;
+}
+
+function renderV3TabPanel(strategyData) {
+  const level = strategyData.evidence_level;
+  const label = V3_EVIDENCE_LABEL[level] || level;
+  const cadence = V3_CADENCE[strategyData.key] || "";
+  const picks = strategyData.picks || [];
+  const listHtml = picks.length
+    ? `<div class="v3-pick-list">${picks.map(renderV3PickCard).join("")}</div>`
+    : `<div class="v3-empty-note">今日無符合條件的標的</div>`;
+  el.v3TabPanel.innerHTML = `
+    <div class="v3-evidence-row">
+      <span class="v3-evidence-badge ${level}">${label}</span>
+      <span class="v3-cadence">${cadence}</span>
+    </div>
+    <p class="v3-evidence-note">${strategyData.evidence_note || ""}</p>
+    <p class="v3-evidence-caveat">${strategyData.evidence_caveat || ""}</p>
+    ${listHtml}
+  `;
+}
+
+function selectV3Tab(key) {
+  if (!state.v3Data) return;
+  state.v3ActiveKey = key;
+  el.v3Tabs.querySelectorAll(".v3-tab").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.key === key);
+  });
+  const strategyData = state.v3Data.strategies.find((s) => s.key === key);
+  if (strategyData) renderV3TabPanel(strategyData);
+}
+
+function renderV3Tabs() {
+  const strategies = state.v3Data.strategies;
+  el.v3Tabs.innerHTML = strategies.map((s) => {
+    const countTag = s.count ? ` (${s.count})` : "";
+    return `<button type="button" class="v3-tab" data-key="${s.key}">${s.label}${countTag}</button>`;
+  }).join("");
+  el.v3Tabs.querySelectorAll(".v3-tab").forEach((btn) => {
+    btn.addEventListener("click", () => selectV3Tab(btn.dataset.key));
+  });
+  // 預設打開第一個標籤（DISPLAY_ORDER已經把跌深反彈排第一，可信度最高的優先顯示）
+  selectV3Tab(strategies[0].key);
+}
+
+async function loadV3Strategies() {
+  try {
+    state.v3Data = await fetchJSON(`daily_picks.json?t=${Date.now()}`);
+    renderV3Tabs();
+    el.panelV3.hidden = false;
+  } catch (err) {
+    // daily_picks.json可能還沒產生過(第一次部署時)，安靜跳過，不擋其他面板載入
+    console.warn("讀取daily_picks.json失敗，V3策略面板暫不顯示：", err.message);
+  }
+}
+
 async function init() {
   setupTokenButton();
   setupWatchlistSearch();
@@ -977,6 +1064,7 @@ async function init() {
   await loadWatchlistData();
   loadCodeNameMap();
   loadChartsData();
+  loadV3Strategies();
   await loadAllSignals();
   renderIntraday();
   setInterval(renderIntraday, 5 * 60 * 1000);  // 每5分鐘自動刷新一次盤中訊號
