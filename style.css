@@ -360,6 +360,91 @@ select:focus-visible, a:focus-visible {
   font-family: var(--font-mono);
   color: var(--gold);
 }
+
+/* V3三策略：分頁籤 + 證據狀態徽章（2026-09-09新增） */
+.v3-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+.v3-tab {
+  flex: 1;
+  padding: 10px 8px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.v3-tab.active {
+  color: var(--text);
+  border-bottom-color: var(--gold);
+}
+.v3-evidence-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.v3-evidence-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+.v3-evidence-badge.validated { background: rgba(57, 255, 136, 0.14); color: var(--gold); }
+.v3-evidence-badge.invalidated_general { background: rgba(212, 162, 76, 0.16); color: var(--cat-warning); }
+.v3-evidence-badge.abandoned { background: rgba(123, 127, 196, 0.16); color: var(--cat-caution); }
+.v3-evidence-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 4px;
+}
+.v3-evidence-caveat {
+  font-size: 11px;
+  color: var(--text-muted);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+.v3-cadence {
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  background: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+.v3-pick-list {
+  display: grid;
+  gap: 8px;
+}
+.v3-pick-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--surface-raised);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.v3-pick-main { display: flex; flex-direction: column; gap: 2px; }
+.v3-pick-code { font-family: var(--font-mono); font-size: 13px; color: var(--text-muted); }
+.v3-pick-name { font-family: var(--font-display); font-size: 15px; font-weight: 600; }
+.v3-pick-reasons { font-size: 11px; color: var(--text-muted); }
+.v3-pick-price { text-align: right; font-family: var(--font-mono); }
+.v3-empty-note { font-size: 13px; color: var(--text-muted); padding: 16px 0; text-align: center; }
 td.conflict-flag {
   color: var(--cat-warning);
   text-align: center;
