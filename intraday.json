@@ -1,267 +1,59 @@
 {
-  "updated_at": "2026-09-22T10:00:41+08:00",
+  "updated_at": "2026-09-22T10:30:35+08:00",
   "signals": {
-    "2327": {
-      "name": "國巨*",
-      "price": 571.5,
+    "3037": {
+      "name": "欣興",
+      "price": 1020.0,
       "price_is_estimated": true,
-      "pct": 2.6,
-      "volume_prorated_ref": 58437,
+      "pct": 0.0,
+      "volume_prorated_ref": 25796,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
-      "reasons": [],
-      "time": "10:00:05"
-    },
-    "2382": {
-      "name": "廣達",
-      "price": 344.25,
-      "price_is_estimated": true,
-      "pct": -0.07,
-      "volume_prorated_ref": 11848,
-      "score": 2,
-      "confidence": 0,
-      "label": "🟡偏多觀察",
       "reasons": [
-        "接近布林上軌壓力(1.3%)",
-        "大盤多頭(+2)",
-        "個股多頭排列(逢高疑慮較低,+1)"
+        "MACD黃金交叉(參考,不計分)"
       ],
-      "time": "10:00:16"
-    },
-    "2330": {
-      "name": "台積電",
-      "price": 2492.5,
-      "price_is_estimated": true,
-      "pct": 0.5,
-      "volume_prorated_ref": 36104,
-      "score": -1,
-      "confidence": 30,
-      "label": "⚪中立",
-      "reasons": [
-        "RSI61偏強",
-        "MACD黃金交叉(參考,不計分)",
-        "觸及布林上軌(壓力)",
-        "20日新高(追高風險,-1)",
-        "大盤多頭(+2)",
-        "個股多頭排列(逢高疑慮較低,+1)"
-      ],
-      "time": "10:00:03"
-    },
-    "6770": {
-      "name": "力積電",
-      "price": 73.75,
-      "price_is_estimated": true,
-      "pct": 1.44,
-      "volume_prorated_ref": 195669,
-      "score": 2,
-      "confidence": 14,
-      "label": "🟡偏多觀察",
-      "reasons": [
-        "MACD黃金交叉(參考,不計分)",
-        "接近布林上軌壓力(1.0%)",
-        "大盤多頭(+2)",
-        "個股多頭排列(逢高疑慮較低,+1)"
-      ],
-      "time": "10:00:03"
+      "time": "10:29:59"
     },
     "3189": {
       "name": "景碩",
-      "price": 902.5,
-      "price_is_estimated": true,
-      "pct": 9.13,
-      "volume_prorated_ref": 72511,
-      "score": -1,
-      "confidence": 24,
+      "price": 898.0,
+      "price_is_estimated": false,
+      "pct": 8.59,
+      "volume_prorated_ref": 49653,
+      "score": 1,
+      "confidence": 14,
       "label": "⚪中立",
       "reasons": [
-        "RSI60偏強",
         "MACD黃金交叉(參考,不計分)",
-        "觸及布林上軌(壓力)",
+        "接近布林上軌壓力(0.4%)",
         "大盤多頭(+2)"
       ],
-      "time": "09:59:54"
+      "time": "10:29:56"
     },
-    "2303": {
-      "name": "聯電",
-      "price": 167.75,
+    "2317": {
+      "name": "鴻海",
+      "price": 252.75,
       "price_is_estimated": true,
-      "pct": 6.85,
-      "volume_prorated_ref": 679104,
-      "score": -3,
-      "confidence": 30,
-      "label": "🟠偏空風險",
-      "reasons": [
-        "RSI73超買",
-        "觸及布林上軌(壓力)",
-        "20日新高(追高風險,-1)",
-        "大盤多頭(+2)"
-      ],
-      "time": "10:00:05"
-    },
-    "3037": {
-      "name": "欣興",
-      "price": 1120.0,
-      "price_is_estimated": false,
-      "pct": 9.8,
-      "volume_prorated_ref": 37602,
+      "pct": 1.1,
+      "volume_prorated_ref": 43257,
       "score": 2,
       "confidence": 14,
       "label": "🟡偏多觀察",
       "reasons": [
-        "RSI63偏強",
         "MACD黃金交叉(參考,不計分)",
+        "接近布林上軌壓力(1.7%)",
         "大盤多頭(+2)",
         "個股多頭排列(逢高疑慮較低,+1)"
       ],
-      "time": "10:00:26"
-    },
-    "2449": {
-      "name": "京元電子",
-      "price": 324.0,
-      "price_is_estimated": false,
-      "pct": 7.46,
-      "volume_prorated_ref": 157131,
-      "score": -3,
-      "confidence": 30,
-      "label": "🟠偏空風險",
-      "reasons": [
-        "RSI72超買",
-        "觸及布林上軌(壓力)",
-        "20日新高(追高風險,-1)",
-        "大盤多頭(+2)"
-      ],
-      "time": "10:00:26"
-    },
-    "3450": {
-      "name": "聯鈞",
-      "price": 543.5,
-      "price_is_estimated": true,
-      "pct": -0.28,
-      "volume_prorated_ref": 16564,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "10:00:37"
-    },
-    "2356": {
-      "name": "英業達",
-      "price": 61.75,
-      "price_is_estimated": true,
-      "pct": -0.08,
-      "volume_prorated_ref": 13347,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱",
-        "個股空頭排列(接刀風險,-1)"
-      ],
-      "time": "10:00:06"
-    },
-    "2344": {
-      "name": "華邦電",
-      "price": 175.75,
-      "price_is_estimated": true,
-      "pct": 1.01,
-      "volume_prorated_ref": 173736,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "10:00:05"
-    },
-    "3481": {
-      "name": "群創",
-      "price": 51.35,
-      "price_is_estimated": true,
-      "pct": 1.88,
-      "volume_prorated_ref": 1114601,
-      "score": -1,
-      "confidence": 18,
-      "label": "⚪中立",
-      "reasons": [
-        "觸及布林上軌(壓力)",
-        "20日新高(追高風險,-1)",
-        "大盤多頭(+2)"
-      ],
-      "time": "09:59:57"
-    },
-    "3017": {
-      "name": "奇鋐",
-      "price": 3440.0,
-      "price_is_estimated": true,
-      "pct": 0.73,
-      "volume_prorated_ref": 4590,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "10:00:00"
-    },
-    "6442": {
-      "name": "光聖",
-      "price": 1527.5,
-      "price_is_estimated": true,
-      "pct": 0.16,
-      "volume_prorated_ref": 1876,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "10:00:24"
-    },
-    "2492": {
-      "name": "華新科",
-      "price": 313.25,
-      "price_is_estimated": true,
-      "pct": 1.54,
-      "volume_prorated_ref": 45778,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "10:00:01"
-    },
-    "3231": {
-      "name": "緯創",
-      "price": 181.75,
-      "price_is_estimated": true,
-      "pct": -2.55,
-      "volume_prorated_ref": 149246,
-      "score": 0,
-      "confidence": 0,
-      "label": "⚪中立",
-      "reasons": [],
-      "time": "09:59:57"
-    },
-    "2408": {
-      "name": "南亞科",
-      "price": 511.5,
-      "price_is_estimated": true,
-      "pct": -0.87,
-      "volume_prorated_ref": 101430,
-      "score": 1,
-      "confidence": 5,
-      "label": "⚪中立",
-      "reasons": [
-        "MACD空頭動能減弱"
-      ],
-      "time": "10:00:36"
+      "time": "10:30:15"
     },
     "3711": {
       "name": "日月光投控",
       "price": 704.5,
       "price_is_estimated": true,
       "pct": 6.26,
-      "volume_prorated_ref": 56776,
+      "volume_prorated_ref": 42567,
       "score": -2,
       "confidence": 30,
       "label": "🟠偏空風險",
@@ -271,14 +63,76 @@
         "20日新高(追高風險,-1)",
         "大盤多頭(+2)"
       ],
-      "time": "10:00:17"
+      "time": "10:30:27"
+    },
+    "2449": {
+      "name": "京元電子",
+      "price": 323.0,
+      "price_is_estimated": false,
+      "pct": 7.13,
+      "volume_prorated_ref": 122802,
+      "score": -3,
+      "confidence": 30,
+      "label": "🟠偏空風險",
+      "reasons": [
+        "RSI72超買",
+        "觸及布林上軌(壓力)",
+        "20日新高(追高風險,-1)",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:01"
+    },
+    "3481": {
+      "name": "群創",
+      "price": 51.95,
+      "price_is_estimated": true,
+      "pct": 3.08,
+      "volume_prorated_ref": 953526,
+      "score": -1,
+      "confidence": 18,
+      "label": "⚪中立",
+      "reasons": [
+        "觸及布林上軌(壓力)",
+        "20日新高(追高風險,-1)",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:12"
+    },
+    "2303": {
+      "name": "聯電",
+      "price": 166.5,
+      "price_is_estimated": false,
+      "pct": 6.05,
+      "volume_prorated_ref": 546552,
+      "score": -3,
+      "confidence": 30,
+      "label": "🟠偏空風險",
+      "reasons": [
+        "RSI72超買",
+        "觸及布林上軌(壓力)",
+        "20日新高(追高風險,-1)",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:15"
+    },
+    "3231": {
+      "name": "緯創",
+      "price": 182.25,
+      "price_is_estimated": true,
+      "pct": -2.28,
+      "volume_prorated_ref": 123894,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "10:30:17"
     },
     "2308": {
       "name": "台達電",
-      "price": 1912.5,
+      "price": 1922.5,
       "price_is_estimated": true,
-      "pct": 2.0,
-      "volume_prorated_ref": 36540,
+      "pct": 2.53,
+      "volume_prorated_ref": 27831,
       "score": -2,
       "confidence": 30,
       "label": "🟠偏空風險",
@@ -289,21 +143,166 @@
         "20日新高(追高風險,-1)",
         "大盤多頭(+2)"
       ],
-      "time": "10:00:00"
+      "time": "10:30:10"
     },
-    "2317": {
-      "name": "鴻海",
-      "price": 251.25,
+    "2382": {
+      "name": "廣達",
+      "price": 344.25,
+      "price_is_estimated": true,
+      "pct": -0.07,
+      "volume_prorated_ref": 9969,
+      "score": 2,
+      "confidence": 0,
+      "label": "🟡偏多觀察",
+      "reasons": [
+        "接近布林上軌壓力(1.3%)",
+        "大盤多頭(+2)",
+        "個股多頭排列(逢高疑慮較低,+1)"
+      ],
+      "time": "10:30:26"
+    },
+    "2330": {
+      "name": "台積電",
+      "price": 2492.5,
       "price_is_estimated": true,
       "pct": 0.5,
-      "volume_prorated_ref": 42732,
+      "volume_prorated_ref": 26895,
+      "score": -1,
+      "confidence": 30,
+      "label": "⚪中立",
+      "reasons": [
+        "RSI61偏強",
+        "MACD黃金交叉(參考,不計分)",
+        "觸及布林上軌(壓力)",
+        "20日新高(追高風險,-1)",
+        "大盤多頭(+2)",
+        "個股多頭排列(逢高疑慮較低,+1)"
+      ],
+      "time": "10:30:15"
+    },
+    "2344": {
+      "name": "華邦電",
+      "price": 174.25,
+      "price_is_estimated": true,
+      "pct": 0.14,
+      "volume_prorated_ref": 151392,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:30:15"
+    },
+    "6442": {
+      "name": "光聖",
+      "price": 1527.5,
+      "price_is_estimated": true,
+      "pct": 0.16,
+      "volume_prorated_ref": 1587,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "10:30:08"
+    },
+    "2408": {
+      "name": "南亞科",
+      "price": 505.5,
+      "price_is_estimated": true,
+      "pct": -2.03,
+      "volume_prorated_ref": 95601,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:30:11"
+    },
+    "2327": {
+      "name": "國巨*",
+      "price": 580.5,
+      "price_is_estimated": true,
+      "pct": 4.22,
+      "volume_prorated_ref": 63207,
+      "score": 1,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "接近布林上軌壓力(1.8%)",
+        "大盤多頭(+2)"
+      ],
+      "time": "10:30:15"
+    },
+    "6770": {
+      "name": "力積電",
+      "price": 72.95,
+      "price_is_estimated": true,
+      "pct": 0.34,
+      "volume_prorated_ref": 160125,
       "score": 0,
       "confidence": 0,
       "label": "⚪中立",
       "reasons": [
         "MACD黃金交叉(參考,不計分)"
       ],
-      "time": "10:00:05"
+      "time": "10:30:13"
+    },
+    "3017": {
+      "name": "奇鋐",
+      "price": 3432.5,
+      "price_is_estimated": true,
+      "pct": 0.51,
+      "volume_prorated_ref": 3774,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:30:00"
+    },
+    "3450": {
+      "name": "聯鈞",
+      "price": 538.5,
+      "price_is_estimated": true,
+      "pct": -1.19,
+      "volume_prorated_ref": 12605,
+      "score": 1,
+      "confidence": 5,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱"
+      ],
+      "time": "10:29:56"
+    },
+    "2492": {
+      "name": "華新科",
+      "price": 317.75,
+      "price_is_estimated": true,
+      "pct": 3.0,
+      "volume_prorated_ref": 40002,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [],
+      "time": "10:30:01"
+    },
+    "2356": {
+      "name": "英業達",
+      "price": 61.85,
+      "price_is_estimated": true,
+      "pct": 0.08,
+      "volume_prorated_ref": 10593,
+      "score": 0,
+      "confidence": 0,
+      "label": "⚪中立",
+      "reasons": [
+        "MACD空頭動能減弱",
+        "個股空頭排列(接刀風險,-1)"
+      ],
+      "time": "10:30:14"
     }
   }
 }
