@@ -983,3 +983,5 @@ details .table-wrap { margin-top: 14px; }
   #table-strategy-perf th:nth-child(6), #table-strategy-perf td:nth-child(6) { display: none; }
   #table-strategy-perf th, #table-strategy-perf td { padding: 8px 6px; white-space: normal; }
 }
+
+.state-message[hidden] { display: none; }
