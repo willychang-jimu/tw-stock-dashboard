@@ -28,7 +28,7 @@ const V3_CADENCE = {
 };
 const POSITIONS_PATH = "positions.json";
 const PERF_HORIZONS = ["5日", "10日", "20日", "40日"];
-const STRATEGY_NAME = { reversal: "跌深反彈", leaders: "強勢股觀察", momentum: "強勢上漲(已退役)", breakout: "突破型態(已退役)" };
+const STRATEGY_NAME = { core: "長期持有", reversal: "跌深反彈", leaders: "強勢股觀察", momentum: "強勢上漲(已退役)", breakout: "突破型態(已退役)" };
 
 function escapeHtml(v) {
   return String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -341,6 +341,7 @@ async function loadPositions() {
 
 function positionAlertsHtml(st) {
   if (!st) return `<span class="empty-note">等下次盤後更新</span>`;
+  if (st.strategy === "core") return `<span class="pos-ok">長期持有，不做出場提醒</span>`;
   if (st.strategy === "reversal") {
     const alerts = st.exit_alerts || [];
     if (alerts.length) return alerts.map((a) => `<span class="pos-alert ${escapeHtml(a.level)}">${escapeHtml(a.text)}</span>`).join("");
