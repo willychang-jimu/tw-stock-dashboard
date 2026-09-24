@@ -132,7 +132,10 @@ function renderV3PickCard(pick) {
   return `
     <div class="v3-pick-card">
       <div class="v3-pick-main">
-        <span class="v3-pick-name">${pick.rank ? `<span class="v4-rank">#${pick.rank}</span>` : ""}${escapeHtml(pick.name || "")} <span class="v3-pick-code">${escapeHtml(pick.code)}</span></span>
+        <span class="v3-pick-name">${pick.rank ? `<span class="v4-rank">#${pick.rank}</span>` : ""}${stockLinkHtml(pick.code, pick.name, {
+          stop: pick.exit_plan ? pick.exit_plan.stop_price_ref : null,
+          stopLabel: "停損參考",
+        })}</span>
         <span class="v3-pick-reasons">${escapeHtml(reasons)}</span>
         ${exitPlanHtml(pick)}
       </div>
@@ -359,7 +362,11 @@ function renderPositions() {
     const st = state.positionStatus[`${p.code}|${p.entry_date || ""}`];
     const name = p.name || state.codeNameMap[p.code] || (st && st.name) || "";
     return `<tr>
-      <td class="pos-name">${escapeHtml(name)} <span class="v3-pick-code">${escapeHtml(p.code)}</span></td>
+      <td class="pos-name">${stockLinkHtml(p.code, name, {
+        entry: p.entry_price,
+        stop: p.strategy === "reversal" && p.entry_price ? Math.round(p.entry_price * 90) / 100 : null,
+        stopLabel: "停損",
+      })}</td>
       <td data-label="策略">${escapeHtml(STRATEGY_NAME[p.strategy] || "一般")}</td>
       <td data-label="買進">${fmtNum(p.entry_price, 2)}<div class="pos-sub">${escapeHtml(p.entry_date || "")}</div></td>
       <td data-label="現價">${st ? fmtNum(st.current, 2) : "-"}</td>
@@ -444,8 +451,184 @@ function setupPositionForm() {
   });
 }
 
+
+// ===== 主題切換（亮色預設） =====
+const THEME_STORAGE_KEY = "tw_stock_theme";
+function currentTheme() { return document.documentElement.dataset.theme === "dark" ? "dark" : "light"; }
+function setupThemeButton() {
+  const btn = document.getElementById("theme-btn");
+  const label = () => { btn.textContent = currentTheme() === "dark" ? "☀️ 亮色" : "🌙 暗色"; };
+  label();
+  btn.addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    if (next === "dark") document.documentElement.dataset.theme = "dark";
+    else delete document.documentElement.dataset.theme;
+    try { localStorage.setItem(THEME_STORAGE_KEY, next); } catch (e) { /* 私密模式等情況存不了就算了 */ }
+    label();
+  });
+}
+
+// ===== K線彈窗（點強勢股／跌深反彈／持股的名稱） =====
+// 資料來自後端charts.json：只含強勢股觀察、跌深反彈、我的持股，每檔最多160天
+const CHART_SHOW_DAYS = 120;
+let chartsPromise = null;
+let activeChart = null;
+
+function stockLinkHtml(code, name, ctx = {}) {
+  const data = { code, name: name || "", entry: ctx.entry ?? null, stop: ctx.stop ?? null, stopLabel: ctx.stopLabel || "停損" };
+  return `<button type="button" class="stock-link" data-chart="${escapeHtml(JSON.stringify(data))}">${escapeHtml(name || code)} <span class="v3-pick-code">${escapeHtml(code)}</span></button>`;
+}
+
+function loadChartsData() {
+  if (!chartsPromise) {
+    chartsPromise = fetchJSON(`charts.json?t=${Date.now()}`).catch(() => ({}));
+  }
+  return chartsPromise;
+}
+
+function cssVar(name) {
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+}
+
+function rollingStats(closes, n) {
+  // 回傳每一天的20日均線與布林上下軌（資料不足20天的日子是null）
+  return closes.map((_, i) => {
+    if (i < n - 1) return null;
+    const seg = closes.slice(i - n + 1, i + 1);
+    const ma = seg.reduce((a, b) => a + b, 0) / n;
+    const sd = Math.sqrt(seg.reduce((a, b) => a + (b - ma) ** 2, 0) / n);
+    return { ma, upper: ma + 2 * sd, lower: ma - 2 * sd };
+  });
+}
+
+function externalLinksHtml(code) {
+  const c = encodeURIComponent(code);
+  return `
+    <a href="https://tw.stock.yahoo.com/quote/${c}/technical-analysis" target="_blank" rel="noopener">Yahoo股市 技術分析 ↗</a>
+    <a href="https://tw.stock.yahoo.com/quote/${c}/news" target="_blank" rel="noopener">Yahoo股市 新聞 ↗</a>
+    <a href="https://goodinfo.tw/tw/StockDetail.asp?STOCK_ID=${c}" target="_blank" rel="noopener">Goodinfo 基本資料 ↗</a>`;
+}
+
+function fmtVol(v) {
+  if (v === null || v === undefined) return "-";
+  const lots = v / 1000;   // 股 → 張
+  return lots >= 10000 ? `${(lots / 10000).toFixed(1)}萬張` : `${Math.round(lots).toLocaleString()}張`;
+}
+
+function legendHtml(bar, prevClose, stat, ctx) {
+  if (!bar) return "";
+  const pct = prevClose ? ((bar.close - prevClose) / prevClose) * 100 : null;
+  const cls = pctClass(pct);
+  const keys = [
+    `<span class="chart-key"><span class="chart-swatch" style="border-color:${cssVar("--chart-ma")}"></span>月線 <b>${stat ? stat.ma.toFixed(2) : "-"}</b></span>`,
+    `<span class="chart-key"><span class="chart-swatch" style="border-color:${cssVar("--chart-bb")}"></span>布林 <b>${stat ? `${stat.lower.toFixed(2)}～${stat.upper.toFixed(2)}` : "-"}</b></span>`,
+  ];
+  if (ctx.entry) keys.push(`<span class="chart-key"><span class="chart-swatch dashed" style="border-color:${cssVar("--text-muted")}"></span>買進價 <b>${Number(ctx.entry).toFixed(2)}</b></span>`);
+  if (ctx.stop) keys.push(`<span class="chart-key"><span class="chart-swatch dashed" style="border-color:${cssVar("--chart-stop")}"></span>${escapeHtml(ctx.stopLabel)} <b>${Number(ctx.stop).toFixed(2)}</b></span>`);
+  return `<span>${escapeHtml(bar.time)}</span>
+    <span>開 <b>${bar.open}</b> 高 <b>${bar.high}</b> 低 <b>${bar.low}</b> 收 <b class="${cls}">${bar.close}</b>
+      <span class="${cls}">${pct === null ? "" : fmtPct(pct)}</span></span>
+    <span>量 <b>${fmtVol(bar.volume)}</b></span>${keys.join("")}`;
+}
+
+async function openChartModal(ctx) {
+  const overlay = document.getElementById("chart-modal-overlay");
+  const canvas = document.getElementById("chart-canvas");
+  const legend = document.getElementById("chart-legend");
+  const foot = document.getElementById("chart-foot");
+  document.getElementById("chart-modal-title").textContent = `${ctx.name || ""} ${ctx.code}`;
+  document.getElementById("chart-links").innerHTML = externalLinksHtml(ctx.code);
+  legend.innerHTML = "載入中…";
+  foot.textContent = "";
+  canvas.innerHTML = "";
+  canvas.hidden = false;
+  overlay.hidden = false;
+  document.getElementById("chart-modal-close").focus();
+
+  const all = (await loadChartsData())[ctx.code];
+  if (!all || !all.length || !window.LightweightCharts) {
+    canvas.hidden = true;
+    legend.innerHTML = "";
+    foot.textContent = window.LightweightCharts
+      ? "這檔還沒有K線資料（剛加入的持股要等下一次盤後更新才會有），可以先用下方連結看。"
+      : "K線圖元件載入失敗（網路問題），可以先用下方連結看。";
+    return;
+  }
+
+  const closes = all.map((d) => d.close);
+  const stats = rollingStats(closes, 20);
+  const start = Math.max(0, all.length - CHART_SHOW_DAYS);
+  const bars = all.slice(start);
+  const up = cssVar("--up"), down = cssVar("--down");
+  const LC = window.LightweightCharts;
+  activeChart = LC.createChart(canvas, {
+    autoSize: true,
+    layout: { background: { color: cssVar("--surface") }, textColor: cssVar("--text-muted"), fontFamily: cssVar("--font-mono") },
+    grid: { vertLines: { color: cssVar("--chart-grid") }, horzLines: { color: cssVar("--chart-grid") } },
+    rightPriceScale: { borderColor: cssVar("--border") },
+    timeScale: { borderColor: cssVar("--border") },
+    crosshair: { mode: LC.CrosshairMode.Normal },
+    localization: { locale: "zh-TW", dateFormat: "yyyy/MM/dd" },
+  });
+  const candle = activeChart.addCandlestickSeries({
+    upColor: up, downColor: down, borderUpColor: up, borderDownColor: down, wickUpColor: up, wickDownColor: down,
+  });
+  candle.setData(bars.map(({ time, open, high, low, close }) => ({ time, open, high, low, close })));
+  // 成交量：放在K線下方自己的區塊（不跟價格共用刻度）
+  const vol = activeChart.addHistogramSeries({ priceScaleId: "vol", priceFormat: { type: "volume" }, lastValueVisible: false, priceLineVisible: false });
+  activeChart.priceScale("vol").applyOptions({ scaleMargins: { top: 0.82, bottom: 0 } });
+  candle.priceScale().applyOptions({ scaleMargins: { top: 0.06, bottom: 0.22 } });
+  vol.setData(bars.filter((d) => d.volume != null).map((d) => ({
+    time: d.time, value: d.volume, color: d.close >= d.open ? `${up}66` : `${down}66`,
+  })));
+  const line = (color, width) => activeChart.addLineSeries({ color, lineWidth: width, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+  const statBars = bars.map((d, i) => ({ d, s: stats[start + i] })).filter((x) => x.s);
+  const bbColor = cssVar("--chart-bb");
+  line(bbColor, 1).setData(statBars.map(({ d, s }) => ({ time: d.time, value: s.upper })));
+  line(bbColor, 1).setData(statBars.map(({ d, s }) => ({ time: d.time, value: s.lower })));
+  line(cssVar("--chart-ma"), 2).setData(statBars.map(({ d, s }) => ({ time: d.time, value: s.ma })));
+  if (ctx.entry) candle.createPriceLine({ price: Number(ctx.entry), color: cssVar("--text-muted"), lineWidth: 1, lineStyle: LC.LineStyle.Dashed, axisLabelVisible: true, title: "買進" });
+  if (ctx.stop) candle.createPriceLine({ price: Number(ctx.stop), color: cssVar("--chart-stop"), lineWidth: 2, lineStyle: LC.LineStyle.Dashed, axisLabelVisible: true, title: ctx.stopLabel });
+  activeChart.timeScale().fitContent();
+
+  const byTime = new Map(bars.map((d, i) => [d.time, i]));
+  const showLegend = (i) => {
+    const gi = start + i;
+    legend.innerHTML = legendHtml(all[gi], gi > 0 ? all[gi - 1].close : null, stats[gi], ctx);
+  };
+  showLegend(bars.length - 1);
+  activeChart.subscribeCrosshairMove((param) => {
+    const i = param.time !== undefined ? byTime.get(param.time) : undefined;
+    showLegend(i === undefined ? bars.length - 1 : i);
+  });
+  foot.textContent = `顯示最近${bars.length}個交易日（未做除權息還原，跟一般看盤軟體一致）。藍線是布林通道上下軌——跌深反彈的停利目標就是收盤碰到上軌。`;
+}
+
+function closeChartModal() {
+  document.getElementById("chart-modal-overlay").hidden = true;
+  if (activeChart) { activeChart.remove(); activeChart = null; }
+}
+
+function setupChartModal() {
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest(".stock-link");
+    if (link) {
+      try { openChartModal(JSON.parse(link.dataset.chart)); } catch (err) { console.warn(err); }
+    }
+  });
+  document.getElementById("chart-modal-close").addEventListener("click", closeChartModal);
+  document.getElementById("chart-modal-overlay").addEventListener("click", (e) => {
+    if (e.target.id === "chart-modal-overlay") closeChartModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !document.getElementById("chart-modal-overlay").hidden) closeChartModal();
+  });
+}
+
 async function init() {
+  setupThemeButton();
   setupTokenButton();
+  setupChartModal();
   setupPositionForm();
   await Promise.all([loadV3Strategies(), loadStrategyPerf(), loadPositions()]);
   loadCodeNameMap();
