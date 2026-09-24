@@ -28,23 +28,11 @@
       <p class="subtitle">個人自動化盤前情報 · 僅供參考，非投資建議</p>
     </div>
   </div>
-  <div class="date-control">
-    <label for="date-select">檢視日期</label>
-    <select id="date-select"><option>載入中…</option></select>
-  </div>
-  <button type="button" id="watchlist-token-btn" class="token-btn" title="設定/清除自選股同步Token">⭐ 自選股設定</button>
+  <button type="button" id="token-btn" class="token-btn" title="設定/清除GitHub Token（登記持股用）">🔑 Token設定</button>
 </header>
-
-<div id="ticker" class="ticker" aria-hidden="true">
-  <div class="ticker-track" id="ticker-track"></div>
-</div>
 
 <main id="app">
   <div class="state-message" id="state-message">正在讀取資料…</div>
-
-  <section class="meta-row" id="meta-row" hidden>
-    <span id="meta-generated"></span>
-  </section>
 
   <section class="panel regime-panel" id="panel-regime" hidden>
     <div class="panel-head">
@@ -78,7 +66,7 @@
   <section class="panel" id="panel-positions" hidden>
     <details open>
       <summary class="panel-head-collapsible"><h2>📌 我的持股</h2></summary>
-      <p class="panel-note">記錄實際買進的股票，系統每天盤後檢查出場條件並推播。標記「跌深反彈」的持股用它自己的出場規則（碰布林上軌停利／跌10%停損／最多40天），其他持股用均線警示。儲存需要自選股同一組Token</p>
+      <p class="panel-note">記錄實際買進的股票，系統每天盤後檢查出場條件並推播。標記「跌深反彈」的持股用它自己的出場規則（碰布林上軌停利／跌10%停損／最多40天），其他持股用均線警示。儲存前先按右上角「🔑 Token設定」</p>
       <div class="position-form" id="position-form">
         <input type="text" id="pos-code" placeholder="代號 例如 2330" maxlength="6" inputmode="numeric">
         <input type="number" id="pos-price" placeholder="買進價" step="0.01" min="0">
@@ -103,128 +91,11 @@
     </details>
   </section>
 
-  <section class="panel" id="panel-intraday" hidden>
-    <div class="panel-head">
-      <h2>⏱️ 盤中即時訊號</h2>
-      <p class="panel-note">平日9:00~13:30每30分鐘更新，只查自選股，法人/量能盤中無法即時取得不列入評分，僅供參考，非投資建議</p>
-    </div>
-    <div class="search-box">
-      <button id="intraday-trigger-btn">🔄 立即更新自選股盤中訊號</button>
-      <span id="intraday-trigger-status" class="empty-note"></span>
-    </div>
-    <div class="table-wrap"><table id="table-intraday"></table></div>
-  </section>
-
-  <section class="panel" id="panel-starred" hidden>
-    <details>
-      <summary class="panel-head-collapsible"><h2>⭐ 自選股</h2></summary>
-      <p class="panel-note">最多20檔，點星號加入/移除，或用下面搜尋直接加入（不限今天有沒有上榜）。「出現於」欄位標示今天出現在哪些榜單：🎯今日關注　📈漲幅榜　💰法人買超　🔥本週熱門　🟢買進訊號　🔴賣出訊號</p>
-      <div class="search-box">
-        <input type="text" id="watchlist-search-input" placeholder="輸入股票代號或公司名稱加入自選股，例如 2330 或 台積電" maxlength="12">
-        <button id="watchlist-search-btn">加入</button>
-      </div>
-      <div id="watchlist-search-result"></div>
-      <div class="table-wrap"><table id="table-starred"></table></div>
-    </details>
-  </section>
-
-  <section class="panel" id="panel-watchlist" hidden>
-    <div class="panel-head">
-      <h2>🎯 今日關注清單</h2>
-      <p class="panel-note">依「量能」×「價格方向」×「三大法人動向」交叉分類，顯著放量門檻：當日量 ≥ 近5日均量 2 倍</p>
-    </div>
-    <div class="watchlist-grid" id="watchlist-grid"></div>
-  </section>
-
-  <section class="panel" id="panel-gainers" hidden>
-    <details>
-      <summary class="panel-head-collapsible"><h2>📈 今日漲幅排行</h2></summary>
-      <div class="table-wrap"><table id="table-gainers"></table></div>
-    </details>
-  </section>
-
-  <section class="panel" id="panel-institution" hidden>
-    <details>
-      <summary class="panel-head-collapsible"><h2>💰 三大法人買超</h2></summary>
-      <div class="table-wrap"><table id="table-institution"></table></div>
-    </details>
-  </section>
-
-  <section class="panel" id="panel-weekly" hidden>
-    <details>
-      <summary class="panel-head-collapsible">
-        <h2>🔥 本週熱門</h2>
-        <p class="panel-note">近 5 個交易日重複上榜次數</p>
-      </summary>
-      <div class="table-wrap"><table id="table-weekly"></table></div>
-    </details>
-  </section>
-
-  <section class="panel" id="panel-all-signals" hidden>
-    <div class="panel-head">
-      <h2>🔍 全市場訊號瀏覽</h2>
-      <p class="panel-note">不限50檔，涵蓋當日全市場，可依產業篩選。排序：自選股優先，其餘依信心值高到低，僅供參考，非投資建議</p>
-    </div>
-    <div class="search-box">
-      <select id="industry-filter">
-        <option value="">全部產業</option>
-      </select>
-    </div>
-    <h3 class="signal-subtitle">🟢 買進訊號</h3>
-    <div class="table-wrap"><table id="table-all-signals-buy"></table></div>
-    <h3 class="signal-subtitle signal-subtitle-sell">🔴 賣出訊號</h3>
-    <div class="table-wrap"><table id="table-all-signals-sell"></table></div>
-  </section>
-
-  <section class="panel" id="panel-backtest" hidden>
-    <div class="panel-head">
-      <h2>📊 回測分析（今日關注清單）</h2>
-      <p class="panel-note">各分類訊號發生後 1／3／5 個交易日的平均報酬與勝率，樣本數會隨時間逐日累積，僅供參考，非投資建議</p>
-    </div>
-    <div class="table-wrap"><table id="table-backtest"></table></div>
-  </section>
-  <section class="panel" id="panel-signal-backtest" hidden>
-    <div class="panel-head">
-      <h2>📊 訊號回測（進出場訊號排行）</h2>
-      <p class="panel-note">按🟢🟡🟠🔴燈號分組統計，跟上方「回測分析」是同一種驗證方式，分別驗證兩套不同的訊號邏輯，僅供參考，非投資建議</p>
-    </div>
-    <div class="table-wrap"><table id="table-signal-backtest"></table></div>
-  </section>
-  <section class="panel" id="panel-support">
-    <div class="panel-head">
-      <h2>🔍 支撐價位查詢</h2>
-      <p class="panel-note">輸入股票代號查詢20日均線與布林下軌，僅供技術參考，非投資建議</p>
-    </div>
-    <div class="search-box">
-      <input type="text" id="support-input" placeholder="輸入股票代號或公司名稱，例如 2330 或 台積電" maxlength="12">
-      <button id="support-search-btn">查詢</button>
-    </div>
-    <div id="support-result"></div>
-  </section>
 </main>
 <footer class="footer">
   <p>資料來源：台灣證券交易所公開資訊 · 本站僅整理呈現，不構成任何投資建議</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
-<div id="chart-modal-overlay" class="chart-modal-overlay" hidden>
-  <div class="chart-modal">
-    <div class="chart-modal-head">
-      <h3 id="chart-modal-title">K線圖</h3>
-      <button type="button" id="chart-modal-close">✕</button>
-    </div>
-    <div id="chart-modal-body"></div>
-  </div>
-</div>
-<div id="signal-modal-overlay" class="chart-modal-overlay" hidden>
-  <div class="chart-modal">
-    <div class="chart-modal-head">
-      <h3 id="signal-modal-title">訊號詳情</h3>
-      <button type="button" id="signal-modal-close">✕</button>
-    </div>
-    <div id="signal-modal-body"></div>
-  </div>
-</div>
 <script src="app.js"></script>
 </body>
 </html>
