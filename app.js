@@ -278,11 +278,8 @@ async function loadStrategyPerf() {
   try {
     const data = await fetchJSON(`daily_picks_backtest.json?t=${Date.now()}`);
     const perf = data["表現"] || {};
-    const order = ["reversal", "leaders", "breakout", "momentum"];
-    const keys = Object.keys(perf).sort((a, b) => {
-      const ia = order.indexOf(a), ib = order.indexOf(b);
-      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
-    });
+    // 只顯示V4仍在運作的策略；已退役策略與V3以前的舊資料不列（原始紀錄仍保留在後端）
+    const keys = ["reversal", "leaders"].filter((k) => perf[k]);
     const hasBench = keys.some((k) => Object.values(perf[k]).some((h) => h && "超額vs0050%" in h));
     const rows = [];
     for (const key of keys) {
@@ -302,7 +299,12 @@ async function loadStrategyPerf() {
         </tr>`);
       });
     }
-    if (!rows.length) return;
+    const total = keys.reduce((n, k) => n + Object.values(perf[k]).reduce((m, h) => Math.max(m, (h && h["樣本數"]) || 0), 0), 0);
+    const since = data["起算日"] ? `${data["起算日"]}起` : "V4上線後";
+    document.getElementById("perf-status").textContent = total
+      ? `統計${since}的推薦；樣本少於30筆時僅供參考`
+      : `${since}的推薦樣本累積中（最快要隔幾個交易日才會有第一筆報酬），目前還沒有可統計的數字`;
+    if (!rows.length) { el.panelStrategyPerf.hidden = false; return; }
     el.tableStrategyPerf.innerHTML = `
       <thead><tr><th>策略</th><th>持有</th><th>樣本</th><th>勝率</th><th>平均報酬</th>
         ${hasBench ? "<th>超額vs0050</th><th>贏0050比例</th>" : ""}</tr></thead>

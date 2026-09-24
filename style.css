@@ -985,3 +985,4 @@ details .table-wrap { margin-top: 14px; }
 }
 
 .state-message[hidden] { display: none; }
+.perf-status { font-size: 12.5px; color: var(--cat-warning); margin: 0 0 10px; }
