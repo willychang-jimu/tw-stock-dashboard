@@ -9,6 +9,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+  // 在畫面畫出來之前就套用主題，避免閃一下亮色再變暗色
+  try { if (localStorage.getItem("tw_stock_theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+</script>
 </head>
 <body>
 
@@ -28,7 +32,10 @@
       <p class="subtitle">個人自動化盤前情報 · 僅供參考，非投資建議</p>
     </div>
   </div>
-  <button type="button" id="token-btn" class="token-btn" title="設定/清除GitHub Token（登記持股用）">🔑 Token設定</button>
+  <div class="topbar-actions">
+    <button type="button" id="theme-btn" class="token-btn" title="切換亮色／暗色">🌙 暗色</button>
+    <button type="button" id="token-btn" class="token-btn" title="設定/清除GitHub Token（登記持股用）">🔑 Token設定</button>
+  </div>
 </header>
 
 <main id="app">
@@ -97,6 +104,21 @@
   <p>資料來源：台灣證券交易所公開資訊 · 本站僅整理呈現，不構成任何投資建議</p>
 </footer>
 
+<div id="chart-modal-overlay" class="chart-modal-overlay" hidden>
+  <div class="chart-modal" role="dialog" aria-modal="true" aria-labelledby="chart-modal-title">
+    <div class="chart-modal-head">
+      <h3 id="chart-modal-title">K線圖</h3>
+      <button type="button" id="chart-modal-close" aria-label="關閉">✕</button>
+    </div>
+    <div class="chart-legend" id="chart-legend"></div>
+    <div class="chart-canvas" id="chart-canvas"></div>
+    <p class="chart-foot" id="chart-foot"></p>
+    <div class="chart-links" id="chart-links"></div>
+  </div>
+</div>
+
+<!-- lightweight-charts 釘在4.1.1：v5 API不相容（見私有repo CLAUDE.md部署踩過的坑） -->
+<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.1/dist/lightweight-charts.standalone.production.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
