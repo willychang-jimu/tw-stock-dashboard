@@ -1,0 +1,2887 @@
+{
+  "version": 1,
+  "generated_at": "2026-08-13T08:31:03+08:00",
+  "date": "2026-08-12",
+  "summary": {
+    "watchlist": 39,
+    "gainers": 50,
+    "institution": 50,
+    "weekly": 50
+  },
+  "watchlist": [
+    {
+      "category": "強力關注",
+      "code": "1416",
+      "name": "廣豐",
+      "pct": 4.11,
+      "volume_ratio": 14.72,
+      "net_buy": 269369.0,
+      "pe": "13.26",
+      "ma20": 10.93,
+      "bb_lower": 10.6,
+      "dist_to_ma_pct": 4.28,
+      "signal_score": 1,
+      "signal_confidence": 39,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "9933",
+      "name": "中鼎",
+      "pct": 8.67,
+      "volume_ratio": 6.53,
+      "net_buy": 4575783.0,
+      "pe": "7.75",
+      "ma20": 38.44,
+      "bb_lower": 34.69,
+      "dist_to_ma_pct": 9.25,
+      "signal_score": 3,
+      "signal_confidence": 43,
+      "signal_label": "🟡偏多觀察",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "3010",
+      "name": "華立",
+      "pct": 6.0,
+      "volume_ratio": 5.59,
+      "net_buy": 2398652.0,
+      "pe": "14.13",
+      "ma20": 117.58,
+      "bb_lower": 106.93,
+      "dist_to_ma_pct": 12.69,
+      "signal_score": 1,
+      "signal_confidence": 46,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2324",
+      "name": "仁寶",
+      "pct": 9.92,
+      "volume_ratio": 5.27,
+      "net_buy": 54989098.0,
+      "pe": "30.00",
+      "ma20": 36.28,
+      "bb_lower": 33.76,
+      "dist_to_ma_pct": 9.98,
+      "signal_score": 2,
+      "signal_confidence": 46,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "1513",
+      "name": "中興電",
+      "pct": 3.12,
+      "volume_ratio": 4.04,
+      "net_buy": 4377986.0,
+      "pe": "18.62",
+      "ma20": 158.3,
+      "bb_lower": 148.75,
+      "dist_to_ma_pct": 4.55,
+      "signal_score": 2,
+      "signal_confidence": 40,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "1717",
+      "name": "長興",
+      "pct": 9.32,
+      "volume_ratio": 4.03,
+      "net_buy": 18025639.0,
+      "pe": "41.37",
+      "ma20": 63.98,
+      "bb_lower": 52.85,
+      "dist_to_ma_pct": 22.84,
+      "signal_score": 1,
+      "signal_confidence": 46,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "1560",
+      "name": "中砂",
+      "pct": 5.97,
+      "volume_ratio": 3.72,
+      "net_buy": 878333.0,
+      "pe": "61.90",
+      "ma20": 670.65,
+      "bb_lower": 596.82,
+      "dist_to_ma_pct": 8.55,
+      "signal_score": 4,
+      "signal_confidence": 39,
+      "signal_label": "🟢強力買進",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "6668",
+      "name": "中揚光",
+      "pct": 5.18,
+      "volume_ratio": 3.63,
+      "net_buy": 513200.0,
+      "pe": "",
+      "ma20": 35.01,
+      "bb_lower": 32.92,
+      "dist_to_ma_pct": 7.26,
+      "signal_score": 2,
+      "signal_confidence": 39,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2356",
+      "name": "英業達",
+      "pct": 5.99,
+      "volume_ratio": 3.59,
+      "net_buy": 27348668.0,
+      "pe": "22.26",
+      "ma20": 62.65,
+      "bb_lower": 56.33,
+      "dist_to_ma_pct": 10.13,
+      "signal_score": 2,
+      "signal_confidence": 46,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2377",
+      "name": "微星",
+      "pct": 9.74,
+      "volume_ratio": 3.54,
+      "net_buy": 8782009.0,
+      "pe": "14.66",
+      "ma20": 147.85,
+      "bb_lower": 132.61,
+      "dist_to_ma_pct": 14.31,
+      "signal_score": 1,
+      "signal_confidence": 29,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "6152",
+      "name": "百一",
+      "pct": 8.78,
+      "volume_ratio": 3.23,
+      "net_buy": 1106519.0,
+      "pe": "",
+      "ma20": 12.45,
+      "bb_lower": 10.01,
+      "dist_to_ma_pct": 29.34,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2364",
+      "name": "倫飛",
+      "pct": 3.29,
+      "volume_ratio": 3.1,
+      "net_buy": 220900.0,
+      "pe": "20.08",
+      "ma20": 71.1,
+      "bb_lower": 65.44,
+      "dist_to_ma_pct": 10.41,
+      "signal_score": 1,
+      "signal_confidence": 39,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "2607",
+      "name": "榮運",
+      "pct": 3.7,
+      "volume_ratio": 3.05,
+      "net_buy": 452054.0,
+      "pe": "10.68",
+      "ma20": 47.5,
+      "bb_lower": 45.7,
+      "dist_to_ma_pct": 6.31,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2461",
+      "name": "光群雷",
+      "pct": 4.35,
+      "volume_ratio": 2.89,
+      "net_buy": 831144.0,
+      "pe": "",
+      "ma20": 16.42,
+      "bb_lower": 15.04,
+      "dist_to_ma_pct": 9.62,
+      "signal_score": 1,
+      "signal_confidence": 39,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "8213",
+      "name": "志超",
+      "pct": 2.3,
+      "volume_ratio": 2.81,
+      "net_buy": 342405.0,
+      "pe": "16.90",
+      "ma20": 30.97,
+      "bb_lower": 28.1,
+      "dist_to_ma_pct": 7.51,
+      "signal_score": 2,
+      "signal_confidence": 40,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2376",
+      "name": "技嘉",
+      "pct": 7.13,
+      "volume_ratio": 2.67,
+      "net_buy": 4783816.0,
+      "pe": "17.54",
+      "ma20": 340.3,
+      "bb_lower": 313.19,
+      "dist_to_ma_pct": 10.34,
+      "signal_score": 1,
+      "signal_confidence": 46,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "3515",
+      "name": "華擎",
+      "pct": 3.94,
+      "volume_ratio": 2.54,
+      "net_buy": 672676.0,
+      "pe": "14.50",
+      "ma20": 205.5,
+      "bb_lower": 187.66,
+      "dist_to_ma_pct": 9.25,
+      "signal_score": 1,
+      "signal_confidence": 46,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "3229",
+      "name": "晟鈦",
+      "pct": 9.61,
+      "volume_ratio": 2.46,
+      "net_buy": 193175.0,
+      "pe": "42.03",
+      "ma20": 43.72,
+      "bb_lower": 34.0,
+      "dist_to_ma_pct": 27.87,
+      "signal_score": 1,
+      "signal_confidence": 46,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "1605",
+      "name": "華新",
+      "pct": 4.44,
+      "volume_ratio": 2.44,
+      "net_buy": 44268856.0,
+      "pe": "12.23",
+      "ma20": 33.56,
+      "bb_lower": 28.08,
+      "dist_to_ma_pct": 19.18,
+      "signal_score": 1,
+      "signal_confidence": 39,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "8011",
+      "name": "台通",
+      "pct": 0.62,
+      "volume_ratio": 2.39,
+      "net_buy": 138000.0,
+      "pe": "22.03",
+      "ma20": 16.36,
+      "bb_lower": 15.65,
+      "dist_to_ma_pct": -0.35,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "空頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "1711",
+      "name": "永光",
+      "pct": 3.7,
+      "volume_ratio": 2.26,
+      "net_buy": 1113005.0,
+      "pe": "",
+      "ma20": 35.84,
+      "bb_lower": 29.28,
+      "dist_to_ma_pct": 9.51,
+      "signal_score": 3,
+      "signal_confidence": 40,
+      "signal_label": "🟡偏多觀察",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "4763",
+      "name": "材料*-KY",
+      "pct": 1.94,
+      "volume_ratio": 2.21,
+      "net_buy": 4174034.0,
+      "pe": "10.17",
+      "ma20": 49.16,
+      "bb_lower": 45.86,
+      "dist_to_ma_pct": 7.0,
+      "signal_score": 3,
+      "signal_confidence": 53,
+      "signal_label": "🟡偏多觀察",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "2201",
+      "name": "裕隆",
+      "pct": 2.16,
+      "volume_ratio": 2.13,
+      "net_buy": 1666323.0,
+      "pe": "33.35",
+      "ma20": 27.8,
+      "bb_lower": 26.73,
+      "dist_to_ma_pct": 1.96,
+      "signal_score": 3,
+      "signal_confidence": 45,
+      "signal_label": "🟡偏多觀察",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "強力關注",
+      "code": "2478",
+      "name": "大毅",
+      "pct": 6.2,
+      "volume_ratio": 2.1,
+      "net_buy": 2782310.0,
+      "pe": "34.64",
+      "ma20": 125.57,
+      "bb_lower": 97.05,
+      "dist_to_ma_pct": 2.33,
+      "signal_score": 5,
+      "signal_confidence": 47,
+      "signal_label": "🟢強力買進",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "強力關注",
+      "code": "2465",
+      "name": "麗臺",
+      "pct": 9.9,
+      "volume_ratio": 2.07,
+      "net_buy": 2199233.0,
+      "pe": "35.24",
+      "ma20": 80.4,
+      "bb_lower": 66.76,
+      "dist_to_ma_pct": 18.78,
+      "signal_score": 2,
+      "signal_confidence": 46,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏空但法人買超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "2506",
+      "name": "太設",
+      "pct": 0.35,
+      "volume_ratio": 8.93,
+      "net_buy": -7000.0,
+      "pe": "23.89",
+      "ma20": 8.66,
+      "bb_lower": 8.5,
+      "dist_to_ma_pct": -0.67,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "多頭",
+      "stock_trend": "空頭排列"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "4960",
+      "name": "誠美材",
+      "pct": 9.9,
+      "volume_ratio": 4.81,
+      "net_buy": -1052751.0,
+      "pe": "",
+      "ma20": 20.73,
+      "bb_lower": 18.19,
+      "dist_to_ma_pct": 9.76,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "3026",
+      "name": "禾伸堂",
+      "pct": 6.04,
+      "volume_ratio": 4.18,
+      "net_buy": -783872.0,
+      "pe": "66.83",
+      "ma20": 588.73,
+      "bb_lower": 401.36,
+      "dist_to_ma_pct": 16.35,
+      "signal_score": 3,
+      "signal_confidence": 31,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "2428",
+      "name": "興勤",
+      "pct": 9.94,
+      "volume_ratio": 4.01,
+      "net_buy": -229800.0,
+      "pe": "18.09",
+      "ma20": 236.82,
+      "bb_lower": 195.83,
+      "dist_to_ma_pct": 7.46,
+      "signal_score": 3,
+      "signal_confidence": 31,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "8046",
+      "name": "南電",
+      "pct": 10.0,
+      "volume_ratio": 3.38,
+      "net_buy": -913161.0,
+      "pe": "148.65",
+      "ma20": 1092.0,
+      "bb_lower": 837.96,
+      "dist_to_ma_pct": 15.84,
+      "signal_score": 2,
+      "signal_confidence": 31,
+      "signal_label": "🟡偏多觀察",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "多頭",
+      "stock_trend": "多頭排列"
+    },
+    {
+      "category": "價量齊揚",
+      "code": "2417",
+      "name": "圓剛",
+      "pct": 3.2,
+      "volume_ratio": 3.14,
+      "net_buy": -766434.0,
+      "pe": "173.85",
+      "ma20": 40.98,
+      "bb_lower": 36.93,
+      "dist_to_ma_pct": 10.3,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "5388",
+      "name": "中磊",
+      "pct": -9.55,
+      "volume_ratio": 4.54,
+      "net_buy": -13726934.0,
+      "pe": "18.43",
+      "ma20": 87.08,
+      "bb_lower": 79.13,
+      "dist_to_ma_pct": -5.37,
+      "signal_score": -1,
+      "signal_confidence": 45,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "8033",
+      "name": "雷虎",
+      "pct": -8.47,
+      "volume_ratio": 3.79,
+      "net_buy": -5137498.0,
+      "pe": "258.21",
+      "ma20": 186.78,
+      "bb_lower": 144.48,
+      "dist_to_ma_pct": -7.38,
+      "signal_score": -1,
+      "signal_confidence": 30,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "2547",
+      "name": "日勝生",
+      "pct": -4.27,
+      "volume_ratio": 3.2,
+      "net_buy": -4479548.0,
+      "pe": "84.17",
+      "ma20": 10.35,
+      "bb_lower": 9.86,
+      "dist_to_ma_pct": -2.42,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "空頭排列"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "5258",
+      "name": "虹堡",
+      "pct": -0.97,
+      "volume_ratio": 2.13,
+      "net_buy": -44857.0,
+      "pe": "15.19",
+      "ma20": 52.04,
+      "bb_lower": 48.82,
+      "dist_to_ma_pct": -2.2,
+      "signal_score": -2,
+      "signal_confidence": 45,
+      "signal_label": "🟠偏空風險",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "9958",
+      "name": "世紀鋼",
+      "pct": -5.73,
+      "volume_ratio": 2.11,
+      "net_buy": -1594465.0,
+      "pe": "15.20",
+      "ma20": 109.8,
+      "bb_lower": 100.63,
+      "dist_to_ma_pct": -2.55,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "空頭排列"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "2393",
+      "name": "億光",
+      "pct": -1.4,
+      "volume_ratio": 2.09,
+      "net_buy": -1625842.0,
+      "pe": "15.11",
+      "ma20": 63.76,
+      "bb_lower": 57.85,
+      "dist_to_ma_pct": -0.71,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": true,
+      "conflict_reason": "技術面偏多但法人賣超",
+      "market_regime": "多頭",
+      "stock_trend": "空頭排列"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "4949",
+      "name": "有成精密",
+      "pct": -5.91,
+      "volume_ratio": 2.08,
+      "net_buy": -458000.0,
+      "pe": "26.02",
+      "ma20": 66.6,
+      "bb_lower": 56.02,
+      "dist_to_ma_pct": 5.1,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    },
+    {
+      "category": "出貨嫌疑",
+      "code": "2492",
+      "name": "華新科",
+      "pct": -4.16,
+      "volume_ratio": 2.06,
+      "net_buy": -15634818.0,
+      "pe": "32.36",
+      "ma20": 267.75,
+      "bb_lower": 201.2,
+      "dist_to_ma_pct": 7.56,
+      "signal_score": 0,
+      "signal_confidence": 0,
+      "signal_label": "⚪中立",
+      "conflict": false,
+      "conflict_reason": null,
+      "market_regime": "多頭",
+      "stock_trend": "中性/不明"
+    }
+  ],
+  "gainers": [
+    {
+      "code": "6442",
+      "name": "光聖",
+      "close": 1595.0,
+      "pct": 10.0
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "close": 73.7,
+      "pct": 10.0
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "close": 1265.0,
+      "pct": 10.0
+    },
+    {
+      "code": "3044",
+      "name": "健鼎",
+      "close": 485.5,
+      "pct": 9.97
+    },
+    {
+      "code": "7711",
+      "name": "永擎",
+      "close": 447.5,
+      "pct": 9.95
+    },
+    {
+      "code": "2428",
+      "name": "興勤",
+      "close": 254.5,
+      "pct": 9.94
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "close": 39.9,
+      "pct": 9.92
+    },
+    {
+      "code": "4960",
+      "name": "誠美材",
+      "close": 22.75,
+      "pct": 9.9
+    },
+    {
+      "code": "2465",
+      "name": "麗臺",
+      "close": 95.5,
+      "pct": 9.9
+    },
+    {
+      "code": "6831",
+      "name": "邁科",
+      "close": 678.0,
+      "pct": 9.89
+    },
+    {
+      "code": "4551",
+      "name": "智伸科",
+      "close": 172.5,
+      "pct": 9.87
+    },
+    {
+      "code": "3055",
+      "name": "蔚華科",
+      "close": 117.0,
+      "pct": 9.86
+    },
+    {
+      "code": "3532",
+      "name": "台勝科",
+      "close": 312.0,
+      "pct": 9.86
+    },
+    {
+      "code": "8996",
+      "name": "高力",
+      "close": 1170.0,
+      "pct": 9.86
+    },
+    {
+      "code": "1718",
+      "name": "中纖",
+      "close": 11.2,
+      "pct": 9.8
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "close": 169.0,
+      "pct": 9.74
+    },
+    {
+      "code": "3229",
+      "name": "晟鈦",
+      "close": 55.9,
+      "pct": 9.61
+    },
+    {
+      "code": "1717",
+      "name": "長興",
+      "close": 78.6,
+      "pct": 9.32
+    },
+    {
+      "code": "6152",
+      "name": "百一",
+      "close": 16.1,
+      "pct": 8.78
+    },
+    {
+      "code": "9933",
+      "name": "中鼎",
+      "close": 42.0,
+      "pct": 8.67
+    },
+    {
+      "code": "3406",
+      "name": "玉晶光",
+      "close": 578.0,
+      "pct": 7.43
+    },
+    {
+      "code": "7788",
+      "name": "松川精密",
+      "close": 256.0,
+      "pct": 7.34
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "close": 375.5,
+      "pct": 7.13
+    },
+    {
+      "code": "3450",
+      "name": "聯鈞",
+      "close": 507.0,
+      "pct": 7.07
+    },
+    {
+      "code": "2033",
+      "name": "佳大",
+      "close": 22.0,
+      "pct": 7.06
+    },
+    {
+      "code": "3543",
+      "name": "州巧",
+      "close": 39.7,
+      "pct": 7.01
+    },
+    {
+      "code": "6141",
+      "name": "柏承",
+      "close": 36.9,
+      "pct": 6.49
+    },
+    {
+      "code": "2426",
+      "name": "鼎元",
+      "close": 68.9,
+      "pct": 6.49
+    },
+    {
+      "code": "2399",
+      "name": "映泰",
+      "close": 45.1,
+      "pct": 6.24
+    },
+    {
+      "code": "2478",
+      "name": "大毅",
+      "close": 128.5,
+      "pct": 6.2
+    },
+    {
+      "code": "3026",
+      "name": "禾伸堂",
+      "close": 685.0,
+      "pct": 6.04
+    },
+    {
+      "code": "3010",
+      "name": "華立",
+      "close": 132.5,
+      "pct": 6.0
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "close": 69.0,
+      "pct": 5.99
+    },
+    {
+      "code": "6706",
+      "name": "惠特",
+      "close": 124.0,
+      "pct": 5.98
+    },
+    {
+      "code": "1560",
+      "name": "中砂",
+      "close": 728.0,
+      "pct": 5.97
+    },
+    {
+      "code": "6155",
+      "name": "鈞寶",
+      "close": 58.4,
+      "pct": 5.8
+    },
+    {
+      "code": "6830",
+      "name": "汎銓",
+      "close": 432.0,
+      "pct": 5.75
+    },
+    {
+      "code": "6531",
+      "name": "愛普*",
+      "close": 878.0,
+      "pct": 5.66
+    },
+    {
+      "code": "2360",
+      "name": "致茂",
+      "close": 2195.0,
+      "pct": 5.53
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "close": 2910.0,
+      "pct": 5.43
+    },
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "close": 259.0,
+      "pct": 5.28
+    },
+    {
+      "code": "3008",
+      "name": "大立光",
+      "close": 4585.0,
+      "pct": 5.28
+    },
+    {
+      "code": "6668",
+      "name": "中揚光",
+      "close": 37.55,
+      "pct": 5.18
+    },
+    {
+      "code": "1563",
+      "name": "巧新",
+      "close": 65.3,
+      "pct": 5.15
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "close": 154.0,
+      "pct": 5.12
+    },
+    {
+      "code": "8039",
+      "name": "台虹",
+      "close": 227.0,
+      "pct": 5.09
+    },
+    {
+      "code": "3645",
+      "name": "達邁",
+      "close": 71.2,
+      "pct": 5.01
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "close": 196.5,
+      "pct": 4.8
+    },
+    {
+      "code": "2455",
+      "name": "全新",
+      "close": 384.5,
+      "pct": 4.63
+    },
+    {
+      "code": "3583",
+      "name": "辛耘",
+      "close": 734.0,
+      "pct": 4.56
+    }
+  ],
+  "institution": [
+    {
+      "code": "6770",
+      "name": "力積電",
+      "net_buy": 117071307.0
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "net_buy": 54989098.0
+    },
+    {
+      "code": "1605",
+      "name": "華新",
+      "net_buy": 44268856.0
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "net_buy": 31084173.0
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "net_buy": 27348668.0
+    },
+    {
+      "code": "1717",
+      "name": "長興",
+      "net_buy": 18025639.0
+    },
+    {
+      "code": "2002",
+      "name": "中鋼",
+      "net_buy": 17669413.0
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "net_buy": 15319037.0
+    },
+    {
+      "code": "2887",
+      "name": "台新新光金",
+      "net_buy": 13895946.0
+    },
+    {
+      "code": "2892",
+      "name": "第一金",
+      "net_buy": 11855670.0
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "net_buy": 11641252.0
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "net_buy": 10911782.0
+    },
+    {
+      "code": "3706",
+      "name": "神達",
+      "net_buy": 9786270.0
+    },
+    {
+      "code": "1608",
+      "name": "華榮",
+      "net_buy": 9288993.0
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "net_buy": 8782009.0
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "net_buy": 8768716.0
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "net_buy": 8731980.0
+    },
+    {
+      "code": "1326",
+      "name": "台化",
+      "net_buy": 7828533.0
+    },
+    {
+      "code": "1718",
+      "name": "中纖",
+      "net_buy": 6849941.0
+    },
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "net_buy": 6234038.0
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "net_buy": 5957221.0
+    },
+    {
+      "code": "2354",
+      "name": "鴻準",
+      "net_buy": 5805428.0
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "net_buy": 5606959.0
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "net_buy": 5572866.0
+    },
+    {
+      "code": "9105",
+      "name": "泰金寶-DR",
+      "net_buy": 5567475.0
+    },
+    {
+      "code": "1216",
+      "name": "統一",
+      "net_buy": 5016338.0
+    },
+    {
+      "code": "2312",
+      "name": "金寶",
+      "net_buy": 4801129.0
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "net_buy": 4783816.0
+    },
+    {
+      "code": "9933",
+      "name": "中鼎",
+      "net_buy": 4575783.0
+    },
+    {
+      "code": "2371",
+      "name": "大同",
+      "net_buy": 4426271.0
+    },
+    {
+      "code": "1513",
+      "name": "中興電",
+      "net_buy": 4377986.0
+    },
+    {
+      "code": "4763",
+      "name": "材料*-KY",
+      "net_buy": 4174034.0
+    },
+    {
+      "code": "2426",
+      "name": "鼎元",
+      "net_buy": 3904430.0
+    },
+    {
+      "code": "2882",
+      "name": "國泰金",
+      "net_buy": 3713014.0
+    },
+    {
+      "code": "2451",
+      "name": "創見",
+      "net_buy": 3230776.0
+    },
+    {
+      "code": "1904",
+      "name": "正隆",
+      "net_buy": 3183837.0
+    },
+    {
+      "code": "2441",
+      "name": "超豐",
+      "net_buy": 3158783.0
+    },
+    {
+      "code": "2330",
+      "name": "台積電",
+      "net_buy": 2923671.0
+    },
+    {
+      "code": "3714",
+      "name": "富采",
+      "net_buy": 2899627.0
+    },
+    {
+      "code": "2009",
+      "name": "第一銅",
+      "net_buy": 2869628.0
+    },
+    {
+      "code": "2478",
+      "name": "大毅",
+      "net_buy": 2782310.0
+    },
+    {
+      "code": "3042",
+      "name": "晶技",
+      "net_buy": 2610709.0
+    },
+    {
+      "code": "2027",
+      "name": "大成鋼",
+      "net_buy": 2558957.0
+    },
+    {
+      "code": "2347",
+      "name": "聯強",
+      "net_buy": 2510259.0
+    },
+    {
+      "code": "1609",
+      "name": "大亞",
+      "net_buy": 2491459.0
+    },
+    {
+      "code": "2855",
+      "name": "統一證",
+      "net_buy": 2476058.0
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "net_buy": 2469721.0
+    },
+    {
+      "code": "3010",
+      "name": "華立",
+      "net_buy": 2398652.0
+    },
+    {
+      "code": "1802",
+      "name": "台玻",
+      "net_buy": 2390958.0
+    },
+    {
+      "code": "9921",
+      "name": "巨大",
+      "net_buy": 2388447.0
+    }
+  ],
+  "weekly": [
+    {
+      "code": "2033",
+      "name": "佳大",
+      "count": 5
+    },
+    {
+      "code": "2354",
+      "name": "鴻準",
+      "count": 5
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "count": 5
+    },
+    {
+      "code": "1216",
+      "name": "統一",
+      "count": 5
+    },
+    {
+      "code": "2002",
+      "name": "中鋼",
+      "count": 5
+    },
+    {
+      "code": "8112",
+      "name": "至上",
+      "count": 4
+    },
+    {
+      "code": "2030",
+      "name": "彰源",
+      "count": 4
+    },
+    {
+      "code": "9921",
+      "name": "巨大",
+      "count": 4
+    },
+    {
+      "code": "2027",
+      "name": "大成鋼",
+      "count": 4
+    },
+    {
+      "code": "1101",
+      "name": "台泥",
+      "count": 4
+    },
+    {
+      "code": "1904",
+      "name": "正隆",
+      "count": 4
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "count": 4
+    },
+    {
+      "code": "4763",
+      "name": "材料*-KY",
+      "count": 4
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "count": 4
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "count": 4
+    },
+    {
+      "code": "3026",
+      "name": "禾伸堂",
+      "count": 4
+    },
+    {
+      "code": "6531",
+      "name": "愛普*",
+      "count": 4
+    },
+    {
+      "code": "2887",
+      "name": "台新新光金",
+      "count": 4
+    },
+    {
+      "code": "3006",
+      "name": "晶豪科",
+      "count": 3
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "count": 3
+    },
+    {
+      "code": "2451",
+      "name": "創見",
+      "count": 3
+    },
+    {
+      "code": "3706",
+      "name": "神達",
+      "count": 3
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "count": 3
+    },
+    {
+      "code": "8039",
+      "name": "台虹",
+      "count": 3
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "count": 3
+    },
+    {
+      "code": "3033",
+      "name": "威健",
+      "count": 3
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "count": 3
+    },
+    {
+      "code": "2014",
+      "name": "中鴻",
+      "count": 3
+    },
+    {
+      "code": "2465",
+      "name": "麗臺",
+      "count": 3
+    },
+    {
+      "code": "9105",
+      "name": "泰金寶-DR",
+      "count": 3
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "count": 3
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "count": 3
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "count": 3
+    },
+    {
+      "code": "6672",
+      "name": "騰輝電子-KY",
+      "count": 3
+    },
+    {
+      "code": "3450",
+      "name": "聯鈞",
+      "count": 3
+    },
+    {
+      "code": "9934",
+      "name": "成霖",
+      "count": 3
+    },
+    {
+      "code": "1608",
+      "name": "華榮",
+      "count": 3
+    },
+    {
+      "code": "2103",
+      "name": "台橡",
+      "count": 3
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "count": 3
+    },
+    {
+      "code": "2330",
+      "name": "台積電",
+      "count": 3
+    },
+    {
+      "code": "2891",
+      "name": "中信金",
+      "count": 3
+    },
+    {
+      "code": "2603",
+      "name": "長榮",
+      "count": 3
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "count": 3
+    },
+    {
+      "code": "3652",
+      "name": "精聯",
+      "count": 3
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "count": 3
+    },
+    {
+      "code": "7711",
+      "name": "永擎",
+      "count": 3
+    },
+    {
+      "code": "2417",
+      "name": "圓剛",
+      "count": 3
+    },
+    {
+      "code": "3055",
+      "name": "蔚華科",
+      "count": 3
+    },
+    {
+      "code": "1605",
+      "name": "華新",
+      "count": 3
+    },
+    {
+      "code": "8033",
+      "name": "雷虎",
+      "count": 3
+    }
+  ],
+  "backtest": {
+    "強力關注": {
+      "1日": {
+        "平均報酬%": 0.46,
+        "勝率%": 52.8,
+        "樣本數": 176
+      },
+      "3日": {
+        "平均報酬%": 1.56,
+        "勝率%": 55.5,
+        "樣本數": 128
+      },
+      "5日": {
+        "平均報酬%": 1.77,
+        "勝率%": 48.6,
+        "樣本數": 74
+      }
+    },
+    "價量齊揚": {
+      "1日": {
+        "平均報酬%": 0.97,
+        "勝率%": 56.3,
+        "樣本數": 71
+      },
+      "3日": {
+        "平均報酬%": 3.35,
+        "勝率%": 64.2,
+        "樣本數": 53
+      },
+      "5日": {
+        "平均報酬%": 5.38,
+        "勝率%": 73.3,
+        "樣本數": 30
+      }
+    },
+    "訊號矛盾": {
+      "1日": {
+        "平均報酬%": -0.23,
+        "勝率%": 45.7,
+        "樣本數": 70
+      },
+      "3日": {
+        "平均報酬%": 5.71,
+        "勝率%": 82.1,
+        "樣本數": 67
+      },
+      "5日": {
+        "平均報酬%": 10.03,
+        "勝率%": 83.9,
+        "樣本數": 62
+      }
+    },
+    "出貨嫌疑": {
+      "1日": {
+        "平均報酬%": -0.0,
+        "勝率%": 44.3,
+        "樣本數": 122
+      },
+      "3日": {
+        "平均報酬%": 2.24,
+        "勝率%": 64.8,
+        "樣本數": 88
+      },
+      "5日": {
+        "平均報酬%": 5.83,
+        "勝率%": 75.8,
+        "樣本數": 66
+      }
+    }
+  },
+  "signal_backtest": {
+    "🟢強力買進": {
+      "1日": {
+        "樣本數": 427,
+        "平均報酬%": 0.46,
+        "勝率%": 52.2,
+        "參考性": "足夠",
+        "報酬標準差": 3.64,
+        "夏普比率": 0.13,
+        "獲利因子": 1.46,
+        "期望值%": 0.46
+      },
+      "3日": {
+        "樣本數": 327,
+        "平均報酬%": 1.94,
+        "勝率%": 60.9,
+        "參考性": "足夠",
+        "報酬標準差": 7.65,
+        "夏普比率": 0.25,
+        "獲利因子": 2.23,
+        "期望值%": 1.94
+      },
+      "5日": {
+        "樣本數": 227,
+        "平均報酬%": 4.33,
+        "勝率%": 72.2,
+        "參考性": "足夠",
+        "報酬標準差": 12.7,
+        "夏普比率": 0.34,
+        "獲利因子": 3.64,
+        "期望值%": 4.33
+      }
+    },
+    "🟡偏多觀察": {
+      "1日": {
+        "樣本數": 221,
+        "平均報酬%": -0.64,
+        "勝率%": 43.9,
+        "參考性": "足夠",
+        "報酬標準差": 3.89,
+        "夏普比率": -0.16,
+        "獲利因子": 0.62,
+        "期望值%": -0.64
+      },
+      "3日": {
+        "樣本數": 221,
+        "平均報酬%": 0.38,
+        "勝率%": 53.4,
+        "參考性": "足夠",
+        "報酬標準差": 7.24,
+        "夏普比率": 0.05,
+        "獲利因子": 1.16,
+        "期望值%": 0.38
+      },
+      "5日": {
+        "樣本數": 221,
+        "平均報酬%": 3.21,
+        "勝率%": 59.3,
+        "參考性": "足夠",
+        "報酬標準差": 7.27,
+        "夏普比率": 0.44,
+        "獲利因子": 3.48,
+        "期望值%": 3.21
+      }
+    },
+    "🔴出場訊號": {
+      "1日": {
+        "樣本數": 32,
+        "平均報酬%": -2.03,
+        "勝率%": 68.8,
+        "參考性": "足夠",
+        "報酬標準差": 3.55,
+        "夏普比率": 0.57,
+        "獲利因子": 5.75,
+        "期望值%": 2.03
+      },
+      "3日": {
+        "樣本數": 32,
+        "平均報酬%": -3.76,
+        "勝率%": 65.6,
+        "參考性": "足夠",
+        "報酬標準差": 7.4,
+        "夏普比率": 0.51,
+        "獲利因子": 4.47,
+        "期望值%": 3.76
+      },
+      "5日": {
+        "樣本數": 31,
+        "平均報酬%": -3.01,
+        "勝率%": 58.1,
+        "參考性": "足夠",
+        "報酬標準差": 7.55,
+        "夏普比率": 0.4,
+        "獲利因子": 3.0,
+        "期望值%": 3.01
+      }
+    },
+    "🟠偏空風險": {
+      "1日": {
+        "樣本數": 442,
+        "平均報酬%": -0.8,
+        "勝率%": 58.4,
+        "參考性": "足夠",
+        "報酬標準差": 7.48,
+        "夏普比率": 0.11,
+        "獲利因子": 1.84,
+        "期望值%": 0.8
+      },
+      "3日": {
+        "樣本數": 404,
+        "平均報酬%": -0.93,
+        "勝率%": 53.2,
+        "參考性": "足夠",
+        "報酬標準差": 10.87,
+        "夏普比率": 0.09,
+        "獲利因子": 1.45,
+        "期望值%": 0.93
+      },
+      "5日": {
+        "樣本數": 375,
+        "平均報酬%": 0.51,
+        "勝率%": 50.4,
+        "參考性": "足夠",
+        "報酬標準差": 9.24,
+        "夏普比率": -0.06,
+        "獲利因子": 0.82,
+        "期望值%": -0.51
+      }
+    }
+  },
+  "signals": {
+    "buy": [
+      {
+        "code": "1531",
+        "name": "高林股",
+        "score": 5,
+        "confidence": 46,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林下軌支撐(1.2%)",
+          "法人買超",
+          "營收年增2%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1583",
+        "name": "程泰",
+        "score": 5,
+        "confidence": 53,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林下軌支撐(1.6%)",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增24%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2023",
+        "name": "燁輝",
+        "score": 5,
+        "confidence": 53,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林下軌支撐(1.9%)",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增11%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2427",
+        "name": "三商電",
+        "score": 5,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI39偏弱",
+          "RSI翻揚(39→39)",
+          "MACD空頭動能減弱",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增32%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2462",
+        "name": "良得電",
+        "score": 5,
+        "confidence": 57,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI36偏弱",
+          "RSI翻揚(35→36)",
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增4%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "2478",
+        "name": "大毅",
+        "score": 5,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "放量上漲",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+          "營收年增48%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2540",
+        "name": "愛山林",
+        "score": 5,
+        "confidence": 39,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI30超賣",
+          "RSI翻揚(28→30)",
+          "觸及布林下軌(支撐)",
+          "法人賣超",
+          "三大法人方向一致",
+          "營收年增7%"
+        ],
+        "conflict": true,
+        "conflict_reason": "技術面偏多但法人賣超",
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2912",
+        "name": "統一超",
+        "score": 5,
+        "confidence": 54,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI35偏弱",
+          "RSI翻揚(34→35)",
+          "MACD空頭動能減弱",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增8%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "3494",
+        "name": "誠研",
+        "score": 5,
+        "confidence": 57,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI38偏弱",
+          "RSI翻揚(37→38)",
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增4%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "3501",
+        "name": "維熹",
+        "score": 5,
+        "confidence": 54,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "放量上漲",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增15%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "4414",
+        "name": "如興",
+        "score": 5,
+        "confidence": 53,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林上軌壓力(0.1%)",
+          "20日新高(動能突破)",
+          "放量上漲",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增25%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "5007",
+        "name": "三星",
+        "score": 5,
+        "confidence": 43,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林下軌支撐(1.5%)",
+          "放量上漲",
+          "法人買超"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "6657",
+        "name": "華安",
+        "score": 5,
+        "confidence": 57,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI39偏弱",
+          "RSI翻揚(36→39)",
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增24%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "6937",
+        "name": "天虹",
+        "score": 5,
+        "confidence": 46,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "20日新高(動能突破)",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+          "營收年增62%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "9943",
+        "name": "好樂迪",
+        "score": 5,
+        "confidence": 58,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI33偏弱",
+          "MACD黃金交叉",
+          "接近布林下軌支撐(1.4%)",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資賣/投信平/自營商買)",
+          "營收年增2%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "1109",
+        "name": "信大",
+        "score": 4,
+        "confidence": 48,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI29超賣",
+          "MACD黃金交叉",
+          "接近布林下軌支撐(0.7%)",
+          "法人買超",
+          "營收年減21%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "1217",
+        "name": "愛之味",
+        "score": 4,
+        "confidence": 36,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD空頭動能減弱",
+          "接近布林下軌支撐(1.5%)",
+          "法人買超",
+          "營收年增4%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1308",
+        "name": "亞聚",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增8%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1340",
+        "name": "勝悅-KY",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增139%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1409",
+        "name": "新纖",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增56%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1457",
+        "name": "宜進",
+        "score": 4,
+        "confidence": 43,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林上軌壓力(0.4%)",
+          "20日新高(動能突破)",
+          "放量上漲",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1560",
+        "name": "中砂",
+        "score": 4,
+        "confidence": 39,
+        "label": "🟢強力買進",
+        "reasons": [
+          "20日新高(動能突破)",
+          "放量上漲",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信買/自營商賣)",
+          "營收年增27%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1563",
+        "name": "巧新",
+        "score": 4,
+        "confidence": 53,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林上軌壓力(1.1%)",
+          "20日新高(動能突破)",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增12%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1615",
+        "name": "大山",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI61偏強",
+          "MACD黃金交叉",
+          "放量上漲",
+          "法人買超",
+          "營收年增12%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1617",
+        "name": "榮星",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增40%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "1710",
+        "name": "東聯",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增31%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "1718",
+        "name": "中纖",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商賣)",
+          "營收年增11%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "1776",
+        "name": "展宇",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增5%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "1905",
+        "name": "華紙",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增2%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2105",
+        "name": "正新",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增12%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2243",
+        "name": "宏旭-KY",
+        "score": 4,
+        "confidence": 37,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI40偏弱",
+          "RSI翻揚(38→40)",
+          "MACD空頭動能減弱",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增131%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2449",
+        "name": "京元電子",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+          "營收年增37%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2484",
+        "name": "希華",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+          "營收年增7%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "2545",
+        "name": "皇翔",
+        "score": 4,
+        "confidence": 46,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林上軌壓力(0.3%)",
+          "20日新高(動能突破)",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增457%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2702",
+        "name": "華園",
+        "score": 4,
+        "confidence": 54,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI40偏弱",
+          "RSI翻揚(40→40)",
+          "MACD空頭動能減弱",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增22%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "2906",
+        "name": "高林",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增8%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "3002",
+        "name": "歐格",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增22%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "3033",
+        "name": "威健",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信買/自營商賣)",
+          "營收年增79%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "3311",
+        "name": "閎暉",
+        "score": 4,
+        "confidence": 59,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI38偏弱",
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增26%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "3356",
+        "name": "奇偶",
+        "score": 4,
+        "confidence": 46,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "接近布林上軌壓力(0.7%)",
+          "20日新高(動能突破)",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增36%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "3705",
+        "name": "永信",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增3%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "4106",
+        "name": "雃博",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信平/自營商賣)",
+          "營收年增1%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "4737",
+        "name": "華廣",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "營收年增2%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "4770",
+        "name": "上品",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增48%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "4915",
+        "name": "致伸",
+        "score": 4,
+        "confidence": 48,
+        "label": "🟢強力買進",
+        "reasons": [
+          "RSI33偏弱",
+          "RSI翻揚(31→33)",
+          "接近布林下軌支撐(1.5%)",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資賣/投信買/自營商賣)",
+          "營收年增9%",
+          "個股空頭排列(接刀風險,-1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "6141",
+        "name": "柏承",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增80%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "6257",
+        "name": "矽格",
+        "score": 4,
+        "confidence": 47,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年增27%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "6281",
+        "name": "全國電",
+        "score": 4,
+        "confidence": 36,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD空頭動能減弱",
+          "接近布林下軌支撐(1.2%)",
+          "法人買超",
+          "營收年增4%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "6525",
+        "name": "捷敏-KY",
+        "score": 4,
+        "confidence": 40,
+        "label": "🟢強力買進",
+        "reasons": [
+          "MACD黃金交叉",
+          "法人買超",
+          "⚠️三大法人方向不一致(外資買/投信賣/自營商買)",
+          "營收年增32%"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      }
+    ],
+    "sell": [
+      {
+        "code": "2010",
+        "name": "春源",
+        "score": -3,
+        "confidence": 39,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI63偏強",
+          "RSI走弱(64→63)",
+          "接近布林上軌壓力(0.6%)",
+          "法人賣超",
+          "⚠️三大法人方向不一致(外資賣/投信平/自營商買)",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2474",
+        "name": "可成",
+        "score": -3,
+        "confidence": 39,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI63偏強",
+          "RSI走弱(65→63)",
+          "觸及布林上軌(壓力)",
+          "法人買超",
+          "三大法人方向一致",
+          "營收年減34%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": true,
+        "conflict_reason": "技術面偏空但法人買超",
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2880",
+        "name": "華南金",
+        "score": -3,
+        "confidence": 47,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI63偏強",
+          "RSI走弱(67→63)",
+          "MACD死亡交叉",
+          "法人賣超",
+          "⚠️三大法人方向不一致(外資賣/投信買/自營商賣)",
+          "大盤多頭(+1)",
+          "個股多頭排列(逢高疑慮較低,+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "2017",
+        "name": "官田鋼",
+        "score": -2,
+        "confidence": 30,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "MACD多頭動能減弱",
+          "法人賣超",
+          "營收年減20%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "2059",
+        "name": "川湖",
+        "score": -2,
+        "confidence": 39,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI76超買",
+          "RSI走弱(80→76)",
+          "接近布林上軌壓力(1.4%)",
+          "法人賣超",
+          "⚠️三大法人方向不一致(外資賣/投信賣/自營商買)",
+          "營收年增356%",
+          "大盤多頭(+1)",
+          "個股多頭排列(逢高疑慮較低,+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "多頭排列"
+      },
+      {
+        "code": "2387",
+        "name": "精元",
+        "score": -2,
+        "confidence": 53,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI37偏弱",
+          "MACD死亡交叉",
+          "接近布林下軌支撐(0.5%)",
+          "20日新低(動能破底)",
+          "法人賣超",
+          "三大法人方向一致",
+          "營收年減27%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "2603",
+        "name": "長榮",
+        "score": -2,
+        "confidence": 39,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI62偏強",
+          "RSI走弱(68→62)",
+          "接近布林上軌壓力(0.5%)",
+          "法人賣超",
+          "⚠️三大法人方向不一致(外資賣/投信買/自營商賣)",
+          "營收年增43%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "3704",
+        "name": "合勤控",
+        "score": -2,
+        "confidence": 37,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "MACD多頭動能減弱",
+          "法人賣超",
+          "三大法人方向一致",
+          "營收年減12%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "5258",
+        "name": "虹堡",
+        "score": -2,
+        "confidence": 45,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "MACD死亡交叉",
+          "放量下跌(出貨疑慮)",
+          "法人賣超",
+          "三大法人方向一致",
+          "營收年增27%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "6120",
+        "name": "達運",
+        "score": -2,
+        "confidence": 37,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "MACD多頭動能減弱",
+          "法人賣超",
+          "三大法人方向一致",
+          "營收年減14%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      },
+      {
+        "code": "8112",
+        "name": "至上",
+        "score": -2,
+        "confidence": 39,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "RSI63偏強",
+          "RSI走弱(68→63)",
+          "接近布林上軌壓力(1.3%)",
+          "法人賣超",
+          "⚠️三大法人方向不一致(外資賣/投信買/自營商賣)",
+          "營收年增334%",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "中性/不明"
+      },
+      {
+        "code": "9110",
+        "name": "越南控-DR",
+        "score": -2,
+        "confidence": 20,
+        "label": "🟠偏空風險",
+        "reasons": [
+          "MACD死亡交叉",
+          "20日新低(動能破底)",
+          "大盤多頭(+1)"
+        ],
+        "conflict": false,
+        "conflict_reason": null,
+        "market_regime": "多頭",
+        "stock_trend": "空頭排列"
+      }
+    ]
+  }
+}
