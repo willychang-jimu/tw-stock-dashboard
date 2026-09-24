@@ -46,13 +46,61 @@
     <span id="meta-generated"></span>
   </section>
 
+  <section class="panel regime-panel" id="panel-regime" hidden>
+    <div class="panel-head">
+      <h2>🧭 市場狀態</h2>
+      <p class="panel-note">市場寬度＝全市場個股站上自己月線（20日均線）的比例。低於30%才算「全市場恐慌」，跌深反彈只在這時候推薦</p>
+    </div>
+    <div class="regime-grid">
+      <div class="regime-now">
+        <div class="regime-label" id="regime-label"></div>
+        <div class="regime-breadth"><span id="regime-breadth-value">-</span><span class="regime-breadth-unit">站上月線</span></div>
+        <div class="regime-gauge" id="regime-gauge" role="img"></div>
+        <div class="regime-gauge-scale"><span>0%</span><span class="regime-threshold-tag" id="regime-threshold-tag">恐慌線30%</span><span>100%</span></div>
+      </div>
+      <div class="regime-trend">
+        <div class="regime-trend-title">近60個交易日市場寬度</div>
+        <div id="regime-sparkline"></div>
+      </div>
+    </div>
+    <p class="regime-core-advice" id="regime-core-advice"></p>
+  </section>
+
   <section class="panel" id="panel-v3-strategies" hidden>
     <div class="panel-head">
       <h2>🎯 進場策略</h2>
-      <p class="panel-note">三個策略各自獨立驗證，可信度不同，僅供參考，非投資建議</p>
+      <p class="panel-note" id="v3-panel-note">各策略獨立驗證、可信度不同，僅供參考，非投資建議</p>
     </div>
     <div class="v3-tabs" id="v3-tabs" role="tablist"></div>
     <div id="v3-tab-panel"></div>
+  </section>
+
+  <section class="panel" id="panel-positions" hidden>
+    <details open>
+      <summary class="panel-head-collapsible"><h2>📌 我的持股</h2></summary>
+      <p class="panel-note">記錄實際買進的股票，系統每天盤後檢查出場條件並推播。標記「跌深反彈」的持股用它自己的出場規則（碰布林上軌停利／跌10%停損／最多40天），其他持股用均線警示。儲存需要自選股同一組Token</p>
+      <div class="position-form" id="position-form">
+        <input type="text" id="pos-code" placeholder="代號 例如 2330" maxlength="6" inputmode="numeric">
+        <input type="number" id="pos-price" placeholder="買進價" step="0.01" min="0">
+        <input type="date" id="pos-date" aria-label="買進日期">
+        <input type="number" id="pos-shares" placeholder="股數(選填)" step="1" min="0">
+        <select id="pos-strategy" aria-label="策略">
+          <option value="reversal">跌深反彈</option>
+          <option value="">一般持股（均線警示）</option>
+        </select>
+        <button type="button" id="pos-add-btn">加入持股</button>
+      </div>
+      <div id="pos-status" class="empty-note"></div>
+      <div class="table-wrap"><table id="table-positions"></table></div>
+    </details>
+  </section>
+
+  <section class="panel" id="panel-strategy-perf" hidden>
+    <details>
+      <summary class="panel-head-collapsible"><h2>📊 策略實盤追蹤 vs 0050</h2></summary>
+      <p class="panel-note">每天推薦名單的後續報酬（隔天開盤買進），同時算同一段時間買0050的報酬。這波牛市集中在權值股，隨便挑一檔股票20日勝率只有約38%，所以要看「贏0050比例」，不要只看勝率</p>
+      <div class="table-wrap"><table id="table-strategy-perf"></table></div>
+    </details>
   </section>
 
   <section class="panel" id="panel-intraday" hidden>
