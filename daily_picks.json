@@ -1,20 +1,16 @@
 {
   "version": 4,
-  "date": "2026-10-07",
+  "date": "2026-10-08",
   "mode": "tech",
   "regime": {
-    "date": "2026-10-07",
-    "breadth": 0.5798,
-    "above": 625,
-    "total": 1078,
+    "date": "2026-10-08",
+    "breadth": 0.5737,
+    "above": 619,
+    "total": 1079,
     "threshold": 0.3,
     "regime": "normal",
     "label": "一般／多頭（不推跌深反彈，核心持有0050）",
     "history": [
-      {
-        "date": "2026-07-14",
-        "breadth": 0.2866
-      },
       {
         "date": "2026-07-15",
         "breadth": 0.4188
@@ -250,6 +246,10 @@
       {
         "date": "2026-10-07",
         "breadth": 0.5798
+      },
+      {
+        "date": "2026-10-08",
+        "breadth": 0.5737
       }
     ]
   },
@@ -284,62 +284,20 @@
           "code": "6225",
           "matched": true,
           "reasons": [
-            "近116日漲幅+297.1%，全市場前20名"
+            "近117日漲幅+313.9%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 68.7,
-          "return_pct": 297.1,
-          "lookback_days": 116,
-          "avg_turnover": 34071114,
-          "ma20": 62.72,
+          "current": 71.6,
+          "return_pct": 313.9,
+          "lookback_days": 117,
+          "avg_turnover": 35442690,
+          "ma20": 63.22,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 1,
           "name": "天瀚",
           "industry": "光電業",
-          "pct": -2.275960170697013
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "1303",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+266.4%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 314.0,
-          "return_pct": 266.4,
-          "lookback_days": 116,
-          "avg_turnover": 23768250782,
-          "ma20": 247.18,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 2,
-          "name": "南亞",
-          "industry": "塑膠工業",
-          "pct": 7.167235494880546
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "3026",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+258.5%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 839.0,
-          "return_pct": 258.5,
-          "lookback_days": 116,
-          "avg_turnover": 9435498079,
-          "ma20": 786.3,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 3,
-          "name": "禾伸堂",
-          "industry": "電子零組件業",
-          "pct": 5.402010050251256
+          "pct": 4.221251819505095
         },
         {
           "strategy": "leaders",
@@ -347,20 +305,62 @@
           "code": "2305",
           "matched": true,
           "reasons": [
-            "近116日漲幅+243.4%，全市場前20名"
+            "近117日漲幅+277.3%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 58.9,
-          "return_pct": 243.4,
-          "lookback_days": 116,
-          "avg_turnover": 764835613,
-          "ma20": 53.94,
+          "current": 64.7,
+          "return_pct": 277.3,
+          "lookback_days": 117,
+          "avg_turnover": 755965786,
+          "ma20": 55.51,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 2,
+          "name": "全友",
+          "industry": "電腦及週邊設備業",
+          "pct": 9.847198641765702
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "3026",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+274.8%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 877.0,
+          "return_pct": 274.8,
+          "lookback_days": 117,
+          "avg_turnover": 9922391158,
+          "ma20": 791.6,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 3,
+          "name": "禾伸堂",
+          "industry": "電子零組件業",
+          "pct": 4.529201430274136
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "1303",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+261.7%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 310.0,
+          "return_pct": 261.7,
+          "lookback_days": 117,
+          "avg_turnover": 23656630436,
+          "ma20": 251.15,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 4,
-          "name": "全友",
-          "industry": "電腦及週邊設備業",
-          "pct": 1.0291595197255576
+          "name": "南亞",
+          "industry": "塑膠工業",
+          "pct": -1.2738853503184715
         },
         {
           "strategy": "leaders",
@@ -368,104 +368,20 @@
           "code": "6834",
           "matched": true,
           "reasons": [
-            "近116日漲幅+228.9%，全市場前20名"
+            "近117日漲幅+247.4%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 125.0,
-          "return_pct": 228.9,
-          "lookback_days": 116,
-          "avg_turnover": 1016466638,
-          "ma20": 110.9,
+          "current": 132.0,
+          "return_pct": 247.4,
+          "lookback_days": 117,
+          "avg_turnover": 1176806894,
+          "ma20": 112.65,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 5,
           "name": "天二科技",
           "industry": "電子零組件業",
-          "pct": 1.6260162601626018
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "2033",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+219.5%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 53.2,
-          "return_pct": 219.5,
-          "lookback_days": 116,
-          "avg_turnover": 139980500,
-          "ma20": 36.65,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 6,
-          "name": "佳大",
-          "industry": "鋼鐵工業",
-          "pct": 0.7575757575757576
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "1709",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+217.7%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 60.2,
-          "return_pct": 217.7,
-          "lookback_days": 116,
-          "avg_turnover": 2189523503,
-          "ma20": 45.24,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 7,
-          "name": "和益",
-          "industry": "化學工業",
-          "pct": -4.897314375987362
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "2059",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+214.8%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 11790.0,
-          "return_pct": 214.8,
-          "lookback_days": 116,
-          "avg_turnover": 5923108242,
-          "ma20": 12412.5,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 8,
-          "name": "川湖",
-          "industry": "電子零組件業",
-          "pct": -10.0
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "3016",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+195.9%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 195.0,
-          "return_pct": 195.9,
-          "lookback_days": 116,
-          "avg_turnover": 4163610228,
-          "ma20": 140.22,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 9,
-          "name": "嘉晶",
-          "industry": "半導體業",
-          "pct": 3.723404255319149
+          "pct": 5.6000000000000005
         },
         {
           "strategy": "leaders",
@@ -473,167 +389,62 @@
           "code": "2466",
           "matched": true,
           "reasons": [
-            "近116日漲幅+193.5%，全市場前20名"
+            "近117日漲幅+222.8%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 180.5,
-          "return_pct": 193.5,
-          "lookback_days": 116,
-          "avg_turnover": 584064597,
-          "ma20": 119.95,
+          "current": 198.5,
+          "return_pct": 222.8,
+          "lookback_days": 117,
+          "avg_turnover": 609300392,
+          "ma20": 124.95,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 10,
+          "rank": 6,
           "name": "冠西電",
           "industry": "光電業",
-          "pct": 5.865102639296188
+          "pct": 9.97229916897507
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "2492",
+          "code": "1709",
           "matched": true,
           "reasons": [
-            "近116日漲幅+186.3%，全市場前20名"
+            "近117日漲幅+221.9%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 428.0,
-          "return_pct": 186.3,
-          "lookback_days": 116,
-          "avg_turnover": 17122423351,
-          "ma20": 326.07,
+          "current": 61.0,
+          "return_pct": 221.9,
+          "lookback_days": 117,
+          "avg_turnover": 2020488152,
+          "ma20": 46.58,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 11,
-          "name": "華新科",
-          "industry": "電子零組件業",
-          "pct": 9.884467265725288
+          "rank": 7,
+          "name": "和益",
+          "industry": "化學工業",
+          "pct": 1.3289036544850499
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "6213",
+          "code": "2033",
           "matched": true,
           "reasons": [
-            "近116日漲幅+182.3%，全市場前20名"
+            "近117日漲幅+213.5%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 796.0,
-          "return_pct": 182.3,
-          "lookback_days": 116,
-          "avg_turnover": 15112855919,
-          "ma20": 587.9,
+          "current": 52.2,
+          "return_pct": 213.5,
+          "lookback_days": 117,
+          "avg_turnover": 128073710,
+          "ma20": 37.98,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 12,
-          "name": "聯茂",
-          "industry": "電子零組件業",
-          "pct": 1.1435832274459974
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "7610",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+182.0%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 1805.0,
-          "return_pct": 182.0,
-          "lookback_days": 116,
-          "avg_turnover": 1301732355,
-          "ma20": 1838.5,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 13,
-          "name": "聯友金屬-創",
-          "industry": "",
-          "pct": 0.8379888268156425
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "3532",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+175.8%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 513.0,
-          "return_pct": 175.8,
-          "lookback_days": 116,
-          "avg_turnover": 3916484837,
-          "ma20": 444.1,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 14,
-          "name": "台勝科",
-          "industry": "半導體業",
-          "pct": 9.850107066381156
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "6957",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+174.1%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 444.0,
-          "return_pct": 174.1,
-          "lookback_days": 116,
-          "avg_turnover": 254913704,
-          "ma20": 305.18,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 15,
-          "name": "裕慶-KY",
-          "industry": "其他業",
-          "pct": 9.900990099009901
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "6226",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+171.6%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 43.45,
-          "return_pct": 171.6,
-          "lookback_days": 116,
-          "avg_turnover": 717956510,
-          "ma20": 40.62,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 16,
-          "name": "光鼎",
-          "industry": "光電業",
-          "pct": 2.9620853080568716
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "3055",
-          "matched": true,
-          "reasons": [
-            "近116日漲幅+170.3%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 223.0,
-          "return_pct": 170.3,
-          "lookback_days": 116,
-          "avg_turnover": 1083093044,
-          "ma20": 185.6,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 17,
-          "name": "蔚華科",
-          "industry": "電子通路業",
-          "pct": 4.449648711943794
+          "rank": 8,
+          "name": "佳大",
+          "industry": "鋼鐵工業",
+          "pct": -1.8796992481203008
         },
         {
           "strategy": "leaders",
@@ -641,41 +452,167 @@
           "code": "6672",
           "matched": true,
           "reasons": [
-            "近116日漲幅+170.1%，全市場前20名"
+            "近117日漲幅+196.8%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 505.0,
-          "return_pct": 170.1,
-          "lookback_days": 116,
-          "avg_turnover": 4321847805,
-          "ma20": 344.52,
+          "current": 555.0,
+          "return_pct": 196.8,
+          "lookback_days": 117,
+          "avg_turnover": 4077504174,
+          "ma20": 357.3,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 18,
+          "rank": 9,
           "name": "騰輝電子-KY",
           "industry": "電子零組件業",
-          "pct": 9.902067464635474
+          "pct": 9.900990099009901
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "2243",
+          "code": "6213",
           "matched": true,
           "reasons": [
-            "近116日漲幅+169.5%，全市場前20名"
+            "近117日漲幅+185.8%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 59.7,
-          "return_pct": 169.5,
-          "lookback_days": 116,
-          "avg_turnover": 23603215,
-          "ma20": 50.9,
+          "current": 806.0,
+          "return_pct": 185.8,
+          "lookback_days": 117,
+          "avg_turnover": 13901189350,
+          "ma20": 602.55,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 19,
-          "name": "宏旭-KY",
-          "industry": "汽車工業",
-          "pct": 4.18848167539267
+          "rank": 10,
+          "name": "聯茂",
+          "industry": "電子零組件業",
+          "pct": 1.256281407035176
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "2059",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+183.4%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 10615.0,
+          "return_pct": 183.4,
+          "lookback_days": 117,
+          "avg_turnover": 7627547963,
+          "ma20": 12248.0,
+          "above_ma60": false,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 11,
+          "name": "川湖",
+          "industry": "電子零組件業",
+          "pct": -9.96607294317218
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "2492",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+180.9%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 420.0,
+          "return_pct": 180.9,
+          "lookback_days": 117,
+          "avg_turnover": 18238524368,
+          "ma20": 330.93,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 12,
+          "name": "華新科",
+          "industry": "電子零組件業",
+          "pct": -1.8691588785046727
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "3016",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+178.5%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 183.5,
+          "return_pct": 178.5,
+          "lookback_days": 117,
+          "avg_turnover": 3830508020,
+          "ma20": 144.38,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 13,
+          "name": "嘉晶",
+          "industry": "半導體業",
+          "pct": -5.897435897435897
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "6226",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+177.5%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 44.4,
+          "return_pct": 177.5,
+          "lookback_days": 117,
+          "avg_turnover": 761793066,
+          "ma20": 41.22,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 14,
+          "name": "光鼎",
+          "industry": "光電業",
+          "pct": 2.186421173762946
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "6957",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+176.5%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 448.0,
+          "return_pct": 176.5,
+          "lookback_days": 117,
+          "avg_turnover": 271275594,
+          "ma20": 316.77,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 15,
+          "name": "裕慶-KY",
+          "industry": "其他業",
+          "pct": 0.9009009009009009
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "3532",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+173.7%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 509.0,
+          "return_pct": 173.7,
+          "lookback_days": 117,
+          "avg_turnover": 4210945905,
+          "ma20": 449.4,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 16,
+          "name": "台勝科",
+          "industry": "半導體業",
+          "pct": -0.7797270955165692
         },
         {
           "strategy": "leaders",
@@ -683,20 +620,83 @@
           "code": "3094",
           "matched": true,
           "reasons": [
-            "近116日漲幅+164.2%，全市場前20名"
+            "近117日漲幅+171.2%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 67.5,
-          "return_pct": 164.2,
-          "lookback_days": 116,
-          "avg_turnover": 1481268253,
-          "ma20": 54.07,
+          "current": 69.3,
+          "return_pct": 171.2,
+          "lookback_days": 117,
+          "avg_turnover": 1334708099,
+          "ma20": 55.29,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 20,
+          "rank": 17,
           "name": "聯傑",
           "industry": "半導體業",
-          "pct": -2.4566473988439306
+          "pct": 2.666666666666667
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "3055",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+170.3%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 223.0,
+          "return_pct": 170.3,
+          "lookback_days": 117,
+          "avg_turnover": 972460559,
+          "ma20": 189.45,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 18,
+          "name": "蔚華科",
+          "industry": "電子通路業",
+          "pct": 0.0
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "2243",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+167.7%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 59.3,
+          "return_pct": 167.7,
+          "lookback_days": 117,
+          "avg_turnover": 23684162,
+          "ma20": 51.6,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 19,
+          "name": "宏旭-KY",
+          "industry": "汽車工業",
+          "pct": -0.6700167504187605
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "7610",
+          "matched": true,
+          "reasons": [
+            "近117日漲幅+165.6%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 1700.0,
+          "return_pct": 165.6,
+          "lookback_days": 117,
+          "avg_turnover": 1320628060,
+          "ma20": 1823.5,
+          "above_ma60": false,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 20,
+          "name": "聯友金屬-創",
+          "industry": "",
+          "pct": -5.8171745152354575
         }
       ]
     }
