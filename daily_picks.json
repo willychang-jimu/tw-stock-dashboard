@@ -1,20 +1,16 @@
 {
   "version": 4,
-  "date": "2026-11-16",
+  "date": "2026-11-17",
   "mode": "tech",
   "regime": {
-    "date": "2026-11-16",
-    "breadth": 0.1322,
-    "above": 143,
-    "total": 1082,
+    "date": "2026-11-17",
+    "breadth": 0.1283,
+    "above": 139,
+    "total": 1083,
     "threshold": 0.3,
     "regime": "panic",
     "label": "全市場恐慌（跌深反彈啟動）",
     "history": [
-      {
-        "date": "2026-08-18",
-        "breadth": 0.4916
-      },
       {
         "date": "2026-08-19",
         "breadth": 0.4818
@@ -250,6 +246,10 @@
       {
         "date": "2026-11-16",
         "breadth": 0.1322
+      },
+      {
+        "date": "2026-11-17",
+        "breadth": 0.1283
       }
     ]
   },
@@ -264,7 +264,7 @@
       "active": true,
       "inactive_reason": null,
       "suppressed_count": 0,
-      "count": 27,
+      "count": 22,
       "picks": [
         {
           "strategy": "reversal",
@@ -272,32 +272,161 @@
           "code": "6189",
           "matched": true,
           "reasons": [
-            "RSI 24 超賣",
-            "接近布林下軌（1.8%）",
+            "RSI 22 超賣",
+            "接近布林下軌（1.4%）",
             "MACD空頭動能減弱"
           ],
           "evidence_level": "validated",
-          "rsi": 24.1,
+          "rsi": 22.3,
           "band_touch": "near",
-          "dist_to_lower_pct": 1.75,
+          "dist_to_lower_pct": 1.39,
           "bonus_count": 1,
-          "current": 42.25,
-          "ma5": 42.91,
-          "ma20": 46.18,
-          "bb_lower": 41.52,
-          "bb_upper": 50.84,
+          "current": 41.65,
+          "ma5": 42.49,
+          "ma20": 45.76,
+          "bb_lower": 41.08,
+          "bb_upper": 50.43,
           "exit_plan": {
             "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 50.84,
+            "target_price_today": 50.43,
             "stop_pct": 10.0,
-            "stop_price_ref": 38.02,
+            "stop_price_ref": 37.48,
             "max_hold_days": 40
           },
-          "exit_hint": "碰布林上軌停利（今天約50.84）；跌破買進價10%停損；最多持有40個交易日",
+          "exit_hint": "碰布林上軌停利（今天約50.43）；跌破買進價10%停損；最多持有40個交易日",
           "name": "豐藝",
           "industry": "電子通路業",
-          "pct": -1.9721577726218096,
+          "pct": -1.4201183431952662,
           "rank": 1
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "8271",
+          "matched": true,
+          "reasons": [
+            "RSI 29 超賣",
+            "接近布林下軌（1.6%）",
+            "RSI翻揚（動能轉折）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 29.0,
+          "band_touch": "near",
+          "dist_to_lower_pct": 1.57,
+          "bonus_count": 1,
+          "current": 151.5,
+          "ma5": 158.8,
+          "ma20": 171.6,
+          "bb_lower": 149.16,
+          "bb_upper": 194.04,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 194.04,
+            "stop_pct": 10.0,
+            "stop_price_ref": 136.35,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約194.04）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "宇瞻",
+          "industry": "半導體業",
+          "pct": 1.0,
+          "rank": 2
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2449",
+          "matched": true,
+          "reasons": [
+            "RSI 27 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 27.4,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -2.7,
+          "bonus_count": 0,
+          "current": 176.5,
+          "ma5": 205.5,
+          "ma20": 239.85,
+          "bb_lower": 181.39,
+          "bb_upper": 298.31,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 298.31,
+            "stop_pct": 10.0,
+            "stop_price_ref": 158.85,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約298.31）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "京元電子",
+          "industry": "半導體業",
+          "pct": -8.311688311688311,
+          "rank": 3
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2059",
+          "matched": true,
+          "reasons": [
+            "RSI 25 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 25.0,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -2.46,
+          "bonus_count": 0,
+          "current": 6565.0,
+          "ma5": 7693.0,
+          "ma20": 8860.25,
+          "bb_lower": 6730.48,
+          "bb_upper": 10990.02,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 10990.02,
+            "stop_pct": 10.0,
+            "stop_price_ref": 5908.5,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約10990.02）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "川湖",
+          "industry": "電子零組件業",
+          "pct": -7.859649122807018,
+          "rank": 4
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "6669",
+          "matched": true,
+          "reasons": [
+            "RSI 28 超賣",
+            "接近布林下軌（0.2%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 28.1,
+          "band_touch": "near",
+          "dist_to_lower_pct": 0.21,
+          "bonus_count": 0,
+          "current": 1450.0,
+          "ma5": 1570.0,
+          "ma20": 1744.0,
+          "bb_lower": 1446.95,
+          "bb_upper": 2041.05,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 2041.05,
+            "stop_pct": 10.0,
+            "stop_price_ref": 1305.0,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約2041.05）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "緯穎",
+          "industry": "電腦及週邊設備業",
+          "pct": -4.29042904290429,
+          "rank": 5
         },
         {
           "strategy": "reversal",
@@ -305,31 +434,479 @@
           "code": "2359",
           "matched": true,
           "reasons": [
-            "RSI 25 超賣",
-            "接近布林下軌（1.3%）"
+            "RSI 24 超賣",
+            "接近布林下軌（1.0%）"
           ],
           "evidence_level": "validated",
-          "rsi": 25.4,
+          "rsi": 23.5,
           "band_touch": "near",
-          "dist_to_lower_pct": 1.27,
+          "dist_to_lower_pct": 1.02,
           "bonus_count": 0,
-          "current": 88.6,
-          "ma5": 96.8,
-          "ma20": 108.61,
-          "bb_lower": 87.49,
-          "bb_upper": 129.73,
+          "current": 85.0,
+          "ma5": 93.96,
+          "ma20": 106.81,
+          "bb_lower": 84.14,
+          "bb_upper": 129.48,
           "exit_plan": {
             "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 129.73,
+            "target_price_today": 129.48,
             "stop_pct": 10.0,
-            "stop_price_ref": 79.74,
+            "stop_price_ref": 76.5,
             "max_hold_days": 40
           },
-          "exit_hint": "碰布林上軌停利（今天約129.73）；跌破買進價10%停損；最多持有40個交易日",
+          "exit_hint": "碰布林上軌停利（今天約129.48）；跌破買進價10%停損；最多持有40個交易日",
           "name": "所羅門",
           "industry": "其他電子業",
-          "pct": -9.775967413441956,
-          "rank": 2
+          "pct": -4.063205417607224,
+          "rank": 6
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "4949",
+          "matched": true,
+          "reasons": [
+            "RSI 30 超賣",
+            "接近布林下軌（0.7%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 29.6,
+          "band_touch": "near",
+          "dist_to_lower_pct": 0.74,
+          "bonus_count": 0,
+          "current": 59.0,
+          "ma5": 63.02,
+          "ma20": 72.92,
+          "bb_lower": 58.57,
+          "bb_upper": 87.27,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 87.27,
+            "stop_pct": 10.0,
+            "stop_price_ref": 53.1,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約87.27）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "有成精密",
+          "industry": "光電業",
+          "pct": -3.1198686371100166,
+          "rank": 7
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2387",
+          "matched": true,
+          "reasons": [
+            "RSI 9 超賣",
+            "接近布林下軌（1.6%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 8.5,
+          "band_touch": "near",
+          "dist_to_lower_pct": 1.61,
+          "bonus_count": 0,
+          "current": 28.0,
+          "ma5": 29.27,
+          "ma20": 32.57,
+          "bb_lower": 27.56,
+          "bb_upper": 37.57,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 37.57,
+            "stop_pct": 10.0,
+            "stop_price_ref": 25.2,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約37.57）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "精元",
+          "industry": "電腦及週邊設備業",
+          "pct": -3.114186851211073,
+          "rank": 8
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "7795",
+          "matched": true,
+          "reasons": [
+            "RSI 27 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 27.1,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -0.34,
+          "bonus_count": 0,
+          "current": 305.5,
+          "ma5": 337.1,
+          "ma20": 382.15,
+          "bb_lower": 306.55,
+          "bb_upper": 457.75,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 457.75,
+            "stop_pct": 10.0,
+            "stop_price_ref": 274.95,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約457.75）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "長廣",
+          "industry": "電子零組件業",
+          "pct": -3.015873015873016,
+          "rank": 9
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "3515",
+          "matched": true,
+          "reasons": [
+            "RSI 30 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 29.7,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -1.74,
+          "bonus_count": 0,
+          "current": 181.0,
+          "ma5": 193.6,
+          "ma20": 211.03,
+          "bb_lower": 184.21,
+          "bb_upper": 237.84,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 237.84,
+            "stop_pct": 10.0,
+            "stop_price_ref": 162.9,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約237.84）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "華擎",
+          "industry": "電腦及週邊設備業",
+          "pct": -2.949061662198391,
+          "rank": 10
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2392",
+          "matched": true,
+          "reasons": [
+            "RSI 26 超賣",
+            "接近布林下軌（0.6%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 26.4,
+          "band_touch": "near",
+          "dist_to_lower_pct": 0.59,
+          "bonus_count": 0,
+          "current": 31.35,
+          "ma5": 33.44,
+          "ma20": 36.46,
+          "bb_lower": 31.17,
+          "bb_upper": 41.76,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 41.76,
+            "stop_pct": 10.0,
+            "stop_price_ref": 28.22,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約41.76）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "正崴",
+          "industry": "電子零組件業",
+          "pct": -2.941176470588235,
+          "rank": 11
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "3005",
+          "matched": true,
+          "reasons": [
+            "RSI 27 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 27.0,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -0.77,
+          "bonus_count": 0,
+          "current": 100.5,
+          "ma5": 105.8,
+          "ma20": 117.35,
+          "bb_lower": 101.28,
+          "bb_upper": 133.42,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 133.42,
+            "stop_pct": 10.0,
+            "stop_price_ref": 90.45,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約133.42）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "神基",
+          "industry": "電腦及週邊設備業",
+          "pct": -2.898550724637681,
+          "rank": 12
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "3706",
+          "matched": true,
+          "reasons": [
+            "RSI 23 超賣",
+            "接近布林下軌（1.0%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 23.1,
+          "band_touch": "near",
+          "dist_to_lower_pct": 1.05,
+          "bonus_count": 0,
+          "current": 61.6,
+          "ma5": 65.22,
+          "ma20": 73.59,
+          "bb_lower": 60.96,
+          "bb_upper": 86.22,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 86.22,
+            "stop_pct": 10.0,
+            "stop_price_ref": 55.44,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約86.22）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "神達",
+          "industry": "電腦及週邊設備業",
+          "pct": -2.6856240126382303,
+          "rank": 13
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2312",
+          "matched": true,
+          "reasons": [
+            "RSI 29 超賣",
+            "接近布林下軌（0.6%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 28.9,
+          "band_touch": "near",
+          "dist_to_lower_pct": 0.64,
+          "bonus_count": 0,
+          "current": 24.05,
+          "ma5": 26.0,
+          "ma20": 29.05,
+          "bb_lower": 23.9,
+          "bb_upper": 34.2,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 34.2,
+            "stop_pct": 10.0,
+            "stop_price_ref": 21.64,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約34.20）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "金寶",
+          "industry": "其他電子業",
+          "pct": -2.2357723577235773,
+          "rank": 14
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "4938",
+          "matched": true,
+          "reasons": [
+            "RSI 29 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 29.1,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -1.48,
+          "bonus_count": 0,
+          "current": 83.8,
+          "ma5": 89.4,
+          "ma20": 98.49,
+          "bb_lower": 85.06,
+          "bb_upper": 111.91,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 111.91,
+            "stop_pct": 10.0,
+            "stop_price_ref": 75.42,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約111.91）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "和碩",
+          "industry": "電腦及週邊設備業",
+          "pct": -2.217036172695449,
+          "rank": 15
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "6192",
+          "matched": true,
+          "reasons": [
+            "RSI 20 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 20.3,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -1.16,
+          "bonus_count": 0,
+          "current": 97.0,
+          "ma5": 100.76,
+          "ma20": 109.24,
+          "bb_lower": 98.14,
+          "bb_upper": 120.34,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 120.34,
+            "stop_pct": 10.0,
+            "stop_price_ref": 87.3,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約120.34）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "巨路",
+          "industry": "其他電子業",
+          "pct": -1.8218623481781377,
+          "rank": 16
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "3028",
+          "matched": true,
+          "reasons": [
+            "RSI 26 超賣",
+            "接近布林下軌（0.8%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 25.7,
+          "band_touch": "near",
+          "dist_to_lower_pct": 0.79,
+          "bonus_count": 0,
+          "current": 52.3,
+          "ma5": 53.92,
+          "ma20": 57.12,
+          "bb_lower": 51.89,
+          "bb_upper": 62.36,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 62.36,
+            "stop_pct": 10.0,
+            "stop_price_ref": 47.07,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約62.36）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "增你強",
+          "industry": "電子通路業",
+          "pct": -1.320754716981132,
+          "rank": 17
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2382",
+          "matched": true,
+          "reasons": [
+            "RSI 21 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 21.3,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -0.32,
+          "bonus_count": 0,
+          "current": 262.5,
+          "ma5": 276.0,
+          "ma20": 303.82,
+          "bb_lower": 263.35,
+          "bb_upper": 344.3,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 344.3,
+            "stop_pct": 10.0,
+            "stop_price_ref": 236.25,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約344.30）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "廣達",
+          "industry": "電腦及週邊設備業",
+          "pct": -0.7561436672967864,
+          "rank": 18
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "2356",
+          "matched": true,
+          "reasons": [
+            "RSI 22 超賣",
+            "觸及布林下軌"
+          ],
+          "evidence_level": "validated",
+          "rsi": 21.6,
+          "band_touch": "touched",
+          "dist_to_lower_pct": -0.12,
+          "bonus_count": 0,
+          "current": 42.75,
+          "ma5": 45.92,
+          "ma20": 55.48,
+          "bb_lower": 42.8,
+          "bb_upper": 68.15,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 68.15,
+            "stop_pct": 10.0,
+            "stop_price_ref": 38.48,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約68.15）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "英業達",
+          "industry": "電腦及週邊設備業",
+          "pct": -0.5813953488372093,
+          "rank": 19
+        },
+        {
+          "strategy": "reversal",
+          "strategy_label": "跌深反彈",
+          "code": "5222",
+          "matched": true,
+          "reasons": [
+            "RSI 30 超賣",
+            "接近布林下軌（1.8%）"
+          ],
+          "evidence_level": "validated",
+          "rsi": 29.5,
+          "band_touch": "near",
+          "dist_to_lower_pct": 1.85,
+          "bonus_count": 0,
+          "current": 79.9,
+          "ma5": 82.1,
+          "ma20": 87.81,
+          "bb_lower": 78.45,
+          "bb_upper": 97.17,
+          "exit_plan": {
+            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
+            "target_price_today": 97.17,
+            "stop_pct": 10.0,
+            "stop_price_ref": 71.91,
+            "max_hold_days": 40
+          },
+          "exit_hint": "碰布林上軌停利（今天約97.17）；跌破買進價10%停損；最多持有40個交易日",
+          "name": "全訊",
+          "industry": "半導體業",
+          "pct": -0.3740648379052369,
+          "rank": 20
         },
         {
           "strategy": "reversal",
@@ -343,473 +920,25 @@
           "evidence_level": "validated",
           "rsi": 27.8,
           "band_touch": "touched",
-          "dist_to_lower_pct": -7.56,
+          "dist_to_lower_pct": -3.16,
           "bonus_count": 0,
           "current": 11.2,
-          "ma5": 12.95,
-          "ma20": 14.41,
-          "bb_lower": 12.12,
-          "bb_upper": 16.69,
+          "ma5": 12.35,
+          "ma20": 14.25,
+          "bb_lower": 11.57,
+          "bb_upper": 16.93,
           "exit_plan": {
             "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 16.69,
+            "target_price_today": 16.93,
             "stop_pct": 10.0,
             "stop_price_ref": 10.08,
             "max_hold_days": 40
           },
-          "exit_hint": "碰布林上軌停利（今天約16.69）；跌破買進價10%停損；最多持有40個交易日",
+          "exit_hint": "碰布林上軌停利（今天約16.93）；跌破買進價10%停損；最多持有40個交易日",
           "name": "兆勁",
           "industry": "通信網路業",
-          "pct": -9.67741935483871,
-          "rank": 3
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "7795",
-          "matched": true,
-          "reasons": [
-            "RSI 28 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 28.4,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -0.37,
-          "bonus_count": 0,
-          "current": 315.0,
-          "ma5": 349.2,
-          "ma20": 389.68,
-          "bb_lower": 316.16,
-          "bb_upper": 463.19,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 463.19,
-            "stop_pct": 10.0,
-            "stop_price_ref": 283.5,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約463.19）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "長廣",
-          "industry": "電子零組件業",
-          "pct": -9.612625538020087,
-          "rank": 4
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2344",
-          "matched": true,
-          "reasons": [
-            "RSI 30 超賣",
-            "接近布林下軌（1.6%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 29.8,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.63,
-          "bonus_count": 0,
-          "current": 113.0,
-          "ma5": 127.4,
-          "ma20": 146.03,
-          "bb_lower": 111.18,
-          "bb_upper": 180.87,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 180.87,
-            "stop_pct": 10.0,
-            "stop_price_ref": 101.7,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約180.87）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "華邦電",
-          "industry": "半導體業",
-          "pct": -9.6,
-          "rank": 5
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2059",
-          "matched": true,
-          "reasons": [
-            "RSI 28 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 27.7,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -0.08,
-          "bonus_count": 0,
-          "current": 7125.0,
-          "ma5": 8093.0,
-          "ma20": 9029.75,
-          "bb_lower": 7130.52,
-          "bb_upper": 10928.98,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 10928.98,
-            "stop_pct": 10.0,
-            "stop_price_ref": 6412.5,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約10928.98）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "川湖",
-          "industry": "電子零組件業",
-          "pct": -9.581218274111675,
-          "rank": 6
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2392",
-          "matched": true,
-          "reasons": [
-            "RSI 29 超賣",
-            "接近布林下軌（1.1%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 28.6,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.13,
-          "bonus_count": 0,
-          "current": 32.3,
-          "ma5": 34.05,
-          "ma20": 36.9,
-          "bb_lower": 31.94,
-          "bb_upper": 41.86,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 41.86,
-            "stop_pct": 10.0,
-            "stop_price_ref": 29.07,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約41.86）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "正崴",
-          "industry": "電子零組件業",
-          "pct": -9.523809523809526,
-          "rank": 7
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2451",
-          "matched": true,
-          "reasons": [
-            "RSI 22 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 21.9,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -1.16,
-          "bonus_count": 0,
-          "current": 212.0,
-          "ma5": 228.7,
-          "ma20": 261.18,
-          "bb_lower": 214.49,
-          "bb_upper": 307.86,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 307.86,
-            "stop_pct": 10.0,
-            "stop_price_ref": 190.8,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約307.86）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "創見",
-          "industry": "半導體業",
-          "pct": -8.817204301075268,
-          "rank": 8
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "8271",
-          "matched": true,
-          "reasons": [
-            "RSI 27 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 27.2,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -1.3,
-          "bonus_count": 0,
-          "current": 150.0,
-          "ma5": 161.8,
-          "ma20": 173.38,
-          "bb_lower": 151.98,
-          "bb_upper": 194.77,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 194.77,
-            "stop_pct": 10.0,
-            "stop_price_ref": 135.0,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約194.77）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "宇瞻",
-          "industry": "半導體業",
-          "pct": -8.256880733944955,
-          "rank": 9
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3312",
-          "matched": true,
-          "reasons": [
-            "RSI 28 超賣",
-            "接近布林下軌（1.7%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 28.4,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.68,
-          "bonus_count": 0,
-          "current": 37.85,
-          "ma5": 40.51,
-          "ma20": 45.39,
-          "bb_lower": 37.22,
-          "bb_upper": 53.56,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 53.56,
-            "stop_pct": 10.0,
-            "stop_price_ref": 34.07,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約53.56）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "弘憶股",
-          "industry": "電子通路業",
-          "pct": -7.230392156862744,
-          "rank": 10
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "6166",
-          "matched": true,
-          "reasons": [
-            "RSI 27 超賣",
-            "接近布林下軌（1.7%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 27.0,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.67,
-          "bonus_count": 0,
-          "current": 84.0,
-          "ma5": 89.78,
-          "ma20": 99.05,
-          "bb_lower": 82.62,
-          "bb_upper": 115.48,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 115.48,
-            "stop_pct": 10.0,
-            "stop_price_ref": 75.6,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約115.48）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "凌華",
-          "industry": "電腦及週邊設備業",
-          "pct": -7.18232044198895,
-          "rank": 11
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3694",
-          "matched": true,
-          "reasons": [
-            "RSI 24 超賣",
-            "接近布林下軌（0.7%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 23.9,
-          "band_touch": "near",
-          "dist_to_lower_pct": 0.72,
-          "bonus_count": 0,
-          "current": 37.0,
-          "ma5": 39.71,
-          "ma20": 44.25,
-          "bb_lower": 36.73,
-          "bb_upper": 51.77,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 51.77,
-            "stop_pct": 10.0,
-            "stop_price_ref": 33.3,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約51.77）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "海華",
-          "industry": "通信網路業",
-          "pct": -6.801007556675064,
-          "rank": 12
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "8016",
-          "matched": true,
-          "reasons": [
-            "RSI 29 超賣",
-            "接近布林下軌（1.6%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 29.1,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.56,
-          "bonus_count": 0,
-          "current": 238.5,
-          "ma5": 253.9,
-          "ma20": 274.98,
-          "bb_lower": 234.83,
-          "bb_upper": 315.12,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 315.12,
-            "stop_pct": 10.0,
-            "stop_price_ref": 214.65,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約315.12）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "矽創",
-          "industry": "半導體業",
-          "pct": -6.653620352250488,
-          "rank": 13
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2324",
-          "matched": true,
-          "reasons": [
-            "RSI 24 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 23.7,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -0.71,
-          "bonus_count": 0,
-          "current": 28.1,
-          "ma5": 30.39,
-          "ma20": 34.12,
-          "bb_lower": 28.3,
-          "bb_upper": 39.95,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 39.95,
-            "stop_pct": 10.0,
-            "stop_price_ref": 25.29,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約39.95）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "仁寶",
-          "industry": "電腦及週邊設備業",
-          "pct": -6.644518272425248,
-          "rank": 14
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2356",
-          "matched": true,
-          "reasons": [
-            "RSI 22 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 21.8,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -4.38,
-          "bonus_count": 0,
-          "current": 43.0,
-          "ma5": 48.35,
-          "ma20": 56.29,
-          "bb_lower": 44.97,
-          "bb_upper": 67.61,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 67.61,
-            "stop_pct": 10.0,
-            "stop_price_ref": 38.7,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約67.61）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "英業達",
-          "industry": "電腦及週邊設備業",
-          "pct": -6.623235613463627,
-          "rank": 15
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2374",
-          "matched": true,
-          "reasons": [
-            "RSI 25 超賣",
-            "接近布林下軌（1.3%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 25.0,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.29,
-          "bonus_count": 0,
-          "current": 48.75,
-          "ma5": 51.49,
-          "ma20": 59.31,
-          "bb_lower": 48.13,
-          "bb_upper": 70.5,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 70.5,
-            "stop_pct": 10.0,
-            "stop_price_ref": 43.88,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約70.50）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "佳能",
-          "industry": "光電業",
-          "pct": -6.429942418426103,
-          "rank": 16
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3592",
-          "matched": true,
-          "reasons": [
-            "RSI 30 超賣",
-            "接近布林下軌（1.7%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 29.8,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.75,
-          "bonus_count": 0,
-          "current": 204.0,
-          "ma5": 213.2,
-          "ma20": 235.88,
-          "bb_lower": 200.49,
-          "bb_upper": 271.26,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 271.26,
-            "stop_pct": 10.0,
-            "stop_price_ref": 183.6,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約271.26）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "瑞鼎",
-          "industry": "半導體業",
-          "pct": -5.773672055427252,
-          "rank": 17
+          "pct": 0.0,
+          "rank": 21
         },
         {
           "strategy": "reversal",
@@ -818,318 +947,30 @@
           "matched": true,
           "reasons": [
             "RSI 25 超賣",
-            "觸及布林下軌"
+            "接近布林下軌（1.8%）"
           ],
           "evidence_level": "validated",
           "rsi": 24.5,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -0.64,
+          "band_touch": "near",
+          "dist_to_lower_pct": 1.8,
           "bonus_count": 0,
           "current": 63.7,
-          "ma5": 68.16,
-          "ma20": 75.82,
-          "bb_lower": 64.11,
-          "bb_upper": 87.53,
+          "ma5": 66.3,
+          "ma20": 74.81,
+          "bb_lower": 62.58,
+          "bb_upper": 87.05,
           "exit_plan": {
             "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 87.53,
+            "target_price_today": 87.05,
             "stop_pct": 10.0,
             "stop_price_ref": 57.33,
             "max_hold_days": 40
           },
-          "exit_hint": "碰布林上軌停利（今天約87.53）；跌破買進價10%停損；最多持有40個交易日",
+          "exit_hint": "碰布林上軌停利（今天約87.05）；跌破買進價10%停損；最多持有40個交易日",
           "name": "安馳",
           "industry": "電子通路業",
-          "pct": -5.769230769230768,
-          "rank": 18
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3005",
-          "matched": true,
-          "reasons": [
-            "RSI 30 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 29.6,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -0.71,
-          "bonus_count": 0,
-          "current": 103.5,
-          "ma5": 107.1,
-          "ma20": 118.45,
-          "bb_lower": 104.24,
-          "bb_upper": 132.66,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 132.66,
-            "stop_pct": 10.0,
-            "stop_price_ref": 93.15,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約132.66）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "神基",
-          "industry": "電腦及週邊設備業",
-          "pct": -5.47945205479452,
-          "rank": 19
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3706",
-          "matched": true,
-          "reasons": [
-            "RSI 25 超賣",
-            "接近布林下軌（0.8%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 24.8,
-          "band_touch": "near",
-          "dist_to_lower_pct": 0.81,
-          "bonus_count": 0,
-          "current": 63.3,
-          "ma5": 67.12,
-          "ma20": 74.58,
-          "bb_lower": 62.79,
-          "bb_upper": 86.37,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 86.37,
-            "stop_pct": 10.0,
-            "stop_price_ref": 56.97,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約86.37）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "神達",
-          "industry": "電腦及週邊設備業",
-          "pct": -4.8120300751879705,
-          "rank": 20
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "5222",
-          "matched": true,
-          "reasons": [
-            "RSI 30 超賣",
-            "接近布林下軌（1.2%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 29.9,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.24,
-          "bonus_count": 0,
-          "current": 80.2,
-          "ma5": 83.12,
-          "ma20": 88.67,
-          "bb_lower": 79.22,
-          "bb_upper": 98.12,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 98.12,
-            "stop_pct": 10.0,
-            "stop_price_ref": 72.18,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約98.12）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "全訊",
-          "industry": "半導體業",
-          "pct": -4.750593824228028,
-          "rank": 21
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "8081",
-          "matched": true,
-          "reasons": [
-            "RSI 26 超賣",
-            "接近布林下軌（1.1%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 26.1,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.15,
-          "bonus_count": 0,
-          "current": 218.0,
-          "ma5": 225.9,
-          "ma20": 250.6,
-          "bb_lower": 215.53,
-          "bb_upper": 285.67,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 285.67,
-            "stop_pct": 10.0,
-            "stop_price_ref": 196.2,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約285.67）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "致新",
-          "industry": "半導體業",
-          "pct": -4.595185995623632,
+          "pct": 0.0,
           "rank": 22
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2382",
-          "matched": true,
-          "reasons": [
-            "RSI 22 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 21.9,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -2.17,
-          "bonus_count": 0,
-          "current": 264.5,
-          "ma5": 283.2,
-          "ma20": 306.8,
-          "bb_lower": 270.37,
-          "bb_upper": 343.23,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 343.23,
-            "stop_pct": 10.0,
-            "stop_price_ref": 238.05,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約343.23）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "廣達",
-          "industry": "電腦及週邊設備業",
-          "pct": -4.3399638336347195,
-          "rank": 23
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2354",
-          "matched": true,
-          "reasons": [
-            "RSI 29 超賣",
-            "接近布林下軌（1.3%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 28.8,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.33,
-          "bonus_count": 0,
-          "current": 50.2,
-          "ma5": 52.88,
-          "ma20": 57.99,
-          "bb_lower": 49.54,
-          "bb_upper": 66.44,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 66.44,
-            "stop_pct": 10.0,
-            "stop_price_ref": 45.18,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約66.44）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "鴻準",
-          "industry": "其他電子業",
-          "pct": -4.198473282442748,
-          "rank": 24
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "3028",
-          "matched": true,
-          "reasons": [
-            "RSI 27 超賣",
-            "接近布林下軌（1.0%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 27.3,
-          "band_touch": "near",
-          "dist_to_lower_pct": 0.97,
-          "bonus_count": 0,
-          "current": 53.0,
-          "ma5": 54.28,
-          "ma20": 57.6,
-          "bb_lower": 52.49,
-          "bb_upper": 62.7,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 62.7,
-            "stop_pct": 10.0,
-            "stop_price_ref": 47.7,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約62.70）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "增你強",
-          "industry": "電子通路業",
-          "pct": -3.985507246376812,
-          "rank": 25
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "2376",
-          "matched": true,
-          "reasons": [
-            "RSI 26 超賣",
-            "接近布林下軌（1.6%）"
-          ],
-          "evidence_level": "validated",
-          "rsi": 25.5,
-          "band_touch": "near",
-          "dist_to_lower_pct": 1.57,
-          "bonus_count": 0,
-          "current": 277.5,
-          "ma5": 292.1,
-          "ma20": 327.15,
-          "bb_lower": 273.22,
-          "bb_upper": 381.08,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 381.08,
-            "stop_pct": 10.0,
-            "stop_price_ref": 249.75,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約381.08）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "技嘉",
-          "industry": "電腦及週邊設備業",
-          "pct": -2.2887323943661975,
-          "rank": 26
-        },
-        {
-          "strategy": "reversal",
-          "strategy_label": "跌深反彈",
-          "code": "6192",
-          "matched": true,
-          "reasons": [
-            "RSI 22 超賣",
-            "觸及布林下軌"
-          ],
-          "evidence_level": "validated",
-          "rsi": 22.2,
-          "band_touch": "touched",
-          "dist_to_lower_pct": -1.44,
-          "bonus_count": 0,
-          "current": 98.8,
-          "ma5": 103.16,
-          "ma20": 110.19,
-          "bb_lower": 100.25,
-          "bb_upper": 120.13,
-          "exit_plan": {
-            "target_rule": "收盤碰到布林上軌就停利（上軌每天會變動）",
-            "target_price_today": 120.13,
-            "stop_pct": 10.0,
-            "stop_price_ref": 88.92,
-            "max_hold_days": 40
-          },
-          "exit_hint": "碰布林上軌停利（今天約120.13）；跌破買進價10%停損；最多持有40個交易日",
-          "name": "巨路",
-          "industry": "其他電子業",
-          "pct": -2.1782178217821784,
-          "rank": 27
         }
       ]
     },
@@ -1150,20 +991,20 @@
           "code": "2466",
           "matched": true,
           "reasons": [
-            "近120日漲幅+743.8%，全市場前20名"
+            "近120日漲幅+765.8%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 402.5,
-          "return_pct": 743.8,
+          "current": 435.5,
+          "return_pct": 765.8,
           "lookback_days": 120,
-          "avg_turnover": 920875893,
-          "ma20": 320.95,
+          "avg_turnover": 921335859,
+          "ma20": 332.15,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 1,
           "name": "冠西電",
           "industry": "光電業",
-          "pct": 2.4173027989821882
+          "pct": 8.198757763975156
         },
         {
           "strategy": "leaders",
@@ -1171,41 +1012,20 @@
           "code": "2033",
           "matched": true,
           "reasons": [
-            "近120日漲幅+431.4%，全市場前20名"
+            "近120日漲幅+387.8%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 80.5,
-          "return_pct": 431.4,
+          "current": 73.9,
+          "return_pct": 387.8,
           "lookback_days": 120,
-          "avg_turnover": 357708028,
-          "ma20": 70.52,
+          "avg_turnover": 372195142,
+          "ma20": 71.23,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 2,
           "name": "佳大",
           "industry": "鋼鐵工業",
-          "pct": 1.5132408575031526
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "1303",
-          "matched": true,
-          "reasons": [
-            "近120日漲幅+239.1%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 274.0,
-          "return_pct": 239.1,
-          "lookback_days": 120,
-          "avg_turnover": 30614174677,
-          "ma20": 291.27,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 3,
-          "name": "南亞",
-          "industry": "塑膠工業",
-          "pct": -9.868421052631579
+          "pct": -8.198757763975156
         },
         {
           "strategy": "leaders",
@@ -1213,20 +1033,41 @@
           "code": "6225",
           "matched": true,
           "reasons": [
-            "近120日漲幅+204.8%，全市場前20名"
+            "近120日漲幅+220.0%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 79.4,
-          "return_pct": 204.8,
+          "current": 80.0,
+          "return_pct": 220.0,
           "lookback_days": 120,
-          "avg_turnover": 10467912,
-          "ma20": 82.36,
+          "avg_turnover": 10342179,
+          "ma20": 81.99,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 3,
+          "name": "天瀚",
+          "industry": "光電業",
+          "pct": 0.7556675062972291
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "1303",
+          "matched": true,
+          "reasons": [
+            "近120日漲幅+199.5%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 261.5,
+          "return_pct": 199.5,
+          "lookback_days": 120,
+          "avg_turnover": 30380945940,
+          "ma20": 289.0,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 4,
-          "name": "天瀚",
-          "industry": "光電業",
-          "pct": -4.337349397590361
+          "name": "南亞",
+          "industry": "塑膠工業",
+          "pct": -4.562043795620438
         },
         {
           "strategy": "leaders",
@@ -1234,41 +1075,20 @@
           "code": "1709",
           "matched": true,
           "reasons": [
-            "近120日漲幅+181.0%，全市場前20名"
+            "近120日漲幅+162.2%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 51.0,
-          "return_pct": 181.0,
+          "current": 48.25,
+          "return_pct": 162.2,
           "lookback_days": 120,
-          "avg_turnover": 1188527367,
-          "ma20": 50.11,
+          "avg_turnover": 1121037979,
+          "ma20": 49.78,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 5,
           "name": "和益",
           "industry": "化學工業",
-          "pct": -3.954802259887006
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "6672",
-          "matched": true,
-          "reasons": [
-            "近120日漲幅+160.1%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 459.0,
-          "return_pct": 160.1,
-          "lookback_days": 120,
-          "avg_turnover": 4933203188,
-          "ma20": 530.27,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 6,
-          "name": "騰輝電子-KY",
-          "industry": "電子零組件業",
-          "pct": -10.0
+          "pct": -5.392156862745098
         },
         {
           "strategy": "leaders",
@@ -1276,41 +1096,41 @@
           "code": "6957",
           "matched": true,
           "reasons": [
-            "近120日漲幅+151.9%，全市場前20名"
+            "近120日漲幅+142.4%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 403.0,
-          "return_pct": 151.9,
+          "current": 389.0,
+          "return_pct": 142.4,
           "lookback_days": 120,
-          "avg_turnover": 302698215,
-          "ma20": 445.93,
+          "avg_turnover": 294121557,
+          "ma20": 441.65,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 7,
+          "rank": 6,
           "name": "裕慶-KY",
           "industry": "其他業",
-          "pct": -6.496519721577726
+          "pct": -3.4739454094292808
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "2468",
+          "code": "6672",
           "matched": true,
           "reasons": [
-            "近120日漲幅+150.3%，全市場前20名"
+            "近120日漲幅+131.7%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 81.6,
-          "return_pct": 150.3,
+          "current": 413.5,
+          "return_pct": 131.7,
           "lookback_days": 120,
-          "avg_turnover": 1791047341,
-          "ma20": 59.16,
+          "avg_turnover": 5023990252,
+          "ma20": 521.4,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 8,
-          "name": "華經",
-          "industry": "資訊服務業",
-          "pct": 9.973045822102428
+          "rank": 7,
+          "name": "騰輝電子-KY",
+          "industry": "電子零組件業",
+          "pct": -9.912854030501089
         },
         {
           "strategy": "leaders",
@@ -1318,41 +1138,41 @@
           "code": "6226",
           "matched": true,
           "reasons": [
-            "近120日漲幅+139.0%，全市場前20名"
+            "近120日漲幅+122.4%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 29.4,
-          "return_pct": 139.0,
+          "current": 27.8,
+          "return_pct": 122.4,
           "lookback_days": 120,
-          "avg_turnover": 296429224,
-          "ma20": 35.92,
+          "avg_turnover": 287623103,
+          "ma20": 35.29,
           "above_ma60": false,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 9,
+          "rank": 8,
           "name": "光鼎",
           "industry": "光電業",
-          "pct": -9.67741935483871
+          "pct": -5.442176870748299
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "2305",
+          "code": "2468",
           "matched": true,
           "reasons": [
-            "近120日漲幅+124.7%，全市場前20名"
+            "近120日漲幅+119.4%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 37.3,
-          "return_pct": 124.7,
+          "current": 73.5,
+          "return_pct": 119.4,
           "lookback_days": 120,
-          "avg_turnover": 317796489,
-          "ma20": 48.3,
-          "above_ma60": false,
+          "avg_turnover": 1814771674,
+          "ma20": 60.28,
+          "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 10,
-          "name": "全友",
-          "industry": "電腦及週邊設備業",
-          "pct": -9.903381642512077
+          "rank": 9,
+          "name": "華經",
+          "industry": "資訊服務業",
+          "pct": -9.926470588235295
         },
         {
           "strategy": "leaders",
@@ -1360,83 +1180,41 @@
           "code": "6108",
           "matched": true,
           "reasons": [
-            "近120日漲幅+112.6%，全市場前20名"
+            "近120日漲幅+115.3%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 40.4,
-          "return_pct": 112.6,
+          "current": 41.45,
+          "return_pct": 115.3,
           "lookback_days": 120,
-          "avg_turnover": 265605154,
-          "ma20": 32.42,
+          "avg_turnover": 262216434,
+          "ma20": 32.95,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 11,
+          "rank": 10,
           "name": "競國",
           "industry": "電子零組件業",
-          "pct": -1.4634146341463414
+          "pct": 2.599009900990099
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "6213",
+          "code": "2305",
           "matched": true,
           "reasons": [
-            "近120日漲幅+103.0%，全市場前20名"
+            "近120日漲幅+93.2%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 480.0,
-          "return_pct": 103.0,
+          "current": 34.2,
+          "return_pct": 93.2,
           "lookback_days": 120,
-          "avg_turnover": 12000421526,
-          "ma20": 646.75,
+          "avg_turnover": 286092164,
+          "ma20": 47.18,
           "above_ma60": false,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 12,
-          "name": "聯茂",
-          "industry": "電子零組件業",
-          "pct": -9.943714821763603
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "2243",
-          "matched": true,
-          "reasons": [
-            "近120日漲幅+100.0%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 41.8,
-          "return_pct": 100.0,
-          "lookback_days": 120,
-          "avg_turnover": 13776103,
-          "ma20": 50.18,
-          "above_ma60": false,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 13,
-          "name": "宏旭-KY",
-          "industry": "汽車工業",
-          "pct": -7.929515418502203
-        },
-        {
-          "strategy": "leaders",
-          "strategy_label": "強勢股觀察",
-          "code": "2465",
-          "matched": true,
-          "reasons": [
-            "近120日漲幅+98.4%，全市場前20名"
-          ],
-          "evidence_level": "experimental",
-          "current": 150.0,
-          "return_pct": 98.4,
-          "lookback_days": 120,
-          "avg_turnover": 1329359643,
-          "ma20": 115.8,
-          "above_ma60": true,
-          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 14,
-          "name": "麗臺",
+          "rank": 11,
+          "name": "全友",
           "industry": "電腦及週邊設備業",
-          "pct": -7.4074074074074066
+          "pct": -8.310991957104557
         },
         {
           "strategy": "leaders",
@@ -1444,17 +1222,17 @@
           "code": "2254",
           "matched": true,
           "reasons": [
-            "近120日漲幅+87.5%，全市場前20名"
+            "近120日漲幅+85.9%，全市場前20名"
           ],
           "evidence_level": "experimental",
           "current": 109.5,
-          "return_pct": 87.5,
+          "return_pct": 85.9,
           "lookback_days": 120,
-          "avg_turnover": 330987404,
-          "ma20": 104.17,
+          "avg_turnover": 332786613,
+          "ma20": 104.92,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 15,
+          "rank": 12,
           "name": "巨鎧精密-創",
           "industry": "",
           "pct": 0.0
@@ -1462,44 +1240,44 @@
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "6933",
+          "code": "2465",
           "matched": true,
           "reasons": [
-            "近120日漲幅+75.6%，全市場前20名"
+            "近120日漲幅+75.7%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 281.0,
-          "return_pct": 75.6,
+          "current": 146.0,
+          "return_pct": 75.7,
           "lookback_days": 120,
-          "avg_turnover": 820628318,
-          "ma20": 363.07,
-          "above_ma60": false,
+          "avg_turnover": 1549811351,
+          "ma20": 118.8,
+          "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 16,
-          "name": "AMAX-KY",
+          "rank": 13,
+          "name": "麗臺",
           "industry": "電腦及週邊設備業",
-          "pct": -9.935897435897436
+          "pct": -2.666666666666667
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "1416",
+          "code": "6213",
           "matched": true,
           "reasons": [
-            "近120日漲幅+75.2%，全市場前20名"
+            "近120日漲幅+75.3%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 19.45,
-          "return_pct": 75.2,
+          "current": 432.0,
+          "return_pct": 75.3,
           "lookback_days": 120,
-          "avg_turnover": 156953269,
-          "ma20": 15.23,
-          "above_ma60": true,
+          "avg_turnover": 12179355841,
+          "ma20": 629.65,
+          "above_ma60": false,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 17,
-          "name": "廣豐",
-          "industry": "其他業",
-          "pct": 6.284153005464479
+          "rank": 14,
+          "name": "聯茂",
+          "industry": "電子零組件業",
+          "pct": -10.0
         },
         {
           "strategy": "leaders",
@@ -1507,41 +1285,62 @@
           "code": "6505",
           "matched": true,
           "reasons": [
-            "近120日漲幅+75.0%，全市場前20名"
+            "近120日漲幅+74.7%，全市場前20名"
           ],
           "evidence_level": "experimental",
           "current": 89.6,
-          "return_pct": 75.0,
+          "return_pct": 74.7,
           "lookback_days": 120,
-          "avg_turnover": 3214099623,
-          "ma20": 98.88,
+          "avg_turnover": 3005007285,
+          "ma20": 97.23,
           "above_ma60": false,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 18,
+          "rank": 15,
           "name": "台塑化",
           "industry": "油電燃氣業",
-          "pct": -3.135135135135135
+          "pct": 0.0
         },
         {
           "strategy": "leaders",
           "strategy_label": "強勢股觀察",
-          "code": "3443",
+          "code": "2243",
           "matched": true,
           "reasons": [
-            "近120日漲幅+68.3%，全市場前20名"
+            "近120日漲幅+72.5%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 7750.0,
-          "return_pct": 68.3,
+          "current": 37.95,
+          "return_pct": 72.5,
           "lookback_days": 120,
-          "avg_turnover": 18989645778,
-          "ma20": 7465.0,
-          "above_ma60": true,
+          "avg_turnover": 13284494,
+          "ma20": 49.18,
+          "above_ma60": false,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
-          "rank": 19,
-          "name": "創意",
-          "industry": "半導體業",
-          "pct": -9.988385598141695
+          "rank": 16,
+          "name": "宏旭-KY",
+          "industry": "汽車工業",
+          "pct": -9.210526315789473
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "2887",
+          "matched": true,
+          "reasons": [
+            "近120日漲幅+64.8%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 39.3,
+          "return_pct": 64.8,
+          "lookback_days": 120,
+          "avg_turnover": 2435629044,
+          "ma20": 40.81,
+          "above_ma60": false,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 17,
+          "name": "台新新光金",
+          "industry": "金融保險業",
+          "pct": 1.8134715025906738
         },
         {
           "strategy": "leaders",
@@ -1549,20 +1348,62 @@
           "code": "6446",
           "matched": true,
           "reasons": [
-            "近120日漲幅+64.1%，全市場前20名"
+            "近120日漲幅+60.4%，全市場前20名"
           ],
           "evidence_level": "experimental",
-          "current": 1295.0,
-          "return_pct": 64.1,
+          "current": 1280.0,
+          "return_pct": 60.4,
           "lookback_days": 120,
-          "avg_turnover": 4198763048,
-          "ma20": 1243.75,
+          "avg_turnover": 4228758024,
+          "ma20": 1245.5,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 18,
+          "name": "藥華藥",
+          "industry": "生技醫療業",
+          "pct": -1.1583011583011582
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "2880",
+          "matched": true,
+          "reasons": [
+            "近120日漲幅+58.5%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 50.8,
+          "return_pct": 58.5,
+          "lookback_days": 120,
+          "avg_turnover": 853745554,
+          "ma20": 49.82,
+          "above_ma60": true,
+          "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
+          "rank": 19,
+          "name": "華南金",
+          "industry": "金融保險業",
+          "pct": 0.19723865877712032
+        },
+        {
+          "strategy": "leaders",
+          "strategy_label": "強勢股觀察",
+          "code": "1416",
+          "matched": true,
+          "reasons": [
+            "近120日漲幅+58.1%，全市場前20名"
+          ],
+          "evidence_level": "experimental",
+          "current": 17.55,
+          "return_pct": 58.1,
+          "lookback_days": 120,
+          "avg_turnover": 160991100,
+          "ma20": 15.45,
           "above_ma60": true,
           "exit_hint": "每月檢視一次，跌出前20名就換掉；不是買進建議",
           "rank": 20,
-          "name": "藥華藥",
-          "industry": "生技醫療業",
-          "pct": -6.159420289855073
+          "name": "廣豐",
+          "industry": "其他業",
+          "pct": -9.768637532133676
         }
       ]
     }
